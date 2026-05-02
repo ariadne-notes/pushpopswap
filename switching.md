@@ -1,10 +1,12 @@
-## Terms
+This document is built on labwork and *Interconnections*, See [1]
+
+# Terms
 
 * **Bridge:** A device that participates in the spanning tree algorithm.
 
 * **Root Bridge:** The bridge that wins the STP election.
 
-* **Bridge ID:** 8 bytes. Bridge Priority + Extension ID (the vlan) + mac address.
+* **Bridge ID:** 8 bytes. (Bridge Priority, Extension ID (the VLAN), MAC Address)
 
 * **BPDU:** Bridge Protocol Data Unit. The frame used in 802.1D STP.
 
@@ -18,24 +20,22 @@
 
 * **Root Port:** AKA, RP. AKA, Upstream. Receives BPDUs, from upstream switch. Each bridge can have only one RP. RP is picked by `port-selection-algo`
 
-* **TC Bit:** Topology Change. The root bridge sets the TC to tell other bridges to set their mac address tables to `max age`
+* **TCN:** Topology change notification. Sent by the bridge that sees a STP change, upstream via it's RP. This is it's own message.
 
-# Topology Algorithm
+* **TCA Bit:** Topology Change Acknowledge, sent by the upstream bridge, to let the TC reporting bridge know it relay'd the TCN upstream. This is inside a config BPDU.
 
-Who is the root?
+* **TC Bit:** Topology Change. The root bridge sets the TC to tell other bridges to set their mac address tables to `max age`. This is inside a config BPDU.
 
 
+# How STP makes a loop free topology.
 
-## How STP makes a loop free topology.
-
-STP elects root and designated ports, aka RP, and DPs.
+STP elects root and designated ports, aka RP, and DPs. It also moves STP ports into Blocking.
 
 - A bridge can only have one RP.
 - All ports on the root are DPs.
 - Ports on the root bridge never enter blocking.
-- The RP is always the port with the best config BPDU (using the port algo)
-- Blocked ports must keep receiving BPDUs to stay blocked (the election must keep occurring, forever)
-- if two DPs send and receive BPDUs
+- Blocked ports must keep receiving BPDUs to stay blocked (the election must continue, forever)
+- if two would-be DPs send and receive BPDUs.
   - There is a loop.
   - The port that has the inferior BPDU will block.
   
@@ -513,3 +513,6 @@ switch# show logging | i %LINK
 *Jul  8 06:35:29.308: %LINK-5-CHANGED: Interface Ethernet0/0, changed state to administratively down
 *Jul  8 06:35:43.756: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
 ```
+
+# References
+1. R. Perlman, *Interconnections: Bridges, Routers, Switches, and Internetworking Protocols*, 2nd ed. Boston, MA: Addison-Wesley, 1999.
