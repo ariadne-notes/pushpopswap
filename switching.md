@@ -6,7 +6,7 @@ This document is built on labwork and *Interconnections*, See [1]
 
 * **Root Bridge:** The bridge that wins the STP election.
 
-* **Bridge ID:** 8 bytes. (Bridge Priority, Extension ID (the VLAN), MAC Address)
+* **Bridge ID:** 8 bytes. `Bridge Priority, Extension ID (the VLAN), MAC Address`
 
 * **BPDU:** Bridge Protocol Data Unit. The frame used in 802.1D STP.
 
@@ -330,7 +330,7 @@ This is what the BPDU looks like on-the-wire
 
 # Port elections
 
-Bridge Priority + Vlan + Bridge MAC + Port Priority + Port Number
+`Bridge Priority, Vlan, Bridge MAC, Port Priority, Port Number`
 
 ## Default settings
 
@@ -516,3 +516,5 @@ switch# show logging | i %LINK
 
 # References
 1. R. Perlman, *Interconnections: Bridges, Routers, Switches, and Internetworking Protocols*, 2nd ed. Boston, MA: Addison-Wesley, 1999.
+
+[Layer 2 Configuration Guide, Cisco IOS-XE 17.16.X](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9200/software/release/17-16/configuration_guide/lyr2/b_1716_lyr2_9200_cg/configuring_spanning_tree_protocol.html
