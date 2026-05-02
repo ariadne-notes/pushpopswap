@@ -49,7 +49,7 @@ STP elects root and designated ports, aka RP, and DPs.
 1. Root bridge sends BPDU, cost is 0, with port identifiers set.
 1. A non-root bridge can only have one RP.
 1. Non-root bridge gets BPDUs. It uses the port selection Algo to pick one RP.
-1. Non-root bridge starts STP elections on all other ports, by sending BPDUs. It takes the cost for the RP port (it's cost) puts that into the sent BPDUs.
+1. Non-root bridge starts STP elections on all other ports, by sending BPDUs. It takes the cost inside the received BPDU, and adds it's port cost.
 1. If a DP gets a BDPU, STP blocks the port if the received BPDU is better.
 
 
@@ -387,7 +387,7 @@ Which ports block?
 ```                                                                                                                                                                                      
 
 - All ports on root bridge are DP.
-- SW2 gets three BDPDs, the best BPDU is on port 1, it has the lowest port number.
+- SW2 gets three BPDUs, the best BPDU is on port 1, it has the lowest port number.
 - SW2 sets the other two ports to BLK.
 
 ## Port Blocking, Port Priority
@@ -405,13 +405,15 @@ Which ports block?
 ```                                                                                                                                                                                      
 
 - All ports on root bridge are DP.
-- SW2 gets three BDPDs, the best BPDU is on port 3, it has the lowest priority. `00`
+- SW2 gets three BPDUs, the best BPDU is on port 3, it has the lowest priority. `00`
 - SW2 sets the other two ports to BLK.
 
 
 ## Topology Change Notifications (TCNs)
 
-A TCN is a kind of BPDU message. There is no root ID or bridge ID.
+- A TCN is a kind of BPDU message.
+- There is no root ID or bridge ID.
+- The TCN is sent out the RP.
 
 ```
 Spanning Tree Protocol
