@@ -6,7 +6,6 @@ Dynamic ARP Inspection
 ip dhcp snooping vlan 10
 ip arp inspection vlan 10
 ip arp inspection validate src-mac dst-mac ip 
-
 !
 ! Ports
 !
@@ -14,7 +13,6 @@ interface GigabitEthernet0/1
  description towards DHCP server
  ip arp inspection trust
  ip dhcp snooping trust
-!
 ```
 
 # Validation
