@@ -2,12 +2,16 @@
 - This is only for switch-to-switch ports.
 
 # Terms
-* **ULD** Unidirectional Link. A failure where one side of a fiber pair is broken.
+* **Unidirectional Link.** A failure where one side of a fiber pair is broken.
+
+A unidirectional failure will always result in one side not getting information.
+- SW1 sends BPDUs
+- SW2 never gets BPDUs.
 
 # Topology
 
 - SW1 is a root bridge.
-- SW2 is experiencing a ULD failure.
+- SW2 is experiencing a UL failure.
 - SW2 will transition Port 1 to a RP.
 
 ```
@@ -23,17 +27,15 @@
 └────────────────────┘                            └─────────────────────┘
 ```
 
-
 # Loopguard
 If a port was receiving BPBUs and suddenly it stops, don't change the STP,
 
-
-**default**
+**Default**
 ```
 spanning-tree loopguard default
 ```
 
-**pert port**
+**Per port**
 ```
 interface 1
   spanning-tree guard loop
