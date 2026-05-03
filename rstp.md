@@ -63,22 +63,21 @@ No BPDUs being received? Wait for the forward delay, transition port to forwardi
 ## Fastest Scenario, the would-be DP is already transmitting.
 
 ```
-┌─────────┐                      ┌─────────┐                                                                                                                                                                    
-│         │   Full-Duplex Link   │         │                                                                                                                                                                    
-│   SW1   ├──────────────────────┤   SW2   │                                                                                                                                                                    
-│         │                      │         │                                                                                                                                                                    
-└────┬────┘                      └────┬────┘                                                                                                                                                                    
-     │                                │                                                                                                                                                                         
-     │                                │                                                                                                                                                                         
-     │                                │                                                                                                                                                                         
-     │DP, Propose, ──────────────────►│                                                                                                                                                                         
-     │                                │                                                                                                                                                                         
-     │                                │                                                                                                                                                                         
-     │◄───────── Agree, Forward, Learn│                                                                                                                                                                         
-     │                                │                                                                                                                                                                         
-     │                                │                                                                                                                                                                         
-     │Forward, Learn ────────────────►│                                                                                                                                                                         
-     │                                │                                                                                                                                                                         
+┌─────────┐                      ┌─────────┐
+│         │   Full-Duplex Link   │         │
+│   SW1   ├──────────────────────┤   SW2   │
+│         │                      │         │
+└────┬────┘                      └────┬────┘
+     │                                │     
+     │                                │     
+     │DP, Propose, ──────────────────►│     
+     │                                │     
+     │                                │     
+     │◄───────── Agree, Forward, Learn│     
+     │                                │     
+     │                                │     
+     │Forward, Learn ────────────────►│     
+     │                                │     
 ```
 
 # References
