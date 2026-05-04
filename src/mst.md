@@ -57,7 +57,7 @@ Spanning Tree Protocol
     MST Extension                                                                                       
         MST Config ID format selector: 0                       ───────┐                                 
         MST Config name: green                                        │   What MST                      
-        MST Config revision: 3                                        │    Shows                        
+        MST Config revision: 3                                        │    shows                        
         MST Config digest: 059b580e0d7ab80bcf83df54c634d006           │      other                      
         CIST Internal Root Path Cost: 20000                           │        devices                  
         CIST Bridge Identifier: 32768 / 0 / 52:54:00:04:67:92         │          in                     
@@ -107,10 +107,40 @@ Instance  Vlans mapped
 ```
 
 # Outputs
+- A switch `ff79` in a different MST region is the root for the CST.
+- Our regional root `c07f` is one hop away.
 
+```
+S32# show spanning-tree mst 
+
+##### MST0    vlans mapped:   1-9,11-19,21-29,31-39,41-4094
+Bridge        address 5254.0004.6792  priority      32768 (32768 sysid 0)
+Root          address 5254.005f.ff79  priority      0     (0 sysid 0)
+              port    Gi3/2           path cost     20000    
+Regional Root address 5254.0082.c07f  priority      4096  (4096 sysid 0)
+                                      internal cost 20000     rem hops 19
+Operational   hello time 2 , forward delay 15, max age 20, txholdcount 6 
+Configured    hello time 2 , forward delay 15, max age 20, max hops    20
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Gi3/1            Desg FWD 20000     128.14   P2p 
+Gi3/2            Root FWD 20000     128.15   P2p 
+
+##### MST1    vlans mapped:   10,20,30,40
+Bridge        address 5254.0004.6792  priority      32769 (32768 sysid 1)
+Root          address 5254.0082.c07f  priority      1     (0 sysid 1)
+              port    Gi3/2           cost          20000     rem hops 19
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Gi3/1            Desg FWD 20000     128.14   P2p 
+Gi3/2            Root FWD 20000     128.15   P2p 
+```
 
 # Captures
-[MST-bpdu.pcap](./captures/switching/MST-bpdu.pcap)
+[MST-region-frame.pcap](./captures/switching/MST-region-frame.pcap)
+
 
 # References
 [Cisco - Understand the Multiple Spanning Tree Protocol (802.1s)](https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/24248-147.html#toc-hId--1408391100)
