@@ -5,6 +5,7 @@
 # Switching
 - [STP](stp.md)
 - [RSTP](rstp.md)
+- [MST](mst.md)
 - [802.1Q](802.1q.md)
 
 # Switchport Features
