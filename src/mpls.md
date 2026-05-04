@@ -30,6 +30,12 @@
 
 **Outgoing label** - What the LSP does next.
 
+#### Null Labels
+`[3] Implicit` Pop the label. Implicit because the label is missing.
+
+`[0] Explicit` Keep the label, but the destination must pop it. Used for MPLS QoS.
+
+
 ### Steps to build the LFIB
 
 **1. Find the next-hop for the destination prefix**
