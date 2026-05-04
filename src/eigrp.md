@@ -16,7 +16,8 @@
 
 * **Poison Reverse:** If you must advertise a network out the same interface it was received on, advertise the delay as infinity.
                                                                       
-## Example.
+
+## Feasible Successor Algo
 
 R2 sends an update
  - 10.0.0.0/24 - RD is 2000
@@ -63,6 +64,8 @@ K1, set to 1
 K3, set to 1
 
 Wide metrics allow for faster links.
+
+The default setting for EIGRP are to figure out the minimum bandwidth for the path, and the total delay.
 
 # Unequal Cost Multi Path
 EIGRP can load balance over the successor and feasible successor routes with a variance command.
@@ -122,4 +125,4 @@ EIGRP can load balance over the successor and feasible successor routes with a v
 192.0.2.5 127.255.255.255 - becomes 128.0.0.0, the rest of the bits get dropped.
 
 # References
-https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html
+[Cisco - Understand and Use the Enhanced Interior Gateway Routing Protocol](https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html)

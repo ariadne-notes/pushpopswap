@@ -13,6 +13,9 @@ Frame relay expects LMI by default, so to get this work, we need to disable keep
 The DCE generates the clock.
 
 ```
+!
+! R1
+!
 ip address 10.0.0.1 255.255.255.252
 encapsulation frame-relay
 frame-relay map ip 10.0.0.2 102
@@ -23,6 +26,9 @@ no shut
 
 # R2
 ```
+!
+! R2
+!
 ip address 10.0.0.2 255.255.255.252
 encapsulation frame-relay
 frame-relay map ip 10.0.0.0 1
@@ -32,4 +38,4 @@ no shut
 
 # Reference
 
-[CCIE Nyquist](https://ccie.nyquist.eu/layer-2-technologies/layer-2-wan-protocols/frame-relay/frame-relay-101#back-to-back-frame-relay)
+[CCIE Nyquist - Back to Back Frame Relay](https://ccie.nyquist.eu/layer-2-technologies/layer-2-wan-protocols/frame-relay/frame-relay-101#back-to-back-frame-relay)

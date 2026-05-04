@@ -27,6 +27,7 @@
   - [OSPF LSA Captures](ospf-lsa-captures.md)
 - [BGP](bgp.md)
 - [EIGRP](eigrp.md)
+- [ISIS](isis.md)
 - [FHRP](fhrp.md)
 - [BFD](bfd.md)
 - [Route Redistribution with Tags](route-redistribution-with-tags.md)
@@ -67,6 +68,7 @@
 # Transport and Physical
 - [Optical](optical.md)
 - [T1](t1.md)
+- [G8032](g8032.md)
 - [Back to Back Frame Relay](back-to-back-frame-relay.md)
 - [STDM](stdm.md)
 - [UDP](udp.md)
