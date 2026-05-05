@@ -14,13 +14,13 @@ interface GigabitEthernet0/0
 
 This is the primary table for this feature. This table is used to populate the mac address table.
 ```
-access-1#show port-security address 
+switch# show port-security address
                Secure Mac Address Table
 -----------------------------------------------------------------------------
 Vlan    Mac Address       Type                          Ports   Remaining Age
                                                                    (mins)    
 ----    -----------       ----                          -----   -------------
-  10    5254.000d.6573    SecureDynamic                 Gi0/0        -
+  10    5254.000d.6573    SecureDynamic                 Gi0/0       10
 -----------------------------------------------------------------------------
 ```
 
@@ -39,7 +39,7 @@ Vlan    Mac Address       Type        Ports
 Asking port security how many ports are currently controlled by the feature.
 
 ```
-switch# show port-security 
+switch #show port-security 
 Secure Port  MaxSecureAddr  CurrentAddr  SecurityViolation  Security Action
                 (Count)       (Count)          (Count)
 ---------------------------------------------------------------------------
@@ -52,3 +52,9 @@ Max Addresses limit in System (excluding one mac per port) : 4096
 
 # References
 [Cisco - Port Security - IOS-XE 17.14 on the C9300](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-14/configuration_guide/sec/b_1714_sec_9300_cg/port_security.pdf)
+
+----
+
+v1.1 - Last edit 5-May-2025
+
+This work is dedicated to the Public Domain via [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
