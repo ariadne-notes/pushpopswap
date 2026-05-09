@@ -1,35 +1,6 @@
-# EIGRP 64-bit metric Calculator
+# EIGRP 32-bit Classic Metric Calculator
 
 The RFC recommended way to modify a path with EIGRP is **changing the delay**, under the interface. This will not impact other protocols. Modifying bandwidth ... affects lots of things!
-
-<style>
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-.wrap{padding:1rem 0;font-size:14px;color:var(--color-text-primary)}
-.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem 1.5rem}
-.field-row{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
-.field-row label{font-size:13px;color:var(--color-text-secondary);min-width:160px}
-.field-row select,.field-row input[type=number]{font-size:13px}
-.field-row select{flex:1}
-.field-row input[type=number]{width:150px}
-.sec-label{font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--color-text-tertiary);text-transform:uppercase;margin:1.25rem 0 .6rem}
-.kvals{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:.5rem}
-.kv{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--color-text-secondary)}
-.kv input{width:38px;font-size:12px;padding:2px 5px}
-.divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:1.25rem 0}
-.result-card{background:var(--color-background-secondary);border:0.5px solid var(--color-border-info);border-radius:var(--border-radius-md);padding:14px 16px;margin-top:1.25rem}
-.rc-name{font-size:11px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--color-text-secondary);margin-bottom:10px}
-.rc-metric{font-size:32px;font-weight:500;color:var(--color-text-primary);line-height:1.1;margin-bottom:14px}
-.components{display:flex;flex-direction:column;gap:6px;margin-top:10px}
-.component-row{display:flex;align-items:center;gap:10px;font-size:12px}
-.component-label{color:var(--color-text-secondary);min-width:180px}
-.component-value{font-family:var(--font-mono);font-weight:500;color:var(--color-text-primary);min-width:80px;text-align:right}
-.component-bar-wrap{flex:1;background:#ddd;border-radius:2px;height:6px;min-width:60px}
-.component-bar{height:6px;border-radius:2px;background:var(--color-border-info);transition:width .2s}
-.component-bar.delay{background:var(--color-border-success)}
-.component-bar.load{background:var(--color-border-warning)}
-.component-note{font-size:11px;color:var(--color-text-tertiary);margin-top:-2px;margin-bottom:4px;font-family:var(--font-mono)}
-.hint{font-size:11px;color:var(--color-text-tertiary);margin-left:4px}
-</style>
 
 <h2 class="sr-only">EIGRP classic mode 32-bit composite metric calculator per RFC 7868 section 5.6.1.1</h2>
 
@@ -261,6 +232,27 @@ RFC 7868                      Cisco's EIGRP                     May 2016
    is:
 
              metric = 256 * { [(10^7)/ BWmin] + [sum of delays]}
+</pre>
+
+## Validation
+<pre>
+R1# show ip protocols | i weight
+    Metric weight K1=2, K2=2, K3=2, K4=0, K5=0
+
+R1# show ip eigrp topology 10.0.0.0
+EIGRP-IPv4 Topology Entry for AS(100)/ID(1.1.1.1) for 10.0.0.0/8
+  State is Passive, Query origin flag is 1, 1 Successor(s), FD is 6164
+  Descriptor Blocks:
+  192.168.12.2 (GigabitEthernet0/0), from 192.168.12.2, Send flag is 0x0
+      Composite metric is (6164/5652), route is Internal
+      Vector metric:
+        Minimum bandwidth is 1000000 Kbit
+        Total delay is 20 microseconds
+        Reliability is 255/255
+        Load is 1/255
+        Minimum MTU is 1500
+        Hop count is 1
+        Originating router is 2.2.2.2
 </pre>
 
 # References

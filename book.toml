@@ -5,4 +5,5 @@ authors = ["Ariadne"]
 language = "en"
 
 [output.html]
+additional-css = ["theme/custom.css"]
 git-repository-url = "https://github.com/ariadne-notes/networking"

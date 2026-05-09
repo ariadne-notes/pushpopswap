@@ -2,29 +2,6 @@
 
 The RFC recommended way to modify a path with EIGRP is **changing the delay**, under the interface. This will not impact other protocols. Modifying bandwidth ... affects lots of things!
 
-<style>
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-.wrap{padding:1rem 0;font-size:14px;color:var(--color-text-primary)}
-.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem 1.5rem}
-.field-row{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
-.field-row label{font-size:13px;color:var(--color-text-secondary);min-width:160px}
-.field-row select,.field-row input[type=number]{font-size:13px}
-.field-row select{flex:1}
-.field-row input[type=number]{width:150px}
-.sec-label{font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--color-text-tertiary);text-transform:uppercase;margin:1.25rem 0 .6rem}
-.kvals{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:.5rem}
-.kv{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--color-text-secondary)}
-.kv input{width:38px;font-size:12px;padding:2px 5px}
-.divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:1.25rem 0}
-.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1.25rem}
-.result-card{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:14px 16px}
-.result-card.rib{border-color:var(--color-border-success)}
-.result-card.wide{border-color:var(--color-border-info)}
-.rc-name{font-size:11px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--color-text-secondary);margin-bottom:6px}
-.rc-metric{font-size:32px;font-weight:500;color:var(--color-text-primary);line-height:1.1}
-.rc-breakdown{font-size:12px;color:var(--color-text-secondary);margin-top:8px;font-family:var(--font-mono);line-height:1.8}
-.linked{font-size:11px;color:var(--color-text-tertiary);margin-left:4px}
-</style>
 
 <h2 class="sr-only">EIGRP named mode 64-bit wide metric calculator per RFC 7868 with correct interface delay constants</h2>
 
@@ -98,9 +75,9 @@ The RFC recommended way to modify a path with EIGRP is **changing the delay**, u
       <div class="rc-breakdown" id="bd_rib"></div>
     </div>
     <div class="result-card wide">
-      <div class="rc-name">EIGRP named — 64-bit</div>
+      <div class="rc-name">EIGRP 64-bit metric (Topology)</div>
       <div class="rc-metric" id="m64">—</div>
-      <div class="rc-breakdown" id="breakdown"></div>
+      <div class="rc-breakdown components" id="breakdown"></div>
     </div>
   </div>
 
@@ -171,34 +148,77 @@ function update(){
   const ribscale = g('ribscale');
 
   const max_throughput = K1 * (EIGRP_BANDWIDTH * EIGRP_WIDE_SCALE) / bw;
-
   const net_throughput = K2 > 0
     ? max_throughput + (K2 * max_throughput) / (256 - load)
     : max_throughput;
-
   const latency = K3 * (delay_ps * EIGRP_WIDE_SCALE) / EIGRP_DELAY_PICO;
-
   const inner = (K1 * net_throughput) + latency + (K6 * extattr);
-
   const m64 = (K5 > 0 && (K4 + rely) > 0)
     ? inner * (K5 / (K4 + rely))
     : inner;
-
   const m_rib = m64 / ribscale;
 
-  const fmt = n => n.toLocaleString(undefined, {maximumFractionDigits: 2});
+  const fmt  = n => n.toLocaleString(undefined, {maximumFractionDigits: 2});
+  const fmtf = n => n.toLocaleString(undefined, {maximumFractionDigits: 4});
 
-  document.getElementById('m64').textContent   = fmt(m64);
-  document.getElementById('m_rib').textContent = fmt(m_rib);
+  document.getElementById('m64').textContent   = fmt(Math.floor(m64));
+  document.getElementById('m_rib').textContent = fmt(Math.floor(m_rib));
+  document.getElementById('bd_rib').innerHTML  = `64-bit ÷ ${ribscale}`;
 
-  document.getElementById('breakdown').innerHTML =
-    `max_throughput:  ${fmt(max_throughput)}<br>` +
-    `net_throughput:  ${fmt(net_throughput)}<br>` +
-    `latency:         ${fmt(latency)}<br>` +
-    (K6 > 0 ? `K6*ExtAttr:      ${fmt(K6*extattr)}<br>` : '') +
-    (K5 > 0 ? `K5/(K4+Rel):     ${(K5/(K4+rely)).toLocaleString(undefined,{maximumFractionDigits:6})}<br>` : '');
+  const total = net_throughput + latency + (K6 * extattr);
+  function bar(value, cls=''){
+    const pct = total > 0 ? Math.min(100, (value / total) * 100) : 0;
+    return `<div class="component-bar-wrap"><div class="component-bar ${cls}" style="width:${pct}%"></div></div>`;
+  }
 
-  document.getElementById('bd_rib').innerHTML = `64-bit ÷ ${ribscale}`;
+  let rows = '';
+
+  rows += `
+    <div class="component-row">
+      <span class="component-label">Throughput component</span>
+      <span class="component-value">${fmt(net_throughput)}</span>
+      ${bar(net_throughput, '')}
+    </div>
+    <div class="component-note">
+      K1(${K1}) × (${EIGRP_BANDWIDTH.toLocaleString()} × ${EIGRP_WIDE_SCALE.toLocaleString()}) ÷ ${bw.toLocaleString()}
+      ${K2 > 0 ? ` + K2(${K2}) term` : ''}
+    </div>`;
+
+  rows += `
+    <div class="component-row">
+      <span class="component-label">Latency component</span>
+      <span class="component-value">${fmt(latency)}</span>
+      ${bar(latency, 'delay')}
+    </div>
+    <div class="component-note">
+      K3(${K3}) × (${delay_ps.toLocaleString()} ps × ${EIGRP_WIDE_SCALE.toLocaleString()}) ÷ ${EIGRP_DELAY_PICO.toLocaleString()}
+    </div>`;
+
+  if(K6 > 0){
+    rows += `
+      <div class="component-row">
+        <span class="component-label">ExtAttr component</span>
+        <span class="component-value">${fmt(K6 * extattr)}</span>
+        ${bar(K6 * extattr, 'load')}
+      </div>
+      <div class="component-note">
+        K6(${K6}) × ExtAttr(${extattr})
+      </div>`;
+  }
+
+  if(K5 > 0 && (K4 + rely) > 0){
+    rows += `
+      <div class="component-row">
+        <span class="component-label">Reliability scaling</span>
+        <span class="component-value">× ${fmtf(K5 / (K4 + rely))}</span>
+        <div class="component-bar-wrap" style="background:transparent"></div>
+      </div>
+      <div class="component-note">
+        K5(${K5}) ÷ (K4(${K4}) + reliability(${rely}))
+      </div>`;
+  }
+
+  document.getElementById('breakdown').innerHTML = rows;
 }
 
 applyPreset();
@@ -338,7 +358,7 @@ EIGRP-IPv4 VR(EIGRP_100) Topology Entry for AS(100)/ID(1.1.1.1) for 2.2.2.2/32
         Originating router is 2.2.2.2
 </pre>
 
-## A bit harder validation
+## Validation
 
 <pre>
 R1# show ip protocols | i weight
