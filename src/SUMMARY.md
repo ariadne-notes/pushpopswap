@@ -45,6 +45,7 @@
 
 # Multicast
 - [Multicast](multicast.md)
+  - [Auto-RP(auto-rp.md)
   - [MSDP](msdp.md)
 
 # Routing Protocols
