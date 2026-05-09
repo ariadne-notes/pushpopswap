@@ -23,7 +23,7 @@ The RFC recommended way to modify a path with EIGRP is **changing the delay**, u
 .component-row{display:flex;align-items:center;gap:10px;font-size:12px}
 .component-label{color:var(--color-text-secondary);min-width:180px}
 .component-value{font-family:var(--font-mono);font-weight:500;color:var(--color-text-primary);min-width:80px;text-align:right}
-.component-bar-wrap{flex:1;background:var(--color-background-tertiary);border-radius:2px;height:6px;min-width:60px}
+.component-bar-wrap{flex:1;background:#ddd;border-radius:2px;height:6px;min-width:60px}
 .component-bar{height:6px;border-radius:2px;background:var(--color-border-info);transition:width .2s}
 .component-bar.delay{background:var(--color-border-success)}
 .component-bar.load{background:var(--color-border-warning)}
@@ -60,7 +60,7 @@ The RFC recommended way to modify a path with EIGRP is **changing the delay**, u
     <input type="number" id="bw" value="1000000" min="1" oninput="document.getElementById('preset').value='';update()">
   </div>
   <div class="field-row">
-    <label>Delay (μs) <span class="hint">microseconds — show ip eigrp topology</span></label>
+    <label>Delay (μs - microseconds)</label>
     <input type="number" id="delay_us" value="10" min="1" step="any" oninput="update()">
   </div>
   <div class="field-row">
@@ -133,6 +133,11 @@ function update(){
   const K5       = g('k5');
 
   const bw_term    = Math.trunc(1e7 / bw);
+
+  const bw_warn = bw >= 10000000 
+  ? ' ⚠️ saturated — classic metric cannot differentiate above 10G' 
+  : '';
+
   const delay_tens = delay_us / 10;
 
   const bw_component    = Math.trunc(256 * K1 * bw_term);
@@ -165,7 +170,7 @@ function update(){
       ${bar(bw_component, '')}
     </div>
     <div class="component-note">
-      256 × K1(${K1}) × trunc(10⁷ ÷ ${bw.toLocaleString()}) = 256 × ${K1} × ${fmti(bw_term)}
+      256 × K1(${K1}) × trunc(10⁷ ÷ ${bw.toLocaleString()}) = 256 × ${K1} × ${fmti(bw_term)}${bw_warn}
     </div>`;
 
   rows += `
