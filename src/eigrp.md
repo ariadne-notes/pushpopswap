@@ -274,3 +274,5 @@ D        2.2.2.2 [90/3398] via 10.12.1.2, 00:00:04, GigabitEthernet0/1
 [Cisco - How Does Unequal Cost Path Load Balancing (Variance) Work in IGRP and EIGRP](https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/13677-19.html)
 
 [Cisco - Troubleshooting EIGRP Variance](https://community.cisco.com/t5/networking-knowledge-base/troubleshooting-eigrp-variance-command/ta-p/3129662)
+
+[Blame The Network - Stuck in Active](https://blamethe.network/posts/stuck-in-the-eigrp-queue/)

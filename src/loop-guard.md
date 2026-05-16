@@ -14,7 +14,7 @@ A unidirectional failure will always result in one side not getting information.
 - SW2 is experiencing a UL failure.
 - SW2 will transition Port 1 to a RP.
 
-```
+<pre>
 ┌────────────────────┐                            ┌─────────────────────┐
 │     ┌─────────────┐│                            │ ┌────────────┐      │
 │     │ Port ┌────┐ ││ BPDU ────►                 │ │┌────┐ Port │      │
@@ -25,7 +25,7 @@ A unidirectional failure will always result in one side not getting information.
 │     │      └────┘ ││                ◄───── BPDU │ │└────┘      │      │
 │     └─────────────┘│                            │ └────────────┘      │
 └────────────────────┘                            └─────────────────────┘
-```
+</pre>
 
 # Loopguard
 If a port was receiving BPBUs and suddenly it stops, don't change the STP,

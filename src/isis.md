@@ -10,7 +10,7 @@ There are only three kinds of routers.
 
 # Example
 
-```
+<pre>
                                              ┌──────┐            
                                              │ L1   │            
                                              └───┬──┘            
@@ -22,7 +22,7 @@ There are only three kinds of routers.
 ┌───┴──┐             ┌──┴───┐          ┌───┴──┐                  
 │  L1  │             │  L2  │──────────┤  L2  │                  
 └──────┘             └──────┘          └──────┘                  
-```
+</pre>
 
 ## IS-IS Metric Styles
 
