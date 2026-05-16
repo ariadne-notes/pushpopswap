@@ -1,12 +1,21 @@
 # Terms
 * **FIFO:** First in, First out. The default behavior of an network node processing IP traffic.
 * **Differentiated Services:** AKA, DiffServ. Giving packet flows different levels of network service, based on classification.
+* **Integrated Services:** AKA, IntServ. Packet flows explicitly reserve bandwidth along a path, via admission control.
+* **RSVP:** Resource Reservation Protocol. Uses Admission control to make explicit QoS reservations on each device in the path.
 * **Marking:** Changing the DSCP bits in the IP header field to put an IP flow into a specific traffic class.
 * **DSCP:** Differentiated Services Code Point. The marking of an IP packet that allows DiffServ
 * **PHB:** Per Hop Behavior. What a node should or shouldn't do with marked traffic.
+* **Queuing:** Holding a packet in memory, delaying transmission. Queuing is always expensive.
 * **LLQ:** Low latency queuing. Describes queue behavior for the EF PHB: never drop, never delay, send immediately, police aggressively.
 * **EF:** Expedited Forwarding. The highest tier of service for network data, that isn't control traffic.
-* **Control Traffic:** Usually CS6. These are either routing protocol packets (OSPF, IS-IS, BGP) or data-plane setup packets (IPSec, ISAKMP) 
+* **Control Traffic:** CS6. CS6 traffic is used to share topology information, eg. (OSPF, IS-IS, BGP)
+* **CAR:** Committed Access Rate. The agreed rate a traffic source will flow at, or violate it's SLA.
+* **SLA:** Service Level Agreement. SLAs are business agreements about data servicing requirements.
+* **WFQ:** Weighted Fair Queuing. The default strategy on links under 2Mbps. Sorts traffic into high bw and low bw classes.
+* **CBWFQ:** Class Based Weighted Fair Queuing, AKA, Modular QoS: multiple queues, bandwidth limits, and access to different kinds of queues, like LLQ.
+* **MQC:** Modular QoS CLI.
+* **PQ:** Priority Queue. A queue that is served first, even if other queues have been waiting longer.
 
 
 ### Type of Service
@@ -56,6 +65,23 @@ Drop
              ────────────►  Importance  to Business/Net work ───────────►   
 <pre>
 
+Again, with DSCP
+
+<pre>
+Drop                                                                        
+ Precedence      Class 1        Class 2        Class 3       Class 4        
+            ┌───────────────┬───────────────┬───────────────┬──────────────┐
+   Low    │ │ AF11  DSCP 10 │ AF21  DSCP 18 │ AF31  DSCP 26 │ AF41 DSCP 34 │
+   Medium │ │ AF12  DSCP 12 │ AF22  DSCP 20 │ AF32  DSCP 28 │ AF42 DSCP 36 │
+   High   ▼ │ AF13  DSCP 14 │ AF23  DSCP 22 │ AF33  DSCP 30 │ AF43 DSCP 38 │
+            └───────────────┴───────────────┴───────────────┴──────────────┘
+             ────────────►  Importance  to Business/Network ───────────►
+</pre>
+
+Yields the following formula.
+
+DSCP = 8 (class) + 2 (drop)
+
 ### QoS Consequences
 
 LAN QoS with voice (buffer management)
@@ -83,23 +109,24 @@ LAN QoS with voice (buffer management)
 
 </pre>
 
-# Modern QoS
 ### RFC 4594 — DiffServ Service Classes
+                                          
+| Service Class         | PHB  | DSCP     | Flow type        | Queue Strategy             |                                           |
+|-----------------------|------|----------|------------------|----------------------------|-------------------------------------------|
+| Network Control       | CS7  | 56       |                  |                            | (unused, reserved)                        |
+| Internetwork Control  | CS6  | 48       | Inelastic        | Vendor Controlled          | BGP, OSPF, IS-IS                          |
+| Telephony (VoIP)      | EF   | 46       | Inelastic        | Priority Queue (PQ)        | IP Phones                                 |
+| Broadcast Video       | CS5  | 40       | Inelastic        | Priority Queue (PQ)        | TV, Live Events, IP Surveillance Cameras  |
+| Real-Time Interactive | CS4  | 32       | Inelastic        | Priority Queue (PQ)        | Telepresence                              |
+| Multimedia Conf.      | AF4x | 34/36/38 | Rate-Adaptive    | BW Queue + DSCP WRED       | Softphone Video                           |
+| Multimedia Streaming  | AF3x | 26/28/30 | Elastic          | BW Queue + DSCP WRED       | Video Training                            |
+| Call Signaling        | CS3  | 24       | Elastic          | BW Queue                   | SCCP, SIP                                 |
+| OAM                   | CS2  | 16       | Elastic          | BW Queue                   | SNMP, Syslog, SSH                         |
+| Transactional Data    | AF2x | 18/20/22 | Elastic          | BW Queue + DSCP WRED       | ERP Apps, Business Apps, Ordering         |
+| Bulk Data             | AF1x | 10/12/14 | Elastic          | BW Queue + DSCP WRED       | CDN Data, Email, FTP, Backup Apps         |
+| Best Effort           | DF   | 0        | Elastic          | Default Queue + RED        | Undifferentiated                          |
+| Scavenger             | CS1  | 8        | Elastic          | Min BW Queue (Deferential) | YouTube, BitTorent, Xbox Live             |
 
-| Service Class         | PHB  | DSCP    | Admission Control | Queuing & AQM           |
-|-----------------------|------|---------|-------------------|-------------------------|
-| Telephony (VoIP)      | EF   | 46      | Required          | Priority Queue (PQ)     |
-| Broadcast Video       | CS5  | 40      | Required          | Priority Queue (PQ)     |
-| Real-Time Interactive | CS4  | 32      | Required          | Priority Queue (PQ)     |
-| Multimedia Conf.      | AF4x | 34/36/38| Required          | BW Queue + DSCP WRED    |
-| Multimedia Streaming  | AF3x | 26/28/30| Recommended       | BW Queue + DSCP WRED    |
-| Network Control       | CS6  | 48      | —                 | BW Queue                |
-| Call Signaling        | CS3  | 24      | —                 | BW Queue                |
-| OAM                   | CS2  | 16      | —                 | BW Queue                |
-| Transactional Data    | AF2x | 18/20/22| —                 | BW Queue + DSCP WRED    |
-| Bulk Data             | AF1x | 10/12/14| —                 | BW Queue + DSCP WRED    |
-| Standard / Best Effort| DF   | 0       | —                 | Default Queue + RED     |
-| Low-Priority Data     | CS1  | 8       | —                 | Min BW Queue (Deferential) |
 
 > Source: RFC 4594 (Aug 2006), updated by RFC 5865 and RFC 8622.
 > AF drop precedence: x1=low, x2=medium, x3=high drop probability.
