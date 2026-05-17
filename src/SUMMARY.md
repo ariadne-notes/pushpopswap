@@ -3,15 +3,16 @@
 
 ----
 
-# Networks
+# IPv4
 - [IPv4 Packet Header](ipv4-packet-header.md)
 - [IPv4 Address Planning](ipv4-address-planning.md)
-- [DNS](dns.md)
-- [QoS](qos.md)
-  - [Cisco IOS QoS Commands](cisco-ios-qos-commands.md)
-- [Classful Networking](classful-networking.md)
 - [RFC1918 Dungeons](rfc1918-dungeons.md)
+- [Classful Networking](classful-networking.md)
 
+# IPv6
+- [IPv6](ipv6.md)
+  - [IPv6 Hextext Boundaries](ipv6-hextet-boundaries.md)
+  
 # Subnetting
 - [with Fingers](subnet-with-fingers.md)
 - [with the Box Method](subnet-with-the-box-method.md)
@@ -25,6 +26,13 @@
   - [ARP Attacks](arp-attacks.md)
   - [DAI](dai.md)
   - [Proxy ARP](proxy-arp.md)
+
+# Network Services
+- [DNS](dns.md)
+
+# Quality of Service
+- [QoS](qos.md)
+  - [Cisco IOS QoS Commands](cisco-ios-qos-commands.md)
 
 # Enterprise Switchport Features
 - [Portfast](portfast.md)
@@ -72,8 +80,7 @@
 - [Policy Based Routing](policy-based-routing.md)
 
 
-# IPv6
-- [IPv6](ipv6.md)
+
 
 # Campus and Architecture
 - [Campus Architecture](campus-architecture.md)

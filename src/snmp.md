@@ -1,14 +1,14 @@
 # SNMPv3
+```
 snmp-server group SSG_PROMETHEUS v3 priv
 snmp-server user ciscosnmp SSG_PROMETHEUS v3 auth sha auth-password-goes-here priv aes 128 encryption-password-goes-here
+```
 
 # Using SNMP Walk to look at the OIDs
 
 `snmpwalk -Os -c`
 
-
 ### v2
-
 
 `snmpwalk -v2c -c <community> <host> 1.3.6.1.4.1.9.9.13`
 
