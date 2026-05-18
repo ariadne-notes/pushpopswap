@@ -99,8 +99,7 @@
 - [AAA with FreeRadius and Univention UCS](aaa-freeradius-and-univention-ucs.md)
 - [SNMP](snmp.md)
 
-# QoS and Timing
-- [QoS](qos.md)
+# Timing
 - [PTP](ptp.md)
 - [SyncE](synce.md)
 - [Flexible NetFlow](flexible-netflow.md)
