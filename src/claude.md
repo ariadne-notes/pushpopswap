@@ -39,8 +39,8 @@ I feed this into claude most of the time to get nice outputs to copy into gear f
 * OSPFv2 process id 1
 * OSPFv3 process id 1
 * Manually specify the router-id for both, as loopback 0.
-* Advertise all subnets into OSPFv2, under the interface use "ip 1 ospfv2 area 0"
-* Advertise all subnets into OSPFv3, under the interface use "ip 1 ospfv3 area 0"
+* Unless specified, advertise all subnets into OSPFv2, under the interface use "ip 1 ospfv2 area 0"
+* Unless specified, advertise all subnets into OSPFv3, under the interface use "ip 1 ospfv3 area 0"
 * Do not use OSPF network statements.
 * Passive interface on interfaces towards hosts, this goes under the router statements
 ```

@@ -47,7 +47,7 @@
       <td class="lsa-cell"><div class="lsa-box blocked"></div></td>
     </tr>
     <tr class="lsa-notes-row">
-      <td colspan="11">● <code>default-information originate [always]</code>, creates an E2 route.<br>● Can be linked to other areas via Virtual Links.</td>
+      <td colspan="11">● <code>default-information originate [always]</code>, creates an <code>O E2</code> route, Type 5.<br>● Can be linked to other areas via Virtual Links.</td>
     </tr>
     <!-- Regular Area -->
     <tr class="area-row">
@@ -81,7 +81,7 @@
       <td class="lsa-cell"><div class="lsa-box blocked"></div></td>
     </tr>
     <tr class="lsa-notes-row">
-      <td colspan="11">● Default route injected as an <code>O IA</code>, Type 3. </td>
+      <td colspan="11">● Default route injected as an <code>O IA</code>, Type 3.<br>● Other Type 3 blocked.</td>
     </tr>
     <!-- Totally Stubby -->
     <tr class="area-row">
@@ -115,7 +115,7 @@
       <td class="lsa-cell"><div class="lsa-box allowed"></div></td>
     </tr>
     <tr class="lsa-notes-row">
-      <td colspan="11">● Uses the N-Bit (NSSA) and P-Bit (propagate).<br>● Default route injectable by ABR via <code>area 3 nssa default-information-originate</code>. Default is a type 7. </td>
+      <td colspan="11">● Uses the N-Bit (NSSA) and P-Bit (propagate).<br>● Default route injectable by ABR via <code>area 3 nssa default-information-originate</code>. Default is a Type 7. </td>
     </tr>
     <!-- Totally Stubby NSSA -->
     <tr class="area-row">
@@ -132,7 +132,7 @@
       <td class="lsa-cell"><div class="lsa-box allowed"></div></td>
     </tr>
     <tr class="lsa-notes-row">
-      <td colspan="11">● ABR gets <code>no-summary</code>, which generates a Type 7 default route.<br>● Allows some external routes via LSA type 7.</td>
+      <td colspan="11">● ABR gets <code>no-summary</code>, which generates a Type 3 default route.<br>● Allows internally originated external routes via Type 7.</td>
     </tr>
   </tbody>
 </table>

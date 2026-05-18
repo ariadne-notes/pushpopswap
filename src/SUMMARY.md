@@ -68,6 +68,7 @@
   - [OSPF Router LSA](ospf-router-lsa.md)
   - [OSPF LSA Captures](ospf-lsa-captures.md)
   - [OSPF LSA Chart](ospf-lsa-chart.md)
+  - [OSPFv2 LSA Default Routes](ospfv2-lsa-default-route.md)
 - [BGP](bgp.md)
 - [EIGRP](eigrp.md)
   - [EIGRP Classic Metric](eigrp-classic-metric.md)
