@@ -1,5 +1,3 @@
-# Classful Networking
-
 <pre>
            ░██                                      ░████            ░██                                 
            ░██                                     ░██               ░██                                 

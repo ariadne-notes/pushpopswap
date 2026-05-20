@@ -12,7 +12,8 @@
 # IPv6
 - [IPv6](ipv6.md)
   - [IPv6 Hextext Boundaries](ipv6-hextet-boundaries.md)
-  - [IPv4 to IPV6 Migration Strategies.md](ipv4-to-ipv6-migration-strategies.md)
+  - [IPv4 to IPV6 Migration Strategies](ipv4-to-ipv6-migration-strategies.md)
+  - [ISATAP](isatap.md)
   - [NAT64](nat64.md)
   
 # Subnetting
