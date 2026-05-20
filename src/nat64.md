@@ -117,9 +117,8 @@ server:
 ```
 
 # Verification
-```
-IPv6-10:~$ dig 64lab.example.com +noall +answer
-64lab.example.com.        138     IN      A       10.0.0.20
+
+
 ```
 R1#show nat64 translations 
 
@@ -134,11 +133,6 @@ Total number of translations: 1
 ```
 
 > The WKP (Well Known Prefix) will not work toward RFC1918 addresses. You must configure a different /96.
-> ```
-> R1#show nat64 prefix stateful global
->
-> Global Stateful Prefix: is not valid
-> ```
 
 
 # References
