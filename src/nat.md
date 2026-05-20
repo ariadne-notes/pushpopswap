@@ -59,7 +59,7 @@ Packets to R3 will appear to be from `10.0.0.2`
            Inside ─────────┘    └─────── Outside        
 </pre>
 
-<pre>
+```
 !
 ! R1
 !
@@ -67,9 +67,6 @@ interface Ethernet0/0
  ip address 192.168.1.1 255.255.255.0
 !
 ip route 0.0.0.0 0.0.0.0 192.168.1.2
-</pre>
-
-<pre>
 !
 ! R2
 !
@@ -85,22 +82,18 @@ ip nat inside source list 1 interface Ethernet0/1 overload
 !
 ip access-list standard 1
  10 permit 192.168.1.0 0.0.0.255
-</pre>
-
-<pre>
 !
 ! R3
 !
 interface Ethernet0/1
  ip address 10.0.0.3 255.255.255.0
-
+!
 ip route 0.0.0.0 0.0.0.0 10.0.0.2
-</pre>
+```
 
 ## R2 Debugs during NAT
-Performed with the above configs via [CML](https://developer.cisco.com/modeling-labs/) IOL routers version 17.12.1.
 
-<pre>
+```
 R2# debug ip nat 1
 IP NAT debugging is on for access list 1
 
@@ -113,12 +106,6 @@ IP NAT debugging is on for access list 1
 R2# show ip nat translations
 Pro Inside global      Inside local       Outside local      Outside global
 icmp 10.0.0.2:1024     192.168.1.1:5      10.0.0.3:5         10.0.0.3:1024
-</pre>
+```
 
 [^source]: Source NAT, because the source address needs to be changed to access outside hosts. As packets move through the router, they will create entries for return packets.
-
-----
-
-v1.1 - Last edit 6-May-2025
-
-This work is dedicated to the Public Domain via [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
