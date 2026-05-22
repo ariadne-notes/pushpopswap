@@ -1,0 +1,1 @@
+[Chris's Blog - CCIE #65551](https://ccie.cknetworking.de/)

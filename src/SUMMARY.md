@@ -161,7 +161,7 @@
 - [Cisco Certifications](cisco-certifications.md)
 
 # Other blogs
-- [CCIE #65551 - CCIE Enterprise Blog](<https://ccie.cknetworking.de/>)
+- [Other Blogs](other-blogs.md)
 
 
 # Jokes
