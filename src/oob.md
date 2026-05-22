@@ -8,6 +8,8 @@
 * **Jump Server:** A special node approved to access in-band equipment.
 * **Zero Trust:** Assuming the network is alredy compromised.
 * **Remote Hands:** An on-site person, who can physicallly touch the equipment to plug and unplug cables.
+* **VRF:** Virtual Route Forwarding. A different routing table, not the global table.
+* **Segmentation:** Splitting the network into an in-band, and OOB network via VRFs.
 
 # In-Band Access Examples
 * Internet

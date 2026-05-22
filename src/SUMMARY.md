@@ -154,6 +154,15 @@
 - [FHRP](fhrp.md)
 - [BFD](bfd.md)
 - [LISP](lisp.md)
+- [Multihoming](multihoming.md)
+- [Network Management](network-management.md)
+
+# Certification Stuff
+- [Cisco Certifications](cisco-certifications.md)
+
+# Other blogs
+- [CCIE #65551 - CCIE Enterprise Blog](<https://ccie.cknetworking.de/>)
+
 
 # Jokes
 - [A Woman Calls TAC](joke-a-woman-calls-TAC.md)
