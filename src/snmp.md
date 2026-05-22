@@ -65,41 +65,33 @@ written out it looks like this...
 [OIDREF](https://oidref.com/1.3.6.1.4.1.9.9.109.1.1.1.1.7) shows the SNMP world OID tree.
 
 ```mermaid
-graph TD;
-    dot["."];
-    dot --> iso["iso (1)"];
-    iso --> mem["mem (2)"];
-    iso --> org["org (3)"];
-    org --> dod["dod (6)"];
-    dod --> internet["internet (1)"];
-    
-    internet --> mgmt["mgmt (2)"];
-    internet --> private["private (4)"];
-    
-    mgmt --> mib["mib (1)"];
-    private --> enterprise["enterprise (1)"];
-    
-    mib --> ip["IP (4)"];
-    mib --> tcp["TCP (6)"];
-    mib --> udp["UDP (7)"];
-    mib --> snmp["SNMP (11)"];
-    enterprise --> cisco["cisco (9)"];
-
-    cisco --> ciscoMgmt["ciscoMgmt (9)"];
-    cisco --> ciscoExperiment["ciscoExperiment (10)"];
-    cisco --> ciscoAdmin["ciscoAdmin (12)"];
-
-    ciscoMgmt --> ciscoIpMIB["ciscoIpMIB (101)"];
-    ciscoMgmt --> ciscoProcessMIB["ciscoProcessMIB (109) CISCO-PROCESS-MIB"];
-    ciscoMgmt --> ciscoMemoryPoolMIB["ciscoMemoryPoolMIB (48)"];
-
-    ciscoProcessMIB --> cpmCPU["cpmCPU (1)"];
-    cpmCPU --> cpmCPUTotalObjects["cpmCPUTotalObjects (1)"];
-    cpmCPUTotalObjects --> cpmCPUTotalTable["cpmCPUTotalTable (1)"];
-    cpmCPUTotalTable --> cpmCPUTotalEntry["cpmCPUTotalEntry (1)"];
-
-    cpmCPUTotalEntry --> cpmCPUTotal1minRev["cpmCPUTotal1minRev (7)"];
-
+graph TD
+    dot["."]
+    dot --> iso["iso (1)"]
+    iso --> mem["mem (2)"]
+    iso --> org["org (3)"]
+    org --> dod["dod (6)"]
+    dod --> internet["internet (1)"]
+    internet --> mgmt["mgmt (2)"]
+    internet --> private["private (4)"]
+    mgmt --> mib["mib (1)"]
+    private --> enterprise["enterprise (1)"]
+    mib --> ip["IP (4)"]
+    mib --> tcp["TCP (6)"]
+    mib --> udp["UDP (7)"]
+    mib --> snmp["SNMP (11)"]
+    enterprise --> cisco["cisco (9)"]
+    cisco --> ciscoMgmt["ciscoMgmt (9)"]
+    cisco --> ciscoExperiment["ciscoExperiment (10)"]
+    cisco --> ciscoAdmin["ciscoAdmin (12)"]
+    ciscoMgmt --> ciscoIpMIB["ciscoIpMIB (101)"]
+    ciscoMgmt --> ciscoProcessMIB["ciscoProcessMIB (109) CISCO-PROCESS-MIB"]
+    ciscoMgmt --> ciscoMemoryPoolMIB["ciscoMemoryPoolMIB (48)"]
+    ciscoProcessMIB --> cpmCPU["cpmCPU (1)"]
+    cpmCPU --> cpmCPUTotalObjects["cpmCPUTotalObjects (1)"]
+    cpmCPUTotalObjects --> cpmCPUTotalTable["cpmCPUTotalTable (1)"]
+    cpmCPUTotalTable --> cpmCPUTotalEntry["cpmCPUTotalEntry (1)"]
+    cpmCPUTotalEntry --> cpmCPUTotal1minRev["cpmCPUTotal1minRev (7)"]
     style mem                   fill:#ddd,color:#aaa,stroke:#ccc
     style mgmt                  fill:#ddd,color:#aaa,stroke:#ccc
     style mib                   fill:#ddd,color:#aaa,stroke:#ccc
@@ -111,34 +103,33 @@ graph TD;
     style ciscoAdmin            fill:#ddd,color:#aaa,stroke:#ccc
     style ciscoIpMIB            fill:#ddd,color:#aaa,stroke:#ccc
     style ciscoMemoryPoolMIB    fill:#ddd,color:#aaa,stroke:#ccc
-    
     style ciscoProcessMIB fill:#1a4a6b,color:#fff,stroke:#1a4a6b
 ```
 
-# SNMP Configs for Cisco 
+### Configs
 
-## SNMP v2
+**SNMP v2**
 ```
 snmp-server community SSG_PROMETHEUS ro
 ```
 
-## SNMPv3
+**SNMPv3**
 
 ```
 snmp-server group SSG_PROMETHEUS v3 priv
 snmp-server user ciscosnmp SSG_PROMETHEUS v3 auth sha auth-password-goes-here priv aes 128 encryption-password-goes-here
 ```
 
-# Verify
+### Verify
 
 These are performed on a linux host. This is `apt install snmp` on Debian.
 
-## SNMPv2
+**SNMPv2**
 ```
 snmpwalk -v2c -c <community> <host> 1.3.6.1.4.1.9.9.109.1.1.1.1.7
 ```
 
-### SNMPv3
+**SNMPv3**
 ```
 snmpwalk -v3 -l authPriv -u <user> -a SHA -A  <auth-password> -x AES -X <encryption-password> <host> 1.3.6.1.4.1.9.9.109.1.1.1.1.7
 ```
