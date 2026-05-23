@@ -50,7 +50,10 @@ Policies are further classified as
 * **Centralized Policy:** Route policy, before being sent to the edges, (Topology, VPN Membership, Application Aware Routing)
 
 # Application Aware Routing
-* If two edges connect to each other over dTLS, BFD is run over the tunnel.
+* **FEC:** Forward Error Correction. For every four packets, send a parity packet. It can help rebuild a lost packet.
+* **Packet Duplication:** Send twice as much data via two tunnels. The receiving vEdge router can reconstruct it.
+* **TCP Optimization and Session Persistence:** For high-latency links like satellite, open one TCP session, proxy it, and reuse it.
+* **Data Redundancy Elimination:** DRE. Modern compression to get more bandwidth from WAN links.
 * For AAR, or CoR, the edge will send HTTP probes and measure the jitter and/or loss.
 * The score for an app is the vQoS (Viptela Quality of Experience) from 0 to 10, 10 being best.
 
@@ -119,5 +122,8 @@ copy tftp://10.0.0.1:8000/<boot-strap>.cfg bootflash:/<bootstrap>.cfg
 ```
 
 **controller-mode enable**
+
+# References
+[Design Zone for Branch/WAN - Cisco Catalyst SD-WAN Design Guide - Cisco](<https://www.cisco.com/c/en/us/td/docs/solutions/CVD/SDWAN/cisco-sdwan-design-guide.html>)
 
 

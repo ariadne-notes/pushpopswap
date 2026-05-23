@@ -3,6 +3,10 @@
 
 ----
 
+# Studying
+- [How to Study](how-to-study.md)
+- [How to Take Notes](how-to-take-notes.md)
+
 # IPv4
 - [IPv4 Packet Header](ipv4-packet-header.md)
 - [IPv4 Address Planning](ipv4-address-planning.md)
@@ -104,6 +108,7 @@
 - [Cisco AAA](cisco-aaa.md)
 - [AAA and ISE](aaa-ise.md)
 - [Device Management](device-mgmt.md)
+- [Clouds](clouds.md)
 
 # Network Services
 - [ACLs](acls.md)

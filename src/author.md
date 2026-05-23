@@ -1,9 +1,7 @@
-This is just where I keep my network notes. Maybe you keep yours in a notebook, or a text file. Mine are just on this public webpage.
+I made this blog to help redo my CCNP.
 
-Some of this is copied from other sites (I try and cite those where possible) and other stuff is from lab reproductions.
+I've been in the Networking Industry since 2012.
 
-My test setup is a CML cluster.
-
-Contact Me
+This is my [Linkedin](https://www.linkedin.com/in/ariadnehaske/details/experience/)
 
 **Email:** ariadne@haske.org
