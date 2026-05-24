@@ -10,9 +10,7 @@ I do something like:
 1. Take more advanced notes documenting observations about behavior. Read source materials.
 1. Understand where this concept fits in with the rest of the related concepts ...
 
-it's iterative.  I don't do flashcards, it's not my vibe.
-
-![Bloom Revised Taxonomy](./images/bloom's_revised_taxonomy.svg)
+![Bloom Revised Taxonomy](./images/wikipedia/bloom's_revised_taxonomy.svg)
 Image by Tidema - [CC BY 4.0](https://commons.wikimedia.org/w/index.php?curid=152872571)
 
 # References
