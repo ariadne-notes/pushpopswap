@@ -3,35 +3,25 @@
 * Requires a Upstream DNS to respond with an A record, to the DNS64 server.
 * Requires a "Stateful Prefix"
 
-<pre>
-    PC             Server          Server       Router        Client   
-┌─────────┐      ┌────────┐      ┌───────┐      ┌────┐      ┌─────────┐
-│ IPV6-20 │      │ DNS-64 │      │ DNS-4 │      │ R1 │      │ IPV4-20 │
-└────┬────┘      └───┬────┘      └───┬───┘      └─┬──┘      └────┬────┘
-     │               │               │            │              │     
-     │ Request AAAA  │               │            │              │     
-     ├──────────────►│ Request A     │            │              │     
-     │               ├──────────────►│            │              │     
-     │               │               │            │              │     
-     │ Translate     │ Answer with A │            │              │     
-     │  to Synthetic │◄──────────────┤            │              │     
-     │    AAAA       │               │  Send to R1│              │     
-     │◄──────────────┤               │   inside of│              │     
-     │               │               │    v6 with │              │     
-     │               │               │     Prefix │              │     
-     ├───────────────┼───────────────┼───────────►│    Translate │     
-     │               │               │            │     to v4    │     
-     │               │               │            ├─────────────►│     
-     │               │               │            │              │     
-     │               │               │            │     Respond  │     
-     │Check          │               │            │      with v4 │     
-     │ Translations  │               │            │◄─────────────┤     
-     │  Send with v6 │               │            │              │     
-     │◄──────────────┼───────────────┼────────────┤              │     
-     │               │               │            │              │     
-</pre>
+```mermaid
+sequenceDiagram
+    participant PC as PC<br/>IPV6-20
+    participant DNS64 as Server<br/>DNS-64
+    participant DNS4 as Server<br/>DNS-4
+    participant R1 as Router<br/>R1
+    participant Client as Client<br/>IPV4-20
 
-# On the router
+    PC->>DNS64: Request AAAA
+    DNS64->>DNS4: Request A
+    DNS4-->>DNS64: Answer with A
+    DNS64-->>PC: Translate to Synthetic AAAA
+    PC->>R1: Send with v6 prefix
+    R1->>Client: Translate to v4
+    Client-->>R1: Respond with v4
+    R1-->>PC: Check Translations<br/>Reply with v6
+```
+
+# Config
 ```
 ipv6 unicast-routing
 !

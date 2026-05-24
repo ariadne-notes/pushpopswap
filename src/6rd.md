@@ -6,30 +6,33 @@
 * **NMS:** Network monitoring system. Needed for network health
 * **AAA:** Authentication, Authorization, Accounting. This is how the ISP controls who can access the network, and controls QoS Deployments.
 * **BR:** AKA, Border Relay. This node terminates the 6RD tunnels.
-* **v4 Common Prefix Mask:** 
 
-# WHat does 6RD Solve?
+# What does 6RD Solve?
 "We can't deploy v6, because our BNG does *<put-feature-here>* and we need that!
 
 This way, the customer gets dual stack without the ISP needing to upgrade a legacy deployment.
 
-```mermaid
-sequenceDiagram
-    participant PC as PC<br/>IPV6-20
-    participant DNS64 as Server<br/>DNS-64
-    participant DNS4 as Server<br/>DNS-4
-    participant R1 as Router<br/>R1
-    participant Client as Client<br/>IPV4-20
-
-    PC->>DNS64: Request AAAA
-    DNS64->>DNS4: Request A
-    DNS4-->>DNS64: Answer with A
-    DNS64-->>PC: Translate to Synthetic AAAA
-    PC->>R1: Send with v6 prefix
-    R1->>Client: Translate to v4
-    Client-->>R1: Respond with v4
-    R1-->>PC: Check Translations<br/>Reply with v6
-```
+<pre>
+     Customer's Home   ┌───────── 6RD Tunnel ────────────┐                  
+          v4/v6        │                                 │                  
+┌──────────────────────┼─┐   Legacy Access Network       │                  
+│┌──────────┐          │ │           v4 only             │                  
+││Customer  │          ▼ │┌────────────────────────────┐ ▼                  
+││ Equipment├──┐  ┌────┐ ││┌────────────┐  ┌──────────┐│ ┌────────┐         
+│└──────────┘  └──┤ISP ├─┼┼┤ Legacy ISP ├──┤Legacy ISP├┼─┤ 6RD    │         
+│┌──────────┐  ┌──┤ RG │ │││  Switches  │  │ BNG      ││ │  BR    │         
+││Customer  ├──┘  └────┘ ││└─┬──────────┘  └──────────┘│ └─────┬──┘         
+││ Equipment│            ││  │  ┌───────┐              │ ┌─────┴──┐         
+│└──────────┘            ││  ├──┤v4 NMS │              │ │ Core   │         
+└────────────────────────┘│  │  └───────┘              │ │        │         
+                          │  │  ┌───────┐              │ └─────┬──┘         
+                          │  ├──┤v4 AAA │              │ ┌─────┴──┐         
+                          │  │  └───────┘              │ │Internet│         
+                          │  │  ┌───────┐              │ │        │         
+                          │  └──┤v4 DHCP│              │ └────────┘         
+                          │     └───────┘              │                    
+                          └────────────────────────────┘                    
+</pre>
 
 # The four things Required to setup
 * **IPv4 Common Prefix:** - The high order bits every CE has in common for their v4 deployments.
