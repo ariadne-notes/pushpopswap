@@ -7,10 +7,10 @@
 
 ### TACACS+ Flows
 
-##### Authentication Flow
+#### Authentication Flow
 
 ![tacacs-plus-authentication-flows](./images/tacacs-plus-authentication-flows.png)
 
-##### Authorization and Accouting Flow
+#### Authorization and Accouting Flow
 
 ![tacacs-plus-auth-and-accounting-flows](./images/tacacs-plus-auth-and-accounting-flows.png)

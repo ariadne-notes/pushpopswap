@@ -13,7 +13,7 @@ This was done on a home lab running Debian 11. `tesseract` is my control-node.
 1. Use an Ansible playbook to ping the devices
 1. Use an Ansible playbook to upgrade the devices
 
-##### Add Ansible to Sources list
+#### Add Ansible to Sources list
 
 ```console
 $ echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/ansible.list
@@ -21,13 +21,13 @@ $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 $ sudo apt update
 ```
 
-##### Install Ansible
+#### Install Ansible
 
 ```console
 $ sudo apt install ansible
 ```
 
-##### Define hosts, Create Host file
+#### Define hosts, Create Host file
 
 Do not put special characters (like -) into the group names. Hosts should be FQDNs.
 
@@ -46,7 +46,7 @@ ariadne@tesseract:~/ansible$ cat /etc/ansible/hosts
 <hosts redacted>
 ```
 
-##### Define Defaults, Modify ansible.cfg
+#### Define Defaults, Modify ansible.cfg
 
 ```console
 ariadne@tesseract:/etc/ansible$ cat ansible.cfg 
@@ -57,7 +57,7 @@ host_key_checking = False
 remote_user = ariadne
 ```
 
-##### Create a public SSH key to allow passwordless access
+#### Create a public SSH key to allow passwordless access
 
 I'm using an internal linux host called `tesseract`. It doesn't use a password, it's a home lab.
 
@@ -65,7 +65,7 @@ I'm using an internal linux host called `tesseract`. It doesn't use a password, 
 ariadne@tesseract:~$ ssh-keygen -t rsa -b 4096 -C "ariadne@tesseract.haske.org"
 ```
 
-##### Write a playbook to copy the SSH keys
+#### Write a playbook to copy the SSH keys
 
 ```console
 ariadne@tesseract:~/ansible$ cat copy_ssh_keys_test.yml 
@@ -84,7 +84,7 @@ ariadne@tesseract:~/ansible$ cat copy_ssh_keys_test.yml
 
 ```
 
-##### Run it
+#### Run it
 
 ```console
 ariadne@tesseract:~/ansible$ ansible-playbook -k copy_ssh_keys.yml 
@@ -144,7 +144,7 @@ hosts.redacted    : ok=2    changed=0    unreachable=0    failed=0    skipped=0 
 hosts.redacted    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0     
 ```
 
-##### Write a Playbook to Upgrade Everything
+#### Write a Playbook to Upgrade Everything
 
 ```console
 ariadne@tesseract:~/ansible$ cat upgrade-everything.yml 
@@ -162,7 +162,7 @@ ariadne@tesseract:~/ansible$ cat upgrade-everything.yml
 
 ```
 
-##### Sources
+#### Sources
 
 https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-debian
 https://docs.ansible.com/ansible/latest/inventory_guide/connection_details.html

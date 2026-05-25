@@ -14,7 +14,7 @@ xTR for Site 2 - Lo0 19.19.19.19
 #### Site 1 - xTR
 
 
-##### config
+#### config
 
 ```console
 R18# show run | s lisp
@@ -27,7 +27,7 @@ router lisp
  exit
 ```
 
-##### verify
+#### verify
 
 
 ```console
@@ -44,7 +44,7 @@ LISP IPv4 Mapping Cache for EID-table default (IID 0), 2 entries
 #### Site 2 - xTR
 
 
-##### config
+#### config
 
 ```console
 R19# show run | s lisp
@@ -57,7 +57,7 @@ router lisp
  exit
 ```
 
-##### verify
+#### verify
 
 ```console
 R19#show ip lisp map-cache 
@@ -70,10 +70,10 @@ LISP IPv4 Mapping Cache for EID-table default (IID 0), 2 entries
   18.18.18.18  00:11:29  up           1/50
 ```
 
-##### MS/MR
+#### MS/MR
 
 
-###### config
+#### config
 
 ```console
 R16# show run | s lisp
@@ -93,7 +93,7 @@ router lisp
  exit
 ```
 
-##### verify
+#### verify
 
 ```console
 R16# show lisp site name 1

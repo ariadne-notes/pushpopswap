@@ -30,7 +30,8 @@ This document is built on labwork and *Interconnections*, See [1]
 - **TC Bit:** Topology Change. The root bridge sets the TC to tell other bridges to set their mac address tables to `max age`. This is inside a config BPDU.
 
 
-## How STP makes a loop free topology.
+## How STP makes a loop free topology
+
 
 
 STP elects root and designated ports, aka RP, and DPs. It also moves STP ports into Blocking.
@@ -75,7 +76,8 @@ STP elects root and designated ports, aka RP, and DPs. It also moves STP ports i
 
 - **Forward Delay** is typically 15 seconds. It's between off -> listening -> learning.
 
-## Device Priority.
+## Device Priority
+
 
 4 bits, goes in geometric sequence starting from 0 to 61440.
 
@@ -89,7 +91,8 @@ switch(config)# spanning-tree vlan 60 priority ?
 
 
 
-## Root bridges election in Spanning Tree.
+## Root bridges election in Spanning Tree
+
 
 Two bridges send each other BPDUs, they compare bridge IDs to see who will keep sending BPDUs
 
@@ -495,7 +498,7 @@ switch# show mac address-table aging-time
 Global Aging Time:  300
 ```
 
-##### Finding TCNs
+#### Finding TCNs
 
 ```console
 switch# show spanning-tree vlan 20 detail | s Spanning
@@ -512,7 +515,7 @@ switch# show spanning-tree vlan 20 detail | s Spanning
   Timers: hello 0, topology change 0, notification 0, aging 300
 ```
 
-##### On the device
+#### On the device
 
 ```console
 switch# show spanning-tree vlan 20 detail | i VLAN|transitions 
@@ -529,7 +532,7 @@ switch# show spanning-tree vlan 20 detail | i VLAN|transitions
    Number of transitions to forwarding state: 2
 ```
 
-##### In the logs
+#### In the logs
 
 ```console
 switch# show logging | i %LINK

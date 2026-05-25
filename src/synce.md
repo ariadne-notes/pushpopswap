@@ -14,12 +14,12 @@ Setting as oscillator to a frequency is syntonization.
 
 ### Config Options
 
-##### ITU-T G.813 Option 1 clock (QL-SEC)
+#### ITU-T G.813 Option 1 clock (QL-SEC)
 
 `EEC-option 1`
 
 
-##### ITU-T G.812 type IV clock (QL-ST3)
+#### ITU-T G.812 type IV clock (QL-ST3)
 
 
 `EEC-option 2`

@@ -29,7 +29,7 @@ UDP does try to send error-free packets by including a checksum, the below via t
 └────────────────────────────────►
 ```
 
-##### TFTP Read Request
+#### TFTP Read Request
 
 ```console
 Frame 115: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface -, id 0
@@ -49,7 +49,7 @@ Frame 115: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interfac
         Type: octet
 ```
 
-##### TFTP Data Packet
+#### TFTP Data Packet
 
 ```console
 Frame 116: 562 bytes on wire (4496 bits), 562 bytes captured (4496 bits) on interface

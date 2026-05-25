@@ -336,7 +336,8 @@ Copy the low order 23 bits directly from the v4 address.
    
 ```
 
-### Building the L2 Address.
+### Building the L2 Address
+
 
 Ethernet Multicast MAC Address
 
@@ -351,7 +352,8 @@ Ethernet Multicast MAC Address
                                       └─  Multicast requires this bit be 0
 ```        
 
-### Quirks and Tech Debt.
+### Quirks and Tech Debt
+
 
 Because we copied only 23 bits, vs 28 bits, we have 5 bits of overlap.
 
@@ -403,7 +405,8 @@ Address           Octet 1    Octet 2    Octet 3    Octet 4
 ```
 
 
-## Lab Stuff.
+## Lab Stuff
+
 
 
 BPF - Capture all PIM, but not PIM hello messages.

@@ -163,7 +163,8 @@ systemctl status freeradius
 freeradius -X
 ```
 
-## After it's working, RSYNC it.
+## After it's working, RSYNC it
+
 
 ```console
 rsync -av /etc/freeradius/3.0/clients.conf \

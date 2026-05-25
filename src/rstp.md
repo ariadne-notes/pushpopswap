@@ -64,7 +64,8 @@ No BPDUs being received? Wait for the forward delay, transition port to forwardi
 - The other side marks `Agree`
 
 
-## Fastest Scenario, the would-be DP is already transmitting.
+## Fastest Scenario, the would-be DP is already transmitting
+
 
 ```plain
 ┌─────────┐                      ┌─────────┐

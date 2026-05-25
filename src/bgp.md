@@ -87,7 +87,8 @@ On Cisco IOS `bgp soft-reconfig-backup` tells the router "if you must, save a en
 
 Soft reconfig is ancient, pre-RFC.
 
-#### Soft Reconfig via Route Refresh (trusting the other device)!
+#### Soft Reconfig via Route Refresh (trusting the other device)
+
 
 `clear ip bgp <neighbor_ip> soft in`[^clear-soft]
 
@@ -217,14 +218,15 @@ Only the route reflector is aware of the reflecting. The clients are dumb
 
 If you configure route reflectors as a cluster you must manually configure the `cluster_ID`
 
-##### BGP by default will summarize.
+#### BGP by default will summarize
+
 
 
 Use `no auto-summary`.
 
 Using redistribute under BGP will make the resulting route show up with an orign code of `incomplete`.
 
-##### Sending a default route
+#### Sending a default route
 
 `neighbor A.B.C.D default-originate`
 
@@ -256,29 +258,29 @@ Just because the route shows up in `show ip bgp` doesn't mean it will install. B
 #### Route Reflection
 
 
-##### Terms
+#### Terms
 
 - **Cluster List** - Router ID of the route Reflector. Used to prevent loops between RRs.
 - **Originator** - Route reflector peer.  Used to prevent loops between clients.
 
-##### Three rules for route reflectors
+#### Three rules for route reflectors
 
   - If the route is received from a non-client peer, reflect to clients only.
   - If the route is received from a client peer, reflect to non-client peers, and client peers.
   - If the route is received from an EBGP peer, reflect to all client and non-client peers.
 
-##### Notes
+#### Notes
 
 - Route reflectors can be clients of each other. This causes extra overhead.
 - If multiple route reflectors server the same cluster they should have the same `Cluster_ID`.
 
-##### BGP Route Reflectors Loop Prevention
+#### BGP Route Reflectors Loop Prevention
 
 - If a BGP router that receives a route from an iBGP neighbor in the incoming update detects the presence of its own Router-ID in the Originator-ID attribute it will reject the update.
 - If a BGP router that receives a route from an iBGP neighbor is configured to operate as a route reflector and in the incoming update detects the presence of its own `Cluster-ID` in the
   `Cluster-list` attribute it will reject the update.
 
-##### Confederations
+#### Confederations
 
 
 `NEXT_HOP` is preserved throughout the confederation.
@@ -292,7 +294,8 @@ Just because the route shows up in `show ip bgp` doesn't mean it will install. B
 `AS_PATH` for privates ASes is used within the confederation
 
 
-###### Force interior confederation MEDs to be considered:
+#### Force interior confederation MEDs to be considered
+
 
 `bgp deterministic-med`
 

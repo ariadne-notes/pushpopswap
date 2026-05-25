@@ -119,7 +119,8 @@ show tech-support routing bfd file
 
 ## IOS-XR Examples
 
-#####  Take the session down if latency grows to 150ms for a single echo packet.
+#### Take the session down if latency grows to 150ms for a single echo packet
+
 
 ```console
 bfd fast detect 
@@ -127,7 +128,8 @@ bfd multiplier 50
 echo latency detect
 ```
 
-##### Take the session down if latency grows to 300ms for a single echo packet.
+#### Take the session down if latency grows to 300ms for a single echo packet
+
 
 ```console
 bfd fast detect 
@@ -135,7 +137,7 @@ bfd multiplier 50
 bfd echo latency detect percentage 200
 ```
 
-##### Take the session down if the latency grows to 150ms for 3 consequitive echo packets
+#### Take the session down if the latency grows to 150ms for 3 consequitive echo packets
 
 ```console
 bfd fast detect
@@ -182,7 +184,7 @@ interface TenGig <>
 
 ## Enabling BFD on RSVP (IOS)
 
-###### A Config
+#### A Config
 
 ```console
 ip rsvp signalling bfd hello
@@ -194,7 +196,7 @@ int f0/0.45
  bfd interval 50 min_rx 50 multiplier 3
 ```
 
-###### Verification
+#### Verification
 
 
 `show ip rsvp hello bfd nbr`

@@ -152,14 +152,16 @@ router eigrp EIGRP_100
  exit-address-family
 ```
 
-### Using the old config, then having the box convert it for you.
+### Using the old config, then having the box convert it for you
+
 
 <pre>
 router eigrp 1
   eigrp upgrade-cli EIGRP_1
 </pre>
 
-### RIB Scaling.
+### RIB Scaling
+
 
 The Cisco RIB can only hold values that are unsigned 4 bytes. The EIGRP named metrics are 64-bit.
 

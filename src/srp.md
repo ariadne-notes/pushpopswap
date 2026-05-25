@@ -19,7 +19,8 @@ RPR - Resilient Packet Ring - 802.17
 
 Side A Always connects to Side B.
 
-## Example of a working connection.
+## Example of a working connection
+
 
 
 ```console
