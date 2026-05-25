@@ -1,10 +1,13 @@
-# Enable AAA
+# Cisco AAA
+
 `aaa new-model`
 
-# Local Database
+## Local Database
+
 Is usually the fallback.
 
-# Basic Config
+## Basic Config
+
 ```
 !
 ! The Radius Server
@@ -22,12 +25,14 @@ aaa authentication login default group radius local
 username admin privilege 15 secret 9 $9$BXZm9X.AvojmtP$LlbzicXZ..f7Y/J59M4cgmTMCdh89fVZj6AyaOYleCg
 ```
 
-# Config for the AAA Server
+## Config for the AAA Server
+
 AAA servers are sensitive to what IP is making the request. To make it easier, pick a loopback.
 
 `ip radius source-interface`, or `ip tacacs source-interface`
 
-# Debugs
+## Debugs
+
 
 ```
 debug aaa authentication

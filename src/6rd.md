@@ -1,4 +1,5 @@
-# Terms
+# 6RD
+
 * **6to4:** The base standard, requires a specific prefix.
 * **6RD:** The current standard, allows any global prefix.
 * **RG:** Router Gateway. The CPE the ISP provides to connect to their network.
@@ -7,34 +8,36 @@
 * **AAA:** Authentication, Authorization, Accounting. This is how the ISP controls who can access the network, and controls QoS Deployments.
 * **BR:** AKA, Border Relay. This node terminates the 6RD tunnels.
 
-# What does 6RD Solve?
+## What does 6RD Solve?
+
 "We can't deploy v6, because our BNG does *<put-feature-here>* and we need that!
 
 This way, the customer gets dual stack without the ISP needing to upgrade a legacy deployment.
 
 <pre>
-     Customer's Home   ┌───────── 6RD Tunnel ────────────┐                  
-          v4/v6        │                                 │                  
-┌──────────────────────┼─┐   Legacy Access Network       │                  
-│┌──────────┐          │ │           v4 only             │                  
-││Customer  │          ▼ │┌────────────────────────────┐ ▼                  
-││ Equipment├──┐  ┌────┐ ││┌────────────┐  ┌──────────┐│ ┌────────┐         
-│└──────────┘  └──┤ISP ├─┼┼┤ Legacy ISP ├──┤Legacy ISP├┼─┤ 6RD    │         
-│┌──────────┐  ┌──┤ RG │ │││  Switches  │  │ BNG      ││ │  BR    │         
-││Customer  ├──┘  └────┘ ││└─┬──────────┘  └──────────┘│ └─────┬──┘         
-││ Equipment│            ││  │  ┌───────┐              │ ┌─────┴──┐         
-│└──────────┘            ││  ├──┤v4 NMS │              │ │ Core   │         
-└────────────────────────┘│  │  └───────┘              │ │        │         
-                          │  │  ┌───────┐              │ └─────┬──┘         
-                          │  ├──┤v4 AAA │              │ ┌─────┴──┐         
-                          │  │  └───────┘              │ │Internet│         
-                          │  │  ┌───────┐              │ │        │         
-                          │  └──┤v4 DHCP│              │ └────────┘         
-                          │     └───────┘              │                    
-                          └────────────────────────────┘                    
+     Customer's Home   ┌───────── 6RD Tunnel ────────────┐
+          v4/v6        │                                 │
+┌──────────────────────┼─┐   Legacy Access Network       │
+│┌──────────┐          │ │           v4 only             │
+││Customer  │          ▼ │┌────────────────────────────┐ ▼
+││ Equipment├──┐  ┌────┐ ││┌────────────┐  ┌──────────┐│ ┌────────┐
+│└──────────┘  └──┤ISP ├─┼┼┤ Legacy ISP ├──┤Legacy ISP├┼─┤ 6RD    │
+│┌──────────┐  ┌──┤ RG │ │││  Switches  │  │ BNG      ││ │  BR    │
+││Customer  ├──┘  └────┘ ││└─┬──────────┘  └──────────┘│ └─────┬──┘
+││ Equipment│            ││  │  ┌───────┐              │ ┌─────┴──┐
+│└──────────┘            ││  ├──┤v4 NMS │              │ │ Core   │
+└────────────────────────┘│  │  └───────┘              │ │        │
+                          │  │  ┌───────┐              │ └─────┬──┘
+                          │  ├──┤v4 AAA │              │ ┌─────┴──┐
+                          │  │  └───────┘              │ │Internet│
+                          │  │  ┌───────┐              │ │        │
+                          │  └──┤v4 DHCP│              │ └────────┘
+                          │     └───────┘              │
+                          └────────────────────────────┘
 </pre>
 
-# The four things Required to setup
+## The four things Required to setup
+
 * **IPv4 Common Prefix:** - The high order bits every CE has in common for their v4 deployments.
 
 If every customer was given an IP on the 10.0.0.0/24 network, the bits they would have in common is `/24`.
@@ -45,7 +48,8 @@ If every customer was given an IP on the 10.0.0.0/24 network, the bits they woul
 
 (there is a neat way to derive the 6rd prefix, refer to Cisco's IOS-XE manual, that's closest to how it's done.)
 
-# Sample Config (from Cisco's PDF)
+## Sample Config (from Cisco's PDF)
+
 ```
 !
 ! This BR is reachable via the loopback.
@@ -76,7 +80,8 @@ Interface Tunnel0:
 
 
 
-# References
+## References
+
 [RFC 3056: Connection of IPv6 Domains via IPv4 Clouds | RFC Editor](https://www.rfc-editor.org/info/rfc3056/)
 
 [RFC 5969: IPv6 Rapid Deployment on IPv4 Infrastructures (6rd) -- Protocol Specification | RFC Editor](https://www.rfc-editor.org/info/rfc5969/)

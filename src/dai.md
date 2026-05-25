@@ -1,6 +1,7 @@
-Dynamic ARP Inspection
+# DAI
 
-# Minimum config
+## Minimum config
+
 
 ```
 ip dhcp snooping vlan 10
@@ -15,7 +16,8 @@ interface GigabitEthernet0/1
  ip dhcp snooping trust
 ```
 
-# Validation
+## Validation
+
 
 ```
 access-1# show ip dhcp snooping binding 
@@ -55,7 +57,8 @@ IP Address Validation      : Enabled
 
 ```
 
-# Reference
+## Reference
+
 [Cisco - Dynamic ARP Inspection](https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/sec-crypto/fhs-sisf/fhs-and-sisf-configuration-guide/dynamic-arp-inspection.pdf)
 
 [Practical Networking - Gratuitous ARP](https://www.practicalnetworking.net/series/arp/gratuitous-arp/)

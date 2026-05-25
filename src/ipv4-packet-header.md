@@ -1,4 +1,4 @@
-# IPv4 Header
+# IPv4 Packet Header
 
 ```mermaid
 packet
@@ -36,6 +36,7 @@ packet
 | **Padding**                       | Variable | Ensures the header ends on a 32-bit boundary. |
 
 ### Flags
+
 <pre>
   Flags:  3 bits
 

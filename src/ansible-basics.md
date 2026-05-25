@@ -1,4 +1,7 @@
+# Ansible Basics
+
 ### Basic Ansible
+
 This was done on a home lab running Debian 11. `tesseract` is my control-node.
 
 1. Add Ansible to Sources list
@@ -11,6 +14,7 @@ This was done on a home lab running Debian 11. `tesseract` is my control-node.
 1. Use an Ansible playbook to upgrade the devices
 
 ##### Add Ansible to Sources list
+
 ```
 $ echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/ansible.list
 $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
@@ -18,11 +22,13 @@ $ sudo apt update
 ````
 
 ##### Install Ansible
+
 ```
 $ sudo apt install ansible
 ```
 
 ##### Define hosts, Create Host file
+
 Do not put special characters (like -) into the group names. Hosts should be FQDNs.
 
 ```
@@ -41,6 +47,7 @@ ariadne@tesseract:~/ansible$ cat /etc/ansible/hosts
 ```
 
 ##### Define Defaults, Modify ansible.cfg
+
 ```
 ariadne@tesseract:/etc/ansible$ cat ansible.cfg 
 # [output omitted]
@@ -58,6 +65,7 @@ ariadne@tesseract:~$ ssh-keygen -t rsa -b 4096 -C "ariadne@tesseract.haske.org"
 ```
 
 ##### Write a playbook to copy the SSH keys
+
 ```
 ariadne@tesseract:~/ansible$ cat copy_ssh_keys_test.yml 
 ---
@@ -72,7 +80,9 @@ ariadne@tesseract:~/ansible$ cat copy_ssh_keys_test.yml
       state: present
       key: "{{ lookup(file, /home/ariadne/.ssh/id_rsa.pub) }}"
 ```
+
 ##### Run it
+
 ```
 ariadne@tesseract:~/ansible$ ansible-playbook -k copy_ssh_keys.yml 
 SSH password: 
@@ -130,7 +140,9 @@ hosts.redacted    : ok=2    changed=0    unreachable=0    failed=0    skipped=0 
 hosts.redacted    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 hosts.redacted    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0     
 ```
+
 ##### Write a Playbook to Upgrade Everything
+
 ```
 ariadne@tesseract:~/ansible$ cat upgrade-everything.yml 
 ---

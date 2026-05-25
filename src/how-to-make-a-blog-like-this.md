@@ -1,3 +1,5 @@
+# How to Make a Blog Like This
+
 * Create an account on [Github](https://github.com/)
 * Write articles with [Markdown](https://www.markdownguide.org/basic-syntax/)
 * Learn [Git Fundamentals](https://www.youtube.com/results?search_query=git+fundamentals)
@@ -9,7 +11,8 @@
 
 I am a **very** heavy AI user. I used Claude Sonnet 4.6 to help figure this out.
 
-# Notes
+## Notes
+
 
 The preprocessor for mdBook in this install relies on [mermaid.js](https://mermaid.js.org/), a binary file that needs to be copied to the root of the repo.
 ```

@@ -1,3 +1,5 @@
+# ARP
+
 Captured on-wire.
 
 <pre>
@@ -5,7 +7,8 @@ packet #1 - who has 10.0.6.10? Tell 10.0.0.20
 packet #2 - 10.0.0.10 is at ce:b1:5f:58:1d:8a
 </pre>
 
-# ARP Request
+## ARP Request
+
 
 <pre>
 > Ethernet II
@@ -27,7 +30,8 @@ packet #2 - 10.0.0.10 is at ce:b1:5f:58:1d:8a
     Target IP address: 10.0.0.10
 </pre>
 
-# ARP Reply
+## ARP Reply
+
 
 <pre>
 > Ethernet II

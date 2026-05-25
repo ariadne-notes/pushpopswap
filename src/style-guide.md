@@ -1,4 +1,4 @@
-# Style
+# Style Guide
 
 term A
   : This is a definition of term A. Text
@@ -13,7 +13,8 @@ term B
 
 **A** --- This is about A
 
-# Admonish
+## Admonish
+
 
 > [!NOTE]
 > `[!NOTE]` General information or additional context.
@@ -30,7 +31,8 @@ term B
 > [!CAUTION]
 > `[!CAUTION]` Information about potential issues that require caution.
 
-# Footnote
+## Footnote
+
 ```
 This is an example of a footnote[^note].
 
@@ -38,5 +40,6 @@ This is an example of a footnote[^note].
     towards the bottom.
 ```
 
-# Reference
+## Reference
+
 [Markdown - mdBook Documentation](https://rust-lang.github.io/mdBook/format/markdown.html)

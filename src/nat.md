@@ -1,4 +1,4 @@
-# NAT is Context Sensitive
+# NAT
 
 We specify an `inside` and `outside` network, so we can do one or both transforms.
 
@@ -6,23 +6,25 @@ We specify an `inside` and `outside` network, so we can do one or both transform
 * **Destination** NAT, where we modify the DA (Destination Address)
 
 <pre>
-         Inside   Outside                                                 
-       ┌────────┬────────┐                                                
-       │Inside  │Outside │                                                
-Local  │   Local│   Local│  ──► How it appears crossing our network       
-       ├────────┼────────┤                                                
-Global │Inside  │Outside │                                                
+         Inside   Outside
+
+       ┌────────┬────────┐
+       │Inside  │Outside │
+Local  │   Local│   Local│  ──► How it appears crossing our network
+       ├────────┼────────┤
+Global │Inside  │Outside │
        │  Global│  Global│  ──► How it appears out on the Internet
-       └───┬────┴───┬────┘                                                
-           │        │                                                     
-           │        └─────────► Destination NAT                           
-           │                                                              
-           │                                                              
-           └──────────────────► Source NAT                                
+       └───┬────┴───┬────┘
+           │        │
+           │        └─────────► Destination NAT
+           │
+           │
+           └──────────────────► Source NAT
 </pre>
 
 
-# Translation
+## Translation
+
 
 <pre>
                     INSIDE NETWORK                                   OUTSIDE NETWORK
@@ -43,20 +45,23 @@ Global │Inside  │Outside │
 
 Based on a diagram [here.](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/13772-12.html)
 
-# NAT Overload - Port Address Translation or PAT
+## NAT Overload - Port Address Translation or PAT
 
-This is Source NAT.[^source] 
+
+This is Source NAT.[^source]
+
 
 Packets to R3 will appear to be from `10.0.0.2`
 
 <pre>
-          192.168.0.0/24             10.0.0.0/24        
+          192.168.0.0/24             10.0.0.0/24
+
 ┌────┐.1                 .2┌────┐.2             .1┌────┐
 │ R1 │─────────────────────│ R2 │─────────────────│ R3 │
 └────┘E0/0             E0/0└────┘E0/1         E0/1└────┘
-                           ▲    ▲                       
-                           │    │                       
-           Inside ─────────┘    └─────── Outside        
+                           ▲    ▲
+                           │    │
+           Inside ─────────┘    └─────── Outside
 </pre>
 
 ```

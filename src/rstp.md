@@ -1,6 +1,7 @@
-# Terms
+# RSTP
 
-* **Discarding:** ports are on, but not forwarding data traffic. Might be receiving BPDUs. STP states: Disabled, blocking and listening. 
+* **Discarding:** ports are on, but not forwarding data traffic. Might be receiving BPDUs. STP states: Disabled, blocking and listening.
+
 
 * **Learning:** ports are on, the switch is building the CAM table. The only forwarding is control traffic.
 
@@ -22,7 +23,8 @@
 
 * **Agree Bit:** Tells the other side, "yeah, I agree" the other side immediately moves into forwarding.
 
-# Packet Headers
+## Packet Headers
+
 ```
 Spanning Tree Protocol
     Protocol Identifier: Spanning Tree Protocol (0x0000)
@@ -47,7 +49,8 @@ Spanning Tree Protocol
     Version 1 Length: 0
 ```
 
-# Proposal
+## Proposal
+
 
 Like 802.1D, we have BPDUs. To speed things up some logic has been added.
 
@@ -56,6 +59,7 @@ Is this port full-duplex? If so, it's point-to-point, and if so, there is a RP a
 No BPDUs being received? Wait for the forward delay, transition port to forwarding.
 
 ## Proposal Bit
+
 - One side marks `Propose`
 - The other side marks `Agree`
 
@@ -80,9 +84,11 @@ No BPDUs being received? Wait for the forward delay, transition port to forwardi
      │                                │     
 ```
 
-# Captures
+## Captures
+
 [RSTP-initial-bringup-fastest.pcap](./captures/switching/RSTP-initial-bringup-fastest.pcap)
 
-# References
+## References
+
 
 https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/24062-146.html

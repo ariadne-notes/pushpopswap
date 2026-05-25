@@ -1,4 +1,4 @@
-# EIGRP 32-bit Classic Metric Calculator
+# EIGRP Classic Metric
 
 The RFC recommended way to modify a path with EIGRP is **changing the delay**, under the interface. This will not impact other protocols. Modifying bandwidth ... affects lots of things!
 
@@ -105,8 +105,9 @@ function update(){
 
   const bw_term    = Math.trunc(1e7 / bw);
 
-  const bw_warn = bw >= 10000000 
-  ? ' ⚠️ saturated — classic metric cannot differentiate above 10G' 
+  const bw_warn = bw >= 10000000
+
+  ? ' ⚠️ saturated — classic metric cannot differentiate above 10G'
   : '';
 
   const delay_tens = delay_us / 10;
@@ -235,6 +236,7 @@ RFC 7868                      Cisco's EIGRP                     May 2016
 </pre>
 
 ## Validation
+
 <pre>
 R1# show ip protocols | i weight
     Metric weight K1=2, K2=2, K3=2, K4=0, K5=0
@@ -255,5 +257,6 @@ EIGRP-IPv4 Topology Entry for AS(100)/ID(1.1.1.1) for 10.0.0.0/8
         Originating router is 2.2.2.2
 </pre>
 
-# References
+## References
+
 [RFC 7868 - Cisco's Enhanced Interior Gateway Routing Protocol (EIGRP)](https://www.rfc-editor.org/rfc/rfc7868.html#section-5.6.2.1)

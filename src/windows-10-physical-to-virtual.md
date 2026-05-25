@@ -1,4 +1,4 @@
-# Windows 10 P2V - Physical to Virtual
+# Windows 10 Physical to Virtual
 
 ## My Setup
 
@@ -32,6 +32,7 @@ A lot of this is to enable a clean "recovery" of the OS once it's copied over. M
 * [MSR](https://en.wikipedia.org/wiki/Microsoft_Reserved_Partition)
 
 ## Dataloss
+
 **These tools cause dataloss.**
 
 **A typo will destroy a filesystem.**
@@ -71,57 +72,73 @@ My Windows 10 machine had some extras on it I didn't want to virtualize.
 1. Turn off the hibernation file
 
    Via the command prompt as an administrator:
-   
+
+
    `powercfg -h off`
-   
+
+
 1. Clean up the hard disk
 
    Into the search box type:
-   
+
+
    `Disk Cleanup`
-   
+
+
 1. Set the virtual memory pagefile to 1024MB
 
    A file of this size is needed for coredumps, errors, and logging.
-   
+
+
    Follow these [instructions.](https://www.tenforums.com/tutorials/77692-manage-virtual-memory-pagefile-windows-10-a.html)
-   
+
+
 1. (Optional) Run *WinDirStat* to look for odd or large files
 
    Delete or Uninstall them.
 
    [Windows Directory Statistics - WinDirStat](https://windirstat.net/)
-   
+
+
 1. Run `chkdsk` on C:
 
    Via the command prompt as an administrator:
-   
+
+
    `chkdsk C: /R`
-   
+
+
    `/R` - "Locates bad sectors and recovers readable information (implies /F, when /scan not specified)"
-   
+
+
    Reboot
-   
+
+
 1. (Optional) - Create another restore point with Clonezilla
 
    This is the **cleaned** image, to save all the clean up work.
-   
+
+
 1. Boot GParted
 
    This is where it gets dangerous. GParted can be used to resize offline NTFS partitions.
-   
+
+
 1. Resize the "Basic data partition"
 
    My data partition was 410GiB. I resized it down to 48GiB. The data on the partition is 25GiB.
-   
+
+
 1. Move the "Recovery" partition
 
    I used the GUI to slide it over.
-   
+
+
 1. Save your work with GParted
 
    Click the green checkmark. This writes the changes to disk.
-   
+
+
 1. Boot into Windows 10
 
    Check to make sure the OS is still sane. Does the Internet work?
@@ -131,20 +148,26 @@ My Windows 10 machine had some extras on it I didn't want to virtualize.
    This is done to make sure the filesystem is OK.
 
    Via the command prompt as an administrator:
-   
+
+
    `chkdsk C: /R`
-   
+
+
    `/R` - "Locates bad sectors and recovers readable information (implies /F, when /scan not specified)"
-   
+
+
    Reboot
-   
+
+
 1. (Optional) - Create another restore point with Clonezilla
 
    This is the **prepared** image.
-   
+
+
 1. Boot into SystemRescue
 
-   
+
+
 ## Creating the Virtual Machine
 
 I used PVE - [Proxmox Virtual Environment](https://www.proxmox.com/en/proxmox-virtual-environment/overview) as my hypervisor. Any hypervisor should work.
@@ -168,13 +191,16 @@ There are four partitions on my windows 10 machine. I want to copy them over-the
    * Created a GPT Partition Table
    * Copied the partitions including the start and stop sectors, **exactly.**
    * Copied the flags
-   
+
+
    I started with four partitions on both and ended with four partitions. They all fit on this smaller disk.
-   
+
+
 1. *Destination* - Turn off the firewall
 
    `systemctl stop iptables`
-   
+
+
 1. *Destination* - Get the IP Address
 
    `ip a`
@@ -182,55 +208,70 @@ There are four partitions on my windows 10 machine. I want to copy them over-the
 1. *Destination* - Turn on the small service netcat
 
    This needs to be done for each partition, one at a time.
-   
+
+
    `nc -l -p 19000 | bzip2 -d | dd of=/dev/sda1`
-   
+
+
 1. *Source* - Redirect dd into bzip into netcat, throw traffic at the Destination
 
    This needs to be done for each partition, one at a time.
 
    `dd bs=16M if=/dev/nvme0n1p1 | bzip2 -c | nc <ip_address> <port>`
-   
+
+
 ## Windows 10 Recovery
 
 I went from a NVMe drive to a IDE drive. I still needed to recover the bootdata.
-   
+
+
 1. *Destination* - Load the ISO for the Windows Recovery Environment.
 
    Click `Repair your computer`
-   
+
+
    Click `Troubleshoot`
-   
+
+
    Click `Command Prompt`
-   
+
+
 I followed [this guide](https://woshub.com/how-to-repair-uefi-bootloader-in-windows-8/) to repair the boot info.
 
 1. Look at the new VM disk
 
    `diskpart`
-   
+
+
    This leads to the `DISKPART>` prompt.
-   
+
+
 1. Verify the disk is GPT.
 
    Under "GPT" there should be a star.
-   
+
+
 1. Select Disk 0
 
    This is the only hard disk in this VM.
-   
+
+
    `sel disk 0`
 
 1. List the partitions and Volumes
 
    This is the windows equivalant to fdisk.
-   
+
+
    `list partition`
-   
+
+
    `list volume`
-   
+
+
    This is my lab system.
-   
+
+
    ```
    DISKPART> list partition 
 
@@ -248,11 +289,14 @@ I followed [this guide](https://woshub.com/how-to-repair-uefi-bootloader-in-wind
       Volume 1    C                   NTFS    Partition     46 GB     Healthy  
       Volume 2                        FAT32   Partition    100 MB     Healthy     Hidden
    ```
-   
+
+
    There are the three required volumes.
-   
+
+
    * **NTFS** - The data partition, apps and the OS
-   * **EFI** - Extensible Firmware Interface. Where the modern boot system lives. Usually 100MB, FAT32 
+   * **EFI** - Extensible Firmware Interface. Where the modern boot system lives. Usually 100MB, FAT32
+
    * **MSR** - Microsoft System Reserved. Usually 16MB formatted as "MSR". Used by Windows to help manage the file partitions
 
 At this point,  I could just follow along with the Windows OS Hub article, to restore the BCD bootloader configuration.

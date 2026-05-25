@@ -1,8 +1,12 @@
+# SRP
+
 SRP - Spatial Reuse protocol. This is used for fiber rings, its where the destination nodes pulls the info from the ring so it doesn't loop endlessly.
 
 Spatial Reuse Protocol (SRP) is a media-independent MAC layer protocol that operates over two counter rotating
-  fiber-optic rings. The dual rings provide survivability of data in case of a failed node or a break in 
-  connecting cables by rerouting the data path over the alternate ring. SRP provides a more efficient use of 
+  fiber-optic rings. The dual rings provide survivability of data in case of a failed node or a break in
+
+  connecting cables by rerouting the data path over the alternate ring. SRP provides a more efficient use of
+
   bandwidth by having packets traverse only the part of the ring necessary to get to the destination node. Once
   the packet has reached the destination node, it is removed from the ring, allowing other parts of the ring
   to reuse the bandwidth. Data packets travel on one ring, while associated control packets travel in the opposite
@@ -15,7 +19,8 @@ RPR - Resilient Packet Ring - 802.17
 
 Side A Always connects to Side B.
 
-# Example of a working connection.
+## Example of a working connection.
+
 
 ```
 router # show controller srp 4/0
@@ -72,5 +77,6 @@ IPS BER thresholds(B3):   SF = 10e-3  SD = 10e-6
 TCA thresholds:           B1 = 10e-6  B2 = 10e-6  B3 = 10e-6
 ```
 
-# References
+## References
+
 [Spatial Reuse Protocol - Wikipedia](https://en.wikipedia.org/wiki/Spatial_Reuse_Protocol)

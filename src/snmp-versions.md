@@ -1,4 +1,7 @@
+# SNMP Versions
+
 ## SNMPv1
+
 * Cleartext
 * Uses a community string for a basic password
 
@@ -14,6 +17,7 @@
 * Trap
 
 ## SNMPv2
+
 * Cleartext
 * Uses a community string for a basic password
 
@@ -24,6 +28,7 @@
 
 
 ## SNMPv3
+
 This is the recommended version to make changes via SNMP.
 
 | Security Level | Authentication | Encryption | Credentials Required           |

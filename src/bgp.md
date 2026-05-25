@@ -1,4 +1,6 @@
-## ASN 
+# BGP
+
+## ASN
 
 16-bit ASN - 65,535
 32-bit ASN - 4,294,967,295
@@ -9,7 +11,8 @@
 
 * 4,200,000,000 – 4,294,967,294
 
-# Requesting an ASN
+## Requesting an ASN
+
 
 IANA asks for the following things.
 * Proof of a publicly allocated network range
@@ -17,7 +20,9 @@ IANA asks for the following things.
 * Need for a unique routing policy from providers
 
 ## BGP Path Attributes
-[RFC 4271 - BGP-4](https://www.rfc-editor.org/rfc/rfc4271#section-5) 
+
+[RFC 4271 - BGP-4](https://www.rfc-editor.org/rfc/rfc4271#section-5)
+
 
 - Well-known mandatory
 - Well-known discretionary
@@ -38,20 +43,24 @@ IANA asks for the following things.
 | CLUSTER_LIST       | Optional Non-Transitive   |
 
 ## BGP Uses TCP
+
 - Port 179
 - BGP is sensitive to IP fragmentation
 
 ## Session Types
+
 - iBGP Administrative distance of 200
 - eBGP Administrative distance of 20
 
 ### eBGP
+
 - TTL is set to 1.
 - Next-hop is set to what the BGP source connection IP is.
 - Check if the current AS_PATH has our AS.
 - Prepend AS into AS_PATH
 
-# BGP Packet Types
+## BGP Packet Types
+
 | Type | Name | Functional Overview |
 |------|--------------|--------------------------------------------------|
 | 1    | OPEN         | initial bringup                                  |
@@ -60,11 +69,13 @@ IANA asks for the following things.
 | 4    | KEEPALIVE    | Makes sure everything is OK                      |
 
 ## Theory
+
 - BGP works on the premise that if a router sees its own AS path, it must be a loop.
 - The default timer is 60 seconds with 180 seconds for hold time. This means worst-case is 3 minutes to fail-over.
 - BGP `aggregate-address` only works if there is a subnet inside the aggregate range in BGP.
 
 #### Working with BGP
+
  - Only consider traffic in one direction at a time
  - Accepting a route will affect outgoing traffic
  - Advertising a route will affect incoming traffic
@@ -91,6 +102,7 @@ These read left to right like a book. This prefix was most recently from AS `701
 ```
 
 ### BGP Best Path Selection
+
 ```
 - Higher Weigth                                       
 - Higher Local Preference                            
@@ -117,6 +129,7 @@ IGP > EGP > Incomplete
 - Incomplete means its likely a redistributed route
 
 ### Next Hop
+
 1. eBGP, routers in different AS, destination outside AS.  The Next hop will be the advertising router.
 1. iBGP, routers in same AS,      destination inside AS.   The Next hop will be the advertising router.
 1. iBGP, routers in same AS,      destination outside AS.  The Next hop is the external peer who advertised the address.
@@ -126,14 +139,17 @@ IGP > EGP > Incomplete
 - Tell the AS border router to change the next hop to its own IP address. [next-hop-self]
 
 ### LOCAL_PREF
+
 - Controls traffic Outgoing traffic.
 - Only shared between iBGP peers, used to determine the exit. Higher is better.
 
 ### MULTI_EXIT_DISC
+
 - Controls incoming traffic.
 - Lower is better
 
 ### ATOMIC_AGGREGATE
+
 BGP can aggregate smaller prefixes into larger ones even if a smaller prefix comes from a different AS.
 
 A router in AS 105 gets these prefixes from its peers.
@@ -150,9 +166,11 @@ If the administrator chooses, they can aggregate this, but lose path information
 Downstream peers can not remove this tag
 
 ### AGGREGATOR
+
 AS and Router ID of the BGP router that did the atomic aggregation.
 
 ### COMMUNITY
+
 Usually used to tag routes from a specific customer.
 
 Tag | Purpose
@@ -162,22 +180,27 @@ NO_EXPORT    | Do not share with other ASes
 NO_ADVERTISE | Do not share with other routers
 LOCAL_AS     | ????
 
-### ORIGINATOR_ID 
+### ORIGINATOR_ID
+
+
 For route reflectors
 The origaning router puts its `Router_ID` here. If it sees this, it knows a loop as occured.
 
 ### CLUSTER_LIST
+
 * A route reflector (RR) and its clients are called a cluster.
 - For route reflectors
 - The sequence of `Router_IDs` through which the route has passed. If a router seeis its Router_ID a loop has occured.
 
 ### WEIGHT
+
 - Cisco specific & this router only
 - Routes learned are 0
 - Locally generated routes are 32768
 
 #### Route Reflectors
-	
+
+
 A RR will not change any attributes of a route.
 - If a route is learned from a non-client iBGP peer, reflect to clients
 - If a route is learned from a client, reflect to everyone
@@ -187,21 +210,27 @@ Only the route reflector is aware of the reflecting. The clients are dumb
 
 If you configure route reflectors as a cluster you must manually configure the `cluster_ID`
 
-##### BGP by default will summarize. 
+##### BGP by default will summarize.
+
+
 Use `no auto-summary`.
 
 Using redistribute under BGP will make the resulting route show up with an orign code of `incomplete`.
 
 ##### Sending a default route
-`neighbor A.B.C.D default-originate` 
+
+`neighbor A.B.C.D default-originate`
+
 
 To get iBGP routers to update the next-hop to be themselves when advertising to other iBGP routers use
 
-`neighbor A.B.C.D next-hop-self` 
+`neighbor A.B.C.D next-hop-self`
+
 
 This makes it so other iBGP routers don't need reachability information for the physical link to the next AS.
 
 #### BGP Finite State Machine
+
 * **Idle** -  check the config
 * **Connect** -  TCP is probably broken
 * **Active** -  Listening for TCP
@@ -218,35 +247,46 @@ Just because the route shows up in `show ip bgp` doesn't mean it will install. B
 3. Use a route-map to set the next hops.
 
 #### Route Reflection
+
+
 ##### Terms
+
 * **Cluster List** - Router ID of the route Reflector. Used to prevent loops between RRs.
 * **Originator** - Route reflector peer.  Used to prevent loops between clients.
 
 ##### Three rules for route reflectors
+
   - If the route is received from a non-client peer, reflect to clients only.
   - If the route is received from a client peer, reflect to non-client peers, and client peers.
   - If the route is received from an EBGP peer, reflect to all client and non-client peers.
 
 ##### Notes
+
 - Route reflectors can be clients of each other. This causes extra overhead.
 - If multiple route reflectors server the same cluster they should have the same `Cluster_ID`.
 
 ##### BGP Route Reflectors Loop Prevention
+
 - If a BGP router that receives a route from an iBGP neighbor in the incoming update detects the presence of its own Router-ID in the Originator-ID attribute it will reject the update.
 - If a BGP router that receives a route from an iBGP neighbor is configured to operate as a route reflector and in the incoming update detects the presence of its own `Cluster-ID` in the
   `Cluster-list` attribute it will reject the update.
 
 ##### Confederations
-	
+
+
 `NEXT_HOP` is preserved throughout the confederation.
 
 `MED` is preserved for routes advertised into the confederation
-	
+
+
 `LOCAL_PREF` is preserved throughout the confederation
-	
+
+
 `AS_PATH` for privates ASes is used within the confederation
- 
+
+
 ###### Force interior confederation MEDs to be considered:
+
 `bgp deterministic-med`
 
 Route Reflectors are generally preferred.
@@ -256,7 +296,8 @@ IF you want to add two BGP speakers to the same router reflector cluster, specif
 
 ### BGP redistribution into anything
 
-# References
+## References
+
 
 B. Edgeworth, R. Garza Rios, J. Gooley, and D. Hucaby, *CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide*, 2nd ed. Indianapolis, IN: Cisco Press, 2023.
 

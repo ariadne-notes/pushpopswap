@@ -1,4 +1,4 @@
-# Stateful Switchover.
+# SSO
 
 <pre>
 ┌──────────────────────┐
@@ -27,7 +27,8 @@ With multiple RPs, if one RP has a catastrophic failure, the other RP can take o
 
 To get zero packet loss during a RP failure, without notifying the peer or dropping any packets, these three technologies are required (SSO + NSR + NSF).
 
-# Terms
+## Terms
+
 * **RIB:** Routing Information Base. This is where the RP stores its routes.
 * **FIB:** Forwarding Information Base. This is the information necessary to program the linecard to pass traffic.
 * **SSO:** Stateful Switchover. The RPs sync with each other and share state, (hopefully) enough state to prevent traffic disruption.
@@ -38,43 +39,46 @@ To get zero packet loss during a RP failure, without notifying the peer or dropp
 * **EoR:** End-of-RIB. This means the neighbor has shared the its entire routing table.
 
 ## Graceful Restart
+
 * **Restart Timer:** If I drop the BGP session, Please wait this long before you stop forwarding me my traffic. (Default is 2 minutes)
 * **Stale Timer:** Once I send an open message, that means I'm working, so please give me this long before flushing my routes. (Default is 6 minutes)
 
 ## Graceful Restart Mechanics
+
 This is a BGP Example.
 
 <pre>
-     ┌───────────────────┐                 ┌────────────────┐                  
-     │ GR-Capable Router │                 │  GR-Aware Peer │                  
-     └───────────────────┘                 └────────┬───────┘                  
-              │                                     │                          
-              │◄─── OPEN with GR Capability ───────►│                          
- Router       │                                     │                          
- Restart  ───►│                                     │                          
-              │                                     │                          
-   * Send     │                                     │ * Acknowledge restart    
-     Restart  ├─── OPEN with Restart Bit Set ──────►│ * Mark routes stale      
-     Notif.   │                                     │ * Start Restart Timer    
-              │                                     │ * GR-Aware Peer in "helper mode"                        
-              │◄── OPEN with Capability ───────────►│                          
-              │                                     │                          
-* Session     │                                     │                          
-  Established │──────── BGP Hello ─────────────────►│ * Stop Restart Timer     
-              │                                     │ * Start Stale-Path Timer 
-              │                                     │                          
-              │◄──── Send Initial Updates + EoR ────┤                          
-              │                                     │                          
-    * Best    │                                     │                          
-      Path    │                                     │ * Stop Stale-Path Timer  
-      Select  │──────── Send Updates + EoR ───────► │ * Delete stale prefixes  
-      on EoR  │                                     │ * Refresh with new ones  
-              │                                     │                          
-              │           *** CONVERGED ***         │                          
+     ┌───────────────────┐                 ┌────────────────┐
+     │ GR-Capable Router │                 │  GR-Aware Peer │
+     └───────────────────┘                 └────────┬───────┘
+              │                                     │
+              │◄─── OPEN with GR Capability ───────►│
+ Router       │                                     │
+ Restart  ───►│                                     │
+              │                                     │
+   * Send     │                                     │ * Acknowledge restart
+     Restart  ├─── OPEN with Restart Bit Set ──────►│ * Mark routes stale
+     Notif.   │                                     │ * Start Restart Timer
+              │                                     │ * GR-Aware Peer in "helper mode"
+              │◄── OPEN with Capability ───────────►│
+              │                                     │
+* Session     │                                     │
+  Established │──────── BGP Hello ─────────────────►│ * Stop Restart Timer
+              │                                     │ * Start Stale-Path Timer
+              │                                     │
+              │◄──── Send Initial Updates + EoR ────┤
+              │                                     │
+    * Best    │                                     │
+      Path    │                                     │ * Stop Stale-Path Timer
+      Select  │──────── Send Updates + EoR ───────► │ * Delete stale prefixes
+      on EoR  │                                     │ * Refresh with new ones
+              │                                     │
+              │           *** CONVERGED ***         │
 </pre>
 
 
-# References
+## References
+
 [Cisco - Introduction to HA Technologies: SSO/NSF with GR and/or NSR](https://archive.nanog.org/meetings/nanog42/presentations/Weissner_SSO.pdf)
 
 [Graceful Restart Mechanism for BGP](https://datatracker.ietf.org/doc/html/rfc4724)

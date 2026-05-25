@@ -1,4 +1,4 @@
-# Terms
+# AAA and ISE
 
 * **RADIUS** - Remote Authentication Dial-In User Service. Created to provide AAA for ISP users, or Dial-In for businesses.
 * **TACACS** - Terminal Access Controller Access-Control System. An AAA protocol to provide support for authenticate once, authorize many.
@@ -8,8 +8,10 @@
 ### TACACS+ Flows
 
 ##### Authentication Flow
+
 ![tacacs-plus-authentication-flows](./images/tacacs-plus-authentication-flows.png)
 
 ##### Authorization and Accouting Flow
+
 ![tacacs-plus-auth-and-accounting-flows](./images/tacacs-plus-auth-and-accounting-flows.png)
 

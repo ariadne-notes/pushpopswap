@@ -1,4 +1,5 @@
-# From the RFC
+# MSDP
+
 ```
 MSDP [Multicast Source Discovery Protocol] - Connecting PIM Sparse-Mode Domains
 
@@ -36,16 +37,19 @@ anycast-RP without external MSDP peering is a valid deployment
 option and common.
 ```
 
-# Startup
+## Startup
+
 
 1. Multicast source starts up.
 2. FHR router sends a register message to the closest RP.
-3. RP registers this as a SA (Source Active). 
+3. RP registers this as a SA (Source Active).
+
 4. Sends Source Active Messages to other RPs
 
 (*,G) means there is an interested receiver.
 
-# MSDP Configuration Example
+## MSDP Configuration Example
+
 ```
 !
 ! RP1

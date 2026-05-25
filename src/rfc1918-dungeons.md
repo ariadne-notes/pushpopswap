@@ -1,3 +1,5 @@
+# RFC1918 Dungeons
+
 When the Internet was first envisioned, the designers thought everyone would get a publicly routable address.
 
 My entire house shares 1 v4 Public IP address, which I'm thankful for.
@@ -8,7 +10,8 @@ These are called "Dungeon" Addresses because they can't be pinged on the Interne
 
 It was (and stil is!) a very contentious design decision.
 
-These are also the most famous IPv4 networks. 
+These are also the most famous IPv4 networks.
+
 
 
 ```
@@ -25,5 +28,6 @@ RFC 1918        Address Allocation for Private Internets   February 1996
 
 ```
 
-# References
+## References
+
 [RFC 1918 - Address Allocation for Private Internets](https://www.rfc-editor.org/rfc/rfc1918)

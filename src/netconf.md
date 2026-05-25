@@ -1,4 +1,5 @@
-# Config
+# NETCONF
+
 ```
 conf t
 aaa new-model
@@ -11,7 +12,8 @@ username admin privilege 15 secret cisco123
 netconf-yang
 ```
 
-# Validate
+## Validate
+
 ```
 restconf-router#show netconf-yang status 
 netconf-yang: enabled
@@ -19,7 +21,8 @@ netconf-yang ssh port: 830
 netconf-yang candidate-datastore: disabled
 ```
 
-# Setting an IP address
+## Setting an IP address
+
 
 I performed this lab inside a linux virtual environment.
 
@@ -81,5 +84,6 @@ python
 <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:5edcd8ca-3e51-4581-8bce-87f7eb939735" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"><ok/></rpc-reply>
 ```
 
-# Reference
+## Reference
+
 [Programmability Configuration Guide, Cisco IOS XE 17.17.x](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/1717/b_1717_programmability_cg/m_1717_prog_restconf.html)

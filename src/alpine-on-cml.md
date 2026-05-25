@@ -1,4 +1,5 @@
-# Alpine Hosts
+# Alpine on CML
+
 ```
 USERNAME=cisco
 PASSWORD=cisco
@@ -8,7 +9,8 @@ ip address add 10.0.20.20/24 dev eth0
 ip route add default via 10.0.20.1
 ```
 
-# Setting Addresses after it's booted.
+## Setting Addresses after it's booted.
+
 ```
 cat > /etc/local.d/ipv6.start << 'EOF'
 #!/bin/sh
@@ -19,7 +21,8 @@ EOF
 chmod +x /etc/local.d/ipv6.start
 ```
 
-# Setting DNS
+## Setting DNS
+
 ```
 cat > /etc/local.d/dns.start << 'EOF'
 #!/bin/sh

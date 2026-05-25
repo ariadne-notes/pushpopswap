@@ -1,4 +1,4 @@
-# Mutual Route-Redistribution
+# Route Redistribution with Tags
 
 * Tag EIGRP as 100
 * TAG OSPF as 1

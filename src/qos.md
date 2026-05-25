@@ -1,4 +1,5 @@
-# Terms
+# QoS
+
 * **FIFO:** First in, First out. The default behavior of an network node processing IP traffic.
 * **Differentiated Services:** AKA, DiffServ. Giving packet flows different levels of network service, based on classification.
 * **Integrated Services:** AKA, IntServ. Packet flows explicitly reserve bandwidth along a path, via admission control.
@@ -19,31 +20,40 @@
 
 
 ### Type of Service
+
 How these 8 bits get used has changed over the years.
 
 <pre>
-                   0 1 2 3 4 5 6 7 
+                   0 1 2 3 4 5 6 7
+
                   ┌─────┬─────┬─┬─┐
    RFC 791 (1981) │IP Pr│ ToS │0│0│
                   └─────┴─────┴─┴─┘
-                                   
-                   0 1 2 3 4 5 6 7 
+
+
+                   0 1 2 3 4 5 6 7
+
                   ┌─────┬───────┬─┐
   RFC 1349 (1992) │IP Pr│  TOS  │0│
                   └─────┴───────┴─┘
-                                   
-                   0 1 2 3 4 5 6 7 
+
+
+                   0 1 2 3 4 5 6 7
+
                   ┌───────────┬─┬─┐
   RFC 2474 (1998) │    DSCP   │0│0│
                   └───────────┴─┴─┘
-                                   
-                   0 1 2 3 4 5 6 7 
+
+
+                   0 1 2 3 4 5 6 7
+
                   ┌───────────┬───┐
   RFC 3168 (2001) │    DSCP   │ECN│
                   └───────────┴───┘
 </pre>
 
 ### Assured Forwarding
+
 [Assured Forwarding PHB Group](https://datatracker.ietf.org/doc/html/rfc2597)
 
 AF uses the first 6 bits to create 4 traffic classes, 4 is best.
@@ -55,21 +65,25 @@ Used for RED, or WRED.
 Four AF classes, each should get it's own resources.
 
 <pre>
-Drop                                                                        
- Precedence      Class 1        Class 2        Class 3       Class 4        
+Drop
+
+ Precedence      Class 1        Class 2        Class 3       Class 4
+
             ┌───────────────┬───────────────┬───────────────┬──────────────┐
    Low    │ │ AF11  001 010 │ AF21  010 010 │ AF31  011 010 │ AF41 100 010 │
    Medium │ │ AF12  001 100 │ AF22  010 100 │ AF32  011 100 │ AF42 100 100 │
    High   ▼ │ AF13  001 110 │ AF23  010 110 │ AF33  011 110 │ AF43 100 110 │
             └───────────────┴───────────────┴───────────────┴──────────────┘
-             ────────────►  Importance  to Business/Net work ───────────►   
+             ────────────►  Importance  to Business/Net work ───────────►
 <pre>
 
 Again, with DSCP
 
 <pre>
-Drop                                                                        
- Precedence      Class 1        Class 2        Class 3       Class 4        
+Drop
+
+ Precedence      Class 1        Class 2        Class 3       Class 4
+
             ┌───────────────┬───────────────┬───────────────┬──────────────┐
    Low    │ │ AF11  DSCP 10 │ AF21  DSCP 18 │ AF31  DSCP 26 │ AF41 DSCP 34 │
    Medium │ │ AF12  DSCP 12 │ AF22  DSCP 20 │ AF32  DSCP 28 │ AF42 DSCP 36 │
@@ -90,7 +104,8 @@ LAN QoS with voice (buffer management)
  * Two voice packets, audio clip, fax call disconnection.
  * VoIP QoS cannot be fixed by adding bandwidth. You simply cannot drop these
  * packets.
- 
+
+
 #### QoS Commands
 
 | Command | Description |
@@ -100,6 +115,7 @@ LAN QoS with voice (buffer management)
 
 
 ### PHB - Per Hop Behaviors
+
 | PHB | Name | Description |
 |--------|-----------------------|---|
 | **CS** | Class Selector        | CS0 to CS7, backward compatible with IP Precedence |
@@ -110,7 +126,8 @@ LAN QoS with voice (buffer management)
 </pre>
 
 ### RFC 4594 — DiffServ Service Classes
-                                          
+
+
 | Service Class         | PHB  | DSCP     | Flow type        | Queue Strategy             |                                           |
 |-----------------------|------|----------|------------------|----------------------------|-------------------------------------------|
 | Network Control       | CS7  | 56       |                  |                            | (unused, reserved)                        |
@@ -131,5 +148,6 @@ LAN QoS with voice (buffer management)
 > Source: RFC 4594 (Aug 2006), updated by RFC 5865 and RFC 8622.
 > AF drop precedence: x1=low, x2=medium, x3=high drop probability.
 
-# References
+## References
+
 [An Architecture for Differentiated Services](https://www.rfc-editor.org/rfc/rfc2475)

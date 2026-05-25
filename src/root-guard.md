@@ -1,3 +1,5 @@
+# Root Guard
+
 Rootguard is an alternative to BPDU guard, when the port needs to participate in BPDUs, but should never receive a superior BPDU.
 
 Normally SW1 is the root bridge
@@ -26,7 +28,8 @@ interface 1
   spanning tree guard root
 ```
 
-# Verification
+## Verification
+
 
 ```
 sw1# show spanning-tree 
@@ -49,7 +52,8 @@ Gi0/0               Desg BKN*4         128.1    P2p *ROOT_Inc
 Gi0/2               Desg BKN*4         128.3    P2p *ROOT_Inc 
 ```
 
-# Logs
+## Logs
+
 ```
 *May  3 20:14:45.169: %SPANTREE-2-ROOTGUARD_BLOCK: Root guard blocking port GigabitEthernet0/0 on VLAN0001.  
 ```

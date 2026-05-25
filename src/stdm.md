@@ -1,4 +1,4 @@
-# Terms
+# STDM
 
 * **STDM** - Synchronous Time-Division Multiplexing
 * **DS0** - Level 0. One timeslot. A timeslot carries 8 bits. Frame rate is 8000 hz. 8 * 8000 = 64Kbps.
@@ -13,13 +13,15 @@
 
 The common STDM system in the US is T-Carrier.
 
-# Cisco CEM Terms
+## Cisco CEM Terms
+
 
 * **ACR** - Adaptive Clock Recovery, A technique to recovery the clock based on the fill level of the jitter buffer.
 
 ## Access Circuit Redundancy
 
-# References
+## References
+
 
 [T-Carrier and SONET](https://pld.cs.luc.edu/telecom/mnotes/tcarrier_sonet.html)
 

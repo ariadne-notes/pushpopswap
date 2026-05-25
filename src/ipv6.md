@@ -1,4 +1,4 @@
-# Why?
+# IPv6
 
 * 128 bits, more space.
 * Globally Unique, less need for NAT.
@@ -15,7 +15,8 @@
 
 An IPv6 address is 128 bits.
 
-# Header
+## Header
+
 
 RFCs really like groups of 32
 
@@ -49,7 +50,8 @@ RFC 2460                   IPv6 Specification              December 1998
 └───────────────────────────────────────────────────────────────┘
 </pre>
 
-# Bits
+## Bits
+
 Addresses are 128 bits.
 
 A standard IPv6 address takes this form.
@@ -64,5 +66,6 @@ The groups are called *hextets*, as they are made with hex characters.
 - Each `0xFF` is 8 bites, or a byte.
 - Each `0xF` is 4 bits, or a  nibble.
 
-# References
+## References
+
 [RFC 2460 - Internet Protocol, Version 6 (IPv6)](https://www.rfc-editor.org/rfc/rfc2460)

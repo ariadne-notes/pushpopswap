@@ -1,4 +1,4 @@
-# Broadcast Network, with a DR
+# OSPF Router LSA
 
 **DR**
 

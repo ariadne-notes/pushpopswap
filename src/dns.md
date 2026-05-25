@@ -1,3 +1,5 @@
+# DNS
+
 DNS uses TCP and UDP.
 
 * UDP, for user queries

@@ -1,3 +1,5 @@
+# OS Architecture
+
 #### IO Pathways
 
 Device controller tells the CPU it's done (put data into a buffer) by sending an interrupt.
@@ -15,17 +17,21 @@ Traps or exceptions are software generated interrupts
 
 Most operating systems are interrupt driven.
 
-# Storage Structures
+## Storage Structures
+
 
 ### Main Memory (DRAM)
+
 * Random Access
 * Lost with power outage (volatile)
 
 ### Secondary Storage
+
 * Larger
 * Not lost with power outage (non-volatile)
 
 ### Caching
+
 Copying data from secondary storage to main memory
 * Faster
 
@@ -33,21 +39,27 @@ Storage Hierarchy
 Registers > cache > main memory (dram) > solid-state disks > spinning disks > optical disks > magnetic tapes.
 
 ### Direct Memory Access (DMA)
+
 Some amount of DRAM is owned directly by an IO controller, and uses the DRAM for the buffer.
 When done, the IO controller sends an interrupt.
 
-# Processing
+## Processing
+
 * **Asymmetric** - each processor does a specific task.
 * **Symmetric** - each processor performs all tasks.
 
-## Multithreading 
+## Multithreading
+
+
 While one thread is asking for memory, execute the other thread. Go back and forth.
 
 ## Dual Mode
+
 User mode and Kernel mode, with a mode bit.
 Kernel mode is also called privileged.
 
 #### System Calls
+
 System calls are how user mode apps interact with the kernel.
 APIs are provided facilities to access the kernel without using system calls (which may not be allowed)
 * Win32 for Windows
@@ -55,12 +67,15 @@ APIs are provided facilities to access the kernel without using system calls (wh
 * Java API for Java Virtual Machine (JVM)
 
 ## Load Averages
+
 Windows will show a percentage of CPU. Linux systems instead show the number of processes waiting to acces the CPU. It can get to double digits.
 
 ## Threading
+
 A single-thread process has a program counter that says "go here to read the next instruction please"
 
 ## Memory Management
+
 Copying from storage into dram, into cache. Only stuff in L1 cache can be executed.
 
 ```
@@ -90,7 +105,8 @@ Copying from storage into dram, into cache. Only stuff in L1 cache can be execut
 
 Source [Stack Overflow](https://stackoverflow.com/questions/4087280/approximate-cost-to-access-various-caches-and-main-memory)
 
-# Debugging
+## Debugging
+
 
 Kernighan's Law
 
@@ -99,14 +115,18 @@ Kernighan's Law
 
 Write easy to understand code, planning on future debugging.
 
-# Communications Models
+## Communications Models
+
 ## Message Passing (modern)
+
 * Puts messages into a shared queue, gives it a number, tell the other app "Go read this message"
 
 ## Shared Memory (ancient)
+
 * Applications can just overwrite each others data.
 
-# Scheduling
+## Scheduling
+
 * **FCFS** - First come First Served. Not really used anymore
 * **SJF** - Shortest Job first, kind-of how QoS works.
 * **Priority** - Give processes an integer, rank them.
@@ -117,16 +137,20 @@ Write easy to understand code, planning on future debugging.
 
 
 ### Multilevel Queue - Done in Linux
+
 * Foreground, Background
   * Foreground gets 80% as RR
 
 * Background
   * FCFS
   
-# Process Environment
-* Argument vector - the command line arguments used to invoke the running program
-* Environment vector - the list of "NAME=VALUE" pairs 
+## Process Environment
 
-# Static and Dynamic Linking
+* Argument vector - the command line arguments used to invoke the running program
+* Environment vector - the list of "NAME=VALUE" pairs
+
+
+## Static and Dynamic Linking
+
 * **Static** - the library functions are embedded in the executable.
 * **Dynamic** - the library functions are at a place in memory, and shared.

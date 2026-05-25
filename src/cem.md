@@ -1,4 +1,4 @@
-# Circuit Emulation (CEM)
+# Circuit Emulation
 
 ## Key Terms
 
@@ -49,6 +49,7 @@
 > Creating a `channel-group` under a T1 controller automatically creates the associated **serial interface**.
 
 ## Clock Distribution
+
 - The hub router owns the clock
 - The spoke router recovers the clocks from `0/0/0`
 - The spoke router uses that clock, to sync lines `0/0/1, 0/1/0, and `0/1/1`

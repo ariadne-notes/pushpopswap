@@ -1,3 +1,5 @@
+# OSPF LSAs
+
 Type 1 and Type 2 describe what's inside an area.
 
 Type 1 - Here are my links.
@@ -6,7 +8,9 @@ Type 2 - Here is my attached network.
 
 
 
-# Type 1 - Router 
+## Type 1 - Router
+
+
 
 **DR**
 
@@ -63,7 +67,8 @@ R4#show ip ospf database router 4.4.4.4
 **DR Describing the network
 
 
-# Type 2 - Network
+## Type 2 - Network
+
 
 ```
 R4# show ip ospf database network 

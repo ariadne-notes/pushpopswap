@@ -1,4 +1,5 @@
-# Topology
+# OSPFv2 LSA Default Routes
+
 <pre>
                     Regular              ┌────┐
               ┌──────────────────────────┤ R3 │ Type 5
@@ -17,9 +18,11 @@
                                          └────┘
 </pre>
 
-# Outputs
+## Outputs
+
 
 ## IPv4 - Type 3
+
 ```
 R2# show ip ospf database summary 0.0.0.0 self-originate 
 
@@ -68,6 +71,7 @@ R2# show ip ospf database summary 0.0.0.0 self-originate
 ```
 
 ## IPv4 - Type 5
+
 ```
 R2# show ip ospf database external 0.0.0.0 self-originate 
 
@@ -92,6 +96,7 @@ R2# show ip ospf database external 0.0.0.0 self-originate
 ```
 
 ## IPv4 - Type 7
+
 ```
 R2# show ip ospf database nssa-external 0.0.0.0 self-originate
 

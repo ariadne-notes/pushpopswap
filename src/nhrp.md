@@ -1,4 +1,4 @@
-# Terms
+# NHRP
 
 * **NHRP:** NBMA Next-Hop Resolution Protocol
 
@@ -12,9 +12,11 @@
 
 * **Protocol Address:** AKA, overlay address. This is what the client asks for. For a point-to-multipoint cloud, this is usually a subnet.
 
-# Config
+## Config
+
 
 ### Hub
+
 <pre>
 interface Tunnel1
  ip address 192.168.100.1 255.255.255.0
@@ -28,6 +30,7 @@ interface Tunnel1
 </pre>
 
 ### Spoke
+
 <pre>
 interface Tunnel1
  ip address 192.168.100.2 255.255.255.0
@@ -44,12 +47,14 @@ interface Tunnel1
 </pre>
 
 
-# Verification
+## Verification
+
 
 This hub knows about two sites, that have dynamically registered their NBMA addresses.
 
 <pre>
-hub# show ip nhrp brief    
+hub# show ip nhrp brief
+
 ****************************************************************************
     NOTE: Link-Local, No-socket and Incomplete entries are not displayed
 ****************************************************************************
@@ -62,10 +67,13 @@ Intf     NextHop Address                                    NBMA Address
          Target Network                              T/Flag
 -------- ------------------------------------------- ------ ----------------
 Tu1      192.168.100.2                                      10.0.120.2
-         192.168.100.2/32                            D/r   
+         192.168.100.2/32                            D/r
+
 Tu1      192.168.100.3                                      10.0.130.3
-         192.168.100.3/32                            D/r   
+         192.168.100.3/32                            D/r
+
 </pre>
 
-# References
+## References
+
 [NBMA Next Hop Resolution Protocol](https://www.rfc-editor.org/rfc/rfc2332)

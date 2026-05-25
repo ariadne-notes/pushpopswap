@@ -1,8 +1,11 @@
+# Subnetting with the Box Method
+
 For visual learners.
 
 For a `/24` network, thats 256 addresses, or ... this box.
 
-# Start with a /24
+## Start with a /24
+
 Write the first IP in the top corner, the last IP in the bottom corner.
 
 <pre>
@@ -28,7 +31,8 @@ Write the first IP in the top corner, the last IP in the bottom corner.
 └─────────────────────────────────┘
 </pre>
 
-# Cut it in half
+## Cut it in half
+
 
 Write the last number in the bottom corner, next number in the top corner.
 
@@ -57,7 +61,8 @@ Write the last number in the bottom corner, next number in the top corner.
 
 Two `/25` networks.
 
-# Cut part in half again
+## Cut part in half again
+
 
 <pre>
 ┌────────────────┬────────────────┐
@@ -86,7 +91,8 @@ Two `/25` networks.
 - Two `/26` networks.
 
 
-# Cut part in half again
+## Cut part in half again
+
 
 <pre>
 ┌───────┬────────┬────────────────┐
@@ -114,29 +120,30 @@ Two `/25` networks.
 - One `/25`
 - Four `/27`
 
-# Cut part in half again
+## Cut part in half again
+
 
 <pre>
-┌───────┬────────┬────────────────┐ 
-│0      │32      │128             │ 
-│       │        │                │ 
-│       │        │                │ 
-│       │        │                │ 
-│       │        │                │ 
-│       │        │                │ 
-│       │        │                │ 
-│     31│      63│                │ 
-├───────┼────────┤                │ 
-│64     │92      │                │ 
-│       │        │                │ 
-│       │        │                │ 
-│     79│     107│                │ 
-├───────┼────────┤                │ 
-│80     │108     │                │ 
-│       │        │                │ 
-│       │        │                │ 
-│     91│     127│             255│ 
-└───────┴────────┴────────────────┘ 
+┌───────┬────────┬────────────────┐
+│0      │32      │128             │
+│       │        │                │
+│       │        │                │
+│       │        │                │
+│       │        │                │
+│       │        │                │
+│       │        │                │
+│     31│      63│                │
+├───────┼────────┤                │
+│64     │92      │                │
+│       │        │                │
+│       │        │                │
+│     79│     107│                │
+├───────┼────────┤                │
+│80     │108     │                │
+│       │        │                │
+│       │        │                │
+│     91│     127│             255│
+└───────┴────────┴────────────────┘
 </pre>
 
 - One `/25`

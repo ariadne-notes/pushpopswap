@@ -1,6 +1,9 @@
+# OSPF
+
 OSPF is protocol 89.
 
-# Terms
+## Terms
+
 
 * **IFF** -- If and only if
 * **LSA** --Link State Advertisement
@@ -14,7 +17,8 @@ OSPF is protocol 89.
 * **LS Checksum** -- Used to ensure the LSA was transmitted without corruption. Everything is checked **except** LS Age.
 * **LS Age** -- LSAs time out in an hour, and are refreshed every 30 minutes. LSA Age increments when they go through routers.
 
-# Packet Types
+## Packet Types
+
 
 | Type | Name | Purpose |
 |------|------|---------|
@@ -32,7 +36,8 @@ These can be thought of as the five steps.
 4. You tell me how it went.
 5. To make sure I really got it, I'll repeat it word-for-word.
 
-# Hello Packets
+## Hello Packets
+
 These things must match for an adjacency to form
 - Subnet
 - Subnet mask
@@ -70,7 +75,8 @@ Open Shortest Path First
       Active Neighbor: 5.5.5.5
 ```
 
-# OSPF Adjacency State Machine
+## OSPF Adjacency State Machine
+
 
 | State | Description |
 | ----------- |-------------|
@@ -82,7 +88,8 @@ Open Shortest Path First
 | Loading     | Router DB has been exchanged, router is requesting specific LSAs. |
 | Full        | LSDBs for this area are identical on both sides. |
 
-# DR and BDR
+## DR and BDR
+
 
 OSPF uses explicit acknowledgments (re-sending the LSAs), so as neighbors and adjacencies grow, the amount of OSPF traffic on a network increases.
 
@@ -132,7 +139,8 @@ Neighbor ID     Pri   State           Dead Time   Address         Interface
 
 * First router online on the segment is the DR.
 
- 
+
+
 ### Drother
 
 - Only forms full adjacencies with the DR, and BDR.
@@ -155,7 +163,8 @@ These are sent by the DR to describe the routers on this segment.
 
 See [OSPF LSAs](./ospf-lsas.md) to see what the actual contents of the LSA.
 
-# Identical Databases
+## Identical Databases
+
 
 Each router can perform it's own SPT via [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm).
 
@@ -194,7 +203,8 @@ Can also check with [checksums](https://en.wikipedia.org/wiki/Fletcher%27s_check
 
 `show ip ospf | i Checksum`
 
-# LSAs
+## LSAs
+
 
 The Router ID is what is used to build the SPT. It's very important it's both
 - Correct
@@ -219,7 +229,8 @@ The Router ID is what is used to build the SPT. It's very important it's both
   +-------------------------+
 ```
 
-# OSPF Hierarchy
+## OSPF Hierarchy
+
 
 OSPF has four levels of routing hierarchy
 
@@ -231,7 +242,8 @@ E2 - External type 2 (to the Internet)
 The `bit E` is what makes E1 and E2 routes. The bit being set is an E2 route, which is considered less preferred.
 
 
-Code   | Number | RFC Name         | Purpose                      | Description 
+Code   | Number | RFC Name         | Purpose                      | Description
+
 -----  | ------ | ---------------- | ---------------------------- | ------------
 O      | 1      | Router-LSA       | interfaces on a router       | Flooded, Single Area, never crosses area boundary.
 O      | 2      | Network-LSA      | routers on a network         | Flooded, Single area, only sent by the DR.
@@ -271,7 +283,8 @@ N1, N2 | 7      | NSSA Summaries   | routes to N1 or N2 networks  | NSSA ASBRs s
 ```
 
 
-# Default Route
+## Default Route
+
 
 OSPF has two ways of originating a default route.
 
@@ -279,7 +292,8 @@ OSPF has two ways of originating a default route.
 
 `default-information originate always` do it anyway.
 
-# Cost
+## Cost
+
 
 Default OSPF is all links above 100Mbps are the same cost.
 
@@ -288,7 +302,8 @@ auto-cost reference-bandwidth 40,000
 ```
 
 ## Network Types
- 
+
+
 [OSPF Representation of routers and networks](https://www.rfc-editor.org/rfc/rfc2328#page-13)
 
 | CLI                                   |      Network Types         | LSA Type 1 or 2	|   Use-case                                                                            |
@@ -341,7 +356,9 @@ RFC 2328                     OSPF Version 2                   April 1998
 
                           Broadcast or NBMA networks
 ```
-# Area summary
+
+## Area summary
+
 
 These will show up as a IA route in OSPF, and a route-to-null on the ABR.
 
@@ -393,7 +410,8 @@ router ospfv3 1
 
 ### Using filter-lists
 
-These are a bit harder to use, `in` and `out` are **inbound** and **outbound** to the area. 
+These are a bit harder to use, `in` and `out` are **inbound** and **outbound** to the area.
+
 
 For this topology
 
@@ -413,7 +431,8 @@ For this topology
                                  |         2001:db8:0:20/64          
 ```
 
-v4 
+v4
+
 ```
 ip prefix-list PREFIX_LIST_LOOPBACK_v4 seq 10 deny 1.1.1.1/32
 ip prefix-list PREFIX_LIST_LOOPBACK_v4 seq 20 deny 2.2.2.2/32
@@ -424,7 +443,8 @@ router ospf 1
  area 1 filter-list prefix PREFIX_LIST_LOOPBACK_v4 in
 ```
 
-v6 
+v6
+
 
 ```
 !
@@ -442,10 +462,12 @@ router ospfv3 1
 ### Area Types
 
 #### No external network connections
+
 * **Stub:** From the RFC, these don't have LSA-5 in them, so no external routes. A stub gets a default injected.
 * **Totally Stubby:** A Cisco area, This blocks LSA-3, LSA-4, and LSA-5. The only injected LSA is a LSA-3 from the ABR for the default.
 
 #### External Network connections
+
 * **NSSA:** From the RFC, this is a stub area with an ASBR. The LSAs within the area are LSA-7, and they get converted to LSA-5 by the ASBR.
 * **Totally Stubby NSSA:**, same as above, used to connect an external network, a default is injected as a LSA-3.
 
@@ -464,7 +486,8 @@ Sham links are needed because the routes provided by an L3VPN are `O IA`. When t
 * OSPF has a lower AD than BGP.
 * `O` routes are prefered over `O IA`
 
-A sham link makes two PE routers at different sites in the same customer VRF form an intra-area connection. 
+A sham link makes two PE routers at different sites in the same customer VRF form an intra-area connection.
+
 
 From [OSPF Sham-Link Support for MPLS VPN - Cisco](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_ospf/configuration/15-sy/iro-15-sy-book/iro-sham-link.html#GUID-B0CBC9E8-D423-4AEF-BAB4-15FED3EA486C).
 
@@ -476,6 +499,7 @@ From [OSPF Sham-Link Support for MPLS VPN - Cisco](https://www.cisco.com/c/en/us
 >   * Be advertised by BGP
 >   * You can use the /32 address for other sham-links
 
-# References
+## References
+
 
 https://datatracker.ietf.org/doc/html/rfc2328

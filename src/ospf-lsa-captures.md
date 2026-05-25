@@ -1,4 +1,5 @@
-# From the DR
+# OSPF LSA Captures
+
 ```
 R1# show ip ospf database router 1.1.1.1
 
@@ -23,7 +24,8 @@ R1# show ip ospf database router 1.1.1.1
        TOS 0 Metrics: 10
 ```
 
-# From a DROther
+## From a DROther
+
 
 ```
 R4#show ip ospf database router 4.4.4.4
@@ -49,4 +51,4 @@ R4#show ip ospf database router 4.4.4.4
        TOS 0 Metrics: 10
 ```
 
-The 
+The

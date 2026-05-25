@@ -1,3 +1,5 @@
+# Flexible NetFlow
+
 Flexible Netflow needs four things to work:
 
 * Records
@@ -69,6 +71,7 @@ interface ten 1/1
 ```
 
 ### Lab validations
+
 ```
 R1# show flow monitor FLOW_MONITOR_IPV4 statistics 
   Cache type:                               Normal (Platform cache)

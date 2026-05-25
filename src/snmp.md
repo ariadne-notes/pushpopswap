@@ -1,4 +1,5 @@
-# Terms
+# SNMP
+
 * **NMS:** Network Monitoring System
 
 * **[SNMP](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol):** Simple Network Management Protocol. a protocol to exchange network device statistics.
@@ -13,7 +14,8 @@
 
 * **[ITU](https://en.wikipedia.org/wiki/International_Telecommunication_Union):** International Telecommunication Union. A UN agency responsible for international telecommunications.
 
-* **OID Tree** An ITU, [X.660](https://www.itu.int/rec/T-REC-X.660-201107-I/en) standardized tree. 
+* **OID Tree** An ITU, [X.660](https://www.itu.int/rec/T-REC-X.660-201107-I/en) standardized tree.
+
 
 * **[OID](https://en.wikipedia.org/wiki/Object_identifier):** Object identifier. A node on an OID tree.
 
@@ -21,7 +23,8 @@
 
 * **Vendor MIB:** In contrast to the IETF MIDs, vendors can create their own MIBs, attached to the OID tree.
 
-# Finding used CPU time
+## Finding used CPU time
+
 
 On the device, I run a normal command, and look at the outputs:
 
@@ -47,8 +50,10 @@ cpmCPUTotal1minRev OBJECT-TYPE
     STATUS          current
     DESCRIPTION
         "The overall CPU busy percentage in the last 1 minute
-        period. This object deprecates the object cpmCPUTotal1min 
-        and increases the value range to (0..100)." 
+        period. This object deprecates the object cpmCPUTotal1min
+
+        and increases the value range to (0..100)."
+
     ::= { cpmCPUTotalEntry 7 }
 </pre>
 
@@ -60,7 +65,8 @@ written out it looks like this...
 
 `iso.org.dod.internet.private.enterprise.cisco.ciscoMgmt.ciscoProcessMIB.cpmCPU.cpmCPUTotalObjects.cpmCPUTotalTable.cpmCPUTotalEntry.cpmCPUTotal1minRev`
 
- ... "how much CPU did this Cisco device use in the last 1 minute?" 
+ ... "how much CPU did this Cisco device use in the last 1 minute?"
+
 
 [OIDREF](https://oidref.com/1.3.6.1.4.1.9.9.109.1.1.1.1.7) shows the SNMP world OID tree.
 
@@ -140,7 +146,8 @@ iso.3.6.1.4.1.9.9.109.1.1.1.1.7.1 = Gauge32: 20
 ```
 
 
-# Trap Severity
+## Trap Severity
+
 ```
 snmp-server enable traps syslog
 logging snmp-trap emergencies
@@ -149,7 +156,8 @@ logging snmp-trap critical
 ```
 
 
-# Refereces
+## Refereces
+
 [Cisco - Consider SNMP](https://www.cisco.com/c/en/us/support/docs/ip/simple-network-management-protocol-snmp/9226-mibs-9226.html)
 
 [How to find the MIB for Cisco Devices - Github](https://github.com/cisco/cisco-mibs#book-usage-guidelines)

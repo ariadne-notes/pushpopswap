@@ -1,4 +1,5 @@
-# FCAPS
+# Network Management
+
 | Letter | Name | Notes |
 |---|----------------------------|-------------------------------------------------|
 | F | Fault management:          | Detection and correction                        |

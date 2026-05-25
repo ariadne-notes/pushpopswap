@@ -1,4 +1,5 @@
 # OSPFv2 LSA Chart
+
 <div><style>
   .ospf-table { border-collapse: collapse; width: 100%; font-size: 0.9em; }
   .ospf-table th, .ospf-table td { border: 1px solid var(--table-border-color, #ccc); padding: 6px 10px; vertical-align: top; }

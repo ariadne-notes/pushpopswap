@@ -1,4 +1,4 @@
-# Terms
+# PTP
 
 * **1 second**, is 1000 ms.
 * **1 millisecond:** Network latency is measured in ms, or 1 thousandth of a second 0.001.
@@ -18,23 +18,27 @@
 * **Master:** All clocks in a subdomain sync to the master. The master sync's to the grand master.
 
 ## Time Terms
+
 * **Epoch:** The start of time.
 * **Offset:** The estimated time between a master clock sending time, and a slave clock receiving it.
 
 
-# Uses
+## Uses
+
 - Robotics, synchronizing movements.
 - Mobile Phone networks, telemetry, billing, logging
 - Financial Networks, trade settling fairness.
 - Power Networks, to sync to the 60hz grid.
 - Science network, seismic data
 
-# Process
+## Process
+
 After PTP has time from something like a GPS device, it can pass that time along, so long as the devices in the path can mark and read the timestamps
 
 ![PTP Delay and Offset Calculations](./images/ptp-algo-riedel-communications.jpg)
 
-# General Messages
+## General Messages
+
 
 * **Announce:** Used to determine which Grand Master is selected Best Master
 
@@ -48,7 +52,8 @@ After PTP has time from something like a GPS device, it can pass that time along
 
 * **Signaling:** Used by clocks to deliver how messages are sent
 
-# Event Messages
+## Event Messages
+
 * **Sync:** Used to convey time
 
 * **Delay_Request:** Used to measure delay from downstream devices

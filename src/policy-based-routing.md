@@ -1,8 +1,11 @@
+# Policy Based Routing
+
 The more advanced of a `match` operation, the harder this becomes to get correct.
 
 Verify with [Flexible Netflow](./flexible-netflow.md).
 
-# Config
+## Config
+
 
 A host is doing a speedtest, with iperf. I want to match that traffic, and route it a *longer* way.
 
@@ -18,7 +21,8 @@ interface GigabitEthernet1
   ip policy route-map RM_IPERF_TO_IPERF
 ```
 
-# Verify
+## Verify
+
 
 - Destination Routing says Take Gig3
 - PBR says take Gig2
@@ -43,15 +47,10 @@ IPV4 SRC ADDR    IPV4 DST ADDR    TRNS SRC PORT  TRNS DST PORT  INTF INPUT      
 10.1.2.1         224.0.0.5                    0              0  Gi1                        89  Null                                   100                     1  01:40:06.846  01:40:06.846
 ```
 
-# References
+## References
+
 [Cisco - Policy Based Routing - IOS-XE 17.x](https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-routing/b-ip-routing/m_iri-pbr.html)
 
 [Cisco - Best Practices for Route Maps](https://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/ios-xe-17/223145-best-practices-for-route-map.html)
 
 [Cisco - Configure Policy-based Routing with Next-Hop Commands](https://www.cisco.com/c/en/us/support/docs/ip/ip-routed-protocols/47121-pbr-cmds-ce.html)
-
-----
-
-v1.1 - Last edit 6-May-2025
-
-This work is dedicated to the Public Domain via [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)

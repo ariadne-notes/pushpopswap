@@ -1,3 +1,5 @@
+# gNMI
+
 A Google Invention
 
 Part of the *OpenConfig* framework. [Google, Microsoft, ATT, and BT]
@@ -11,7 +13,8 @@ A gRPC based protocol to do the following:
 
 > **replaces** SNMP
 
-# Setting an IPv4 Address
+## Setting an IPv4 Address
+
 
 This is done with NETCONF and a YANG model.
 
@@ -21,7 +24,8 @@ This is done with NETCONF and a YANG model.
   - prefix-length: 24
 ```
 
-# References
+## References
+
 [GitHub - openconfig/gnmi: gRPC Network Management Interface · GitHub](https://github.com/openconfig/gnmi)
 
 [OpenConfig - gRPC Network Management Interface (gNMI) specification](https://openconfig.net/docs/gnmi/gnmi-specification/)

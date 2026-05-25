@@ -21,9 +21,9 @@
 
 # Subnetting
 
-- [with Fingers](subnet-with-fingers.md)
-- [with the Box Method](subnet-with-the-box-method.md)
-- [with Binary](subnet-with-binary.md)
+- [Subnetting with Fingers](subnet-with-fingers.md)
+- [Subnetting with the Box Method](subnet-with-the-box-method.md)
+- [Subnetting with Binary](subnet-with-binary.md)
 
 # IPv6
 

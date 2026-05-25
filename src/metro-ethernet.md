@@ -1,4 +1,4 @@
-# Cisco ME3400 — Metro Ethernet Caveats & Port Types
+# Metro Ethernet
 
 ## General Caveats
 
@@ -14,6 +14,7 @@
 ## Port Types (MEF Terminology)
 
 ### UNI — User Network Interface
+
 - Connects to **customer end devices** (phones, computers, routers at the customer site)
 - All ports except uplinks default to UNI
 - Can only forward traffic toward **NNI ports**
@@ -22,12 +23,14 @@
 - **No Link Aggregation**
 
 ### ENI — Enhanced Network Interface
+
 - Connects to **routers or switches** (slightly trusted devices)
 - Supports **STP**
 - Supports **CDP**
 - Supports **Link Aggregation**
 
 ### NNI — Network Node Interface
+
 - **Network-to-Network** — connects to other provider nodes/uplinks
 - **No Layer 2 protocol filtering** — passes BPDUs, CDP, etc. transparently
 

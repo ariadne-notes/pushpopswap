@@ -1,9 +1,10 @@
-# Model Driven Telemetry
+# MDT
 
 * Can be ordinary TCP.
 * Can also use gRPC, to add TLS.
 
-# TCP Dial-out
+## TCP Dial-out
+
 
 ```mermaid
 sequenceDiagram
@@ -16,7 +17,8 @@ sequenceDiagram
     R->>C: Telemetry data
 ```
 
-# TCP Dial-in
+## TCP Dial-in
+
 
 ```mermaid
 sequenceDiagram
@@ -29,5 +31,6 @@ sequenceDiagram
     R->>C: Telemetry data
 ```
 
-# References
+## References
+
 [Model-Driven Telemetry: Dial-In or Dial-Out ? | Telemetry | XRdocs](<https://xrdocs.io/telemetry/blogs/2017-01-20-model-driven-telemetry-dial-in-or-dial-out>)

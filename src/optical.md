@@ -1,3 +1,5 @@
+# Optical
+
 ## Terms
 
 | Term                                         | Definition                                                                      |
@@ -32,15 +34,18 @@ It's been a while, the below might be wrong.
 │                                                                                                         │
 │   ┌─────────────── LINE ────────────────────┐            ┌────────────────── LINE ──────────────────┐   │
 ▼   ▼                                         ▼            ▼                                          ▼   ▼
-                                                                                                           
+
+
 ┌───┐      ┌────────────┐       ┌─────┐       ┌────────────┐      ┌─────┐       ┌────────────┐        ┌───┐
 │CPE├──────┤Terminal    ├───────┤Regen├───────┤Add/Drop    ├──────┤Regen├───────┤Terminal    ├────────┤CPE│
 └───┘ DS-n │ Multiplexer│ OC-N  └─────┘ OC-N  │ Multiplexer│ OC-N └─────┘ OC-N  │ Multiplexer│  DS-n  └───┘
-           └────────────┘                     └────────────┘                    └────────────┘             
-                                                                                                           
-    ▲      ▲            ▲       ▲     ▲       ▲            ▲      ▲     ▲       ▲            ▲        ▲    
-    └──────┘            └───────┘     └───────┘            └──────┘     └───────┘            └────────┘    
-    SECTION              SECTION       SECTION             SECTION       SECTION              SECTION      
+           └────────────┘                     └────────────┘                    └────────────┘
+
+
+    ▲      ▲            ▲       ▲     ▲       ▲            ▲      ▲     ▲       ▲            ▲        ▲
+    └──────┘            └───────┘     └───────┘            └──────┘     └───────┘            └────────┘
+    SECTION              SECTION       SECTION             SECTION       SECTION              SECTION
+
 </pre>
 
 ### C2 Byte
@@ -49,9 +54,9 @@ C2 Defines the SONET payload
 
 An old note, probably from a standard document.
 
-    The SONET standard defines the C2 byte as the path signal label. The purpose of this byte 
-    is to communicate the payload type that the SONET Framing OverHead (FOH) encapsulates. 
-    The C2 byte functions similar to Ethertype and Logical Link Control (LLC)/Subnetwork 
+    The SONET standard defines the C2 byte as the path signal label. The purpose of this byte
+    is to communicate the payload type that the SONET Framing OverHead (FOH) encapsulates.
+    The C2 byte functions similar to Ethertype and Logical Link Control (LLC)/Subnetwork
     Access Protocol (SNAP) header fields on an Ethernet network. The C2 byte allows a single
     interface to transport multiple payload types simultaneously.
 
@@ -81,9 +86,11 @@ SPE Scrambling: Enabled
 C2 State: Stable   C2_rx = 0xCF (207)   C2_tx = 0x16 (22) / Scrambling Derived
 S1S0(tx): 0x0  S1S0(rx): 0x2 / Framing Derived
 ```
-    
+
+
 Monitoring at each Network Element is usually helpful
-    
+
+
 POS - Spawned interface from SONET controller.
 
 `controller SONET0/2/0/0`
@@ -94,6 +101,7 @@ POS - Spawned interface from SONET controller.
 Sonet YELLOW is RDI (Remote Defect indication)
 
 ### Packet Over Sonet
+
 ```
 Document: Troubleshooting Bit Error on SONET Links
 URL: http://www.cisco.com/en/US/tech/tk482/tk607/technologies_tech_note09186a0080094a79.shtml
@@ -105,22 +113,26 @@ B1: B1 can detect up to eight parity errors per frame. This level of resolution 
 
 B2: B2 can detect a far higher number of errors per frame. The exact number increases as the number of STS-1s (or STM-1s) increases in the SONET frame. For example, an OC-192/STM-64 produces a 192 x 8 = 1536 bit-wide BIP field. In other words, B2 can count up to 1536 bit errors per frame. There is considerably less chance of an even-numbered error that eludes the B2 parity calculation. B2 offers superior resolution when compared to B1 or B3. Therefore, a SONET interface can report B2 errors only for a particular monitored segment.
 
-B3: B3 can detect up to eight parity errors in the entire SPE. This number produces acceptable resolution for a channelized interface because, (for example) each STS-1 in an STS-3 has a path overhead and B3 byte. However, this number produces poor resolution over concatenated payloads in which a single set of path overhead must cover a relatively large payload frame. 
+B3: B3 can detect up to eight parity errors in the entire SPE. This number produces acceptable resolution for a channelized interface because, (for example) each STS-1 in an STS-3 has a path overhead and B3 byte. However, this number produces poor resolution over concatenated payloads in which a single set of path overhead must cover a relatively large payload frame.
 ```
 
 ##### Packet over SONET commands
 
 ##### Displays information about the automatic protection switching feature
+
 `show aps`
 
 ##### Displays information about the hardware
+
 `show controller sonet slot/port-adapter/port`
 
 ##### Displays information about the interface
+
 `show controllers pos`
 
 
 ## G709
+
 G709 is an optical specification that is specifcially designed for FEC (Forward Error correction)
 	It uses Reed-Solomon to produce redundant information that can be used to rebuild the frame.
 
@@ -138,8 +150,8 @@ Like taken from a standards document someplace
 
 ```
 Spatial Reuse Protocol (SRP) is a media-independent MAC layer protocol that operates over two counterrotating
-fiber-optic rings. The dual rings provide survivability of data in case of a failed node or a break in 
-connecting cables by rerouting the data path over the alternate ring. SRP provides a more efficient use of 
+fiber-optic rings. The dual rings provide survivability of data in case of a failed node or a break in
+connecting cables by rerouting the data path over the alternate ring. SRP provides a more efficient use of
 bandwidth by having packets traverse only the part of the ring necessary to get to the destination node. Once
 the packet has reached the destination node, it is removed from the ring, allowing other parts of the ring
 to reuse the bandwidth. Data packets travel on one ring, while associated control packets travel in the opposite
@@ -170,14 +182,14 @@ PATH
 
 Active Defects: None
 Active Alarms:  None
-Alarm reporting enabled for: SLOS SLOF PLOP 
+Alarm reporting enabled for: SLOS SLOF PLOP
 
 Framing           : SONET
 Rx SONET/SDH bytes: (K1/K2) = 0/0        S1S0 = 0  C2 = 0x16
-Tx SONET/SDH bytes: (K1/K2) = 0/0        S1S0 = 0  C2 = 0x16  J0 = 0x1 
+Tx SONET/SDH bytes: (K1/K2) = 0/0        S1S0 = 0  C2 = 0x16  J0 = 0x1
 Clock source      : Internal
 Framer loopback   : None
-Path trace buffer : Stable 
+Path trace buffer : Stable
   Remote hostname : Node1
   Remote interface: SRP4/0
   Remote IP addr  : <removed>
@@ -196,13 +208,13 @@ AIS = 0          RDI    = 0          FEBE = 65535      BIP(B3) = 65535
 LOP = 0          NEWPTR = 3          PSE  = 0          NSE     = 0
 Active Defects: None
 Active Alarms:  None
-Alarm reporting enabled for: SLOS SLOF PLOP 
+Alarm reporting enabled for: SLOS SLOF PLOP
 Framing           : SONET
 Rx SONET/SDH bytes: (K1/K2) = 0/0        S1S0 = 0  C2 = 0x16
-Tx SONET/SDH bytes: (K1/K2) = 0/0        S1S0 = 0  C2 = 0x16  J0 = 0x1 
+Tx SONET/SDH bytes: (K1/K2) = 0/0        S1S0 = 0  C2 = 0x16  J0 = 0x1
 Clock source      : Internal
 Framer loopback   : None
-Path trace buffer : Stable 
+Path trace buffer : Stable
 Remote hostname : Node3
 Remote interface: SRP4/0
 Remote IP addr  : <removed>

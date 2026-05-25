@@ -1,4 +1,4 @@
-# Terms
+# OMP
 
 * **OMP routes:** AKA, vRoutes, AKA Site prefixes. `10.0.0.0/24`.
 
@@ -18,5 +18,6 @@ Works like a BGP route, with a next-hop atttribute.
 * Color (mpls, metro-ethernet)
 * Encapsulation (IPsec or GRE)
 
-# References
+## References
+
 [LAB 1 - Hub-and-Spoke - Restricting spoke-to-spoke tunnels | NetworkAcademy.IO](https://www.networkacademy.io/ccie-enterprise/sdwan/lab1-restricting-spoke-to-spoke-tunnels)

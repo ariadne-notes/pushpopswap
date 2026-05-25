@@ -1,6 +1,9 @@
+# Port Security
+
 The default settings for port security **will not** age out learned mac addresses. To get aging back to the mac address table default of 5 minutes, set this feature to `300`.
 
-# Config
+## Config
+
 ```
 interface GigabitEthernet0/0
  switchport access vlan 10
@@ -12,7 +15,8 @@ interface GigabitEthernet0/0
  spanning-tree portfast edge
 ```
 
-# Validation
+## Validation
+
 
 This is the primary table for this feature. This table is used to populate the mac address table.
 ```
@@ -50,11 +54,6 @@ Total Addresses in System (excluding one mac per port)     : 0
 Max Addresses limit in System (excluding one mac per port) : 4096
 ```
 
-# References
+## References
+
 [Cisco - Port Security - IOS-XE 17.14 on the C9300](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-14/configuration_guide/sec/b_1714_sec_9300_cg/port_security.pdf)
-
-----
-
-v1.2 - Last edit 6-May-2025
-
-This work is dedicated to the Public Domain via [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)

@@ -1,3 +1,5 @@
+# EIGRP
+
 ## EIGRP Terminology
 
 * **Successor route:** The current best path, with the smallest metric. The "successful" route.
@@ -27,19 +29,21 @@ R3 Sends an update
 R1 calculates total path metric.
  - R2 is 2000 + 1000 = 3000.
  - R3 is 2050 +   50 = 2100.  < - Successor route.
- 
+
+
 R1 sees it has an reported distance less than the current distance, so installs that route as the feasible successor.
 
 <pre>
-┌────────┐            1000             ┌────────┐    10.0.0.0/24   
+┌────────┐            1000             ┌────────┐    10.0.0.0/24
 │   R1   ├─────────────────────────────┤   R2   ├──────────────────
-└─────┬──┘                             └─┬──────┘      2000        
-      │            ┌────────┐            │                         
-      └────────────┤   R3   ├────────────┘                         
-         50        └────────┘      50    
+└─────┬──┘                             └─┬──────┘      2000
+      │            ┌────────┐            │
+      └────────────┤   R3   ├────────────┘
+         50        └────────┘      50
 </pre>
 
-# Example with the EIGRP topology table
+## Example with the EIGRP topology table
+
 
 ```text
 R1# show ip eigrp topology 10.0.0.0/24
@@ -49,42 +53,49 @@ P 10.0.0.0/24, 1 successors, FD is 2100                <--- Feasible Distance
         via 10.0.13.3 (2100/2050), GigabitEthernet0/3  <--- Successor Route
         via 10.0.12.2 (3000/2000), GigabitEthernet0/2  <--- Feasible Successor
                        |     |
-                       |     +-- Reported Distance 
+                       |     +-- Reported Distance
                        +-------- Path Metric
-        
+
                                                              (RD 2000 < FD 2100)
 ```
 
 
 
-# Unequal Cost Multi Path
+## Unequal Cost Multi Path
+
 EIGRP can load balance over the successor and feasible successor routes with a variance command.
 
-# Timers
+## Timers
+
 - Hello packets are every 5 seconds, on 60 seconds on T1 links.
   - The deadtime is 3x the hold timer.
 
 
-# Initial Bringup
+## Initial Bringup
+
 - Send Hello packets, to 224.0.0.10
   - Doesn't' require multicast to be on
   - Unicast Init from neighbor, set Seq, Set Ack to 0
     - Neighbor Sends back Ack as prior sequence number.
     - Update Messages
-    
-# Stuck in Active
+
+
+## Stuck in Active
+
 
 - The router is too busy to answer the query (generally due to high CPU utilization).
 - The router has memory problems and cannot allocate the memory to process the query or build the reply packet.
 - The circuit between the two routers is not good; there are not enough packets that get through to keep the neighbor relationship up, but some queries or replies are lost between the routers.
 - unidirectional links (a link on which traffic can only flow in one direction because of a failure)
 
-# Update Message
+## Update Message
+
 - AS number
 - Prefixes
 - End-of-table Flag
 
-# Prefixes
+## Prefixes
+
 - Type (internal, etc)
 - Reliability
 - Load
@@ -100,7 +111,8 @@ EIGRP can load balance over the successor and feasible successor routes with a v
 - Next-hop
 - Prefix Length
 
-# Auto Summary
+## Auto Summary
+
 
 Is off by default.
 
@@ -110,7 +122,8 @@ To enable:
 
 `no auto-summary`
 
-# Manual Summaries
+## Manual Summaries
+
 
 In EIGRP these go under the interface, on the interface you want the summary to be sent out of.
 
@@ -119,11 +132,13 @@ ethernet 1
   ip summary-address eigrp 100 192.168.0.0/16
 ```
 
-# Named Mode
+## Named Mode
+
 
 Name mode supports IPv6 inside a VRF.
 
 ### Minimum config
+
 ```
 router eigrp EIGRP_100
  !
@@ -155,7 +170,8 @@ router eigrp EIGRP_100
 </pre>
 
 
-# Variance
+## Variance
+
 
 ### Shorter Delays
 
@@ -187,7 +203,8 @@ interface GigabitEthernet0/7
  delay 7
 
 
-R1# show ip route 
+R1# show ip route
+
 
 [output omitted]q
 !
@@ -231,7 +248,8 @@ interface GigabitEthernet0/7
  delay 17
 
 
-R1# show ip route 
+R1# show ip route
+
 
 [output omitted]
 !
@@ -246,13 +264,15 @@ D        2.2.2.2 [90/3398] via 10.12.1.2, 00:00:04, GigabitEthernet0/1
                  [90/5177] via 10.12.7.2, 00:00:04, GigabitEthernet0/7
 </pre>
 
-# Stub Routing
+## Stub Routing
+
 
 - This feature is used so remote sites are never used for transit, and simplifies configuration for remote sites.
 - The router responds to queries for summaries, connected routes, redistributed static routes, external routes, and internal routes with the message "inaccessible."
 - Any neighbor that receives a packet informing it of the stub status will not query the stub router for any routes, and a router that has a stub peer will not query that peer.
 
-# Network Parser
+## Network Parser
+
 
 * The CLI parser is converting the IP into binary, then comparing it to the wild mask.
 * The CLI parser will only save the matched bits of the IP.
@@ -264,7 +284,8 @@ D        2.2.2.2 [90/3398] via 10.12.1.2, 00:00:04, GigabitEthernet0/1
 
 192.0.2.5 127.255.255.255 - becomes 128.0.0.0, the rest of the bits get dropped.
 
-# References
+## References
+
 [Cisco - Understand and Use the Enhanced Interior Gateway Routing Protocol](https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html)
 
 [Cisco - Configure EIGRP Named Mode](https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/200156-Configure-EIGRP-Named-Mode.html)

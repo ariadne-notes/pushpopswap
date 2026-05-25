@@ -1,4 +1,4 @@
-# SPAN
+# SPAN, RSPAN, ERSPAN
 
 **Local**
 ```
@@ -6,7 +6,8 @@ monitor session 1 source interface GigabitEthernet1/0/1 both
 monitor session 1 destination interface GigabitEthernet1/0/2
 ```
 
-# RSPAN
+## RSPAN
+
 
 - VLAN Encapsulated.
 - Does not support layer 2 protocols. (CDP, BPDUs)
@@ -28,7 +29,8 @@ monitor session 1 source remote vlan 3000
 monitor session 1 destination interface GigabitEthernet1/0/2
 ```
 
-# ERSPAN
+## ERSPAN
+
 
 GRE Encapsulated.
 
@@ -67,7 +69,8 @@ monitor session 1 type erspan-destination
  no shutdown
 ```
 
-# References
+## References
+
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-12/configuration_guide/nmgmt/b_1712_nmgmt_9300_cg/configuring_span_and_rspan.html
 
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-12/configuration_guide/nmgmt/b_1712_nmgmt_9300_cg/configuring_erspan.html

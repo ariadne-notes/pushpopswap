@@ -1,3 +1,5 @@
+# MST
+
 Cisco switches provide three kinds of spanning tree modes.
 
 ```
@@ -7,18 +9,24 @@ switch(config)# spanning-tree mode ?
   rapid-pvst  Per-Vlan rapid spanning tree mode
 ```
 
-The Industry has three kinds of interop. 
+The Industry has three kinds of interop.
 
 
-IEEE            | Cisco         | Notes                                      
+
+IEEE            | Cisco         | Notes
+
 ----------------|---------------|--------------------------------------------
-STP (802.1D)    | PVST+         | Cisco's version is per vlan                
-RSTP (802.1w)   | Rapid PVST+   | Cisco's version is per vlan                
-MST (802.1s)    | MST           | Same standard; Cisco implements it on-gear 
+STP (802.1D)    | PVST+         | Cisco's version is per vlan
+
+RSTP (802.1w)   | Rapid PVST+   | Cisco's version is per vlan
+
+MST (802.1s)    | MST           | Same standard; Cisco implements it on-gear
+
 
 Industry liked what Cisco was doing with "per vlan" so MST merges that feature into 802.1s.
 
-# Terms
+## Terms
+
 
 * **CST:** Common Spanning Tree. For interoperability we fall back to 802.1D, with one spanning tree. MST supports this.
 * **CST Root: The one root bridge for the entire CST.
@@ -35,7 +43,8 @@ Industry liked what Cisco was doing with "per vlan" so MST merges that feature i
 * **PVST Simulation Check:** If a MST device receives a superior BPDU, it will shut down the port.
 
 
-# Packet
+## Packet
+
 From wireshark
 
 ```
@@ -78,13 +87,15 @@ MST keeps track of a few things:
 
 
 
-# Basic Config
+## Basic Config
+
 ```
 spanning-tree mode mst
 ```
 
 
-# More involved config
+## More involved config
+
 ```
 default spanning-tree mst configuration
 spanning-tree mst configuration
@@ -106,7 +117,8 @@ Instance  Vlans mapped
 -------------------------------------------------------------------------------
 ```
 
-# Outputs
+## Outputs
+
 - A switch `ff79` in a different MST region is the root for the CST.
 - Our regional root `c07f` is one hop away.
 
@@ -138,10 +150,12 @@ Gi3/1            Desg FWD 20000     128.14   P2p
 Gi3/2            Root FWD 20000     128.15   P2p 
 ```
 
-# Captures
+## Captures
+
 [MST-region-frame.pcap](./captures/switching/MST-region-frame.pcap)
 
-# References
+## References
+
 [Cisco - Understand the Multiple Spanning Tree Protocol (802.1s)](https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/24248-147.html#toc-hId--1408391100)
 
 [Layer 23 - MSTP Protocol Explained: Multiple Spanning Tree in Depth](https://www.layer23-switch.com/blog/mstp-protocol.html)

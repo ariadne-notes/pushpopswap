@@ -1,4 +1,5 @@
-# Stateful NAT64
+# NAT64
+
 * Requires a DNS64 Server to translate an A record to a synthetic AAAA record.
 * Requires a Upstream DNS to respond with an A record, to the DNS64 server.
 * Requires a "Stateful Prefix"
@@ -21,7 +22,8 @@ sequenceDiagram
     R1-->>PC: Check Translations<br/>Reply with v6
 ```
 
-# Config
+## Config
+
 ```
 ipv6 unicast-routing
 !
@@ -55,7 +57,8 @@ interface GigabitEthernet1
  nat64 enable
 ```
 
-# DNS64
+## DNS64
+
 apk update
 apk add unbound
 apk add bind-tools
@@ -83,7 +86,8 @@ forward-zone:
         forward-addr:  2001:db8:1::6
 ```
 
-# DNS4
+## DNS4
+
 Installing Apps
 ```
 apk update
@@ -106,7 +110,8 @@ server:
     local-data: "64lab.example.com. A 10.0.0.20"
 ```
 
-# Verification
+## Verification
+
 
 
 ```
@@ -125,7 +130,8 @@ Total number of translations: 1
 > The WKP (Well Known Prefix) will not work toward RFC1918 addresses. You must configure a different /96.
 
 
-# References
+## References
+
 [IP Addressing Configuration Guide, Cisco IOS XE 17.x - Stateful Network Address Translation 64 Cisco IOS XE 17 - Cisco](https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-addressing/b-ip-addressing/m_iadnat-stateful-nat64.html)
 
 [RFC 4291: IP Version 6 Addressing Architecture | RFC Editor](<https://www.rfc-editor.org/info/rfc4291/>)

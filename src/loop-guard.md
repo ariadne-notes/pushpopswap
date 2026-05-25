@@ -1,14 +1,18 @@
+# Loop Guard
+
 - This is one of the unidirectional preventatives.
 - This is only for switch-to-switch ports.
 
-# Terms
+## Terms
+
 * **Unidirectional Link.** A failure where one side of a fiber pair is broken.
 
 A unidirectional failure will always result in one side not getting information.
 - SW1 sends BPDUs
 - SW2 never gets BPDUs.
 
-# Topology
+## Topology
+
 
 - SW1 is a root bridge.
 - SW2 is experiencing a UL failure.
@@ -27,7 +31,8 @@ A unidirectional failure will always result in one side not getting information.
 └────────────────────┘                            └─────────────────────┘
 </pre>
 
-# Loopguard
+## Loopguard
+
 If a port was receiving BPBUs and suddenly it stops, don't change the STP,
 
 **Default**

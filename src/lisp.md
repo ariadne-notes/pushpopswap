@@ -1,3 +1,5 @@
+# LISP
+
 A very basic setup, that assumes a working underlay. I implemented this on my home lab of c7200s in GNS3 running `15.2(4)S7`. My underlay was IS-IS to router loopbacks.
 
 ```
@@ -7,9 +9,13 @@ Site 2 EIDs - 192.168.101.0/24
 xTR for Site 1 - Lo0 16.16.16.16
 xTR for Site 2 - Lo0 19.19.19.19
 ```
- 
+
+
 #### Site 1 - xTR
+
+
 ##### config
+
 ```
 R18# show run | s lisp
 router lisp
@@ -20,7 +26,10 @@ router lisp
  ipv4 etr
  exit
 ```
-##### verify 
+
+##### verify
+
+
 ```
 R18# show ip lisp map-cache 
 LISP IPv4 Mapping Cache for EID-table default (IID 0), 2 entries
@@ -33,7 +42,10 @@ LISP IPv4 Mapping Cache for EID-table default (IID 0), 2 entries
 ```
 
 #### Site 2 - xTR
+
+
 ##### config
+
 ```
 R19# show run | s lisp
 router lisp
@@ -44,7 +56,9 @@ router lisp
  ipv4 etr
  exit
 ```
+
 ##### verify
+
 ```
 R19#show ip lisp map-cache 
 LISP IPv4 Mapping Cache for EID-table default (IID 0), 2 entries
@@ -55,8 +69,12 @@ LISP IPv4 Mapping Cache for EID-table default (IID 0), 2 entries
   Locator      Uptime    State      Pri/Wgt
   18.18.18.18  00:11:29  up           1/50
 ```
+
 ##### MS/MR
+
+
 ###### config
+
 ```
 R16# show run | s lisp
 router lisp
@@ -74,7 +92,9 @@ router lisp
  ipv4 map-resolver
  exit
 ```
+
 ##### verify
+
 ```
 R16# show lisp site name 1
 Site name: 1
@@ -186,6 +206,7 @@ Internet Control Message Protocol
 ```
 
 ### Lisp Packet in the RFC
+
 ```
 Farinacci, et al.             Experimental                     [Page 15]
 

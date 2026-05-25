@@ -1,8 +1,11 @@
+# BFD
+
 I learned this protocol using IOS-XR.
 
 **Async, no echo** - Please respond to this packet with the control plane of the far device.
 
 ### BFD Async without Echo
+
 ```
           Peer-A to Peer-B, lets agree to use BFD.
           
@@ -23,6 +26,7 @@ I learned this protocol using IOS-XR.
 **Async, with echo** - Just loop the BFD packets back onto the link, please.
 
 ### BFD Async with Echo
+
 The packets never leave the data plane, and never touches the control plane of Peer-A or Peer-B.
 ```
 
@@ -61,6 +65,7 @@ BFD Payload is sent as SRC UDP 3785  --> Destination 3785
 
 
 #### BFD State Machine
+
 Courtesy of the RFC
 
 ```
@@ -104,6 +109,7 @@ DOWN│    │ INIT │--------------------->│  UP  │    │INIT, UP
 
 
 ### IOS-XR Commands
+
 ```
 multipath include location 0/1/CPU0
 bundle coexistence bob-blb logical
@@ -113,6 +119,7 @@ show tech-support routing bfd file
 ## IOS-XR Examples
 
 #####  Take the session down if latency grows to 150ms for a single echo packet.
+
 ```
 bfd fast detect 
 bfd multiplier 50
@@ -120,6 +127,7 @@ echo latency detect
 ```
 
 ##### Take the session down if latency grows to 300ms for a single echo packet.
+
 ```
 bfd fast detect 
 bfd multiplier 50
@@ -127,6 +135,7 @@ bfd echo latency detect percentage 200
 ```
 
 ##### Take the session down if the latency grows to 150ms for 3 consequitive echo packets
+
 ```
 bfd fast detect
 bfd multiplier 50
@@ -134,6 +143,7 @@ bfd echo latency detect percentage 100 count 3
 ```
 
 #### Disable echo mode
+
 ```
 bfd 
 interface g0/0/0/0
@@ -141,6 +151,7 @@ interface g0/0/0/0
 ```
 
 #### Protecting the BFD data-plane packets from QoS
+
 `192.168.100.1 <-> 192.168.100.2`
 
 ```
@@ -171,6 +182,7 @@ interface TenGig <>
 ## Enabling BFD on RSVP (IOS)
 
 ###### A Config
+
 ```
 ip rsvp signalling bfd hello
 !
@@ -181,5 +193,7 @@ int f0/0.45
  bfd interval 50 min_rx 50 multiplier 3
 ```
 
-###### Verification 
+###### Verification
+
+
 `show ip rsvp hello bfd nbr`

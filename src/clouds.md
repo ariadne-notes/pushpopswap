@@ -1,4 +1,5 @@
-# Cloud Terms
+# Clouds
+
 * **IaaS:** Infrastructure as a Service. Instead of buying routers, switches, or servers, you can rent digital versions, online.
 
 IaaS Providers: AWS (Amazon), Azure (Microsoft), Google Cloud Platform.

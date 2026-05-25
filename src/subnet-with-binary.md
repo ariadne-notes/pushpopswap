@@ -1,3 +1,5 @@
+# Subnetting with Binary
+
 - A byte is eight bits `0b0000 0000`.
 - A nibble is four bits `0b0000`.
 - A bit is `on` or `off`.
@@ -10,7 +12,8 @@ Start with a `/24`, eight bits, or values from 0 to 256.
 
 `0000 0000`
 
-# 100 Hosts
+## 100 Hosts
+
 
 A subnet needs 100 hosts, to represent that in binary, we'd need at least 7 bits, or 128.
 
@@ -24,7 +27,8 @@ A `/24` would be too large, (256 IPs), remove a bit, and we get a `/25`.
 
 `1000 0000`
 
-# 20 Hosts
+## 20 Hosts
+
 
 We already spent the first portion of the address space, from 0 to 127.
 

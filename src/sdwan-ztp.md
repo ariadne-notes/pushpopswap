@@ -1,4 +1,5 @@
-# Requirements
+# SD-WAN ZTP
+
 * SD-WAN edge needs DHCP for ZTP to work.
 * SD-WAN Edge device added to the [PNP portal.](https://software.cisco.com/software/csws/ws/platform/login?route=module/pnp)
 * SD-WAN Manager synced to the PNP portal.
@@ -11,7 +12,8 @@
 
 1. (matches device by serial number based on what was put into the PNP portal earlier)
 
-1. Once the authentication of the vEdge is done, vEdge gets the IP address of vManage and vSmart given by vBond. 
+1. Once the authentication of the vEdge is done, vEdge gets the IP address of vManage and vSmart given by vBond.
+
 
 1. The vEdge gets authenticated by vManage and gets the System IP address.
 
@@ -21,7 +23,8 @@
 
 1.  Now vEdge establishes IPsec tunnels for the data plane traffic with other vEdges within the overlay.
 
-# References
+## References
+
 [Onboard New vEdge Device by SD-WAN ZTP Process - Cisco](https://www.cisco.com/c/en/us/support/docs/routers/vedge-router/220445-onboard-new-vedge-device-by-sd-wan-ztp-p.html)
 
 [Solutions - Cisco SD-WAN Onboarding Guide - Cisco](https://www.cisco.com/c/en/us/solutions/collateral/enterprise-networks/sd-wan/guide-c07-742221.html)

@@ -1,7 +1,10 @@
+# MPLS
+
 **MPLS Requires CEF**
 
 
-# Frame Format
+## Frame Format
+
 <pre>
   RFC 3032 - MPLS Label Stack Encoding
 
@@ -31,6 +34,7 @@
 **Outgoing label** - What the LSP does next.
 
 #### Null Labels
+
 `[3] Implicit` Pop the label. Implicit because the label is missing.
 
 `[0] Explicit` Keep the label, but the destination must pop it. Used for MPLS QoS.
@@ -66,7 +70,8 @@ show mpls forwarding 3.3.3.4
 ```
 
 
-# Testing Pseudowires
+## Testing Pseudowires
+
 
 You can test MPLS pseduowire labels by doing labeled pings.
 

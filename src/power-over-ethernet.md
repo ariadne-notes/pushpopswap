@@ -1,4 +1,5 @@
-# Terms
+# Power Over Ethernet
+
 * **PSE:** Power sourcing equipment, i.e. a PoE ethernet switch.
 * **PD:** Powered Device, i.e. a phone.
 * **PoE Splitter:** Use Ethernet as a power source for low power devices.
@@ -58,7 +59,8 @@ flowchart LR
     A[Detection] --> B[Classification] --> C[Start to Power] --> D[Normal Power Supply]
 ```
 
-# References
+## References
+
 [Power over Ethernet - Wikipedia](https://en.wikipedia.org/wiki/Power_over_Ethernet)
 
 [Cisco - Industrial Power over Ethernet (PoE)](https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2024/pdf/BRKIOT-1128.pdf?cachemode=refresh)

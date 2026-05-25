@@ -1,6 +1,9 @@
+# STP
+
 This document is built on labwork and *Interconnections*, See [1]
 
-# Terms
+## Terms
+
 
 * **Bridge:** A device that participates in the spanning tree algorithm.
 
@@ -27,7 +30,8 @@ This document is built on labwork and *Interconnections*, See [1]
 * **TC Bit:** Topology Change. The root bridge sets the TC to tell other bridges to set their mac address tables to `max age`. This is inside a config BPDU.
 
 
-# How STP makes a loop free topology.
+## How STP makes a loop free topology.
+
 
 STP elects root and designated ports, aka RP, and DPs. It also moves STP ports into Blocking.
 
@@ -54,7 +58,8 @@ STP elects root and designated ports, aka RP, and DPs. It also moves STP ports i
 
 
 
-# Port Selection Algo
+## Port Selection Algo
+
 
 - All choices are made based on the received BPDU.
 - Modifications are made on the upstream switch.
@@ -125,6 +130,7 @@ Eth0 │
 
 
 ## Portfast
+
 For end Hosts
 
 * Does not protect against BPDUs
@@ -155,9 +161,11 @@ More details [here](https://www.cisco.com/c/en/us/support/docs/lan-switching/spa
 * **Root Ports** are the best port towards the root bridge, either the lowest total cost or the lowest advertised priority or lowest advertised port ID (interface number).
 
 ## Root Path Cost
+
 **Root Path Cost** - What the interfaces costs + the advertised cost to the root. The root sends a cost of 0.
 
 ### STP Path Calculations
+
 `spanning-tree pathcost method long`
 
 | Speed      | Short-Mode Cost | Long-Mode Cost |
@@ -330,7 +338,8 @@ This is what the BPDU looks like on-the-wire
            2 Bytes
 ```
 
-# Port elections
+## Port elections
+
 
 `Bridge Priority, Vlan, Bridge MAC, Port Priority, Port Number`
 
@@ -485,6 +494,7 @@ Global Aging Time:  300
 ```
 
 ##### Finding TCNs
+
 ```
 switch# show spanning-tree vlan 20 detail | s Spanning
  VLAN0020 is executing the rstp compatible Spanning Tree protocol
@@ -559,13 +569,15 @@ switch# show logging | i %LINK
 *Jul  8 06:35:43.756: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
 ```
 
-# Captures
+## Captures
+
 [STP-stable-state.pcap](./captures/switching/STP-stable-state.pcap)
 
 [STP-TCN-topology-change-notification.pcap](./captures/switching/STP-TCN-topology-change-notification.pcap)
 
 
-# References
+## References
+
 1. R. Perlman, *Interconnections: Bridges, Routers, Switches, and Internetworking Protocols*, 2nd ed. Boston, MA: Addison-Wesley, 1999.
 
 [Layer 2 Configuration Guide, Cisco IOS-XE 17.16.X](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9200/software/release/17-16/configuration_guide/lyr2/b_1716_lyr2_9200_cg/configuring_spanning_tree_protocol.html)

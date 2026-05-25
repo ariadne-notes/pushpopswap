@@ -1,4 +1,4 @@
-# Auto RP
+# Auto-RP
 
 Cisco devices can announce their willingness to be an RP, via `cisco-rp-announce`
 
@@ -8,8 +8,10 @@ A different service, a mapping agent, will read these messages, pick a winner, t
 * 4.4.4.4, mapping agent.
 
 <pre>
-R4# show ip pim autorp 
-AutoRP Information: 
+R4# show ip pim autorp
+
+AutoRP Information:
+
   AutoRP is enabled.
   RP Discovery packet MTU is 1500.
   224.0.1.40 is joined on Loopback0.
@@ -22,7 +24,8 @@ PIM AutoRP Statistics: Sent/Received
 These packets are slow.
 
 <pre>
-R4# debug ip pim auto-rp 
+R4# debug ip pim auto-rp
+
 PIM Auto-RP debugging is on
 !
 ! Sent to cisco-rp-discovery
@@ -45,5 +48,6 @@ R4# undebug all
 All possible debugging has been turned off
 </pre>
 
-# References
+## References
+
 [Cisco - Configuring a Rendezvous Point](https://www.cisco.com/c/en/us/td/docs/ios/solutions_docs/ip_multicast/White_papers/rps.html#wp1029236)

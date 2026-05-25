@@ -1,3 +1,5 @@
+# BPDU Guard
+
 - Only works if the attached device sends a BPDU. Cannot prevent a switch from being attached to a port. 802.1x helps with that.
 
 **Detects a BPDU, and err-disables a port**
@@ -11,6 +13,7 @@ switch(config)# spanning-tree portfast bpduguard default
 ... should be set so access ports go `errdisable` when a rogue switch is connected and require an operator to correct.
 
 #### Seeing `err-disabled` status
+
 ```
 switch# show int status
 

@@ -1,12 +1,16 @@
+# SD-WAN
+
 ## Theory
 
-# Terms
+## Terms
+
 * **DIA:** Direct Internet Access. What we usually have has residential customers. No real guarantee of service, but tends to be fast.
 * **SLA:** Service Level Agreement. Business Internet, especially, to connect sites together tends to have a SLA.
 * **MPLS:** A kind of VPN service provided by an ISP, to connect business sites together. Comes with a SLA. More expensive than DIA.
 * **BFD:** Bidirectional Forwarding Detection
 
-# Devices
+## Devices
+
 
 * **Manager:** AKA vManage, AKA, the NMS. What a human interacts with, the GUI
 * **Validator:** AKA vBond. Initial Authentication and provisioning, (Cisco calls this orchestration) Responsible for NAT traversal.
@@ -14,10 +18,12 @@
 * **WAN Edge:** AKA vEdge. What gets programmed. Provides data-plane between sites, via circuits like DIA, or MPLs.
 * **vEDGE:** Old hardware-based Viptela gear, pre-Cisco acquisition. Unfavored.
 
-# Marketing Terms
+## Marketing Terms
+
 * **Cisco SD-WAN Cloud OnRamp:** AKA, CoR. Edges can perform analytics to SaaS or IaaS offerings to select the best path, via jitter.
 
-# Validator
+## Validator
+
 Should be give a FQDN, so WAN edges have no problems finding it on connection to a DIA.
 
 FQDNs also mean we aren't putting a static IP into a config.
@@ -30,26 +36,31 @@ This device does the load balancing if multiple controllers are being used.
 
 The Validator has a permanent dTLS tunnel to all the controllers.
 
-# Controllers
+## Controllers
+
 * Keeps all the routes between sites, that are managed via the OMP protocol (like BGP, but proprietary)
 * Logical tunnel topologies (such as hub and spoke, regional, and partial mesh)
 * Service Chaining
 * Traffic Engineering
-* Segmentation per VPN 
+* Segmentation per VPN
 
-# WAN Edge
+
+## WAN Edge
+
 * Dataplane for a site
 * Has OMP, BGP, OSPF, EIGRP, ACLs, ARP, HA, and QoS.
 * Connects via dTLS to the controllers.
 * Connects via dTLS to other edges.
 
-# SD-WAN Policy
+## SD-WAN Policy
+
 Policies are further classified as
 
 * **Local Policy:** Programed on the edges. ACLs, QoS, routing, and AAA.
 * **Centralized Policy:** Route policy, before being sent to the edges, (Topology, VPN Membership, Application Aware Routing)
 
-# Application Aware Routing
+## Application Aware Routing
+
 * **FEC:** Forward Error Correction. For every four packets, send a parity packet. It can help rebuild a lost packet.
 * **Packet Duplication:** Send twice as much data via two tunnels. The receiving vEdge router can reconstruct it.
 * **TCP Optimization and Session Persistence:** For high-latency links like satellite, open one TCP session, proxy it, and reuse it.
@@ -57,7 +68,8 @@ Policies are further classified as
 * For AAR, or CoR, the edge will send HTTP probes and measure the jitter and/or loss.
 * The score for an app is the vQoS (Viptela Quality of Experience) from 0 to 10, 10 being best.
 
-# VPNs
+## VPNs
+
 
 **VPN0:** Underlay Signaling, transport WAN. Typically public addresses or SRC-NAT Public addresses.
 
@@ -68,6 +80,7 @@ Policies are further classified as
 
 
 ## Commands
+
 ```
 !
 ! Control Setup
@@ -89,9 +102,11 @@ show sdwan omp multicast-routes
 show orchestrator connections
 ```
 
-# Initial Bringup
+## Initial Bringup
+
 
 ### Pasting in the bootstrap
+
 ```
 tclsh
 puts [open "bootflash:name-of-bootstrap-file.cfg" w+] {
@@ -123,7 +138,8 @@ copy tftp://10.0.0.1:8000/<boot-strap>.cfg bootflash:/<bootstrap>.cfg
 
 **controller-mode enable**
 
-# References
+## References
+
 [Design Zone for Branch/WAN - Cisco Catalyst SD-WAN Design Guide - Cisco](<https://www.cisco.com/c/en/us/td/docs/solutions/CVD/SDWAN/cisco-sdwan-design-guide.html>)
 
 

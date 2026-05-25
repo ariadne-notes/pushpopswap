@@ -1,4 +1,4 @@
-# Terms
+# Multicast
 
 * **Multicast:** A one-to-many service using UDP packets destined to group IP address. Hosts subscribe to the group, routers replicate for the group.
 * **IGMP:** Internet Group Management Protocol. A host uses IGMP to request a multicast stream. Switches see it (for snooping), and the FHR uses this to build the MDT.
@@ -22,7 +22,8 @@
 * **RIB:** Routing Information Base
 * **DF:** Designated Forwarder. Used in PIDIR-PIM.
 
-# Harder Terms
+## Harder Terms
+
 
 ### RPF - Reverse Path Forwarding
 
@@ -40,6 +41,7 @@ Any multi-cast traffic from any given source, not received on the RPF is discard
 
 
 ## Shared Trees
+
 (*,G) entries in the mroute table require fewer resources, since multiple sources can use the same tree.
 
 (*,G) entries in the mroute table represent a security risk, because any source can send to this shared tree.
@@ -111,7 +113,8 @@ PIM                | 224.0.0.13
 mDNS               | 224.0.0.251
 
 
-# PIM
+## PIM
+
 
 PIM Mode             | Full Name             | How it works
 ---------------------|-----------------------|------------------------------------------------------
@@ -123,6 +126,7 @@ PIM-SSM              | Source Specific       | No RP. Receiver specifies both so
 
 
 ## PIM Message Types
+
  Type | Message Type               | Destination                       | Purpose
 ------|----------------------------|-----------------------------------|------------------------------------------------------
  0    | Hello                      | 224.0.0.13 (all PIM routers)      | Establish adjacency, negotiate parameters.
@@ -134,11 +138,14 @@ PIM-SSM              | Source Specific       | No RP. Receiver specifies both so
  8    | Candidate RP advertisement | Bootstrap router (BSR) (unicast)  | Candidate RPs advertise themselves to the BSR.
  9    | State refresh              | 224.0.0.13 (all PIM routers)      | PIM-DM only. Prevents prune state from timing out and triggering a re-flood.
  10   | DF election                | 224.0.0.13 (all PIM routers)      | Bidir-PIM only. Elects a Designated Forwarder per link to forward traffic toward the RP.
- 
- 
+
+
+
+
 
 
 ## Dense
+
 Based on RFC 3973 Protocol Independent Multicast Dense Mode (PIM-DM)
 - Push Model
   - Good for when every subnet probably wants this traffic
@@ -165,10 +172,12 @@ Based on RFC 3973 Protocol Independent Multicast Dense Mode (PIM-DM)
   - No downstream neighbor or reciever
   - Downstream sent prune
   - LAN Prune override exception
-- After pruning 
+- After pruning
+
   - Flood again, prune back, flood again, prune back
   
 ## PIM Sparse
+
 Based on [RFC4601](https://www.rfc-editor.org/rfc/rfc4601) - Protocol Independent Multicast Sparse Mode (PIM-SM)
 - Explicit joins everywhere. No flooding.
 - LHR, sends a PIM-Join towards the RP, building a (*,G).
@@ -202,7 +211,9 @@ a DR is elected by highest priority, or highest IP in the subnet.
 
 The RP always gets the stream, even if it has no receivers to forward it to.
 
-## BIDIR-PIM 
+## BIDIR-PIM
+
+
 Based on RFC 4601 - Bidirectional Protocol Independent Multicast (BIDIR-PIM)
 - Superset of PIM-SM
 - No (S,G) entries
@@ -215,6 +226,7 @@ Based on RFC 4601 - Bidirectional Protocol Independent Multicast (BIDIR-PIM)
   - Ingress packets to a DF can be forwarded upstream via the RPF towards the RPA.
   
 ## MSDP
+
 - RPs register to each other, in different multicast domains.
 - RP sends a SA (source active) message.
 - Still needs PIM running for the S,G.
@@ -226,6 +238,7 @@ Based on RFC 4601 - Bidirectional Protocol Independent Multicast (BIDIR-PIM)
 
 
 #### Shared-Tree (*,G)
+
 - Shared trees are essential for multiple senders to the same group
 - A single tree is built for each group, regardless of source
   - 3 sources, 1 tree
@@ -237,6 +250,7 @@ Based on RFC 4601 - Bidirectional Protocol Independent Multicast (BIDIR-PIM)
 - RP Selection is a hassle
 
 #### Source Based Multicast (S,G)
+
 - PIM dense uses a separate tree for each multicast source and destination group.
 - Groups do not share trees.
   - 3 Sources 3 trees.
@@ -280,9 +294,11 @@ FLAGS
 ```
 
 #### Nexus 7K
+
 `show forwarding multicast route group <>`
 
 ## L2 Addresses
+
 MAC addresses are 48 bits.
 
 The first 25 bits are always.
@@ -383,7 +399,8 @@ Address           Octet 1    Octet 2    Octet 3    Octet 4
 ```
 
 
-# Lab Stuff.
+## Lab Stuff.
+
 
 BPF - Capture all PIM, but not PIM hello messages.
 
@@ -396,6 +413,7 @@ iperf --client 239.10.10.10 --udp --time 3600 --interval 1 --bandwidth 1pps --tt
 ```
 
 ### Receiving Multicast
+
 ```
 iperf --server --udp --bind 239.10.10.10 --interval 1
 ```

@@ -1,4 +1,4 @@
-# EIGRP 64-bit metric Calculator
+# EIGRP Wide Metric
 
 The RFC recommended way to modify a path with EIGRP is **changing the delay**, under the interface. This will not impact other protocols. Modifying bandwidth ... affects lots of things!
 
@@ -226,7 +226,8 @@ update();
 </script>
 
 
-# Wide Network Vectors
+## Wide Network Vectors
+
 <pre>
 RFC 7868                      Cisco's EIGRP                     May 2016
 
@@ -242,7 +243,8 @@ RFC 7868                      Cisco's EIGRP                     May 2016
               o Reliability   - minimum
               o MTU           - minimum
               o Hop count     - accumulative
-              
+
+
    There are two additional values: Jitter and energy.  These two values
    are accumulated from destination to source:
 
@@ -250,7 +252,8 @@ RFC 7868                      Cisco's EIGRP                     May 2016
            o Energy - accumulative
 </pre>
 
-# Wide Metric Conversion Constants
+## Wide Metric Conversion Constants
+
 <pre>
 
 RFC 7868                      Cisco's EIGRP                     May 2016
@@ -275,7 +278,8 @@ RFC 7868                      Cisco's EIGRP                     May 2016
    energy would be expressed in power per kilobytes per second of usage.
 </pre>
 
-# Throughput
+## Throughput
+
 <pre>
 RFC 7868                      Cisco's EIGRP                     May 2016
 
@@ -301,7 +305,8 @@ RFC 7868                      Cisco's EIGRP                     May 2016
    increases beyond 90%.
 </pre>
 
-# Latency
+## Latency
+
 <pre>
 RFC 7868                      Cisco's EIGRP                     May 2016
 
@@ -322,7 +327,8 @@ RFC 7868                      Cisco's EIGRP                     May 2016
                              EIGRP_DELAY_PICO
 </pre>
 
-# Composite Calculation
+## Composite Calculation
+
 <pre>
 RFC 7868                      Cisco's EIGRP                     May 2016
 
@@ -339,7 +345,8 @@ RFC 7868                      Cisco's EIGRP                     May 2016
       metric = (K1 * min(Throughput)) + (K3 * sum(Latency)) }
 </pre>
 
-# Validations
+## Validations
+
 
 <pre>
 R1# show eigrp address-family ipv4 topology 2.2.2.2/32
@@ -363,7 +370,8 @@ EIGRP-IPv4 VR(EIGRP_100) Topology Entry for AS(100)/ID(1.1.1.1) for 2.2.2.2/32
 <pre>
 R1# show ip protocols | i weight
     Metric weight K1=1, K2=2, K3=3, K4=4, K5=5 K6=0
-    
+
+
 R1# show ip eigrp topology 2.2.2.2/32
 EIGRP-IPv4 VR(EIGRP_100) Topology Entry for AS(100)/ID(1.1.1.1) for 2.2.2.2/32
   State is Passive, Query origin flag is 1, 7 Successor(s), FD is 55450, RIB is 433
@@ -380,5 +388,6 @@ EIGRP-IPv4 VR(EIGRP_100) Topology Entry for AS(100)/ID(1.1.1.1) for 2.2.2.2/32
         Originating router is 2.2.2.2
 </pre>
 
-# References
+## References
+
 [RFC 7868 - Cisco's Enhanced Interior Gateway Routing Protocol (EIGRP)](https://www.rfc-editor.org/rfc/rfc7868.html#section-5.6.2.1)

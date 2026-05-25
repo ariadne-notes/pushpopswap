@@ -1,3 +1,5 @@
+# gRPC
+
 A Google Invention.
 
 * Uses HTTP/2 as transport.
@@ -28,7 +30,8 @@ flowchart LR
     cpp -->|"Proto Response(s)"| stub1
 ```
 
-# Protocol Buffers
+## Protocol Buffers
+
 This defines the data structure to send.
 * Small local records
 
@@ -45,9 +48,12 @@ message Person {
 
 ... Gets fed into the protocol buffer compiler `protoc`
 
-Allows `name()`, `set_name()` 
+Allows `name()`, `set_name()`
 
-Now the `Person` class can serialize and retrieve protocol buffer messages. 
 
-# References
+Now the `Person` class can serialize and retrieve protocol buffer messages.
+
+
+## References
+
 [Introduction to gRPC | gRPC](<https://grpc.io/docs/what-is-grpc/introduction/>)

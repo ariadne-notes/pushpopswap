@@ -1,3 +1,5 @@
+# ISATAP
+
 * Packet-in-packet technology
 * Mostly historical
 * Used within one site, **not** an Internet Tech.
@@ -8,61 +10,75 @@
 * Works as long as v4 routing works.
 * Stateless.
 
-# Theory 
+## Theory
+
+
 
 Use v4 connectivity to emulate a NBMA network. Wrap the v6 packet inside v4.
 
 
-# The routers perform ISATAP
+## The routers perform ISATAP
+
 <pre>
-         ┌─ v6 only ─┐         ┌────────────  v4 only ───────────────┐         ┌─ v6 only ─┐         
-         ▼           ▼         ▼                                     ▼         ▼           ▼         
+         ┌─ v6 only ─┐         ┌────────────  v4 only ───────────────┐         ┌─ v6 only ─┐
+         ▼           ▼         ▼                                     ▼         ▼           ▼
 ┌────────┐           ┌─────────┐            ┌─────────┐              ┌─────────┐           ┌────────┐
 │client-1│           │    R1   │            │   R2    │              │    R3   │           │client-2│
 │   v6   ├───────────┤  v4/v6  ├────────────┤    v4   ├──────────────│  v4/v6  ├───────────┤   v6   │
 └────────┘           └─────────┘            └─────────┘              └─────────┘           └────────┘
-                             ISATAP                              ISATAP                              
-                              Interface                           Interface                          
-                           ┌───────────┬───────────┐                                                 
-                           │ v6-packet │ v4-header │ ───────►                                        
-                           └───────────┴───────────┘                                                 
+                             ISATAP                              ISATAP
+
+                              Interface                           Interface
+
+                           ┌───────────┬───────────┐
+                           │ v6-packet │ v4-header │ ───────►
+                           └───────────┴───────────┘
 </pre>
 
-# The clients perform ISATAP
-<pre>                                                                                                  
-           ┌──────────────────────────────────  v4 only  ───────────────────────────────────┐          
-           ▼                                                                                ▼          
-  ┌────────┐           ┌─────────┐            ┌─────────┐              ┌─────────┐          ┌────────┐ 
-  │client-1│           │   R1    │            │   R2    │              │   R3    │          │client-2│ 
-  │ v4/v6  ├───────────┤    v4   ├────────────┤    v4   ├──────────────┤    v4   │──────────┤  v4/v6 │ 
-  └────────┘           └─────────┘            └─────────┘              └─────────┘          └────────┘ 
-        ISATAP                                                                        ISATAP           
-         Interface                                                                     Interface       
-        ┌───────────┬───────────┐                                                                      
-        │ v6-packet │ v4-header │ ────────►                                                  
-        └───────────┴───────────┘                                                                      
-</pre>                                                                                                 
+## The clients perform ISATAP
 
-# ISATAP Interface in v6
+<pre>
+
+           ┌──────────────────────────────────  v4 only  ───────────────────────────────────┐
+           ▼                                                                                ▼
+  ┌────────┐           ┌─────────┐            ┌─────────┐              ┌─────────┐          ┌────────┐
+  │client-1│           │   R1    │            │   R2    │              │   R3    │          │client-2│
+  │ v4/v6  ├───────────┤    v4   ├────────────┤    v4   ├──────────────┤    v4   │──────────┤  v4/v6 │
+  └────────┘           └─────────┘            └─────────┘              └─────────┘          └────────┘
+        ISATAP                                                                        ISATAP
+
+         Interface                                                                     Interface
+
+        ┌───────────┬───────────┐
+        │ v6-packet │ v4-header │ ────────►
+        └───────────┴───────────┘
+</pre>
+
+
+## ISATAP Interface in v6
+
 
 All ISATAP interfaces look like this. The giveaway is `0000:5EFE` in the host portion.
 
 If a router sees a v6 destination that looks like this, it's an ISATAP packet.
 
 <pre>
-                    64 bits                              32 bits                   32 bits          
+                    64 bits                              32 bits                   32 bits
+
 ┌───────────────────────────────────────────────┬───────────────────────────┬──────────────────────┐
 │  Global Unicast Prefix                        │        0000:5EFE          │  IPv4 of ISATAP Link │
 └───────────────────────────────────────────────┴───────────────────────────┴──────────────────────┘
 </pre>
 
-# Terms
+## Terms
+
 * **PRL:** Potential Router List. Routers that could perform ISATAP.
 * **ISATAP Interface:** The dual-stack interface, with the above v6 IP on it.
 * **ISATAP v4 Address:** The NBMA address. How to reach this device via ISATAP
 * **ISATAP v6 Address:** The end-to-end v6 address, it **must** embed the v4 address.
 
-# References
+## References
+
 [ISATAP - Wikipedia](<https://en.wikipedia.org/wiki/ISATAP>)
 
 [RFC 5214: Intra-Site Automatic Tunnel Addressing Protocol (ISATAP)](https://www.rfc-editor.org/rfc/rfc5214)

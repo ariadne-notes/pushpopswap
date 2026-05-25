@@ -1,3 +1,5 @@
+# Private VLANs
+
 Default port type on a Catalyst ME3400 is UNI (User Network Interface)
 
 UNI ports can only send traffic to NNI ports in the same vlan. The default UNI mode is isolated.
@@ -15,7 +17,8 @@ vlan 100
 
 This example uses a ME3400.
 
-# Config Example
+## Config Example
+
 ```
 vlan 100
 private-vlan primary
@@ -52,7 +55,8 @@ vlan 100
  private-vlan association add ... this doesn't work at all!!
 ```
 
-# Verification
+## Verification
+
 ```
 switch #show vlan private-vlan 
 

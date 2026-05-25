@@ -1,3 +1,5 @@
+# SyncE
+
 SyncE synchronizes clock frequency over an Ethernet port. It does not synchronize time-of-day, that's done by PTP, IEEE 1588.
 
 Setting as oscillator to a frequency is syntonization.
@@ -13,10 +15,13 @@ Setting as oscillator to a frequency is syntonization.
 ### Config Options
 
 ##### ITU-T G.813 Option 1 clock (QL-SEC)
+
 `EEC-option 1`
 
 
-##### ITU-T G.812 type IV clock (QL-ST3)		      
+##### ITU-T G.812 type IV clock (QL-ST3)
+
+
 `EEC-option 2`
 
 ## Terms
@@ -28,11 +33,13 @@ Synchronous Ethernet and IEEE 1588 in Telecoms
 * **Frequency:** Rate of a repetitive event. Measured in cyles per second. A device that produces frequency is an oscilator.
 
 * **T0:** System Clock (line interface output)
-	
+
+
 * **T1:** Timing Reference signal derived from STM-N (STS-N/SyncE) input.
 	 
 * **T2:** Timing Reference signal derived from 2048/1544 kbit input [input from PDH]
-	
+
+
 * **T3:** Timing reference signal derived from 2048 or 2048 1544 with SSM.
 	 
 * **T4:** Clock-interface output.

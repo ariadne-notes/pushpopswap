@@ -7,9 +7,6 @@ language = "en"
 [preprocessor.mermaid]
 command = "mdbook-mermaid"     # render only code-blocks marked as "mermaid" e.g. ```mermaid
 
-[preprocessor.svgbob2]
-code_block = "bob"             # render only code-blocks marked as "bob", e.g.: ```bob
-
 [output.html]
 additional-css = ["theme/custom.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
