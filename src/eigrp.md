@@ -21,12 +21,15 @@
 ## Feasible Successor Algo
 
 R2 sends an update
+
  - 10.0.0.0/24 - RD is 2000
 
 R3 Sends an update
+
  - 10.0.0.0/24 - RD is 2050
 
 R1 calculates total path metric.
+
  - R2 is 2000 + 1000 = 3000.
  - R3 is 2050 +   50 = 2100.  < - Successor route.
 

@@ -39,6 +39,7 @@ These can be thought of as the five steps.
 ## Hello Packets
 
 These things must match for an adjacency to form
+
 - Subnet
 - Subnet mask
 - Interface MTU
@@ -50,6 +51,7 @@ These things must match for an adjacency to form
 - Dead time
 
 These must not match
+
 - Router ID
 
 Check with `debug ip ospf event`
@@ -207,6 +209,7 @@ Can also check with [checksums](https://en.wikipedia.org/wiki/Fletcher%27s_check
 
 
 The Router ID is what is used to build the SPT. It's very important it's both
+
 - Correct
 - Easy to identify the router
 
@@ -483,6 +486,7 @@ When they turn on their private OSPF peering, all the traffic between these two 
 **The Solution: Sham Links**
 
 Sham links are needed because the routes provided by an L3VPN are `O IA`. When the OSPF backdoor link comes up it will be preferred for two reasons:
+
 - OSPF has a lower AD than BGP.
 - `O` routes are prefered over `O IA`
 
@@ -493,6 +497,7 @@ From [OSPF Sham-Link Support for MPLS VPN - Cisco](https://www.cisco.com/c/en/us
 
 > Before you create a sham-link between PE routers in an MPLS VPN, you must:
 >
+
 > * Configure a new interface with a /32 address on the remote PE so that OSPF packets can be sent over the VPN backbone to the remote end of the sham-link. The /32 address must meet the following criteria:
 >   * Belong to a VRF
 >   * Not be advertised by OSPF

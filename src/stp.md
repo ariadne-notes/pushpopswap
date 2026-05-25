@@ -244,6 +244,7 @@ This is a STP BPDU.
   - TC-Ack
 
 Two bridges
+
   - Root bridge
   - Bridge that sent the BDPU
   

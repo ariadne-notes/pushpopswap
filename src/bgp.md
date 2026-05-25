@@ -15,6 +15,7 @@
 
 
 IANA asks for the following things.
+
 - Proof of a publicly allocated network range
 - Proof that Internet connectivity is provided through multiple connections
 - Need for a unique routing policy from providers
@@ -125,6 +126,7 @@ These read left to right like a book. This prefix was most recently from AS `701
 ### Origin
 
 IGP > EGP > Incomplete
+
 - IGP means it came from an IGP. This is the highest preference.
 - Incomplete means its likely a redistributed route
 
@@ -135,6 +137,7 @@ IGP > EGP > Incomplete
 1. iBGP, routers in same AS,      destination outside AS.  The Next hop is the external peer who advertised the address.
 
 ... When the third option happens ...
+
 - Advertise into the IGP the external links to the BGP peers.
 - Tell the AS border router to change the next hop to its own IP address. [next-hop-self]
 
@@ -202,6 +205,7 @@ The origaning router puts its `Router_ID` here. If it sees this, it knows a loop
 
 
 A RR will not change any attributes of a route.
+
 - If a route is learned from a non-client iBGP peer, reflect to clients
 - If a route is learned from a client, reflect to everyone
 - If a route is learned from a eBGP peer, reflect to everyone
@@ -292,6 +296,7 @@ Just because the route shows up in `show ip bgp` doesn't mean it will install. B
 Route Reflectors are generally preferred.
 
 IF you want to add two BGP speakers to the same router reflector cluster, specify the cluster ID.
+
 - clients can not detect inter-cluster loops. They don't have the attributes in the BGP table.
 
 ### BGP redistribution into anything
@@ -302,4 +307,3 @@ IF you want to add two BGP speakers to the same router reflector cluster, specif
 B. Edgeworth, R. Garza Rios, J. Gooley, and D. Hucaby, *CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide*, 2nd ed. Indianapolis, IN: Cisco Press, 2023.
 
 I. van Beijnum, *Internet Routing with BGP*, Kindle ed., Nov. 12, 2022, 269 pp.
-

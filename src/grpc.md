@@ -33,6 +33,7 @@ flowchart LR
 ## Protocol Buffers
 
 This defines the data structure to send.
+
 - Small local records
 
 - Messages

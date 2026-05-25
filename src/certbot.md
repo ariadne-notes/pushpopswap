@@ -115,4 +115,3 @@ I'm using cloudflare with a domain I own, but there is a good sized list of [sup
 [Snapcraft - Installing Snap or Rocky Linux](https://snapcraft.io/docs/installing-snap-on-rocky)
 
 [Read The Docs - Certbot - DNS Plugins](https://eff-certbot.readthedocs.io/en/stable/using.html#dns-plugins)
-

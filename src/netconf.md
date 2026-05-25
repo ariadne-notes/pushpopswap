@@ -27,26 +27,31 @@ netconf-yang candidate-datastore: disabled
 I performed this lab inside a linux virtual environment.
 
 1. Load a python virtual environment
+
 ```console
 python3 -m venv ~/netconf-lab
 ```
 
 1. Activate it
+
 ```console
 source ~/netconf-lab/bin/activate
 ```
 
 1. Install ncclient
+
 ```console
 pip install ncclient
 ```
 
 1. Enter the python shell
+
 ```console
 python
 ```
 
 1. Connect to device:
+
 ```console
 >>> conn = manager.connect(
     host="192.168.52.199",
@@ -59,6 +64,7 @@ python
 ```
 
 1. Paste in a payload, follow the XML
+
 ```console
 >>> payload = """
 <config>

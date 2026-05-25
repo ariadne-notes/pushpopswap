@@ -9,9 +9,11 @@ IO goes from controller - local buffer - CPU
 #### Interrupts
 
 Hardware interrupts
+
 - A buffer has been filled
 
 Traps or exceptions are software generated interrupts
+
 - User requests
 - Errors
 
@@ -33,6 +35,7 @@ Most operating systems are interrupt driven.
 ### Caching
 
 Copying data from secondary storage to main memory
+
 - Faster
 
 Storage Hierarchy
@@ -62,6 +65,7 @@ Kernel mode is also called privileged.
 
 System calls are how user mode apps interact with the kernel.
 APIs are provided facilities to access the kernel without using system calls (which may not be allowed)
+
 - Win32 for Windows
 - POSIX API (Unix, Linux, Mac OS X)
 - Java API for Java Virtual Machine (JVM)

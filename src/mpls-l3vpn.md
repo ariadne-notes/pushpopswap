@@ -11,6 +11,7 @@ VRF = VPN Routing Forwarding Instance
 You can use loopbacks to route between VRFs
 
 L3VPNs rely on Extended Comunnities.
+
 -  Basically just arbitrary TLVs attached to BGP prefixes
 
 VPNV4 = PE to PE Label Information

@@ -11,6 +11,7 @@ This feature has two modes:
 - **Aggressive:** Detect one way traffic on both fiber, and twisted pair.
 
 From Cisco:
+
 - On fiber-optic or twisted-pair links, one of the ports cannot send or receive traffic.
 - On fiber-optic or twisted-pair links, one of the ports is down while the other is up.
 - One of the fiber strands in the cable is disconnected.

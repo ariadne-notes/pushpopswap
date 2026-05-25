@@ -14,6 +14,7 @@ n*(n-1)/2
 **TLOC Routes**
 
 Works like a BGP route, with a next-hop atttribute.
+
 - System IP of the OMP speaker who owns the route
 - Color (mpls, metro-ethernet)
 - Encapsulation (IPsec or GRE)

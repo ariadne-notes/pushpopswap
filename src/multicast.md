@@ -147,6 +147,7 @@ PIM-SSM              | Source Specific       | No RP. Receiver specifies both so
 ## Dense
 
 Based on RFC 3973 Protocol Independent Multicast Dense Mode (PIM-DM)
+
 - Push Model
   - Good for when every subnet probably wants this traffic
 - No PIM DR
@@ -179,6 +180,7 @@ Based on RFC 3973 Protocol Independent Multicast Dense Mode (PIM-DM)
 ## PIM Sparse
 
 Based on [RFC4601](https://www.rfc-editor.org/rfc/rfc4601) - Protocol Independent Multicast Sparse Mode (PIM-SM)
+
 - Explicit joins everywhere. No flooding.
 - LHR, sends a PIM-Join towards the RP, building a (*,G).
 - Phased
@@ -207,6 +209,7 @@ Based on [RFC4601](https://www.rfc-editor.org/rfc/rfc4601) - Protocol Independen
   
 
 a DR is elected by highest priority, or highest IP in the subnet.
+
   - DR sends the PIM join upstream.
 
 The RP always gets the stream, even if it has no receivers to forward it to.
@@ -215,6 +218,7 @@ The RP always gets the stream, even if it has no receivers to forward it to.
 
 
 Based on RFC 4601 - Bidirectional Protocol Independent Multicast (BIDIR-PIM)
+
 - Superset of PIM-SM
 - No (S,G) entries
 - Traffic can flow up and down the same tree.

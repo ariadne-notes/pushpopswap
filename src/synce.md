@@ -53,7 +53,3 @@ Synchronous Ethernet and IEEE 1588 in Telecoms
 - **MTIE:** Maximum time interval error is a measure of the worst case phase variation of a signal with respect to a perfect signal over a given period of time.
 
 - **TDEV:** Time deviation is a statistical analysis of the phase stability of a signal over a given period of time.
-
-
-
-

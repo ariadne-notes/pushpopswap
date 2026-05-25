@@ -27,4 +27,3 @@ Connections shown are logical to connect the modules, not the actual connections
                             │                                                  │
                             └──────────────────────────────────────────────────┘
 </pre>
-

@@ -81,6 +81,7 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 ## Other Designs
 
 **SD-Access**
+
 - Cisco Catalyst Center
 - Cisco Identity Services Engine
 
@@ -88,6 +89,7 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 ![cisco-campus-sd-access-design](./images/cisco-campus/cisco-campus-sd-access-design.jpg)
 
 **Open Standards Based Overlay**
+
 - MP-BGP
 - VXLAN
 

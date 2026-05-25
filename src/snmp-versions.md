@@ -6,13 +6,16 @@
 - Uses a community string for a basic password
 
 **Changing the equipment**
+
 - Set Request
 
 **Getting Outputs**
+
 - Get Request
 - GetNext
 
 **Receiving Outputs**
+
 - Get Response
 - Trap
 

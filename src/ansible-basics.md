@@ -19,7 +19,7 @@ This was done on a home lab running Debian 11. `tesseract` is my control-node.
 $ echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/ansible.list
 $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 $ sudo apt update
-````
+```
 
 ##### Install Ansible
 
@@ -44,31 +44,33 @@ ariadne@tesseract:~/ansible$ cat /etc/ansible/hosts
 
 [linux]
 <hosts redacted>
-```console
+```
 
 ##### Define Defaults, Modify ansible.cfg
 
-```
+```console
 ariadne@tesseract:/etc/ansible$ cat ansible.cfg 
 # [output omitted]
 
 [defaults]
 host_key_checking = False
 remote_user = ariadne
-```console
+```
 
 ##### Create a public SSH key to allow passwordless access
 
 I'm using an internal linux host called `tesseract`. It doesn't use a password, it's a home lab.
-```
-ariadne@tesseract:~$ ssh-keygen -t rsa -b 4096 -C "ariadne@tesseract.haske.org"
+
 ```console
+ariadne@tesseract:~$ ssh-keygen -t rsa -b 4096 -C "ariadne@tesseract.haske.org"
+```
 
 ##### Write a playbook to copy the SSH keys
 
-```
+```console
 ariadne@tesseract:~/ansible$ cat copy_ssh_keys_test.yml 
 ---
+
 - name: Copy SSH key to hosts
   hosts: all
   become: yes
@@ -79,11 +81,12 @@ ariadne@tesseract:~/ansible$ cat copy_ssh_keys_test.yml
       user: ariadne
       state: present
       key: "{{ lookup(file, /home/ariadne/.ssh/id_rsa.pub) }}"
-```console
+
+```
 
 ##### Run it
 
-```
+```console
 ariadne@tesseract:~/ansible$ ansible-playbook -k copy_ssh_keys.yml 
 SSH password: 
 
@@ -139,13 +142,14 @@ hosts.redacted    : ok=2    changed=0    unreachable=0    failed=0    skipped=0 
 hosts.redacted    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 hosts.redacted    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 hosts.redacted    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0     
-```console
+```
 
 ##### Write a Playbook to Upgrade Everything
 
-```
+```console
 ariadne@tesseract:~/ansible$ cat upgrade-everything.yml 
 ---
+
 - name: Update and upgrade apt packages
   hosts: all
   become: true
@@ -155,7 +159,8 @@ ariadne@tesseract:~/ansible$ cat upgrade-everything.yml
         upgrade: yes
         update_cache: yes
         cache_valid_time: 86400 #One day
-```console
+
+```
 
 ##### Sources
 

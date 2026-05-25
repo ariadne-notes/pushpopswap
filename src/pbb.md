@@ -58,6 +58,7 @@ the backbone service instance of a frame. The I-SID defines the service instance
 - **CBP:** Customer Backbone Port. A BEB port that can receive and transmit I-tagged frames for multiple customers,
 
 and can assign B-VIDs (backbone VLAN IDs) and translate I-SID on the basis of the received I-SID.
+
 - **I-Component:** A bridging component contained in a BEB that bridges in the Customer space (Customer MAC addresses, S-VLAN).
 - **PIP:** Provider Instance Port. The set of Virtual Instance Ports (VIPs) that are supported by a single instance.
 - **Service frame:** A frame exchanged between a provider and a customer.

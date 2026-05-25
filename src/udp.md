@@ -104,4 +104,3 @@ Frame 116: 562 bytes on wire (4496 bits), 562 bytes captured (4496 bits) on inte
     01e0  6f 6b 75 70 0a 69 70 20 63 65 66 0a 6e 6f 20 69   okup.ip cef.no i
     01f0  70 76 36 20 63 65 66 0a 21 0a 21 0a 21 0a 73 70   pv6 cef.!.!.!.sp
 ```
-

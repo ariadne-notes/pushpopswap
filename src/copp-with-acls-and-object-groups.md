@@ -10,6 +10,7 @@ ip access-list extended ACL_ICMP_UNKNOWN
 ```
 
 2. Make class-map to use the ACL.
+
 ```console
 class-map CLASS_MAP_ICMP_UNKNOWN
  match access-group name ACL_ICMP_UNKNOWN
@@ -25,6 +26,7 @@ policy-map POLICY_MAP_COPP
 ```
 
 4. Apply it to the control plane.
+
 ```console
 control-plane
  service-policy input COPP-POLICY-MAP
@@ -66,17 +68,20 @@ router# show policy-map control-plane input
 This uses python3, scapy, and sendpfast, to send icmp packets with random sources.
 
 1. Install sendpfast
+
 ```console
 sudo apt install tcpreplay
 ```
 
 2. Start a python virtual environment.
+
 ```console
 python3 -m venv venv
 source venv/bin/activate
 ```
 
 3. Install scapy inside it.
+
 ```console
 pip install scapy
 ```
@@ -105,11 +110,13 @@ EOF
 ```
 
 5. In a different terminal run something like this to see the packets leaving the interface.
+
 ```console
 sudo tcpdump -i ens18 icmp -n
 ```
 
 6. This requires raw sockets to run.
+
 ```console
 sudo venv/bin/python3 flood.py
 ```

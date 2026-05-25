@@ -132,6 +132,7 @@ python -m http.server 8000 --bind 10.0.0.1
 ```
 
 1. Copy into cisco box
+
 ```console
 copy tftp://10.0.0.1:8000/<boot-strap>.cfg bootflash:/<bootstrap>.cfg
 ```
@@ -141,5 +142,3 @@ copy tftp://10.0.0.1:8000/<boot-strap>.cfg bootflash:/<bootstrap>.cfg
 ## References
 
 [Design Zone for Branch/WAN - Cisco Catalyst SD-WAN Design Guide - Cisco](<https://www.cisco.com/c/en/us/td/docs/solutions/CVD/SDWAN/cisco-sdwan-design-guide.html>)
-
-

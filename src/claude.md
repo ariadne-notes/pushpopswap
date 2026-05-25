@@ -44,8 +44,3 @@ I feed this into claude most of the time to get nice outputs to copy into gear f
 - Do not use OSPF network statements.
 - Passive interface on interfaces towards hosts, this goes under the router statements
 ```
-
-
-
-
-

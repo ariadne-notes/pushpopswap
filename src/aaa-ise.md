@@ -14,4 +14,3 @@
 ##### Authorization and Accouting Flow
 
 ![tacacs-plus-auth-and-accounting-flows](./images/tacacs-plus-auth-and-accounting-flows.png)
-

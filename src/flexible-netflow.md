@@ -95,4 +95,3 @@ IPV4 SRC ADDR    IPV4 DST ADDR    TRNS SRC PORT  TRNS DST PORT  INTF INPUT      
 10.0.12.2        224.0.0.5                    0              0  Gi1                        89  Null                                   600                     6  20:36:54.026  20:37:41.568
 10.0.12.1        224.0.0.5                    0              0  Null                       89  Gi1                                    600                     6  20:36:52.808  20:37:38.836
 ```
-
