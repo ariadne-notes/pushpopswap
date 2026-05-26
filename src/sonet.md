@@ -76,17 +76,17 @@ B2: B2 can detect a far higher number of errors per frame. The exact number incr
 B3: B3 can detect up to eight parity errors in the entire SPE. This number produces acceptable resolution for a channelized interface because, (for example) each STS-1 in an STS-3 has a path overhead and B3 byte. However, this number produces poor resolution over concatenated payloads in which a single set of path overhead must cover a relatively large payload frame.
 ```
 
-## Packet over SONET commands
+## Packet Over SONET Commands
 
-## Displays information about the automatic protection switching feature
+## Displays Information About The Automatic Protection Switching Feature
 
 `show aps`
 
-## Displays information about the hardware
+## Displays Information About The Hardware
 
 `show controller sonet slot/port-adapter/port`
 
-## Displays information about the interface
+## Displays Information About The Interface
 
 `show controllers pos`
 

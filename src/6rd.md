@@ -36,7 +36,7 @@ This way, the customer gets dual stack without the ISP needing to upgrade a lega
                           └────────────────────────────┘
 </pre>
 
-## The four things Required to setup
+## The Four Things Required To Setup
 
 - **IPv4 Common Prefix:** - The high order bits every CE has in common for their v4 deployments.
 

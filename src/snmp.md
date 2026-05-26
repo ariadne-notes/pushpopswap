@@ -114,13 +114,13 @@ graph TD
 
 ### Configs
 
-**SNMP v2**
+#### SNMP v2
 
 ```console
 snmp-server community SSG_PROMETHEUS ro
 ```
 
-**SNMPv3**
+#### SNMPv3
 
 ```console
 snmp-server group SSG_PROMETHEUS v3 priv
@@ -131,13 +131,13 @@ snmp-server user ciscosnmp SSG_PROMETHEUS v3 auth sha auth-password-goes-here pr
 
 These are performed on a linux host. This is `apt install snmp` on Debian.
 
-**SNMPv2**
+#### SNMPv2
 
 ```console
 snmpwalk -v2c -c <community> <host> 1.3.6.1.4.1.9.9.109.1.1.1.1.7
 ```
 
-**SNMPv3**
+#### SNMPv3
 
 ```console
 snmpwalk -v3 -l authPriv -u <user> -a SHA -A  <auth-password> -x AES -X <encryption-password> <host> 1.3.6.1.4.1.9.9.109.1.1.1.1.7
@@ -149,7 +149,7 @@ iso.3.6.1.4.1.9.9.109.1.1.1.1.7.1 = Gauge32: 20
 ```
 
 
-## Trap Severity
+## Trap severity
 
 ```console
 snmp-server enable traps syslog

@@ -7,10 +7,10 @@
 - **TACACS+** - Same as above, basically an upgraded version, not backward compatible.
 - **EAP** - Extensible Authentication Protocol, 802.1x, used for LAN Auth, only works with RADIUS.
 
-## Authentication Flow
+## Authentication flow
 
 ![tacacs-plus-authentication-flows](./images/tacacs-plus-authentication-flows.png)
 
-## Authorization and Accouting Flow
+## Authorization and accouting flow
 
 ![tacacs-plus-auth-and-accounting-flows](./images/tacacs-plus-auth-and-accounting-flows.png)

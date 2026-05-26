@@ -21,7 +21,7 @@ A `/24` would be too large, (256 IPs), remove a bit, and we get a `/25`.
 
 `10.0.0.0/25.`
 
-## Borrowing one bit
+## Borrowing One Bit
 
 `0000 0000`
 

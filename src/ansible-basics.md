@@ -58,7 +58,7 @@ host_key_checking = False
 remote_user = ariadne
 ```
 
-### Create a public SSH key to allow passwordless access
+### Create A Public SSH Key To Allow Passwordless Access
 
 I'm using an internal linux host called `tesseract`. It doesn't use a password, it's a home lab.
 
@@ -66,7 +66,7 @@ I'm using an internal linux host called `tesseract`. It doesn't use a password, 
 ariadne@tesseract:~$ ssh-keygen -t rsa -b 4096 -C "ariadne@tesseract.haske.org"
 ```
 
-### Write a playbook to copy the SSH keys
+### Write A Playbook To Copy The SSH Keys
 
 ```console
 ariadne@tesseract:~/ansible$ cat copy_ssh_keys_test.yml 
@@ -85,7 +85,7 @@ ariadne@tesseract:~/ansible$ cat copy_ssh_keys_test.yml
 
 ```
 
-### Run it
+### Run It
 
 ```console
 ariadne@tesseract:~/ansible$ ansible-playbook -k copy_ssh_keys.yml 

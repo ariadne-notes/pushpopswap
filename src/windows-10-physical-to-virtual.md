@@ -33,9 +33,9 @@ A lot of this is to enable a clean "recovery" of the OS once it's copied over. M
 
 ## Dataloss
 
-**These tools cause dataloss.**
+### These Tools Cause Dataloss.
 
-**A typo will destroy a filesystem.**
+### A Typo Will Destroy A Filesystem.
 
 Before doing this, practice both making and recovering bare metal restores (BMRs) ... I used [Clonezilla.](https://clonezilla.org/)
 
@@ -61,7 +61,7 @@ Most of the time was spent inside of recovery OSes, working with unmounted files
 
 [Clonezilla](https://clonezilla.org/) - A bare metal recovery tool.
 
-## Preparing Windows 10 to be virtualized
+## Preparing Windows 10 To Be Virtualized
 
 My Windows 10 machine had some extras on it I didn't want to virtualize.
 

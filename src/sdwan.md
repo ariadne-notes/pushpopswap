@@ -105,7 +105,7 @@ show orchestrator connections
 ## Initial Bringup
 
 
-### Pasting in the bootstrap
+### Pasting In The Bootstrap
 
 ```console
 tclsh
@@ -117,7 +117,7 @@ puts [open "bootflash:name-of-bootstrap-file.cfg" w+] {
 }
 ```
 
-### Copy via HTTP using Python
+### Copy Via HTTP Using Python
 
 1. Get the current IP
 
@@ -137,7 +137,7 @@ python -m http.server 8000 --bind 10.0.0.1
 copy tftp://10.0.0.1:8000/<boot-strap>.cfg bootflash:/<bootstrap>.cfg
 ```
 
-**controller-mode enable**
+#### Controller-Mode Enable
 
 ## References
 

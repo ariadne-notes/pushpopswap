@@ -1,6 +1,6 @@
 # MPLS
 
-**MPLS Requires CEF**
+## MPLS Requires CEF
 
 
 ## Frame Format
@@ -40,30 +40,30 @@
 `[0] Explicit` Keep the label, but the destination must pop it. Used for MPLS QoS.
 
 
-## Steps to build the LFIB
+## Steps To Build The LFIB
 
-**1. Find the next-hop for the destination prefix**
+### 1. Find The Next-Hop For The Destination Prefix
 
 ```console
 show ip route 3.3.3.4
  * 10.1.2.1, from 10.1.2.1 via Eth0/0
 ```
 
-**2. Confirm the LDP neighbor behind that next-hop**
+### 2. Confirm The LDP Neighbor Behind That Next-Hop
 
 ```console
 show mpls ldp neighbor 10.1.2.1
  * peer LDP ident 3.3.3.3; Local LDP ident 2.2.2.2
 ```
 
-**3. Check what label that peer advertised for the prefix**
+### 3. Check What Label That Peer Advertised For The Prefix
 
 ```console
 show mpls ldp binding 3.3.3.4 255.255.255.255
  * remote binding: lsr: 3.3.3.3, label: imp-null
 ```
 
-**4. Verify the resulting LFIB entry**
+### 4. Verify The Resulting LFIB Entry
 
 ```console
 show mpls forwarding 3.3.3.4

@@ -48,10 +48,6 @@
   - [DAI](dai.md)
   - [Proxy ARP](proxy-arp.md)
 
-# Network Services
-
-- [DNS](dns.md)
-
 # Quality of Service
 
 - [QoS](qos.md)
@@ -153,6 +149,7 @@
 - [ACLs](acls.md)
 - [CoPP with ACLs and Object Groups](copp-with-acls-and-object-groups.md)
 - [NAT](nat.md)
+- [DNS](dns.md)
 - [SSH](ssh.md)
 - [NTP](ntp.md)
 - [AAA with FreeRadius and Univention UCS](aaa-freeradius-and-univention-ucs.md)
@@ -189,12 +186,11 @@
 # Layer 1
 
 - [SONET](sonet.md)
-  - [SONET C2 Byte](sonet-c2-byte.md
+  - [SONET C2 Byte](sonet-c2-byte.md)
 - [G.709](g709.md)
 - [RPR - Resilient Packet Ring](rpr.md)
 - [SRP - Spatial Reuse protocol](srp.md)
 - [T1](t1.md)
-- [SRP](srp.md)
 - [MLPPP over ATM](mlppp-over-atm.md)
 - [IRB On the ASR9K](irb-on-the-asr9k.md)
 - [WAN Considerations](wan-considerations.md)
@@ -222,6 +218,7 @@
 - [FHRP](fhrp.md)
 - [BFD](bfd.md)
 - [LISP](lisp.md)
+  - [LISP Encapsulation](lisp-encapsulation.md)
 - [Multihoming](multihoming.md)
 - [Network Management](network-management.md)
 - [Certbot](certbot.md)

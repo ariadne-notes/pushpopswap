@@ -11,7 +11,7 @@ n*(n-1)/2
 
 - Service routes: Firewalls, IPS, and VPN labels.
 
-**TLOC Routes**
+## TLOC Routes
 
 Works like a BGP route, with a next-hop atttribute.
 

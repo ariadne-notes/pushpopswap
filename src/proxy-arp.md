@@ -8,7 +8,7 @@ There are lots of requirements to get this to work.
 - The ARP target the host is requesting is in the routing table.
 - The ARP target cannot be out the same interface the ARP was heard on.
 
-## Lab Topology
+## Lab topology
 
 
 <pre>

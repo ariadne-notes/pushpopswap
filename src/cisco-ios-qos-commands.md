@@ -1,10 +1,10 @@
 # Cisco IOS QoS Commands
 
-**See all matched QoS**
+## See All Matched QoS
 
 `show mls qos interface statistics`
 
-**See the DSCP to CoS Map**
+## See the DSCP to CoS Map
 
 `show mls qos map cos-dscp`
 
@@ -12,10 +12,10 @@
 
 `show mls qos interface Fa0/1`
 
-**Trust All QoS Markings**
+## Trust All QoS Markings
 
 `mls qos trust dscp`
 
-**Trust QoS if it comes from a Cisco Phone**
+## Trust QoS if it comes from a Cisco Phone
 
 `mls qos trust device cisco-phone`

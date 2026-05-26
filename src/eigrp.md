@@ -45,7 +45,7 @@ R1 sees it has an reported distance less than the current distance, so installs 
          50        └────────┘      50
 </pre>
 
-## Example with the EIGRP topology table
+## Example With The EIGRP Topology Table
 
 
 ```text
@@ -134,7 +134,7 @@ ethernet 1
 
 Name mode supports IPv6 inside a VRF.
 
-### Minimum config
+### Minimum Config
 
 ```console
 router eigrp EIGRP_100
@@ -146,7 +146,7 @@ router eigrp EIGRP_100
  exit-address-family
 ```
 
-### Using the old config, then having the box convert it for you
+### Using The Old Config, Then Having The Box Convert It For You
 
 
 ```console

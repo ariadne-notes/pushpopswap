@@ -12,7 +12,7 @@ Type 2 - Here is my attached network.
 
 
 
-**DR**
+### DR
 
 ```console
 R1# show ip ospf database router 1.1.1.1
@@ -38,7 +38,7 @@ R1# show ip ospf database router 1.1.1.1
        TOS 0 Metrics: 10
 ```
 
-**DROther**
+### DROther
 
 ```console
 R4#show ip ospf database router 4.4.4.4

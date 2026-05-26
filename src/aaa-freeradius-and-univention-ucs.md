@@ -77,7 +77,7 @@ udm groups/group create \
   --set description="Read-only RADIUS access to network devices"
 ```
 
-### LDAP - Verifying the groups
+### LDAP - Verifying The Groups
 
 ```console
 udm groups/group list --filter name="RADIUS Network Admins"
@@ -85,7 +85,7 @@ udm groups/group list --filter name="RADIUS Network Admins"
 udm groups/group list --filter name="RADIUS Network Read Only"
 ```
 
-### Add users
+### Add Users
 
 Users need to be added to this group directly.
 
@@ -148,7 +148,7 @@ test aaa group radius ariadne my-password legacy
 radtest <user-in-ldap> <ldap-password> <server-ip> 0 <FreeRADIUS-secret>
 ```
 
-### Do packets arrive
+### Do Packets Arrive
 
 ```console
 tcpdump -i any -n udp port 1812
@@ -163,7 +163,7 @@ systemctl status freeradius
 freeradius -X
 ```
 
-## After it's working, RSYNC it
+## After It's Working, RSYNC It
  
 
 ```console

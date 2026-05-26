@@ -44,7 +44,7 @@ Any multi-cast traffic from any given source, not received on the RPF is discard
 
 (*,G) entries in the mroute table represent a security risk, because any source can send to this shared tree.
 
-## Theory (in v4)
+## Theory (in V4)
 
 Multicast is always TO a group, a destination, or a set of destinations.
 
@@ -64,7 +64,7 @@ Address Scopes      | Description
 
 ## Common L3 Addresses
 
-**Same Broadcast Domain**
+### Same Broadcast Domain
 
 Protocol           | Multicast Address
 --------------     | --------------
@@ -77,7 +77,7 @@ EIGRP              | 224.0.0.10
 PIM                | 224.0.0.13
 mDNS               | 224.0.0.251
 
-**Can be forwarded**
+### Can Be Forwarded
 
 Protocol           | Multicast Address
 --------------     | --------------
@@ -205,7 +205,7 @@ FLAGS
  F - Forwarding. Where to send multicast traffic
 ```
 
-#### Nexus 7K
+## Nexus 7K
 
 `show forwarding multicast route group <>`
 
@@ -228,7 +228,7 @@ So the first six bytes are `01:00:5E`
 
 The last 23 bits come from the IP address.
 
-**A Multicast IP**
+### A Multicast IP
 
 Mapping 232.10.10.10 → 01:00:5E:0A:0A:0A
 

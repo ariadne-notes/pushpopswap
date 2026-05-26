@@ -124,7 +124,7 @@ bundle coexistence bob-blb logical
 show tech-support routing bfd file
 ```
 
-### Take the session down if latency grows to 150ms for a single echo packet
+### Take The Session Down If Latency Grows To 150ms For A Single Echo Packet
 
 ```console
 bfd fast detect 
@@ -132,7 +132,7 @@ bfd multiplier 50
 echo latency detect
 ```
 
-### Take the session down if latency grows to 300ms for a single echo packet
+### Take The Session Down If Latency Grows To 300ms For A Single Echo Packet
 
 ```console
 bfd fast detect 
@@ -140,7 +140,7 @@ bfd multiplier 50
 bfd echo latency detect percentage 200
 ```
 
-### Take the session down if the latency grows to 150ms for 3 consequitive echo packets
+### Take The Session Down If The Latency Grows To 150ms For 3 Consequitive Echo Packets
 
 ```console
 bfd fast detect
@@ -148,7 +148,7 @@ bfd multiplier 50
 bfd echo latency detect percentage 100 count 3
 ```
 
-### Disable echo mode
+### Disable Echo Mode
 
 ```console
 bfd 
@@ -156,7 +156,7 @@ interface g0/0/0/0
  echo disable
 ```
 
-### Protecting the BFD data-plane packets from QoS
+### Protecting The BFD Data-Plane Packets From QoS
 
 `192.168.100.1 <-> 192.168.100.2`
 
@@ -185,7 +185,7 @@ interface TenGig <>
 !
 ```
 
-## Enabling BFD on RSVP (IOS)
+## Enabling BFD On RSVP (IOS)
 
 ### A Config
 

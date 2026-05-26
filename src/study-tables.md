@@ -17,7 +17,7 @@ Mnemonic courtesy of [Romelchand](https://learningnetwork.cisco.com/s/article/sy
 
 ## IP Protocol Numbers
 
-When IP encapsulates another protoctol it labels the `protoctol` field with a number to define the next layer.
+When IP encapsulates another protocol it labels the `protocol` field with a number to define the next layer.
 
 | IP Protocol Number | Description |
 | ------------------ | ----------- |
@@ -55,10 +55,9 @@ When IP encapsulates another protoctol it labels the `protoctol` field with a nu
 | ODR                             | 160                     |
 | EIGRP External                  | 170                     |
 | iBGP                            | 200                     |
-| Unknown/Infinite[^infinite]     | 255                     |
+| Unknown/Infinite                | 255                     |
 
 ## References
 
 [Troubleshooting TechNotes - What is Administrative Distance? - Cisco](https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html#topic2)
 
-[^infinite]:Can use to do route-filtering.

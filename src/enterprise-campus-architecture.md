@@ -14,7 +14,7 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 
 ![cisco-campus-three-tier-with-network-services-layer](./images/cisco-campus/cisco-campus-three-tier-with-network-services-layer.jpg)
 
-## Layer 2 Access with traditional multilayer
+## Layer 2 Access With Traditional Multilayer
 
 - Layer 2 is a single wiring closest, or access uplink pair.
 - FHRP is used, but limits bandwidth to one uplink, vs both.
@@ -31,7 +31,7 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 - 9300 (480Gbps stack-wise ring)
 - 9400 (modular chassis)
 
-**Considerations**
+### Considerations
 
 
 - mGig, so access speeds can scale
@@ -43,7 +43,7 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 - 9500
 - 9600 (modular chassis)
 
-**Considerations**
+### Considerations
 
 - Service heavy (FHRPs, Routing, SVIs)
 - Typical L2 boundary
@@ -57,7 +57,7 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 - 9500
 - 9600 (modular chassis)
 
-**Considerations**
+### Considerations
 
 - No services
 - Layer 3 only
@@ -68,19 +68,19 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 
 
 
-**Traditional Design**
+### Traditional Design
 
 ![cisco-campus-looped-access](./images/cisco-campus/cisco-campus-looped-access.jpg)
 
 - Needs STP to block ports
 
-**Traditional Design - Loop Free**
+### Traditional Design - Loop Free
 
 ![cisco-campus-loop-free-access](./images/cisco-campus/cisco-campus-loop-free-access.jpg)
 
 ## Other Designs
 
-**SD-Access**
+### SD-Access
 
 - Cisco Catalyst Center
 - Cisco Identity Services Engine
@@ -88,7 +88,7 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 
 ![cisco-campus-sd-access-design](./images/cisco-campus/cisco-campus-sd-access-design.jpg)
 
-**Open Standards Based Overlay**
+### Open Standards Based Overlay
 
 - MP-BGP
 - VXLAN

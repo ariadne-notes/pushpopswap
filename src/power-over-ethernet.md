@@ -15,7 +15,7 @@
 >
 > You must know and supply the correct voltage, there is no voltage or power negotiation.
 
-**As a Table**
+## As a Table
 
 | Type               | IEEE Standard       | Maximum Power from PSE        | Supported Modes                        | Notes                   |
 |--------------------|---------------------|-------------------------------|----------------------------------------|-------------------------|
@@ -26,7 +26,7 @@
 | PoE++, AKA 4PPPoE  | 802.3bt aka 4PPoE   | 90W                           | Mode A, Mode B, or 4-pair              |                         |
 | Cisco UPOE+        | Superset of 802.3bt | 90W                           | Mode A, Mode B, or 4-pair              | Works over CDP          |
 
-**As a Flowchart**
+## As a Flowchart
 
 ```mermaid
 graph TD;
@@ -44,15 +44,15 @@ graph TD;
     BT --> |"Includes IEEE Standard \n adds Cisco UPOE"| UPOEP;
 ```
 
-**Cisco's Chart**
+## Cisco's Chart
 
 ![Power Over Ethernet - 1](./images/cisco/cisco-brkiot-1128-poe-1.png)
 
-**Wire example - 4 Pairs**
+## Wire example - 4 Pairs
 
 ![Power Over Ethernet - 2](./images/cisco/cisco-upoe-1.png)
 
-**Power States**
+## Power States
 
 ```mermaid
 flowchart LR

@@ -8,7 +8,7 @@
 
 `AS_PATH` for privates ASes is used within the confederation.
 
-## Force interior confederation MEDs to be considered
+## Force Interior Confederation MEDs To Be Considered
 
 `bgp deterministic-med`
 

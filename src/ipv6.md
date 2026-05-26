@@ -20,7 +20,7 @@ An IPv6 address is 128 bits.
 
 RFCs really like groups of 32
 
-<pre>
+```plain
 Deering & Hinden            Standards Track                     [Page 3]
 
 RFC 2460                   IPv6 Specification              December 1998
@@ -48,7 +48,7 @@ RFC 2460                   IPv6 Specification              December 1998
 │                                                               │
 │                                                               │
 └───────────────────────────────────────────────────────────────┘
-</pre>
+```
 
 ## Bits
 

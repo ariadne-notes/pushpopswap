@@ -10,7 +10,7 @@
 | **SAToP**   | Structure-Agnostic Transport over Packet |
 
 
-## What is CEM?
+## What Is CEM?
 
 > CEM treats data as an **arbitrary bit stream** — the actual Layer 1/Layer 2 format is irrelevant to the transport. This makes it ideal for carrying legacy or opaque traffic over modern packet-switched networks.
 
@@ -77,20 +77,18 @@
 
 ## Wireshark Decoding
 
-### Wireshark Decoding
-
 - SAToP traffic can be decoded using the **`pwsatopcw`** protocol keyword
 - If Wireshark does not auto-detect the encapsulation, **right-click the frame → Decode As** and manually select the correct protocol
   - You need to already know what format the traffic is in — there is no auto-detection for pseudowire types
 
-### CEM Command Reference
+## CEM Command Reference
 
 | IOS Command | Mode | RFC |
 |----------------------------|---------|----------|
 | `cem-group unframed`       | SAToP   | RFC 4553 |
 | `cem-group timeslots 1-24` | CESoPSN | RFC 5086 |
 
-### Key Configuration Notes
+## Key Configuration Notes
 
 - **TDM byte** = one timeslot
 - **`xconnect`** requires matching **VCIDs** on both ends to bring up the pseudowire connection

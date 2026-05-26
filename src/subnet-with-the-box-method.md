@@ -4,7 +4,7 @@ For visual learners.
 
 For a `/24` network, thats 256 addresses, or ... this box.
 
-## Start with a /24
+## Start With A /24
 
 Write the first IP in the top corner, the last IP in the bottom corner.
 

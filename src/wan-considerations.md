@@ -100,7 +100,7 @@
 - Significantly cheaper that DWDM.
 - 18 channels is common.
 
-## Dark fiber
+## Dark Fiber
 
 - The DIY Solution
 - A business asks an ISP "do you have any fiber I can just .. use?"

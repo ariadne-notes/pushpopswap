@@ -11,7 +11,7 @@
 
 - 4,200,000,000 – 4,294,967,294
 
-## Requesting an ASN
+## Requesting An ASN
 
 
 IANA asks for the following things.
@@ -75,7 +75,7 @@ IANA asks for the following things.
 - The default timer is 60 seconds with 180 seconds for hold time. This means worst-case is 3 minutes to fail-over.
 - BGP `aggregate-address` only works if there is a subnet inside the aggregate range in BGP.
 
-## Working with BGP
+## Working With BGP
 
  - Only consider traffic in one direction at a time
  - Accepting a route will affect outgoing traffic
@@ -142,7 +142,7 @@ These read left to right like a book. This prefix was most recently from AS `701
 ... When the third option happens ...
 
 - Advertise into the IGP the external links to the BGP peers.
-- Tell the AS border router to change the next hop to its own IP address. [next-hop-self]
+- Tell the AS border router to change the next hop to its own IP address. (next-hop-self)
 
 ### Origin
 
@@ -195,13 +195,13 @@ LOCAL_AS     | ????
 For route reflectors
 The origaning router puts its `Router_ID` here. If it sees this, it knows a loop as occured.
 
-#### BGP by default will summarize
+#### BGP By Default Will Summarize
 
 Use `no auto-summary`.
 
 Using redistribute under BGP will make the resulting route show up with an orign code of `incomplete`.
 
-#### Sending a default route
+#### Sending A Default Route
 
 `neighbor A.B.C.D default-originate`
 
@@ -222,7 +222,7 @@ This makes it so other iBGP routers don't need reachability information for the 
 - **OpenConfirm**
 - **Established**
 
-#### Fixing next-hop issues
+#### Fixing Next-Hop Issues
 
 Just because the route shows up in `show ip bgp` doesn't mean it will install. BGP needs to be able to reach the next-hop.
 

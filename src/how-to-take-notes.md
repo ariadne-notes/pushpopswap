@@ -1,6 +1,6 @@
 # How To Take Notes
 
-## I don't need to take notes. I can remember everything just fine
+## I Don't Need To Take Notes. I Can Remember Everything Just Fine
 
 Note down what you will not remember.
  
@@ -18,7 +18,7 @@ You can find these details via
 - Collecting packets
 - collecting debugs
 
-## I don't look at my notes after I take them
+## I Don't Look At My Notes After I Take Them
 
 Don't take notes on stuff you'll remember, *take notes on stuff you'll forget.*
 
@@ -26,7 +26,7 @@ Learn what kinds of details you forget.
 
 The notes aren't for you six months from now, the notes are for you, six years from now.
 
-## I can't take notes digitally, I need to write them out
+## I Can't Take Notes Digitally, I Need To Write Them Out
 
 You can take handwritten notes, just OCR them into digitals. The AI is decent at this.
 

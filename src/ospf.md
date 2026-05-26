@@ -56,7 +56,7 @@ These must not match
 
 Check with `debug ip ospf event`
 
-**Broadcast Network Multicast Packet to acknowledge multiple neighbors**
+### Broadcast Network Multicast Packet To Acknowledge Multiple Neighbors
 
 ```console
 Ethernet II, Src: aa:bb:cc:00:4b:00 (aa:bb:cc:00:4b:00), Dst: IPv4mcast_05 (01:00:5e:00:00:05)
@@ -91,7 +91,7 @@ Open Shortest Path First
 | Loading     | Router DB has been exchanged, router is requesting specific LSAs. |
 | Full        | LSDBs for this area are identical on both sides. |
 
-## DR and BDR
+## DR And BDR
 
 
 OSPF uses explicit acknowledgments (re-sending the LSAs), so as neighbors and adjacencies grow, the amount of OSPF traffic on a network increases.
@@ -125,7 +125,7 @@ In the diagram (from the RFC), everything connects to N2, so problem solved.
 
 See [OSPF LSAs](./ospf-lsas.md) to see what the actual contents of the LSAs are.
 
-### The DR
+### DR
 
 Forms full adjacencies.
 
@@ -362,7 +362,7 @@ RFC 2328                     OSPF Version 2                   April 1998
                           Broadcast or NBMA networks
 ```
 
-## Area summary
+## Area Summary
 
 
 These will show up as a IA route in OSPF, and a route-to-null on the ABR.
@@ -391,7 +391,7 @@ router ospfv3 1
 
 You can use the same command to tell the router to ... exclude these routes from the backbone, via the `not-advertise` keyword.
 
-### Using range
+### Using Range
 
 The area command is now a route-filter.
 
@@ -413,7 +413,7 @@ router ospfv3 1
  exit-address-family
 ```
 
-### Using filter-lists
+### Using Filter-Lists
 
 These are a bit harder to use, `in` and `out` are **inbound** and **outbound** to the area.
 
@@ -466,7 +466,7 @@ router ospfv3 1
 
 ### Area Types
 
-#### No external network connections
+#### No External Network Connections
 
 - **Stub:** From the RFC, these don't have LSA-5 in them, so no external routes. A stub gets a default injected.
 - **Totally Stubby:** A Cisco area, This blocks LSA-3, LSA-4, and LSA-5. The only injected LSA is a LSA-3 from the ABR for the default.
@@ -479,13 +479,13 @@ router ospfv3 1
 
 ### Sham Link
 
-**The Problem**
+#### The Problem
 
 A customer with L3VPN service via OSPF-BGP-VPNv4 decides to connect two sites together via OSPF backdoor, a direct connection they manage themselves.
 
 When they turn on their private OSPF peering, all the traffic between these two sites now prefers the new link, vs the L3VPN cloud.
 
-**The Solution: Sham Links**
+#### The Solution: Sham Links
 
 Sham links are needed because the routes provided by an L3VPN are `O IA`. When the OSPF backdoor link comes up it will be preferred for two reasons:
 

@@ -1,6 +1,6 @@
 # Out of Band Management
 
-**Management interfaces should never be accessible via the Open Internet.**
+## Management Interfaces Should Never Be Accessible Via The Open Internet.
 
 ## Terms
 

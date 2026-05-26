@@ -52,7 +52,7 @@ STP elects root and designated ports, aka RP, and DPs. It also moves STP ports i
 1. Non-root bridge starts STP elections on all other ports, by sending BPDUs. It takes the cost inside the received BPDU, and adds it's port cost.
 1. If a DP gets a BDPU, STP blocks the port if the received BPDU is better.
 
-## Port Selection Algo
+## Port selection algo
 
 - All choices are made based on the received BPDU.
 - Modifications are made on the upstream switch.
@@ -68,7 +68,7 @@ STP elects root and designated ports, aka RP, and DPs. It also moves STP ports i
 
 - **Forward Delay** is typically 15 seconds. It's between off -> listening -> learning.
 
-## Device Priority
+## Device priority
 
 4 bits, goes in geometric sequence starting from 0 to 61440.
 
@@ -80,7 +80,7 @@ switch(config)# spanning-tree vlan 60 priority ?
   32768 36864 40960 45056 49152 53248 57344 61440
 ```
 
-## Root bridges election in Spanning Tree
+## Root bridges election in spanning tree
 
 Two bridges send each other BPDUs, they compare bridge IDs to see who will keep sending BPDUs
 
@@ -90,7 +90,7 @@ The default for priority is `32768` or `0x80` on the wire. Because the 802.1D co
 
 **Always** configure a root bridge, or the *oldest device* with probably the *lowest mac address* wins the root bridge election.
 
-## Path Cost
+## Path cost
 
 The root bridge BPDU gets stuff tack'd onto it. The root bridge advertises itself as `0` cost.
 
@@ -125,11 +125,11 @@ For end Hosts
 
 - Does not protect against BPDUs
 
-## Loop Prevention
+## Loop prevention
 
 Best practice is to set the root to `0` and the secondary to `4096`.
 
-### STP Loop Guard
+### STP loop guard
 
 A unidirectional failure on a `root` or `alternate` port will cause spanning tree to loop, as other switches will unblock ports, and the unidirectional failure will still forward frames. To prevent this, turn on `stp loop guard` so ... if a port doesn't get a BPDU, it enters `STP loop-inconsistent` disabling the port.
 
@@ -142,17 +142,17 @@ switch(config-if)# spanning-tree guard loop
 
 More details [here](https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/10596-84.html).
 
-## Port Types
+## Port types
 
 - **Designated ports:** send BPDUs downstream.
 
 - **Root Ports** are the best port towards the root bridge, either the lowest total cost or the lowest advertised priority or lowest advertised port ID (interface number).
 
-## Root Path Cost
+## Root path cost
 
 **Root Path Cost** - What the interfaces costs + the advertised cost to the root. The root sends a cost of 0.
 
-### STP Path Calculations
+### STP path calculations
 
 `spanning-tree pathcost method long`
 
@@ -168,7 +168,7 @@ More details [here](https://www.cisco.com/c/en/us/support/docs/lan-switching/spa
 | 1 Tbps     | 1               | 20             |
 | 10 Tbps    | 1               | 2              |
 
-## 802.1D - Spanning Tree
+## 802.1D - spanning tree
 
 The 802.1D committee wanted *two* learning states[^stp], one with and one without learning station addresses. This is why it's more complicated.
 
@@ -198,9 +198,9 @@ The 802.1D committee wanted *two* learning states[^stp], one with and one withou
 └─────────────┘                                                     
 ```
 
-## BPDU Frame Format
+## BPDU frame format
 
-**Wireshark**
+### Wireshark
 
 ```console
 Spanning Tree Protocol
@@ -378,7 +378,7 @@ SW2 wins with `0`. SW2 has the lower bridge priority.
 spanning-tree vlan 1 priority 0
 ```
 
-## Port Blocking, Port Default
+## Port blocking, port default
 
 Which ports block?
 
@@ -396,7 +396,7 @@ Which ports block?
 - SW2 gets three BPDUs, the best BPDU is on port 1, it has the lowest port number.
 - SW2 sets the other two ports to BLK.
 
-## Port Blocking, Port Priority
+## Port blocking, port priority
 
 Which ports block?
 
@@ -422,7 +422,7 @@ interface 3
  spanning-tree vlan 1 port-priority 0
 ```
 
-## Port Blocking, Cost?
+## Port blocking, cost?
 
 Which ports block?
 
@@ -448,7 +448,7 @@ interface 2
  spanning-tree vlan 1 cost 1
 ```
 
-## Topology Change Notifications (TCNs)
+## Topology change notifications (TCNs)
 
 - A TCN is a kind of BPDU message.
 - There is no root ID or bridge ID.

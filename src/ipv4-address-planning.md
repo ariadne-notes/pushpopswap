@@ -4,7 +4,7 @@
 2. Plan the ipv4 range
 3. Document the plan
 
-## Example standards
+## Example Standards
 
 - Statically assign network infrastructure
 - User devices are DHCP.

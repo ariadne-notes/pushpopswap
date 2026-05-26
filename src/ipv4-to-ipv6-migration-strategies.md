@@ -26,7 +26,7 @@
 
 - Much like NAT
 
-## DNS64 and NAT64
+## DNS64 And NAT64
 
 - **DNS64:** DNS creates synthetic AAAA records, so a v4 client can connect to a v6 service.
 - **NAT64:** A router translates IPv6 traffic to IPv4 traffic.

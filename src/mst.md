@@ -94,7 +94,7 @@ spanning-tree mode mst
 ```
 
 
-## More involved config
+## More Involved Config
 
 ```console
 default spanning-tree mst configuration
@@ -104,7 +104,7 @@ spanning-tree mst configuration
  instance 1 vlan 10, 20, 30, 40
 ```
 
-**Config Validation**
+### Config Validation
 
 ```console
 S21# show spanning-tree mst configuration 

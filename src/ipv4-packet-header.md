@@ -35,7 +35,7 @@ packet
 | **IP Options**                    | Variable | Loose/Strict Source Routing, Record Route, Timestamp. Mostly unused, historical. |
 | **Padding**                       | Variable | Ensures the header ends on a 32-bit boundary. |
 
-### Flags
+## Flags
 
 <pre>
   Flags:  3 bits

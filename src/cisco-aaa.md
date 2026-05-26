@@ -2,11 +2,11 @@
 
 `aaa new-model`
 
-## Local Database
+## Local database
 
 Is usually the fallback.
 
-## Basic Config
+## Basic config
 
 ```console
 !

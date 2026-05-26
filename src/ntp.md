@@ -4,7 +4,7 @@
 
 `ntp master <stramum>`
 
-## Client/Server - Based on other NTP clocks and stratum
+## Client/Server - Based On Other NTP Clocks And Stratum
 
 `ntp server <address|hostname>`
 

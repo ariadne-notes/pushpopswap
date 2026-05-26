@@ -2,7 +2,7 @@
 
 A Google Invention
 
-Part of the *OpenConfig* framework. [Google, Microsoft, ATT, and BT]
+Part of the *OpenConfig* framework. (Google, Microsoft, ATT, and BT)
 
 A gRPC based protocol to do the following:
 
