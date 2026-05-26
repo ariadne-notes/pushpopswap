@@ -2,7 +2,7 @@
 
 - **DIA:** Direct Internet Access. This is what we hawe at home, a "connection to the Internet." Many (especially older) WAN technologies are point-to-point.
 
-## [Leased Lines](https://en.wikipedia.org/wiki/Leased_line)
+## [Leased Lines]
 
 - Point-to-point
 - Logically "a wire" between two sites.
@@ -15,7 +15,7 @@
 - Always more expensive, but reliable and dedicated bandwidth.
 - Gets more expensive with a SLA.
 
-## [T-Carrier](https://en.wikipedia.org/wiki/T-carrier)
+## [T-Carrier]
 
 - Leased line.
 - Invented in the 1950s, used to link telephone central offices and transport telephone calls.
@@ -70,10 +70,6 @@
 - **VPWS** Virtual private wire service is point-to-point.
 - **VPLS** Virtual Private LAN Service is Full-Mesh.
 
-## Ethernet
-
-
-
 ## Metro Ethernet
 
 - Can be *very* fast, 10Gbps and above.
@@ -83,24 +79,24 @@
 ## Fiber Technologies
 
 
-## DWDM
+### DWDM
 
 - Usually owned by the ISP as the multiplexers are very, very expensive.
 - A single fiber can support multiple channels.
 - A single channel can support 10 to 400G.
 - Tight channel spacing. (Less than 1nm)
 - 80+ channels.
-- Used to link continents with [submarine cables.](https://cablegraph.com)
+- Used to link continents with [submarine cables](https://cablegraph.com).
 - Can multiplex wavelengths of light in channels.
 - Unknown theoretical speed.
 
-## CWDM
+### CWDM
 
 - Channels are widely spaced. (20nm)
 - Significantly cheaper that DWDM.
 - 18 channels is common.
 
-## Dark Fiber
+### Dark Fiber
 
 - The DIY Solution
 - A business asks an ISP "do you have any fiber I can just .. use?"
@@ -122,19 +118,19 @@
 - If there are two numbers, the slower one is the upload.
 - These need to be secured via IPSec or another Overlay Technology.
 
-## Slow
+### Slow
 
 - **GSM** is 9600bps, or about an hour to transfer a 5MB file.
 - **GPRS** can be 128 Kbps, or about 5 minutes for that 5MB file.
 - **UMTS** (3G) is around 1Mbps. It takes about 8 seconds to transfer that file.
 
-## OK
+### OK
 
 - **LTE** can be 300/50 Mbps . It takes about an hour to upload a 20GB file.
 - **LTE Advanced** can be 600/100 Mbps. It takes about 30 minutes to upload a 20GB file.
 - **LTE Advanced Pro** can be 1.1GB/200 Mbps. It takes about 15 minutes to upload a 20GB file.
 
-## Modern
+### Modern
 
 - 5G can be 20/10 Gbps. It can upload a 20GB file in about 16 seconds.
 
@@ -155,3 +151,8 @@ IPSec doesn't support routing protocols unless it's the outside is a GRE tunnel.
 
 - Good over ISP L2 networks to encrypt the traffic, just in case.
 - Doesn't change the outside IPs, does not make an overlay network.
+
+## References
+[Leased line - Wikipedia](https://en.wikipedia.org/wiki/Leased_line)
+
+[T-carrier - Wikipedia](https://en.wikipedia.org/wiki/T-carrier)
