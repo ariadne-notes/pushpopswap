@@ -62,8 +62,6 @@ P 10.0.0.0/24, 1 successors, FD is 2100                <--- Feasible Distance
                                                              (RD 2000 < FD 2100)
 ```
 
-
-
 ## Unequal Cost Multi Path
 
 EIGRP can load balance over the successor and feasible successor routes with a variance command.
@@ -73,7 +71,6 @@ EIGRP can load balance over the successor and feasible successor routes with a v
 - Hello packets are every 5 seconds, on 60 seconds on T1 links.
   - The deadtime is 3x the hold timer.
 
-
 ## Initial Bringup
 
 - Send Hello packets, to 224.0.0.10
@@ -82,9 +79,7 @@ EIGRP can load balance over the successor and feasible successor routes with a v
     - Neighbor Sends back Ack as prior sequence number.
     - Update Messages
 
-
 ## Stuck in Active
-
 
 - The router is too busy to answer the query (generally due to high CPU utilization).
 - The router has memory problems and cannot allocate the memory to process the query or build the reply packet.
@@ -115,7 +110,6 @@ EIGRP can load balance over the successor and feasible successor routes with a v
 - Prefix Length
 
 ## Auto Summary
-
 
 Is off by default.
 
@@ -162,7 +156,6 @@ router eigrp 1
 
 ### RIB Scaling
 
-
 The Cisco RIB can only hold values that are unsigned 4 bytes. The EIGRP named metrics are 64-bit.
 
 This is done automatically (and why the topology values don't match "show ip route". In the event you need to modify it, here it is.
@@ -173,7 +166,6 @@ router eigrp EIGRP_100
     topology base
       metric rib-scale 100
 ```
-
 
 ## Variance
 

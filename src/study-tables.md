@@ -19,7 +19,6 @@ Mnemonic courtesy of [Romelchand](https://learningnetwork.cisco.com/s/article/sy
 
 When IP encapsulates another protoctol it labels the `protoctol` field with a number to define the next layer.
 
-
 | IP Protocol Number | Description |
 | ------------------ | ----------- |
 | 1                  | ICMP        |
@@ -46,31 +45,19 @@ When IP encapsulates another protoctol it labels the `protoctol` field with a nu
 | Protocol                        | Administrative Distance |
 | ----------------                | ----------------------- |
 | Connected                       | 0                       |
-
 | Static                          | 1                       |
 | EIGRP Summary                   | 5                       |
-
 | eBGP                            | 20                      |
-
 | EIGRP Internal                  | 90                      |
-
 | OSPF                            | 110                     |
-
 | IS-IS                           | 115                     |
-
 | RIP                             | 120                     |
-
 | ODR                             | 160                     |
-
 | EIGRP External                  | 170                     |
-
 | iBGP                            | 200                     |
-
 | Unknown/Infinite[^infinite]     | 255                     |
 
-
 ## References
-
 
 [Troubleshooting TechNotes - What is Administrative Distance? - Cisco](https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html#topic2)
 

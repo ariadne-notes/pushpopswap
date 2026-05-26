@@ -3,7 +3,7 @@
 [Author](author.md)
 [License](license.md)
 
----
+----
 
 # Studying
 
@@ -226,7 +226,7 @@
 # Other Blogs
 
 - [Other Blogs](other-blogs.md)
-
+- [Style Guide](style-guide.md)
 ---
 [Style Guide](style-guide.md)
 [A Woman Calls TAC](joke-a-woman-calls-TAC.md)

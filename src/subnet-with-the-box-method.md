@@ -31,7 +31,7 @@ Write the first IP in the top corner, the last IP in the bottom corner.
 └─────────────────────────────────┘
 </pre>
 
-## Cut it in half
+## Cut In Half (1)
 
 
 Write the last number in the bottom corner, next number in the top corner.
@@ -61,7 +61,7 @@ Write the last number in the bottom corner, next number in the top corner.
 
 Two `/25` networks.
 
-## Cut part in half again
+## Cut In Half (2)
 
 
 <pre>
@@ -90,8 +90,7 @@ Two `/25` networks.
 - One `/25`
 - Two `/26` networks.
 
-
-## Cut part in half again
+## Cut In Half (3)
 
 
 <pre>
@@ -120,8 +119,7 @@ Two `/25` networks.
 - One `/25`
 - Four `/27`
 
-## Cut part in half again
-
+## Cut In Half (4)
 
 <pre>
 ┌───────┬────────┬────────────────┐

@@ -1,8 +1,6 @@
 # UDP
 
-## UDP Packet Format
-
-[User Datagram Protocol - RFC 768](https://www.rfc-editor.org/rfc/rfc768)
+## UDP Checksum
 
 UDP does try to send error-free packets by including a checksum, the below via the RFC
 
@@ -18,6 +16,8 @@ UDP does try to send error-free packets by including a checksum, the below via t
 > checksum  value means that the transmitter  generated  no checksum  (for
 > debugging or for higher level protocols that don't care).
 
+## UDP Header
+
 ```plain
  1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8
 ┌────────────────────────────────┬───────────────────────────────┐
@@ -31,7 +31,7 @@ UDP does try to send error-free packets by including a checksum, the below via t
 
 #### TFTP Read Request
 
-```console
+```plain
 Frame 115: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface -, id 0
     Internet Protocol Version 4, Src: 10.0.10.22, Dst: 10.0.10.33
     User Datagram Protocol, Src Port: 52775, Dst Port: 69
@@ -51,7 +51,7 @@ Frame 115: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interfac
 
 #### TFTP Data Packet
 
-```console
+```plain
 Frame 116: 562 bytes on wire (4496 bits), 562 bytes captured (4496 bits) on interface
     Internet Protocol Version 4, Src: 10.0.10.33, Dst: 10.0.10.22
     User Datagram Protocol, Src Port: 52590, Dst Port: 52775
@@ -104,3 +104,7 @@ Frame 116: 562 bytes on wire (4496 bits), 562 bytes captured (4496 bits) on inte
     01e0  6f 6b 75 70 0a 69 70 20 63 65 66 0a 6e 6f 20 69   okup.ip cef.no i
     01f0  70 76 36 20 63 65 66 0a 21 0a 21 0a 21 0a 73 70   pv6 cef.!.!.!.sp
 ```
+
+# References
+
+[User Datagram Protocol - RFC 768](https://www.rfc-editor.org/rfc/rfc768)
