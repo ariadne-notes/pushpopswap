@@ -9,7 +9,18 @@ IS-IS
 IS
 : Intermediate System
   - A router
+
+NSAP
+: Network Service Access Point
+  - An instance of the IS-IS protocol. 
+
+NET
+: Network Entity Title
+  - A router
+  - Also refers to the address NSAP
   
+
+
 ES
 : End Station
   - A PC, or a server.
@@ -48,7 +59,6 @@ There are only three kinds of routers.
 
 ## Example
 
-
 <pre>
                                              ┌──────┐
                                              │ L1   │
@@ -67,38 +77,43 @@ There are only three kinds of routers.
 ## Topology
 
 Single Topology
-  : All Routed Protocols must be configured on all enabled interfaces.
-  : e.g. v4 and v6 on all interfaces.
+:
+- All Routed Protocols must be configured on all enabled interfaces.
+- e.g. v4 and v6 on all interfaces.
   
 Multi-Topology
-  : Some interfaces can be v4, others can be v6, others can be both.
+: Some interfaces can be v4, others can be v6, others can be both.
 
 ### Addressing Scheme
 
-This is the ISO NSAP addressing format.
-- Minimum of 8 bytes.
-- Max of 20 bytes
-
-```plain
-┌──────────────┬─────────────────────────────────────────┬──────┐
-│ Area Address │                System ID                │ NSEL │
-└──────────────┴─────────────────────────────────────────┴──────┘
-    Variable                     6 bytes                  1 Byte 
+```mermaid
+packet-beta
+0-7: "AFI"
+8-23: "Area ID"
+24-71: "System ID"
+72-79: "SEL"
 ```
 
+AFI
+: Authority and Format Identifier - 1 byte
+  - `49` means local authority, and hexadecimal (binary is encoded).
+  
+Area ID
+: Variable, and ... *includes* the AFI.
 
-net 00.0000.0000.0005.00
+System ID
+: 6 bytes, can fit a MAC address or a v4 address.
+  - Must be unique in an area for L1.
+  - Must be unique in a domain for L2.
+  
+SEL
+: Selector - 1 byte.
+  - This is always `00` to mean router.
 
-Area   - System ID - N-Selector
-1 byte - 6 bytes   - 1 byte.
-area is not the same
-Does not denote flooding domain
 
-N-Selector is always zero
-System ID is only unique to the area.
-Address is always an even number of bytes, 8 to 20.
+**Example**
 
-49 is a private address.
+`net 49.0001.0000.0A00.0001.00`
 
 So long as the NSAP is unique, its OK because we aren't routing CLNS.
 
@@ -110,9 +125,9 @@ Level 1 is Intra area only.
 Level 2 is the backbone.
 
 Level 1 (NSSA)
-    - Intraarea
-    - Default route out (sets the attached bit)
-    - Redistribution is allowed.
+  - Intraarea
+  - Default route out (sets the attached bit)
+  - Redistribution is allowed.
 
 L1/L2 is the ABR in OSPF
 
@@ -124,12 +139,17 @@ L1 areas must match
 
 ## IS-IS Metric Styles
 
-IS-IS supports two metric styles relevant to MPLS-TE:
+Narrow
+:
+- 63 per link
+- 1 023 per path
 
-| Style       | Description |
-|-------------|--------------------------------------------------------------|
-| **Narrow**  | Legacy metric style; max metric value 63 per link, 1023 path |
-| **Wide**    | Extended metric style; max metric of 16 772 215.             |
+Wide
+:
+- 16 772 215 per link
+- 4 294 967 295 per path
+
+Cisco's implementation of the wide metric uses the bits ISO set aside for delay, expense and error.
 
 ### Configuration
 

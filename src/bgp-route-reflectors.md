@@ -1,11 +1,16 @@
 # BGP Route Reflector
 
-## Terms
+RR
+: Route Reflector
 
-- **RR** --- Route Reflector
-- **Cluster** --- A route reflector and its clients.
-- **Cluster List** --- The sequence of `Router_IDs` through which the route has passed. If a router sees its own Router_ID a loop has occurred.
-- **Originator** - Route reflector peer.  Used to prevent loops between clients.
+Cluster
+: A route reflector and its clients.
+
+Cluster List
+: The sequence of `Router_IDs` through which the route has passed. If a router sees its own Router_ID a loop has occurred.
+
+Originator
+: Route reflector peer. Used to prevent loops between clients.
 
 ## Route Reflection Rules 
 

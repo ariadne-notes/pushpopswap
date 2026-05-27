@@ -239,23 +239,23 @@ The Router ID is what is used to build the SPT. It's very important it's both
 
 OSPF has four levels of routing hierarchy
 
-O -  Intra-area (same area)
-OI - Inter-area (same OSPF domain)
-E1 - External type 1 (To an attached but non-OSPF domain)
-E2 - External type 2 (to the Internet)
+| Route   | Purpose |
+|---------|--------------------------------------------------------|
+| O       | Intra-area (same area)                                 |
+| O IA    | Inter-area (same OSPF domain)                          |
+| E1      | External type 1 (to an attached but non-OSPF domain)   |
+| E2      | External type 2 (to the Internet)                      |
 
 The `bit E` is what makes E1 and E2 routes. The bit being set is an E2 route, which is considered less preferred.
 
-
-Code   | Number | RFC Name         | Purpose                      | Description
-
------  | ------ | ---------------- | ---------------------------- | ------------
-O      | 1      | Router-LSA       | interfaces on a router       | Flooded, Single Area, never crosses area boundary.
-O      | 2      | Network-LSA      | routers on a network         | Flooded, Single area, only sent by the DR.
-IA     | 3      | Summary-LSA      | networks in other areas      | ABRs send these, to describe, routes to networks
-E1, E2 | 4      | Summary-LSA      | next-hop to a ASBR           | ABRs send these, to provide reachability for ASBRs.
-E1, E2 | 5      | AS-external-LSA  | routes to E1 or E2 networks  | ASBRs send these, to describe, routes to an AS.
-N1, N2 | 7      | NSSA Summaries   | routes to N1 or N2 networks  | NSSA ASBRs send these, to describe, routes to an AS.
+| Route  | Number | RFC Name         | Purpose                      | Description                                          |
+| -----  | ------ | ---------------- | ---------------------------- | ---------------------------------------------------- |
+| O      | 1      | Router-LSA       | interfaces on a router       | Flooded, Single Area, never crosses area boundary.   |
+| O      | 2      | Network-LSA      | routers on a network         | Flooded, Single area, only sent by the DR.           |
+| O IA   | 3      | Summary-LSA      | networks in other areas      | ABRs send these, to describe, routes to networks     |
+| E1, E2 | 4      | Summary-LSA      | next-hop to a ASBR           | ABRs send these, to provide reachability for ASBRs.  |
+| E1, E2 | 5      | AS-external-LSA  | routes to E1 or E2 networks  | ASBRs send these, to describe, routes to an AS.      |
+| N1, N2 | 7      | NSSA Summaries   | routes to N1 or N2 networks  | NSSA ASBRs send these, to describe, routes to an AS. |
 
 ### Type 5 LSAs
 
@@ -287,9 +287,7 @@ N1, N2 | 7      | NSSA Summaries   | routes to N1 or N2 networks  | NSSA ASBRs s
        +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
-
 ## Default Route
-
 
 OSPF has two ways of originating a default route.
 
@@ -307,7 +305,6 @@ auto-cost reference-bandwidth 40,000
 ```
 
 ## Network Types
-
 
 [OSPF Representation of routers and networks](https://www.rfc-editor.org/rfc/rfc2328#page-13)
 
@@ -417,23 +414,22 @@ router ospfv3 1
 
 These are a bit harder to use, `in` and `out` are **inbound** and **outbound** to the area.
 
-
 For this topology
 
 ```console
-             Area 0                               Area 1               
+             Area 0                               Area 1            
                                                                
-                                 |           10.0.10.0/24            
-                                 |         2001:db8:0:10/64          
-                                 |                            +----+ 
-                              +----+       +------------------+ R3 | 
-+----+                        |    +-------+                  +----+ 
+                                 |           10.0.10.0/24           
+                                 |         2001:db8:0:10/64         
+                                 |                            +----+
+                              +----+       +------------------+ R3 |
++----+                        |    +-------+                  +----+
 | R1 +------------------------+ R2 |                        
 +----+                        |    +------+     
-             10.0.0.0/24      +----+      |                   +----+ 
-           2001:db8:0:0/64       |        +-------------------+ R4 | 
-                                 |           10.0.20.0/24     +----+ 
-                                 |         2001:db8:0:20/64          
+             10.0.0.0/24      +----+      |                   +----+
+           2001:db8:0:0/64       |        +-------------------+ R4 |
+                                 |           10.0.20.0/24     +----+
+                                 |         2001:db8:0:20/64         
 ```
 
 v4
@@ -476,7 +472,6 @@ router ospfv3 1
 - **NSSA:** From the RFC, this is a stub area with an ASBR. The LSAs within the area are LSA-7, and they get converted to LSA-5 by the ASBR.
 - **Totally Stubby NSSA:**, same as above, used to connect an external network, a default is injected as a LSA-3.
 
-
 ### Sham Link
 
 #### The Problem
@@ -506,6 +501,5 @@ From [OSPF Sham-Link Support for MPLS VPN - Cisco](https://www.cisco.com/c/en/us
 >   * You can use the /32 address for other sham-links
 
 ## References
-
 
 [RFC 2328 - OSPF](https://datatracker.ietf.org/doc/html/rfc2328)

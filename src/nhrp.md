@@ -1,23 +1,28 @@
 # NHRP
 
-- **NHRP:** NBMA Next-Hop Resolution Protocol
+NHRP
+: NBMA Next-Hop Resolution Protocol
 
-- **NBMA:** Non-broadcast Multi-access Network. Network connections you could make, if only you knew how to address the packet.
+NBMA
+: Non-broadcast Multi-access Network. Network connections you could make, if only you knew how to address the packet.
 
-- **NBMA Address:** AKA, transport address. For DMVPN, this is the public address, out on the Internet.
+NBMA Address
+: AKA transport address. For DMVPN, this is the public address out on the Internet.
 
-- **NHS:** Next Hop Server. This is the service that NHRP provides. The NHS is usually the hub router.
+NHS
+: Next Hop Server. This is the service that NHRP provides. The NHS is usually the hub router.
 
-- **NHC:** Next Hop Client. These can dynamically register with the NHS.
+NHC
+: Next Hop Client. These can dynamically register with the NHS.
 
-- **Protocol Address:** AKA, overlay address. This is what the client asks for. For a point-to-multipoint cloud, this is usually a subnet.
+Protocol Address
+: AKA overlay address. This is what the client asks for. For a point-to-multipoint cloud, this is usually a subnet.
 
 ## Config
 
-
 ### Hub
 
-<pre>
+```console
 interface Tunnel1
  ip address 192.168.100.1 255.255.255.0
  no ip redirects
@@ -27,11 +32,11 @@ interface Tunnel1
  !
  tunnel source 10.0.110.1
  tunnel mode gre multipoint
-</pre>
+```
 
 ### Spoke
 
-<pre>
+```console
 interface Tunnel1
  ip address 192.168.100.2 255.255.255.0
  no ip redirects
@@ -44,7 +49,7 @@ interface Tunnel1
  ip nhrp nhs 192.168.100.1
  tunnel source 10.0.120.2
  tunnel mode gre multipoint
-</pre>
+```
 
 
 ## Verification
@@ -52,7 +57,7 @@ interface Tunnel1
 
 This hub knows about two sites, that have dynamically registered their NBMA addresses.
 
-<pre>
+```console
 hub# show ip nhrp brief
 
 ****************************************************************************
@@ -71,8 +76,7 @@ Tu1      192.168.100.2                                      10.0.120.2
 
 Tu1      192.168.100.3                                      10.0.130.3
          192.168.100.3/32                            D/r
-
-</pre>
+```
 
 ## References
 

@@ -18,9 +18,6 @@
                                          └────┘
 </pre>
 
-## Outputs
-
-
 ## IPv4 - Type 3
 
 ```console

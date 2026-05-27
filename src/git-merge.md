@@ -52,6 +52,15 @@ FF can be used when there are no local changes or local commits.
 
 The repo was `cloned` previously. 
 
+Before `fetch`.
+
+```mermaid
+gitGraph
+   commit id: "A"
+   commit id: "B"
+   commit id: "HEAD → C"
+```
+
 After `fetch`.
 
 ```mermaid
@@ -61,6 +70,10 @@ gitGraph
    commit id: "HEAD → C"
    commit id: "D"
    commit id: "E"
+```
+
+```plain
+git fetch
 ```
 
 After `merge`.
@@ -77,6 +90,10 @@ gitGraph
    commit id: "D"
    commit id: "HEAD → E"
 ```
+
+***
+
+### Pull
 
 `pull` combines `fetch` and `merge`. `pull` assumes a fast forward `merge`.
 
@@ -120,7 +137,6 @@ To resolve:
 1. Find the Markers.
 1. Delete lines you don't want.
 1. Delete the markers.
-
 
 ### Two way Conflict
 

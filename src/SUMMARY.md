@@ -13,6 +13,7 @@
 - [How to Evaluate AI](how-to-evaluate-ai.md)
 - [Git](git.md)
   - [Git Merge](git-merge.md)
+  - [Git Rebase](git-rebase.md)
 
 # IPv4
 
@@ -98,7 +99,6 @@
 
 - [OSPF](ospf.md)
   - [OSPF LSAs](ospf-lsas.md)
-  - [OSPF Router LSA](ospf-router-lsa.md)
   - [OSPF LSA Captures](ospf-lsa-captures.md)
   - [OSPFv2 LSA Chart](ospfv2-lsa-chart.md)
   - [OSPFv2 LSA Default Routes](ospfv2-lsa-default-route.md)
@@ -107,6 +107,7 @@
   - [EIGRP Classic Metric](eigrp-classic-metric.md)
   - [EIGRP Wide Metric](eigrp-metric-wide.md)
 - [IS-IS](is-is.md)
+  - [IPv4 To Hex](ipv4-to-hex.md)
 
 # BGP
 
@@ -124,7 +125,6 @@
 - [DMVPN](dmvpn.md)
   - [NHRP](nhrp.md)
 - [Policy Based Routing](policy-based-routing.md)
-- [Multi-Homing](multi-homing.md)
 
 # DDoS Prevention
 
