@@ -1,42 +1,42 @@
 # ISIS
 
-IS-IS
-: Intermediate System To Intermediate System
-  - An ISO standard open protocol.
-  - Link State and Shortest Path
-  - Good for large flat networks
+## Terms
 
-IS
+**IS-IS**
+- Intermediate System To Intermediate System
+- An ISO standard open protocol.
+- Link State and Shortest Path
+- Good for large flat networks
+
+**IS**
 : Intermediate System
   - A router
 
-NSAP
+**NSAP**
 : Network Service Access Point
   - An instance of the IS-IS protocol. 
 
-NET
+**NET**
 : Network Entity Title
   - A router
   - Also refers to the address NSAP
+
+**ES**
+- End Station
+- A PC, or a server.
+
+
+
+**Station Routing**
+- AKA, intra-area
+- Routing within a L1 area.
+
+**Area Routing**
+-  AKA, inter-area
+-  Routing within a L2 area.
   
-
-
-ES
-: End Station
-  - A PC, or a server.
-
-- Default route injected via route-map.
-
-- **Station Routing**
-  - AKA, intra-area
-  - Routing within a L1 area.
-  
-- **Area Routing**
-  - AKA, inter-area
-  - Routing within a L2 area.
-  
-Backbone
-  : The L2 area.
+**Backbone**
+- The L2 area.
 
 
 ```console
@@ -46,6 +46,7 @@ router isis
    address-family ipv4
 ```
 
+Default route injected via route-map.
 
 ISIS Uses a simplified topology compared to OSPF.
 
@@ -76,13 +77,12 @@ There are only three kinds of routers.
 
 ## Topology
 
-Single Topology
-:
+**Single Topology**
 - All Routed Protocols must be configured on all enabled interfaces.
 - e.g. v4 and v6 on all interfaces.
-  
-Multi-Topology
-: Some interfaces can be v4, others can be v6, others can be both.
+
+**Multi-Topology**
+- Some interfaces can be v4, others can be v6, others can be both.
 
 ### Addressing Scheme
 
@@ -94,21 +94,21 @@ packet-beta
 72-79: "SEL"
 ```
 
-AFI
-: Authority and Format Identifier - 1 byte
-  - `49` means local authority, and hexadecimal (binary is encoded).
-  
-Area ID
-: Variable, and ... *includes* the AFI.
+**AFI**
+- Authority and Format Identifier - 1 byte
+- `49` means local authority, and hexadecimal (binary is encoded).
 
-System ID
-: 6 bytes, can fit a MAC address or a v4 address.
-  - Must be unique in an area for L1.
-  - Must be unique in a domain for L2.
-  
-SEL
-: Selector - 1 byte.
-  - This is always `00` to mean router.
+**Area ID**
+- Variable, and ... *includes* the AFI.
+
+**System ID**
+- 6 bytes, can fit a MAC address or a v4 address.
+- Must be unique in an area for L1.
+- Must be unique in a domain for L2.
+
+**SEL**
+- Selector - 1 byte.
+- This is always `00` to mean router.
 
 
 **Example**
@@ -139,13 +139,11 @@ L1 areas must match
 
 ## IS-IS Metric Styles
 
-Narrow
-:
+**Narrow**
 - 63 per link
 - 1 023 per path
 
-Wide
-:
+**Wide**
 - 16 772 215 per link
 - 4 294 967 295 per path
 

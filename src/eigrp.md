@@ -2,21 +2,29 @@
 
 ## EIGRP Terminology
 
-- **Successor route:** The current best path, with the smallest metric. The "successful" route.
+**Successor route**
+- The current best path, with the smallest metric. The "successful" route.
 
-- **Successor:** The first next-hop router for the successor route.
+**Successor**
+- The first next-hop router for the successor route.
 
-- **Feasible distance (FD):** Lowest metric to reach a subnet. The sum of the RD + local cost.
+**Feasible distance (FD)**
+- Lowest metric to reach a subnet. The sum of the RD + local cost.
 
-- **Reported distance (RD):** The metric inside a route update from another router. The sending router included it's FD, which becomes out RD.
+**Reported distance (RD)**
+- The metric inside a route update from another router. The sending router included it's FD, which becomes out RD.
 
-- **Feasibility condition:** If another path is *actually a backup*, the RD will be less than the current FD.
+**Feasibility condition**
+- If another path is *actually a backup*, the RD will be less than the current FD.
 
-- **Feasible successor:** A route that satisfies the feasibility condition and is maintained as a backup route.
+**Feasible successor**
+- A route that satisfies the feasibility condition and is maintained as a backup route.
 
-- **Split Horizon:** Never advertise a network, out the same interface it was learned on.
+**Split Horizon**
+- Never advertise a network, out the same interface it was learned on.
 
-- **Poison Reverse:** If you must advertise a network out the same interface it was received on, advertise the delay as infinity.
+**Poison Reverse**
+- If you must advertise a network out the same interface it was received on, advertise the delay as infinity.
 
 ## Feasible Successor Algo
 

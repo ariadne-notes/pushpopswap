@@ -1,29 +1,81 @@
 # QoS
 
-- **FIFO:** First in, First out. The default behavior of an network node processing IP traffic.
-- **Differentiated Services:** AKA, DiffServ. Giving packet flows different levels of network service, based on classification.
-- **Integrated Services:** AKA, IntServ. Packet flows explicitly reserve bandwidth along a path, via admission control.
-- **RSVP:** Resource Reservation Protocol. Uses Admission control to make explicit QoS reservations on each device in the path.
-- **Marking:** Changing the DSCP bits in the IP header field to put an IP flow into a specific traffic class.
-- **DSCP:** Differentiated Services Code Point. The marking of an IP packet that allows DiffServ
-- **PHB:** Per Hop Behavior. What a node should or shouldn't do with marked traffic.
-- **Queuing:** Holding a packet in memory, delaying transmission. Queuing is always expensive.
-- **LLQ:** Low latency queuing. Describes queue behavior for the EF PHB: never drop, never delay, send immediately, police aggressively.
-- **EF:** Expedited Forwarding. The highest tier of service for network data, that isn't control traffic.
-- **Control Traffic:** CS6. CS6 traffic is used to share topology information, eg. (OSPF, IS-IS, BGP)
-- **CAR:** Committed Access Rate. The agreed rate a traffic source will flow at, or violate it's SLA.
-- **SLA:** Service Level Agreement. SLAs are business agreements about data servicing requirements.
-- **WFQ:** Weighted Fair Queuing. The default strategy on links under 2Mbps. Sorts traffic into high bw and low bw classes.
-- **CBWFQ:** Class Based Weighted Fair Queuing, AKA, Modular QoS: multiple queues, bandwidth limits, and access to different kinds of queues, like LLQ.
-- **MQC:** Modular QoS CLI.
-- **PQ:** Priority Queue. A queue that is served first, even if other queues have been waiting longer.
+## Terms
+
+**FIFO**
+- First in, First out.
+- The default behavior of an network node processing IP traffic.
+
+**Differentiated Services**
+- AKA, DiffServ.
+- Giving packet flows different levels of network service, based on classification.
+
+**Integrated Services** 
+- AKA, IntServ. 
+- Packet flows explicitly reserve bandwidth along a path, via admission control.
+
+**RSVP** 
+- Resource Reservation Protocol.
+- Uses Admission control to make explicit QoS reservations on each device in the path.
+
+**Marking** 
+- Changing the DSCP bits in the IP header field to put an IP flow into a specific traffic class.
+
+**DSCP** 
+- Differentiated Services Code Point.
+- The marking of an IP packet that allows DiffServ
+
+**PHB**
+- Per Hop Behavior.
+- What a node should or shouldn't do with marked traffic.
+
+**Queuing**
+- Holding a packet in memory, delaying transmission. Queuing is always expensive.
+
+**LLQ**
+- Low latency queuing.
+- Describes queue behavior for the EF PHB: 
+  - Never drop
+  - Never delay
+  - Send immediately
+  - Police aggressively
+
+**EF**
+- Expedited Forwarding.
+- The highest tier of service for network data, that isn't control traffic.
+
+**Control Traffic**
+- CS6. CS6 traffic is used to share topology information, eg. (OSPF, IS-IS, BGP)
+
+**CAR**
+- Committed Access Rate.
+- The agreed rate a traffic source will flow at, or violate it's SLA.
+
+**SLA**
+- Service Level Agreement.
+- SLAs are business agreements about data servicing requirements.
+
+**WFQ**
+- Weighted Fair Queuing.
+- The default strategy on links under 2Mbps. Sorts traffic into high bw and low bw classes.
+
+**CBWFQ**
+- Class Based Weighted Fair Queuing
+- AKA, Modular QoS: multiple queues, bandwidth limits, and access to different kinds of queues, like LLQ.
+
+**MQC**
+- Modular QoS CLI.
+
+**PQ**
+- Priority Queue.
+- A queue that is served first, even if other queues have been waiting longer.
 
 
 ## Type of Service
 
 How these 8 bits get used has changed over the years.
 
-<pre>
+```plain
                    0 1 2 3 4 5 6 7
 
                   ┌─────┬─────┬─┬─┐
@@ -50,7 +102,7 @@ How these 8 bits get used has changed over the years.
                   ┌───────────┬───┐
   RFC 3168 (2001) │    DSCP   │ECN│
                   └───────────┴───┘
-</pre>
+```
 
 ### PHB - Per Hop Behaviors
 
@@ -73,7 +125,7 @@ Used for RED, or WRED.
 
 Four AF classes, each should get it's own resources.
 
-<pre>
+```plain
 Drop
 
  Precedence      Class 1        Class 2        Class 3       Class 4
@@ -84,11 +136,11 @@ Drop
    High   ▼ │ AF13  001 110 │ AF23  010 110 │ AF33  011 110 │ AF43 100 110 │
             └───────────────┴───────────────┴───────────────┴──────────────┘
              ────────────►  Importance  to Business/Net work ───────────►
-<pre>
+```
 
 Again, with DSCP
 
-<pre>
+```plain
 Drop
 
  Precedence      Class 1        Class 2        Class 3       Class 4
@@ -99,7 +151,7 @@ Drop
    High   ▼ │ AF13  DSCP 14 │ AF23  DSCP 22 │ AF33  DSCP 30 │ AF43 DSCP 38 │
             └───────────────┴───────────────┴───────────────┴──────────────┘
              ────────────►  Importance  to Business/Network ───────────►
-</pre>
+```
 
 Yields the following formula.
 
@@ -109,10 +161,10 @@ DSCP = 8 (class) + 2 (drop)
 
 LAN QoS with voice (buffer management)
 
- * One voice packet, no voice, but modem will retrain
- * Two voice packets, audio clip, fax call disconnection.
- * VoIP QoS cannot be fixed by adding bandwidth. You simply cannot drop these
- * packets.
+- One voice packet, no voice, but modem will retrain
+- Two voice packets, audio clip, fax call disconnection.
+- VoIP QoS cannot be fixed by adding bandwidth. You simply cannot drop these
+- packets.
 
 ## QoS Commands
 

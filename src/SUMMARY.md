@@ -13,7 +13,15 @@
 - [How to Evaluate AI](how-to-evaluate-ai.md)
 - [Git](git.md)
   - [Git Merge](git-merge.md)
+  - [Git Branch](git-branch.md)
+  - [Git Switch](git-switch.md)
+  - [Git Push](git-push.md)
+  - [Git Log](git-log.md)
   - [Git Rebase](git-rebase.md)
+  - [Git Reset](git-reset.md)
+  - [Git Commit](git-commit.md)
+  - [Git Restore](git-restore.md)
+  - [Git Ignore](git-ignore.md)
 
 # IPv4
 
@@ -181,7 +189,6 @@
 - [RESTCONF](restconf.md)
 - [NETCONF](netconf.md)
 - [gRPC](grpc.md)
-- [gNMI](gnmi.md)
 - [YANG](yang.md)
 - [MDT](mdt.md)
 

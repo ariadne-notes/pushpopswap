@@ -2,15 +2,15 @@
 
 Captured on-wire.
 
-<pre>
+```plain
 packet #1 - who has 10.0.6.10? Tell 10.0.0.20
 packet #2 - 10.0.0.10 is at ce:b1:5f:58:1d:8a
-</pre>
+```
 
 ## ARP Request
 
 
-<pre>
+```plain
 > Ethernet II
 
     Destination: Broadcast (ff:ff:ff:ff:ff:ff)
@@ -28,18 +28,18 @@ packet #2 - 10.0.0.10 is at ce:b1:5f:58:1d:8a
     Sender IP address: 10.0.0.20
     Target MAC address: 00:00:00_00:00:00 (00:00:00:00:00:00)
     Target IP address: 10.0.0.10
-</pre>
+```
 
 ## ARP Reply
 
 
-<pre>
+```plain
 > Ethernet II
 
     Destination: 1a:20:4e:9e:fb:9c (1a:20:4e:9e:fb:9c)
     Source: ce:b1:5f:58:1d:8a (ce:b1:5f:58:1d:8a)
     Type: ARP (0x0806)
-    Padding: <lots of zeros>
+    Padding: ... lots of zeros
 
 > Address Resolution Protocol (reply)
 
@@ -52,4 +52,4 @@ packet #2 - 10.0.0.10 is at ce:b1:5f:58:1d:8a
     Sender IP address: 10.0.0.10
     Target MAC address: 1a:20:4e:9e:fb:9c (1a:20:4e:9e:fb:9c)
     Target IP address: 10.0.0.20
-</pre>
+```

@@ -1,0 +1,36 @@
+# Git Reset
+
+> [!CAUTION]
+>
+> Keywords like `hard` and `force` have serious consequences.
+
+Reset changes what commit `HEAD` points to.
+
+## Soft Reset
+
+- Leave your working tree files and the index unchanged.
+
+This is useful to undo local commits then re-play them as one commit.
+
+```console
+git reset --soft HEAD~5
+git commit
+```
+
+## Hard Reset
+
+This is used when there is nothing of value in the local working directory.
+
+- Overwrite all files and directories with the version from <commit>, 
+- Tracked files not in <commit> are removed so that the working tree matches <commit>. 
+- Update the index to match the new HEAD, so nothing will be staged.
+
+```console
+git fetch origin
+git reset --hard origin/main
+```
+
+## References
+
+[Git - git-reset Documentation](https://git-scm.com/docs/git-reset)
+

@@ -10,11 +10,11 @@
 
 ## What does 6RD Solve?
 
-"We can't deploy v6, because our BNG does *<put-feature-here>* and we need that!
+"We can't deploy v6, because our BNG does *(put-feature-here)* and we need that!
 
 This way, the customer gets dual stack without the ISP needing to upgrade a legacy deployment.
 
-<pre>
+```plain
      Customer's Home   ┌───────── 6RD Tunnel ────────────┐
           v4/v6        │                                 │
 ┌──────────────────────┼─┐   Legacy Access Network       │
@@ -34,7 +34,7 @@ This way, the customer gets dual stack without the ISP needing to upgrade a lega
                           │  └──┤v4 DHCP│              │ └────────┘
                           │     └───────┘              │
                           └────────────────────────────┘
-</pre>
+```
 
 ## The Four Things Required To Setup
 

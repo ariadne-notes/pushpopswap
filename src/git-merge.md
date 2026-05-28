@@ -1,6 +1,6 @@
 # Git Merge
 
-> [!WARNING] 
+> [!WARNING]
 > Do not perform `pull` or a `merge` with uncommitted changes.
 >
 > `merge` is designed to combine **committed** changes. You can lose work.
@@ -50,7 +50,7 @@ The default `merge` is called fast forward, or FF.
 
 FF can be used when there are no local changes or local commits.
 
-The repo was `cloned` previously. 
+The repo was `cloned` previously.
 
 Before `fetch`.
 
@@ -70,10 +70,6 @@ gitGraph
    commit id: "HEAD → C"
    commit id: "D"
    commit id: "E"
-```
-
-```plain
-git fetch
 ```
 
 After `merge`.
@@ -97,9 +93,16 @@ gitGraph
 
 `pull` combines `fetch` and `merge`. `pull` assumes a fast forward `merge`.
 
-```plain
-git pull
+Before `pull`.
+
+```mermaid
+gitGraph
+   commit id: "A"
+   commit id: "B"
+   commit id: "HEAD → C"
 ```
+
+After `pull`.
 
 ```mermaid
 gitGraph
@@ -125,8 +128,6 @@ This happens trying to update the part of a file, someone else has already updat
 
 1. A ref called `AUTO_MERGE` gets created.
 
-[Git Merge]: https://git-scm.com/docs/git-merge
-
 ## Conflict Resolution
 
 After the `merge`, Git will say what files need to be resolved. This is called **Conflict Resolution.**
@@ -140,7 +141,7 @@ To resolve:
 
 ### Two way Conflict
 
-**In Conflict**
+In Conflict.
 
 ```plain
                    Here are lines that are either unchanged from the common        
@@ -155,7 +156,7 @@ Your change  ┌───  Conflict resolution is hard;
                    And here is another line that is cleanly resolved or unmodified.
 ```
 
-**Resolved, kept local change**
+Resolved, kept local change.
 
 ```plain
                    Here are lines that are either unchanged from the common        
@@ -170,7 +171,7 @@ Your change  ┌───  Conflict resolution is hard;
 
 `zdiff3` shows the conflict with the original text, adding the `|||||||` marker.
 
-**In Conflict**
+In Conflict
 
 ```plain
                  Here are lines that are either unchanged from the common        
@@ -188,7 +189,7 @@ Original    ┌──  or cleanly resolved because both sides changed identicall
                  And here is another line that is cleanly resolved or unmodified.
 ```
 
-**Resolved, kept their lines**
+Resolved, kept their lines.
 
 ```plain
                  Here are lines that are either unchanged from the common        
@@ -212,5 +213,6 @@ git merge --continue
 merge --abort
 ```
 
-# References
+## References
+
 [Git - git-merge Documentation](https://git-scm.com/docs/git-merge)

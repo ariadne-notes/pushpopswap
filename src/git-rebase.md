@@ -27,7 +27,7 @@ gitGraph LR:
 
 Normally, with two branches, we'd do a `merge`
 
-**After the `merge`**
+## Merging
 
 ```mermaid
 ---
@@ -51,9 +51,9 @@ gitGraph LR:
 
 The `dev` branch is just hanging out.
 
-***
+---
 
-**What a rebase does.**
+### Rebasing
 
 ```mermaid
 ---
@@ -114,7 +114,16 @@ gitGraph LR:
    commit id: "HEAD/main, dev → E"
 ```
 
-# References
+## Rebasing with Deleted Files
+
+Sometimes while rebasing there will be moved or deleted files. They need to be deleted from the working tree, and the index before the rebase continues.
+
+```console
+git rm --cached file-one file-two file-three; rm -rf file-one file-two file-three && git rebase --continue
+```
+
+## References
+
 [Git - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
 [Git - git-rebase Documentation](https://git-scm.com/docs/git-rebase)

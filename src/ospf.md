@@ -308,12 +308,12 @@ auto-cost reference-bandwidth 40,000
 
 [OSPF Representation of routers and networks](https://www.rfc-editor.org/rfc/rfc2328#page-13)
 
-| CLI                                   |      Network Types         | LSA Type 1 or 2	|   Use-case                                                                            |
-| ------------------------------------- | -----------------------    | -----------------| ------------------------------------------------------------------------------------- |
-| `ip ospf network broadcast`           | Broadcast		             | 2 - DR Election	|   Ethernet, Token Ring, FDDI                                                          |
-| `ip ospf network non-broadcast`       | NBMA[^NBMA]			     | 2 - DR Election 	|   X.25, frame-relay, ATM. Requires a full-mesh.                                       |
-| `ip ospf network point-to-point`      | point-to-point		     | 1 - No DR	    |   Serial links, Unnumbered, TDM, HDLC, PPP (Full Adjacency)                           |
-| `ip ospf network point-to-multipoint` | Hub and spoke on Ethernet	 | 1 - No DR		|   Hub and Spoke Topologies, like DMVPN or Frame Relay                                 |
+| CLI                                   |      Network Types         | LSA Type 1 or 2	|   Use-case                                                            |
+| ------------------------------------- | -----------------------    | -----------------| --------------------------------------------------------------------- |
+| `ip ospf network broadcast`           | Broadcast		             | 2 - DR Election	|   Ethernet, Token Ring, FDDI                                          |
+| `ip ospf network non-broadcast`       | NBMA[^NBMA]			     | 2 - DR Election 	|   X.25, frame-relay, ATM. Requires a full-mesh.                       |
+| `ip ospf network point-to-point`      | point-to-point		     | 1 - No DR	    |   Serial links, Unnumbered, TDM, HDLC, PPP (Full Adjacency)           |
+| `ip ospf network point-to-multipoint` | Hub and spoke on Ethernet	 | 1 - No DR		|   Hub and Spoke Topologies[^unicast], like DMVPN or Frame Relay       |
 
 [^NBMA]: RFC compliant (??) implementation. For actual nbma networks use `ip ospf network point-to-multipoint`.
 [^unicast]: The DR (which should be the HUB or bad things happen) needs to have static neighbor statements.
