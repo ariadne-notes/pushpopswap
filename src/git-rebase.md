@@ -114,14 +114,6 @@ gitGraph LR:
    commit id: "HEAD/main, dev → E"
 ```
 
-## Rebasing with Deleted Files
-
-Sometimes while rebasing there will be moved or deleted files. They need to be deleted from the working tree, and the index before the rebase continues.
-
-```console
-git rm --cached file-one file-two file-three; rm -rf file-one file-two file-three && git rebase --continue
-```
-
 ## References
 
 [Git - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)

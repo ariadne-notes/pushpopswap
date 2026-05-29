@@ -1,12 +1,12 @@
 # Git Commit
 
-## Ordinary commit
+## Ordinary Commit
 
 ```console
 git commit -m "Here is what I did"
 ```
 
-## Amend - Change the last commit message
+## Amend - Change the Last Commit Message
 
 > [!WARNING]
 > Do not amend commits that have already been published.
@@ -24,6 +24,6 @@ git commit --amend -m "This is what I wished it said"
 git commit --all -m "Used when you don't want to manually add files
 ```
 
-# References
+## References
 
 [Git - git-commit Documentation](https://git-scm.com/docs/git-commit)

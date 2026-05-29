@@ -43,7 +43,7 @@ git restore --staged -- hello.c
 git restore --source origin/main -- hello.c
 ```
 
-# References
+## References
 
 [Git - git-restore Documentation](https://git-scm.com/docs/git-restore)
 

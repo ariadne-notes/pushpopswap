@@ -7,7 +7,9 @@
 
 > On My Windows machine, I just use the Desktop App.
 
-- Use `GitHub Pages` and `Actions` to Deploy [mdBook](https://github.com/rust-lang/mdBook) ... My [deploy script on GitHub](https://github.com/ariadne-notes/networking/blob/main/.github/workflows/mdbook.yml).
+- Use `GitHub Pages` and `Actions` to Deploy [mdBook](https://github.com/rust-lang/mdBook) ... My [deploy script on GitHub].
+
+[deploy script on GitHub]: https://github.com/ariadne-notes/networking/blob/main/.github/workflows/mdbook.yml
 
 I am a **very** heavy AI user. I used Claude Sonnet 4.6 to help figure this out.
 

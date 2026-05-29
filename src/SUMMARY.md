@@ -115,6 +115,7 @@
   - [EIGRP Classic Metric](eigrp-classic-metric.md)
   - [EIGRP Wide Metric](eigrp-metric-wide.md)
 - [IS-IS](is-is.md)
+  - [IS-IS Network Design](is-is-network-design.md)
   - [IPv4 To Hex](ipv4-to-hex.md)
 
 # BGP
@@ -242,6 +243,8 @@
 
 - [Other Blogs](other-blogs.md)
 - [Style Guide](style-guide.md)
+
 ---
+
 [A Woman Calls TAC](joke-a-woman-calls-TAC.md)
 [A Red Team Housecall](joke-red-team-housecall.md)

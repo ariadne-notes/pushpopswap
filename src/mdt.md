@@ -1,10 +1,12 @@
 # MDT
 
+**MDT**
+
+- Model Driven Telemetry
 - Can be ordinary TCP.
 - Can also use gRPC, to add TLS.
 
 ## TCP Dial-out
-
 
 ```mermaid
 sequenceDiagram
@@ -18,7 +20,6 @@ sequenceDiagram
 ```
 
 ## TCP Dial-in
-
 
 ```mermaid
 sequenceDiagram

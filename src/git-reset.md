@@ -44,8 +44,7 @@ git commit -m "Final commit"
 ## Hard Reset
 
 > [!CAUTION]
-> - This will erase uncommitted work.
-> - If local commits were made, this will create dangling commits.
+> This erases uncommitted work. This creates dangling local commits.
 
 - Move `HEAD`
 - Reset Index to `HEAD`

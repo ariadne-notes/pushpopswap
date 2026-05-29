@@ -8,11 +8,12 @@ Previous version control tools used diffs, which are changes or deltas between f
 
 Every file being tracked is hashed with SHA-1, each and every time a commit is made. Git always knows if files have been changed.
 
-The list of files and their hashes is called the **Index.** 
+The list of files and their hashes is called the **Index.**
 
 ## Terms
 
-**Repository**
+### Repository
+
 - `.git/`
 - AKA, Repo
 - AKA, the object store.
@@ -22,44 +23,51 @@ The list of files and their hashes is called the **Index.**
   - Git stores: blobs, trees, commits, and tags.
 - Interacted with almost purely via `git`.
 
-**Commits**
+### Commits
+
 - Takes a snapshot of the current Index
 - SHA-1 entity that points to a specific tree.
 - Metadata: author, commiter, timestamp, messages, parent commit.
 - Commits are backwards chains.
   - All commits store the hash of previous commits.
 
-**Tree**
+### Tree
+
 - A directory snapshot
   - Mode (file type and permissions)
   - Name (file or directory)
   - SHA-1 (the hash)
   - Trees point to blobs and other trees.
   
-**Blob**
+### Blob
+
 - A key-value pair that represents a file.
 - `82da472f6d00dc5f0a651f33ebb320aa9c7b08d0  LICENSE`
 - The SHA-1 is used to find the compressed content of `LICENSE`
 
-**Branch**
+### Branch
+
 - A named pointer to a specific commit.
 - Commits are stored as nodes on a [DAG].
 - Merge commits have two or more parents.
 - The init commit has no parents.
 
-**HEAD**
+### HEAD
+
 - A named pointer to the current branch.
 - In detached HEAD state, points directly to a commit.
 - Works like the playhead on a tapedeck.
 
-**Working Tree**
+### Working Tree
+
 - AKA, project directory.
 - AKA, user directory.
 - AKA, your files
 - This is where project files are modified.
 - Directory inside `git init` was ran.
 
-**The Index**
+### The Index
+
 - `.git/index`
 - AKA, staging
 - AKA, cache.
@@ -92,7 +100,7 @@ gitGraph
 
 `A`, `B`, `C`, `D` are previous commits.
 
-The working tree contains the files from commit `E`. 
+The working tree contains the files from commit `E`.
 
 I think of it like a tape deck, the `HEAD` can be played backwards or forwards.
 

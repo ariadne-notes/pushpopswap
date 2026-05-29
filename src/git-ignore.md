@@ -16,6 +16,6 @@ ariadne@tesseract:~/git/network-notes$ cat .gitignore
 /book
 ```
 
-# References
+## References
 
 [Git - gitignore Documentation](https://git-scm.com/docs/gitignore)

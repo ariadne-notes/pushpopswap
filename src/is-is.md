@@ -1,66 +1,65 @@
-# ISIS
+# IS-IS
 
-## Terms
+## What is IS-IS
 
-**IS-IS**
 - Intermediate System To Intermediate System
 - An ISO standard open protocol.
 - Link State and Shortest Path
 - Good for large flat networks
 
-**IS**
-: Intermediate System
-  - A router
+### Terms
 
-**NSAP**
-: Network Service Access Point
-  - An instance of the IS-IS protocol. 
+- **IS**
+- Intermediate System
+- A router
 
-**NET**
-: Network Entity Title
-  - A router
-  - Also refers to the address NSAP
+### NSAP
 
-**ES**
+- Network Service Access Point
+- An instance of the IS-IS protocol. 
+
+### NET
+
+- Network Entity Title
+- A router
+- Also refers to the address NSAP
+
+### ES
+
 - End Station
 - A PC, or a server.
 
+### Station Routing
 
-
-**Station Routing**
 - AKA, intra-area
 - Routing within a L1 area.
 
-**Area Routing**
+### Area Routing
+
 -  AKA, inter-area
 -  Routing within a L2 area.
-  
-**Backbone**
+
 - The L2 area.
 
+## Types of Routers
 
-```console
-router isis 
- net 00.0000.0000.0005.00
- interface g0/0/0/0
-   address-family ipv4
-```
+### L2 Routers
 
-Default route injected via route-map.
+IS-IS doesn't refer to a backbone, but L2 routers perform the same function. They should be center-of-topology.
 
-ISIS Uses a simplified topology compared to OSPF.
+### L1L2 Routers
 
-There are only three kinds of routers.
+These routes have topology information for the L1 area and the L2 area.
 
-- **L2** Backbone routers, which can carry summaries.
+These are kind of like ABRs in OSPF.
 
-- **L1L2:** ABRs, AKA Area Border Routers.
+### L1 Router
 
-- **L1:** These are the Area routers. They do not flood their link state databases into L2.
+These are the Area routers. They do not flood their link state databases into L2.
 
 ## Example
 
-<pre>
+```plain
                                              ┌──────┐
                                              │ L1   │
                                              └───┬──┘
@@ -72,10 +71,10 @@ There are only three kinds of routers.
 ┌───┴──┐             ┌──┴───┐          ┌───┴──┐
 │  L1  │             │  L2  │──────────┤  L2  │
 └──────┘             └──────┘          └──────┘
-</pre>
+```
 
 
-## Topology
+## Topologies
 
 **Single Topology**
 - All Routed Protocols must be configured on all enabled interfaces.
@@ -84,7 +83,8 @@ There are only three kinds of routers.
 **Multi-Topology**
 - Some interfaces can be v4, others can be v6, others can be both.
 
-### Addressing Scheme
+
+### Addressing scheme
 
 ```mermaid
 packet-beta
@@ -137,19 +137,23 @@ To do Multipoint NBMA you need to include CLNS resolution.
 L1 areas must match
 
 
-## IS-IS Metric Styles
+### IS-IS Narrow
 
-**Narrow**
+The Cisco default link cost is 10.
+
+These are the limits:
+
 - 63 per link
 - 1 023 per path
 
-**Wide**
+### IS-IS Wide
+
 - 16 772 215 per link
 - 4 294 967 295 per path
 
 Cisco's implementation of the wide metric uses the bits ISO set aside for delay, expense and error.
 
-### Configuration
+### Config
 
 Enable wide metrics:
 
@@ -157,7 +161,7 @@ Enable wide metrics:
 metric-style wide
 ```
 
-### Transition Commands
+#### Metric Transition Commands
 
 Used when migrating from narrow to wide without a hard cutover:
 
@@ -167,9 +171,23 @@ Used when migrating from narrow to wide without a hard cutover:
 | `metric-style narrow transition`  | Transitioning — still **advertising narrow** (old)       |
 | `metric-style wide transition`    | Transitioning — now **advertising wide** (new)           |
 
-# References
+### IS-IS Authentication
+
+- Plaintext
+  - Link, Area, or Domain
+    - Link is between routers
+    - Area is every router must have a matching password
+    - L2 and L1/L2 router use domain authentication.
+    
+### Notes
+
+Default route injected via route-map.
+
+## References
 
 [RFC 1195: Use of OSI IS-IS for routing in TCP/IP and dual environments | RFC Editor](https://www.rfc-editor.org/info/rfc1195/)
+
+[RFC 5308: Routing IPv6 with IS-IS | RFC Editor](https://www.rfc-editor.org/info/rfc5308/)
 
 [ISO/IEC 10589:2002 - Information technology — Telecommunications and information exchange between systems](https://www.iso.org/standard/30932.html)
 

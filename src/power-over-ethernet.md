@@ -1,34 +1,47 @@
 # Power Over Ethernet
 
-PSE
-: Power sourcing equipment, i.e. a PoE ethernet switch.
+**PSE**
 
-PD
-: Powered Device, i.e. a phone.
+- Power sourcing equipment, i.e. a PoE ethernet switch.
 
-PoE Splitter
-: Use Ethernet as a power source for low power devices.
+**PD**
 
-PoE Extender
-: Increases Ethernet's data and power range beyond 100m.
+- Powered Device, i.e. a phone.
 
-Passive PoE
-: AKA Pre-standard PoE. Usually old installs.
+**PoE Splitter**
 
-Endspan
-: The switch is the PSE.
+- Use Ethernet as a power source for low power devices.
 
-Midspan
-: The PSE is an injector and daisy chained into the ethernet.
+**PoE Extender**
 
-Mode-A
-: AKA Alt-A. Deliver power on the data pairs of 10Base-T or 100Base-T. (pairs 2, 3)
+- Increases Ethernet's data and power range beyond 100m.
 
-Mode-B
-: AKA Alt-B. Deliver power on the spare pairs of 10Base-T or 100Base-T. (pairs 1, 4)
+**Passive PoE**
 
-LLDP
-: Link Layer Discovery Protocol. The IEEE equivalent to CDP. Used in IEEE PoE to request power.
+- AKA Pre-standard PoE. 
+- Usually old installs.
+
+**Endspan**
+
+- The switch is the PSE.
+
+**Midspan**
+
+- The PSE is an injector and daisy chained into the Ethernet.
+
+**Mode-A**
+
+- AKA Alt-A.
+- Deliver power on the data pairs of 10Base-T or 100Base-T. (pairs 2, 3)
+
+**Mode-B**
+
+- AKA Alt-B. 
+- Deliver power on the spare pairs of 10Base-T or 100Base-T. (pairs 1, 4)
+
+**LLDP**
+
+- Link Layer Discovery Protocol. The IEEE equivalent to CDP. Used in IEEE PoE to request power.
 
 
 > [!IMPORTANT]
@@ -86,4 +99,5 @@ flowchart LR
 
 [Cisco - Industrial Power over Ethernet (PoE)](https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2024/pdf/BRKIOT-1128.pdf?cachemode=refresh)
 
-[Cisco UPOE+: The Catalyst for Expanded IT-OT Convergence White Paper - Cisco](https://www.cisco.com/c/en/us/solutions/collateral/enterprise-networks/nb-06-upoe-plus-it-ot-wp-cte-en.html)
+[Cisco UPOE+- The Catalyst for Expanded IT-OT Convergence White Paper - Cisco](https://www.cisco.com/c/en/us/solutions/collateral/enterprise-networks/nb-06-upoe-plus-it-ot-wp-cte-en.html)
+
