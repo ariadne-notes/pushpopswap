@@ -1,39 +1,26 @@
-# IPv6 Subnetting.
+# IPv6 Subnetting
 
-Since a v6 address is 128 bits, we need a way to express that many digits with fewer characters.
+Not really used by individual sites, but if you get a block from a RIR, this is how to subnet it.
 
-The IETF settled on hex.
+In the US [ARIN] handles requests for v6 space.
 
-`0000`
+[ARIN]: https://www.arin.net/resources/guide/ipv6/first_request/
 
-Looking at just the first digit, of the first hextet we see this:
+Could be useful to work with [NPTv6]
 
-| Hex | Binary |
-|-----|------- |
-| 0   | `0000` |
-| 1   | `0001` |
-| 2   | `0010` |
-| 3   | `0011` |
-| 4   | `0100` |
-| 5   | `0101` |
-| 6   | `0110` |
-| 7   | `0111` |
-| 8   | `1000` |
-| 9   | `1001` |
-| A   | `1010` |
-| B   | `1011` |
-| C   | `1100` |
-| D   | `1101` |
-| E   | `1110` |
-| F   | `1111` |
+[NPTv6]: https://www.rfc-editor.org/info/rfc6296/
 
-## Examples
+## Blessed Subnets
+
+The easy v6 networks to subnet fall on hex digit boundaries of /4.
+
+For these, [see this chart](./ipv6-hextet-boundaries.md).
 
 ### /40
 
 You're given `3fff::/20`, make some `/40` networks.
 
-A `/40` is two hextets, and two digits worth of bits.
+A `/40` is two hextets, and two hex digits worth of bits.
 
 - `3fff:0:0000::/40`
 - `3fff:0:0100::/40`
@@ -55,7 +42,7 @@ which becomes
 
 You're given `3fff::/20`, make some `/44` networks.
 
-A `/44` is two hextets, and three digits worth of bits.
+A `/44` is two hextets, and three hex digits worth of bits.
 
 - `3fff:0:0000::/44`
 - `3fff:0:0010::/44`
@@ -99,7 +86,30 @@ A `/52` is three hextets, plus 1 hex digit worth of bits.
 
 ## Cursed Subnets
 
-These do not fall on a hex digit boundary.
+What if instead, we try and subnet, inside a hex digit?
+
+First, we'd have to know what every hex digit is in binary.
+
+| Hex | Binary |
+|-----|------- |
+| 0   | `0000` |
+| 1   | `0001` |
+| 2   | `0010` |
+| 3   | `0011` |
+| 4   | `0100` |
+| 5   | `0101` |
+| 6   | `0110` |
+| 7   | `0111` |
+| 8   | `1000` |
+| 9   | `1001` |
+| A   | `1010` |
+| B   | `1011` |
+| C   | `1100` |
+| D   | `1101` |
+| E   | `1110` |
+| F   | `1111` |
+
+Then we'd want to figure out where the boundaries are for bits borrowed:
 
 | Bits Borrowed | Boundaries                                     |
 |---------------|------------------------------------------------|
@@ -111,7 +121,7 @@ These do not fall on a hex digit boundary.
 
 You're given `3fff::/20`, make some `/53` networks.
 
-A `/53` is three hextets, plus one extra bit.
+A `/53` is three hextets, plus one binary bit.
 
 - `3fff:0:0:0::/53`
 - `3fff:0:0:8000::/53`
@@ -123,7 +133,7 @@ A `/53` is three hextets, plus one extra bit.
 
 You're given `3fff::/20`, make some `/54` networks.
 
-A `/54` is three hextets, plus two extra bits.
+A `/54` is three hextets, plus two binary bits.
 
 - `3fff:0:0:0::/54`
 - `3fff:0:0:4000::/54`
@@ -135,7 +145,7 @@ A `/54` is three hextets, plus two extra bits.
 
 You're given `3fff::/20`, make some `/55` networks.
 
-A `/55` is three hextets, plus three extra bits.
+A `/55` is three hextets, plus three binary bits.
 
 - `3fff:0:0:0::/55`
 - `3fff:0:0:2000::/55`

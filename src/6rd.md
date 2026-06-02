@@ -14,7 +14,7 @@
 
 This way, the customer gets dual stack without the ISP needing to upgrade a legacy deployment.
 
-```plain
+```bob
      Customer's Home   ┌───────── 6RD Tunnel ────────────┐
           v4/v6        │                                 │
 ┌──────────────────────┼─┐   Legacy Access Network       │

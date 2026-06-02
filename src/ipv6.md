@@ -1,5 +1,7 @@
 # IPv6
 
+There are a lot of fundamentals changed with v6.
+
 - 128 bits, more space.
 - Globally Unique, less need for NAT.
 - Fixed header length, v4 has variable length headers
@@ -13,7 +15,7 @@
 - Mobile IPv6 lets mobile nodes remain reachable
 - No broadcast traffic
 
-An IPv6 address is 128 bits.
+
 
 ## Header
 

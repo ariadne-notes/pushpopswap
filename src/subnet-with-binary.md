@@ -1,7 +1,7 @@
 # Subnetting with Binary
 
-- A byte is eight bits `0b0000 0000`.
-- A nibble is four bits `0b0000`.
+- A byte is eight bits `0000 0000`.
+- A nibble is four bits `0000`.
 - A bit is `on` or `off`.
 
 Powers of 2: `1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048`

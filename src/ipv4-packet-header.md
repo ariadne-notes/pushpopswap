@@ -37,7 +37,7 @@ packet
 
 ## Flags
 
-<pre>
+```plain
   Flags:  3 bits
 
     Various Control Flags.
@@ -51,4 +51,5 @@ packet
         |   | D | M |
         | 0 | F | F |
         +---+---+---+
-</pre>
+```
+

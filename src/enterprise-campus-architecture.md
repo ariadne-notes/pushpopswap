@@ -25,39 +25,14 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 - Over-subscription rates between 4-20 are common.
 - Networks with over-subscription that results in queuing should implement QoS for voice traffic.
 
-## Access Layer
-
-- 9200 (160Gbps stack-wise ring)
-- 9300 (480Gbps stack-wise ring)
-- 9400 (modular chassis)
-
-### Considerations
-
-
-- mGig, so access speeds can scale
-- UPOE+, 90W with perpetual power (survives reboots)
-
-## Distribution Layer
-
-- 9400 (modular chassis)
-- 9500
-- 9600 (modular chassis)
-
-### Considerations
-
-- Service heavy (FHRPs, Routing, SVIs)
-- Typical L2 boundary
-- Used to interconnect all the access layer switches in a building
-- Used to interconnect Access layer switches, once they can't form a full-mesh
-- Also contains the failure domain of the access layer.
-- Simplified Distribution, using stackwise virtual to remove FHRP.
-
 ## Core Layer
 
+### Gear
+
 - 9500
 - 9600 (modular chassis)
 
-### Considerations
+### Features
 
 - No services
 - Layer 3 only
@@ -66,9 +41,39 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 
 ![cisco-campus-lan-core](./images/cisco-campus/cisco-campus-lan-core.jpg)
 
+## Distribution Layer Considerations
+
+### Gear
+
+- 9400 (modular chassis)
+- 9500
+- 9600 (modular chassis)
+
+### Features
+
+- Service heavy (FHRPs, Routing, SVIs)
+- Typical L2 boundary
+- Used to interconnect all the access layer switches in a building
+- Used to interconnect Access layer switches, once they can't form a full-mesh
+- Also contains the failure domain of the access layer.
+- Simplified Distribution, using stackwise virtual to remove FHRP.
+
+## Access Layer
+
+### Gear
+
+- 9200 (160Gbps stack-wise ring)
+- 9300 (480Gbps stack-wise ring)
+- 9400 (modular chassis)
+
+### Features
+
+- mGig, so access speeds can scale
+- UPOE+, 90W with perpetual power (survives reboots)
 
 
-### Traditional Design
+
+## Traditional Design
 
 ![cisco-campus-looped-access](./images/cisco-campus/cisco-campus-looped-access.jpg)
 
@@ -85,14 +90,12 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 - Cisco Catalyst Center
 - Cisco Identity Services Engine
 
-
 ![cisco-campus-sd-access-design](./images/cisco-campus/cisco-campus-sd-access-design.jpg)
 
 ### Open Standards Based Overlay
 
 - MP-BGP
 - VXLAN
-
 
 ![cisco-campus-bgp-evpn-vxlan](./images/cisco-campus/cisco-campus-bgp-evpn-vxlan.jpg)
 
@@ -124,14 +127,12 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 
 - **GIR:** Graceful Insertion or Removal. Influencing paths by changing route-metrics or adjusting FHRP priorities.
 
-
-
 ## Etherchannel
 
 - Use a dynamic protocol, to check on link health
 
-
-
 ## References
 
 [Design Zone - Campus LAN and Wireless LAN Solution Design Guide - Cisco](https://www.cisco.com/c/en/us/td/docs/solutions/CVD/Campus/cisco-campus-lan-wlan-design-guide.html)
+
+[Enterprise Campus Design - Multilayer Architectures and Design Principles - Cisco Live 2023](https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2023/pdf/BRKENS-2031.pdf)

@@ -8,7 +8,7 @@ For a `/24` network, thats 256 addresses, or ... this box.
 
 Write the first IP in the top corner, the last IP in the bottom corner.
 
-<pre>
+```
 ┌─────────────────────────────────┐
 │0                                │
 │                                 │
@@ -29,14 +29,14 @@ Write the first IP in the top corner, the last IP in the bottom corner.
 │                                 │
 │                              255│
 └─────────────────────────────────┘
-</pre>
+```
 
 ## Cut In Half (1)
 
 
 Write the last number in the bottom corner, next number in the top corner.
 
-<pre>
+```
 ┌────────────────┬────────────────┐
 │0               │128             │
 │                │                │
@@ -57,14 +57,14 @@ Write the last number in the bottom corner, next number in the top corner.
 │                │                │
 │            127 │             255│
 └────────────────┴────────────────┘
-</pre>
+```
 
 Two `/25` networks.
 
 ## Cut In Half (2)
 
 
-<pre>
+```
 ┌────────────────┬────────────────┐
 │0               │128             │
 │                │                │
@@ -85,15 +85,14 @@ Two `/25` networks.
 │                │                │
 │            127 │             255│
 └────────────────┴────────────────┘
-</pre>
+```
 
 - One `/25`
 - Two `/26` networks.
 
 ## Cut In Half (3)
 
-
-<pre>
+```
 ┌───────┬────────┬────────────────┐
 │0      │32      │128             │
 │       │        │                │
@@ -114,14 +113,14 @@ Two `/25` networks.
 │       │        │                │
 │     91│    127 │             255│
 └───────┴────────┴────────────────┘
-</pre>
+```
 
 - One `/25`
 - Four `/27`
 
 ## Cut In Half (4)
 
-<pre>
+```
 ┌───────┬────────┬────────────────┐
 │0      │32      │128             │
 │       │        │                │
@@ -142,7 +141,7 @@ Two `/25` networks.
 │       │        │                │
 │     91│     127│             255│
 └───────┴────────┴────────────────┘
-</pre>
+```
 
 - One `/25`
 - Two `/27`

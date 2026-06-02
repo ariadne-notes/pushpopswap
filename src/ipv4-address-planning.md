@@ -12,6 +12,11 @@
 - Third Octet: The vlan ID. `10.0.150.0/24` is vlan 150.
 - Forth Octet: Address Assignment type. 1 to 99 are static IPs, 100-200 are DHCP.
 
+## Figure out NAT
+
+- How many IPs are needed?
+- Do any devices need to be reachable from the outside?
+
 ## Best Practices
 
 - Address internal hosts with RFC1918 addresses.

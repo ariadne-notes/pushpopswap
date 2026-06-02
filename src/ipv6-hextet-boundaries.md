@@ -1,5 +1,7 @@
 # IPv6 Hextext Boundaries
 
+For any of these, to subnet them, just change the final hex digit.
+
 ## Groups of 64
 
 <pre>
