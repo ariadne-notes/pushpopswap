@@ -2,6 +2,8 @@
 
 RESTCONF uses HTTP to send command operations to network equipment.
 
+The data is encoded with XML or JSON.
+
 ## Config
 
 
@@ -94,3 +96,7 @@ ariadne@tesseract:~$ curl --insecure --user admin:cisco123 \
 ## Reference
 
 [Programmability Configuration Guide, Cisco IOS XE 17.17.x](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/1717/b_1717_programmability_cg/m_1717_prog_restconf.html)
+
+[RESTCONF Protocol - RFC 8040](https://www.rfc-editor.org/rfc/rfc8040.html)
+
+
