@@ -248,6 +248,7 @@
 - [Power Over Ethernet](power-over-ethernet.md)
 - [Wake on LAN](wake-on-lan.md)
 - [Grep](grep.md)
+- [Unknown Command or Computer Name](unknown-command-or-computer-name.md)
 
 # Certification Stuff
 
