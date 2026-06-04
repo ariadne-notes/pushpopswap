@@ -1,6 +1,28 @@
 # How To Take Notes
 
-## I Don't Need To Take Notes. I Can Remember Everything Just Fine
+## The Process
+
+### Consistency
+
+If all your notes are in spiral bound notebooks or 3x5 cards, that's OK, but pick a system and stick with it.
+
+### Detail
+
+Cite your sources. You need enough to remember where something comes from.
+
+### Summarize
+
+Do not re-create source materials.
+
+- Record facts
+- Summarize and reduce scope
+- Fit your notes into your whole understanding (synthesis)
+
+An hour long meeting? One page of notes. Don't overdo it.
+
+## Myths
+
+### I Don't Need To Take Notes. I Can Remember Everything Just Fine
 
 Note down what you will not remember
  
@@ -18,7 +40,7 @@ You can find these details via
 - Collecting packets
 - Collecting debugs
 
-## I Don't Look At My Notes After I Take Them
+### I Don't Look At My Notes After I Take Them
 
 Don't take notes on stuff you'll remember, *take notes on stuff you'll forget.*
 
@@ -26,7 +48,7 @@ Learn what kinds of details you forget.
 
 The notes aren't for you six months from now, the notes are for you, six years from now.
 
-## I Can't Take Notes Digitally, I Need To Write Them Out
+### I Can't Take Notes Digitally, I Need To Write Them Out
 
 You can take handwritten notes, just OCR them into digitals. The AI is decent at this.
 
