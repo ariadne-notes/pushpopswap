@@ -8,10 +8,6 @@ IP Protocol 50
 
 The IPSec process responsible for providing encryption.
 
-**SA** --- Security Association
-
-An IKE concept, shared secret information and the set of accepted cryptographic algorithms to transport information.
-
 **ESP SPI** --- Security Parameters Index
 
 32-bit field, used by the receiver to identify the SA.
@@ -26,7 +22,7 @@ It's not recommended to share a SA for multiple senders for this reason.
 
 ## Transport Mode
 
-Encrypt the payload. Not used much, since it's point-to-point.
+Encrypt the payload.
 
 ![IPSec Transport Mode](./images/diagrams/ipsec-transport.drawio.svg)
 
@@ -35,6 +31,10 @@ Encrypt the payload. Not used much, since it's point-to-point.
 ## Tunnel Mode
 
 Encrypt entire packet. Put into new packet.
+
+- AKA IPSec Direct Encapsulation
+- Does not support Dynamic Routing Protocols
+- Does not support IP Multicast
 
 ![IPSec Tunnel Mode](./images/diagrams/ipsec-tunnel.drawio.svg)
 

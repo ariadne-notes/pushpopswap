@@ -1,4 +1,4 @@
-# OSPFv2 LSA Chart
+# OSPFv2 Network and LSA Chart
 
 <div><style>
   .ospf-table { border-collapse: collapse; width: 100%; font-size: 0.9em; }
@@ -130,5 +130,6 @@
     </tr>
   </tbody>
 </table>
-<p><em>Source: <a href="https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/6208-nssa.html">Cisco — OSPF NSSA</a></em></p>
 </div>
+
+v3.1 (9-June-2026)

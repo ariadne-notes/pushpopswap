@@ -247,8 +247,6 @@ See results of DF election
 
 `show ip pim interface df`
 
-
-
 ```console
 FLAGS
  A - Accepting. This interface is accepting data
@@ -258,56 +256,6 @@ FLAGS
 ## Nexus 7K
 
 `show forwarding multicast route group <>`
-
-## L2 Addresses
-
-MAC addresses are 48 bits.
-
-The first 25 bits are always.
-
-```plain
-0000 0001 . 0000 0000 . 0101 1110 . 0??? ????
-       01 :        00 :        5E :
-        ^                           ^
-        |                           └─  Multicast requires this bit be 0.
-        |
-        └─ Individual/Group. Multicast requires this bit be 1.
-```
-
-So the first six bytes are `01:00:5E`
-
-The last 23 bits come from the IP address.
-
-### A Multicast IP
-
-Mapping 232.10.10.10 → 01:00:5E:0A:0A:0A
-
-Copy the low order 23 bits directly from the v4 address.
-
-```plain
-
-  232.10.10.10/8
-  (in binary)
-  1110 1000 . 0000 1010 . 0000 1010 . 0000 1010
-               \______________________________/
-               Remember these 23 bits.
-   
-```
-
-## Building the L2 Address
-
-Ethernet Multicast MAC Address
-
-```plain
-          1 :         0 :        5E :        0A :       0A  :        0A
-  0000 0001 . 0000 0000 . 0101 1110 . 0000 1010 . 0000 1010 . 0000 1010
-  \__________________________________/|\______________________________/
-        Assigned first 25 bits        |   Same bits as above.
-        (always 01:00:5E)             |  (24 bits → 23 bits, 1 bit dropped)
-                                      |
-                                      |
-                                      └─  Multicast requires this bit be 0
-```        
 
 
 ## Lab Stuff

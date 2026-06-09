@@ -1,5 +1,20 @@
 # DMVPN
 
+DMVPN has a lot of benefits:
+
+- One GRE interface
+- One IPSec Profile for all spoke routers
+- Automatic and Dynamic IPSec initiation.
+- Remote spokes can by dynamically addressed.
+- Remote spokes can be behind NAT.
+  - Hub can be behind static NAT.
+- Supports Dynamic spoke-to-spoke with phases 2 and 3.
+- QoS
+- Dynamic Routing
+- Multicast
+
+## Phase 1
+
 - GRE
 - Only hub-to-spoke
 

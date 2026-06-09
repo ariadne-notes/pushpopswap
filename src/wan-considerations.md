@@ -1,8 +1,8 @@
 # WAN Considerations
 
-DIA
-  : Direct Internet Access.
-  : Ordinary connection to the Internet.
+**DIA** --- Direct Internet Access.
+
+An ordinary connection to the Internet.
 
 ## Leased Lines
 
@@ -139,16 +139,9 @@ DIA
 
 ## Overlay Technologies
 
+## [IPSec](./ipsec.md)
 
-## IPSec
-
-- **ISAKMP** Used to exchange keys
-  * **IKEv1:** Symmetric Encryption
-  * **IKEv2:** Asymmetric Encryption
-- **IPSEC ESP** Encryption of data
-- **IPsec AH:** Authentication only
-
-IPSec doesn't support routing protocols unless it's the outside is a GRE tunnel.
+IPSec doesn't support routing protocols unless encapsulated in GRE.
 
 ## GETVPN
 

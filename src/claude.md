@@ -10,6 +10,9 @@ I feed this into claude most of the time to get nice outputs to copy into gear f
 - set line console 0 to transport output none
 - enable ipv4 routing
 - enable ipv6 routing
+- no banner exec
+- no banner incomming
+- no banner login
 - end on the bottom
 - copy run start very last
 
@@ -18,16 +21,17 @@ I feed this into claude most of the time to get nice outputs to copy into gear f
 
 # v4 - L2 addressing
 - v4 subnets are usually /24s.
-- router-to-router subnets: in v4 take the form 10.X.Y.Z/24. X is the lower router number. Y is the higher router number. Z is the router itself.
+- router-to-router subnets: in v4 take the form 10.X.Y.Z/24. X is the lower router number. Y is the higher router number. Z is the router itself
   * Example: R1 to R5 would be 10.1.5.1/24
   * Example: R5 to R1 would be 10.1.5.5/24
-- Loopback0: Each router gets a v4 loopback like 1.1.1.1/32, or 2.2.2.2/32
-  * Example: R1 would be 1.1.1.1/32
-  * Example: R5 would be 5.5.5.5/32
+- Loopback0: Each router gets a /32 v4 loopback in the format 10.0.0.Z
+  * Example: R1 would be 10.0.0.1/32
+  * Example: R5 would be 10.0.0.5/32
+
 
 # v6 - L2 addressing
 - v6 subnets are usually /64s.
-- router-to-router subnets in v6 take the form 2001:db8:X:Y::Z/64. X is the lower router number. Y is the higher router number. Z is the router itself.
+- router-to-router subnets in v6 take the form 2001:db8:X:Y::Z/64. X is the lower router number. Y is the higher router number. Z is the router itself
 - R1-R5 2001:db8:0:15::0/64. 
   * Example: R1 to R5 would be 2001:db8:1:5:1/64
   * Example: R5 to R1 would be 2001:db8:1:5:5/64

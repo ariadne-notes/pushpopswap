@@ -337,7 +337,7 @@ R1# show ip ospf database router
 
 #### The Capture
 
-[ospfv2-p2mp-failing](./captures/routing/ospfv2-p2mp-failing.pcap)
+[OSPFv2-p2mp-failing](./captures/routing/OSPFv2-p2mp-failing.pcap)
 
 R1 sends a unicast DBD packet to R4, but uses the wrong mac address.
 

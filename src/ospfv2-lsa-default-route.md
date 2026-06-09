@@ -1,6 +1,10 @@
 # OSPFv2 LSA Default Routes
 
-<pre>
+R2 is advertising a default route to these routers.
+
+Each router is inside a different area type.
+
+```plain
                     Regular              ┌────┐
               ┌──────────────────────────┤ R3 │ Type 5
               │                          └────┘
@@ -16,9 +20,9 @@
               │     NSSA Totally Stubby  ┌────┐
               └──────────────────────────┤ R7 │ Type 3
                                          └────┘
-</pre>
+```
 
-## IPv4 - Type 3
+## Type 3 Default
 
 ```console
 R2# show ip ospf database summary 0.0.0.0 self-originate 
@@ -67,7 +71,7 @@ R2# show ip ospf database summary 0.0.0.0 self-originate
         MTID: 0         Metric: 1
 ```
 
-## IPv4 - Type 5
+## Type 5 Default
 
 ```console
 R2# show ip ospf database external 0.0.0.0 self-originate 
@@ -92,7 +96,7 @@ R2# show ip ospf database external 0.0.0.0 self-originate
         External Route Tag: 1
 ```
 
-## IPv4 - Type 7
+## Type 7 Default
 
 ```console
 R2# show ip ospf database nssa-external 0.0.0.0 self-originate

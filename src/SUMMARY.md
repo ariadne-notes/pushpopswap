@@ -63,9 +63,12 @@
 - [VLAN Access Control Lists](vlan-access-control-lists.md)
 
 # IP Security
+- [Encryption Fundamentals](encryption-fundamentals.md)
+- [IKE](ike.md)
 - [IPSec](ipsec.md)
   - [IPSec Authentication Header](ipsec-ah.md)
   - [IPSec Encapsulating Security Payload](ipsec-esp.md)
+
 
 # Quality of Service
 
@@ -112,17 +115,27 @@
   - [BIDIR-PIM](bidir-pim.md)
   - [Auto-RP](auto-rp.md)
   - [MSDP](msdp.md)
-  - [Multicast Tech Debt](multicast-tech-debt.md)
+  - [Multicast L2 Addressing](multicast-l2-addressing.md)
 
-# Routing Protocols
+# OSPF
 
 - [OSPF](ospf.md)
   - [OSPF DR Election](ospf-dr-election.md)
-    - [OSPF DR LSAs](ospf-dr-lsas.md)
-  - [OSPFv2 Point-to-Multipoint](ospfv2-p2mp.md)
-  - [OSPFv2 LSA Chart](ospfv2-lsa-chart.md)
+  - [OSPF DR LSAs](ospf-dr-lsas.md)
+  - [OSPF LSA Types](ospf-lsa-types.md)
+    - [Type 1 LSA - Router](ospf-type-1-lsa-router.md)
+    - [Type 2 LSA - Network](ospf-type-2-lsa-network.md)
+    - [Type 3 LSA - Summary](ospf-type-3-lsa-summary.md)
+    - [Type 4 LSA - ASBR Summary](ospf-type-4-lsa-asbr-summary.md)
+    - [Type 5 LSA - External](ospf-type-5-lsa-external.md)
+  - [OSPFv2 Network and LSA Chart](ospfv2-network-and-lsa-chart.md)
   - [OSPFv2 LSA Default Routes](ospfv2-lsa-default-route.md)
+  - [OSPF Network Types](ospf-network-types.md)
+    - [OSPFv2 Point-to-Multipoint](ospfv2-p2mp.md)
   - [OSPF LFA](ospf-lfa.md)
+  - [OSPF Sham Links](ospf-sham-links.md)
+
+# EIGRP
 
 - [EIGRP](eigrp.md)
   - [EIGRP Stub Routing](eigrp-stub-routing.md)
