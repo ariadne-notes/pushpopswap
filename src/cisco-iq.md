@@ -1,17 +1,32 @@
 # Cisco IQ
 
-Launched Nov 4th 2025.
+Launched: Nov 4th, 2025
 
-A web dashboard integrating Agentic AI and the customer installed infrastructure, via a on-prem collector.
+General Availability: April 29, 2026
 
-Uses data connectors and Telemetry (SNMP) to get configs, software info, and installed equipment.
+A web dashboard meant to help with the CX experience, harnessing a combination of Agentic AI, and customer provided Telemetry.
 
-Supports APIs, so if there is a preferred LLM instead, that can be used.
+Works with just the cloud dashboard [iq.cisco.com], optionally expanded via Cisco IQ Link, the on-prem data collector.
 
-Can make a variety of recommendations.
+Cisco IQ can make a variety of data-driven network recommendations.
 
+From the News Release:
+
+> Over 40 percent of outages start as misconfigurations nobody caught in time.
+>
+> Sophisticated actors do not need a novel exploit. 
+>
+> They are going after aged infrastructure organizations knew about and did not prioritize. 
+>
+> Our Talos team confirmed it: 40% of top-targeted vulnerabilities last year impacted end-of-life devices. 
+>
+> 32% are over a decade old.
 
 ## Terms
+
+**CX** --- Customer Experience.
+
+Cisco's name for their customer support organization.
 
 **EOL** --- End of Life
 
@@ -44,7 +59,7 @@ Cisco's RTP NC. USA Campus.
 
 Insights are provided by Cisco's LLM in RTP.
 
-- Insights for previous tier
+- Insights from previous tier
 - New Insights
   - Security Hardening Insights
   - Configuration Insights
@@ -102,11 +117,7 @@ Recommendations are provided by Cisco's LLM in RTP.
 - Classical Networking to Controller Based
 - MPLS to SRv6
 
-
-
 ## Deployment Models
-
-
 
 **SaaS**
 
@@ -117,8 +128,8 @@ Comes with an optional collector called **Cisco IQ-Link**
 - Cisco IQ Link, the telemetry collector
   - Deployed VM
   - Uses the cloud LLM (in RTP) for inference
-  - Does not train the AI
-  - Data is not kept
+    - Does not train the AI
+    - Data is not kept
 
 **On-Prem Tethered**
 
@@ -140,3 +151,5 @@ Same as above, but no automatic updates, and no external connections.
 [Cisco IQ Documentation - Cisco](https://www.cisco.com/c/en/us/support/cx/cisco-iq.html)
 
 [Cisco IQ Frequently Asked Questions](https://www.cisco.com/c/en/us/support/docs/cx/cisco-iq/faq/cx225779-cisco-iq-frequently-asked-questions.pdf)
+
+[Cisco Newsroom - Cisco IQ General Availability](https://blogs.cisco.com/news/cisco-iq-is-generally-available-heres-what-that-actually-means)
