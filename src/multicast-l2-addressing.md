@@ -4,7 +4,7 @@ An L2 multicast address is 6 bytes, or 48 bits.
 
 The address is built by combining these three things.
 
-`Multicast Prefix` + `0b0` + `low-order-23-bis-from-v4` 
+`Multicast Prefix` + `0` + `low-order-23-bits-from-v4`
 
 ## Multicast Prefix
 

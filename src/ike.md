@@ -10,25 +10,25 @@ All of IKE is Request Response Pairs.
 
 **SA** --- Security Association
 
-An IKE concept, shared secret information and the set of accepted cryptographic algorithms to transport information.
+- Shared Secret 
+- Set of Agreed on and Shared Cryptographic algorithms to transport information
 
 **Message ID**
 
-IKE Messages always have a message ID, which is used to match requests and responses.
-
+- Requests and Responses share the same Message ID
 - 32 bits
 
 **Initiator**
 
-Sends cryptographic suite proposals in requests messages.
+- Proposes a cryptographic suite
 
 **Responder**
 
-Accepts or denies the requests.
+- Accepts or denies the requests
 
 **ISAKMP** -- Internet Security Association and Key Management Protocol
 
-One method to perform key exchange.
+- One method to perform key exchange.
 
 ```mermaid
 venn-beta

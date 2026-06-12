@@ -53,9 +53,7 @@ Use v4 connectivity to emulate a NBMA network. Wrap the v6 packet inside v4.
         └───────────┴───────────┘
 ```
 
-
 ## ISATAP Interface in v6
-
 
 All ISATAP interfaces look like this. The giveaway is `0000:5EFE` in the host portion.
 
@@ -71,10 +69,24 @@ If a router sees a v6 destination that looks like this, it's an ISATAP packet.
 
 ## Terms
 
-- **PRL:** Potential Router List. Routers that could perform ISATAP.
-- **ISATAP Interface:** The dual-stack interface, with the above v6 IP on it.
-- **ISATAP v4 Address:** The NBMA address. How to reach this device via ISATAP
-- **ISATAP v6 Address:** The end-to-end v6 address, it **must** embed the v4 address.
+**PRL** --- Potential Router List
+
+- Routers that could perform ISATAP
+
+**ISATAP Interface**
+
+- Dual-stack
+  - Has the v6 IP
+
+**ISATAP v4 Address**
+
+- NBMA address
+- How to reach this device via ISATAP
+
+**ISATAP v6 Address**
+
+- End-to-end v6 address
+- **Must** embed the v4 address
 
 ## References
 

@@ -22,7 +22,10 @@ It's not recommended to share a SA for multiple senders for this reason.
 
 ## Transport Mode
 
-Encrypt the payload.
+- Cannot be fragmented
+- AKA IPSec Direct Encapsulation
+- Does not support Dynamic Routing Protocols
+- Does not support IP Multicast
 
 ![IPSec Transport Mode](./images/diagrams/ipsec-transport.drawio.svg)
 
@@ -32,15 +35,12 @@ Encrypt the payload.
 
 Encrypt entire packet. Put into new packet.
 
-- AKA IPSec Direct Encapsulation
-- Does not support Dynamic Routing Protocols
-- Does not support IP Multicast
-
 ![IPSec Tunnel Mode](./images/diagrams/ipsec-tunnel.drawio.svg)
 
 ![IPSec ESP Packet](./images/diagrams/ipsec-esp-tunnel-packet.svg)
 
 ## References
+
 
 [RFC 4303: IP Encapsulating Security Payload (ESP) | RFC Editor](https://www.rfc-editor.org/info/rfc4303/)
 

@@ -263,3 +263,7 @@ FLAGS
 BPF - Capture all PIM, but not PIM hello messages.
 
 `ip proto 103 and not ether[34] == 0x20`
+
+## References
+
+[IP Multicast - Cisco](https://www.cisco.com/c/en/us/tech/ip/ip-multicast/index.html)

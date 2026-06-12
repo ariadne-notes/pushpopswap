@@ -56,12 +56,7 @@
 
 - [VLAN Access Control Lists](vlan-access-control-lists.md)
 
-# IP Security
-- [Encryption Fundamentals](encryption-fundamentals.md)
-- [IKE](ike.md)
-- [IPSec](ipsec.md)
-  - [IPSec Authentication Header](ipsec-ah.md)
-  - [IPSec Encapsulating Security Payload](ipsec-esp.md)
+
 
 
 # Quality of Service
@@ -163,10 +158,21 @@
   - [Route Redistribution EIGRP](route-redistribution-eigrp.md)
   - [Route Redistribution OSPF](route-redistribution-ospf.md)
   - [Route Redistribution with Tags](route-redistribution-with-tags.md)
-- [DMVPN](dmvpn.md)
-  - [NHRP](nhrp.md)
 - [Policy Based Routing](policy-based-routing.md)
 
+# IP Security
+
+- [Encryption Fundamentals](encryption-fundamentals.md)
+- [IKE](ike.md)
+- [Secure VPNs](secure-vpns.md)
+  - [GRE](gre.md)
+  - [IPSec](ipsec.md)
+    - [IPSec Authentication Header](ipsec-ah.md)
+    - [IPSec Encapsulating Security Payload](ipsec-esp.md)
+  - [DMVPN](dmvpn.md)
+    - [NHRP](nhrp.md)
+  - [GETVPN](getvpn.md)
+  
 # DDoS Prevention
 
 - [uRPF](urpf.md)
@@ -257,9 +263,9 @@
 
 # Etc (Stuff I Haven't Sorted)
 
-- [iperf2](iperf2.md)
-- [Claude](claude.md)
 - [CML](cml.md)
+  - [iperf2](iperf2.md)
+  - [Claude](claude.md)
   - [Alpine on CML](alpine-on-cml.md)
 - [Study Tables](study-tables.md)
 - [OS Architecture](os-architecture.md)
@@ -277,6 +283,7 @@
 - [Unknown Command or Computer Name](unknown-command-or-computer-name.md)
 - [Cisco C9000 Catalyst Troubleshooting](cisco-c9000-troubleshooting.md)
 - [Cisco ECMP](cisco-ecmp.md)
+- [Packet Drops](packet-drops.md)
 
 
 # Certification Stuff
@@ -287,6 +294,7 @@
 
 - [Other Resources](other-resources.md)
 - [Style Guide](style-guide.md)
+- [CCIE Blogs](ccie-blogs.md)
 
 ---
 

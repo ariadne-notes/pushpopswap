@@ -25,11 +25,11 @@ iperf --port 2000 --client 10.0.100.100 --reverse --time 3600 --interval 5 --udp
 ### Source
 
 ```console
-iperf --server --udp --bind 239.10.10.10 --interval 1
+iperf --server --udp --bind 239.10.10.10 --interval 5
 ```
 
 ### Receiver
 
 ```console
-iperf --client 239.10.10.10 --udp --time 3600 --interval 1 --bandwidth 1pps --ttl 15 --len 1000
+iperf --client 239.10.10.10 --udp --time 3600 --interval 5 --bandwidth 5pps --ttl 15 --len 1000
 ```
