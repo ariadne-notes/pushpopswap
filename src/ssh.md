@@ -5,7 +5,7 @@
 
 ## Config
 
-```console
+```console,editable
 aaa new-model
 !
 username ariadne secret passwordgoeshere

@@ -25,7 +25,7 @@ RIP -> EIGRP -> OSPF -> EIGRP
 
 Set EIGRP external to be a lower AD than OSPF.
 
-```console
+```console,editable
 router eigrp EIGRP_100
  !
  address-family ipv4 unicast autonomous-system 100

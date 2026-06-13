@@ -3,7 +3,7 @@
 ## Minimum config
 
 
-```console
+```console,editable
 ip dhcp snooping vlan 10
 ip arp inspection vlan 10
 ip arp inspection validate src-mac dst-mac ip 

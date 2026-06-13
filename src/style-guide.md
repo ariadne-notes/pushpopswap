@@ -2,7 +2,7 @@
 
 ## Definitions
 
-**Definition**
+**Definition** --- I have defined this
 
 - This is a clean and easy way
 - To make maintainable [CommonMark]
@@ -49,7 +49,7 @@ This is a footnote[^note].
 
 ## Links
 
-[Duck Duck Go] 
+[Duck Duck Go]
 
 [Duck Duck Go]: http://www.duckduckgo.com
 

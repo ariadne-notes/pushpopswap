@@ -219,33 +219,33 @@ The multicast source is the root of the tree. Packets flow downstream from the s
 
 ## Commands
 
-`show pim rpf hash`
-
-`show pim range-list`
-
-`show pim topology`
-
-`show mrib route`
-
-`show ip mroute`
-
-What interface should I receive this host traffic from?
-
-`show ip rpf 10.0.0.`
-
-`show ip mfib`
-
-See if multicast even works
-
-`show ip pim stats`
-
-See if PIM adjacency traffic even arrives.
-
-`show ip pim interface detail`
-
-See results of DF election
-
-`show ip pim interface df`
+```console,editable
+show mrib route
+show ip mroute
+!
+! PIM
+!
+show pim rpf hash
+show pim range-list
+show pim topology
+!
+! What interface should I receive this host traffic from?
+!
+show ip rpf 10.0.0.0
+show ip mfib
+!
+! See if multicast even works
+!
+show ip pim stats
+!
+! PIM traffic
+!
+show ip pim interface detail
+!
+! DF election
+!
+show ip pim interface df
+```
 
 ```console
 FLAGS
@@ -256,7 +256,6 @@ FLAGS
 ## Nexus 7K
 
 `show forwarding multicast route group <>`
-
 
 ## Lab Stuff
 

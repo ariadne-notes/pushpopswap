@@ -4,7 +4,7 @@ The default settings for port security **will not** age out learned mac addresse
 
 ## Config
 
-```console
+```console,editable
 interface GigabitEthernet0/0
  switchport access vlan 10
  switchport mode access

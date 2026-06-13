@@ -19,7 +19,7 @@ To change this use `bgp redistribute-internal`.
 
 This is the safe way to redistribute connected networks. Useful for transit or peering links.
 
-```console
+```console,editable
 router bgp 65100
  address-family ipv4
   redistribute connected route-map RM_BGP_LOOPBACK
@@ -30,7 +30,7 @@ route-map RM_BGP_LOOPBACK permit 10
 
 ## Redistribute All OSPF Routes
 
-```conosle
+```conosle,editable
 router bgp 100
  redistribute ospf 1 match internal external 1 external 2 
 ```

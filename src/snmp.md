@@ -42,7 +42,7 @@ So I want to figure out how to get the switch to report the first value "20" for
 
 I find this...
 
-<pre>
+```text
 cpmCPUTotal1minRev OBJECT-TYPE
     SYNTAX          Gauge32 (0..100)
     UNITS           "percent"
@@ -55,7 +55,7 @@ cpmCPUTotal1minRev OBJECT-TYPE
         and increases the value range to (0..100)."
 
     ::= { cpmCPUTotalEntry 7 }
-</pre>
+```
 
 This is the OID leaf I'm going to query:
 
@@ -116,13 +116,13 @@ graph TD
 
 **SNMP v2**
 
-```console
+```console,editable
 snmp-server community SSG_PROMETHEUS ro
 ```
 
 **SNMPv3**
 
-```console
+```console,editable
 snmp-server group SSG_PROMETHEUS v3 priv
 snmp-server user ciscosnmp SSG_PROMETHEUS v3 auth sha auth-password-goes-here priv aes 128 encryption-password-goes-here
 ```
@@ -133,13 +133,13 @@ These are performed on a linux host. This is `apt install snmp` on Debian.
 
 **SNMPv2**
 
-```console
+```console,editable
 snmpwalk -v2c -c <community> <host> 1.3.6.1.4.1.9.9.109.1.1.1.1.7
 ```
 
 **SNMPv3**
 
-```console
+```console,editable
 snmpwalk -v3 -l authPriv -u <user> -a SHA -A  <auth-password> -x AES -X <encryption-password> <host> 1.3.6.1.4.1.9.9.109.1.1.1.1.7
 ```
 
@@ -151,7 +151,7 @@ iso.3.6.1.4.1.9.9.109.1.1.1.1.7.1 = Gauge32: 20
 
 ## Trap severity
 
-```console
+```console,editable
 snmp-server enable traps syslog
 logging snmp-trap emergencies
 logging snmp-trap alerts

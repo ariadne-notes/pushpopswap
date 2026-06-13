@@ -31,7 +31,7 @@ This solution relies on:
 
 ### AAA Config
 
-```console
+```console,editable
 aaa new-model
 !
 radius server FREERADIUS
@@ -60,7 +60,7 @@ eval $(ucr shell)
 
 RADIUS Network Admins
 
-```console
+```console,editable
 udm groups/group create \
   --position "cn=groups,$ldap_base" \
   --set name="RADIUS Network Admins" \
@@ -69,7 +69,7 @@ udm groups/group create \
 
 RADIUS Network Read Only
 
-```console
+```console,editable
 udm groups/group create \
   --position "cn=groups,$ldap_base" \
   --set name="RADIUS Network Read Only" \
@@ -78,7 +78,7 @@ udm groups/group create \
 
 ### LDAP - Verifying The Groups
 
-```console
+```console,editable
 udm groups/group list --filter name="RADIUS Network Admins"
 
 udm groups/group list --filter name="RADIUS Network Read Only"
@@ -90,7 +90,7 @@ Users need to be added to this group directly.
 
 I am `ariadne` so that's my uid.
 
-```console
+```console,editable
 udm groups/group modify \
   --dn "cn=RADIUS Network Admins,cn=groups,$ldap_base" \
   --append users="uid=ariadne,cn=users,$ldap_base"
@@ -98,13 +98,13 @@ udm groups/group modify \
 
 ### Verify Users
 
-```console
+```console,editable
 udm users/user list --filter uid=ariadne | grep -i group
 ```
 
 ### FreeRADIUS Clients
 
-```console
+```console,editable
 cat >> /etc/freeradius/3.0/clients.conf << 'EOF'
 
 client internal_network {
@@ -117,7 +117,7 @@ EOF
 
 ### FreeRADIUS Cisco AV Pairs
 
-```console
+```console,editable
 eval $(ucr shell)
 
 cat >> /etc/freeradius/3.0/mods-config/files/authorize << EOF
@@ -137,25 +137,25 @@ EOF
 
 ## Testing on Cisco
 
-```console
+```console,editable
 test aaa group radius ariadne my-password legacy
 ```
 
 ## Testing On UCS
 
-```console
+```console,editable
 radtest <user-in-ldap> <ldap-password> <server-ip> 0 <FreeRADIUS-secret>
 ```
 
 ### Do Packets Arrive
 
-```console
+```console,editable
 tcpdump -i any -n udp port 1812
 ```
 
 ## Debugging FreeRADIUS
 
-```console
+```console,editable
 systemctl daemon-reload
 systemctl restart freeradius
 systemctl status freeradius
@@ -165,12 +165,12 @@ freeradius -X
 ## After It's Working, RSYNC It
  
 
-```console
+```console,editable
 rsync -av /etc/freeradius/3.0/clients.conf \
   root@ucs-2:/etc/freeradius/3.0/clients.conf
 ```
 
-```console
+```console,editable
 rsync -av /etc/freeradius/3.0/mods-config/files/authorize \
   root@ucs-2:/etc/freeradius/3.0/mods-config/files/authorize
 ```

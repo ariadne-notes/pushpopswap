@@ -2,20 +2,20 @@
 
 ## Local
 
-```console
+```console,editable
 monitor session 1 source interface GigabitEthernet1/0/1 both
 monitor session 1 destination interface GigabitEthernet1/0/2
 ```
 ## RSPAN
 
-
-- VLAN Encapsulated.
-- Does not support layer 2 protocols. (CDP, BPDUs)
-- If the source is a trunk port, you can use the `filter` keyword to select specific vlans.
+- VLAN Encapsulated
+- Does not support layer 2 protocols
+  - No CDP, BPDUs, LLDP, etc
+- If the source is a trunk port, you can use the `filter` keyword to select specific vlans
 
 **Source switch**
 
-```console
+```console,editable
 vlan 3000
  remote-span
 monitor session 1 source interface GigabitEthernet1/0/1 both
@@ -24,7 +24,7 @@ monitor session 1 destination remote vlan 3000
 
 **Destination switch**
 
-```console
+```console,editable
 vlan 3000
  remote-span
 monitor session 1 source remote vlan 3000
@@ -45,7 +45,7 @@ These do not support QoS.
 
 **Source switch**
 
-```console
+```console,editable
 monitor session 1 type erspan-source
  !
  ! Could also put a vlan here
@@ -60,7 +60,7 @@ monitor session 1 type erspan-source
 
 **Destination switch**
 
-```console
+```console,editable
 monitor session 1 type erspan-destination
  destination interface Gi2
  source

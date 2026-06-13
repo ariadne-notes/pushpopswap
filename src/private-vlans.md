@@ -10,7 +10,7 @@ UNI ports can only send traffic to NNI ports in the same vlan. The default UNI m
 
 You can set the uni-vlan type with this command:
 
-```console
+```console,editable
 vlan 100
   uni-vlan community
 ```
@@ -19,7 +19,7 @@ This example uses a ME3400.
 
 ## Config Example
 
-```console
+```console,editable
 vlan 100
 private-vlan primary
 private-vlan association 1000,2000,3000

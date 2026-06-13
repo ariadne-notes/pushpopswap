@@ -27,33 +27,33 @@ A source turns on, and when the first RP finds out about it, it notifies other R
 
 ## Config
 
-```console
+```console,editable
 !
 ! RP1
 !
 int lo0
 description "Only used for Anycast RP"
 ip address 10.0.0.1 255.255.255.255
-
+!
 int lo1
 ip add 10.1.1.1 255.255.255.255
-
+!
 ip msdp peer 10.1.1.2 connect-source loopback 1
 ip msdp originator-id loopback 1
 ip pim rp-address 10.0.0.1
 ```
 
-```console
+```console,editable
 !
 ! RP2
 !
 int lo 0
   description "Only used for Anycast RP"
   ip address 10.0.0.1 255.255.255.255
-
+!
 int lo1
   ip address 10.1.1.2 255.255.255.255
-
+!
 ip msdp peer 10.1.1.1 connect-source lo1
 ip msdp originator-id loopback 1
 ip pim rp-address 10.0.0.1

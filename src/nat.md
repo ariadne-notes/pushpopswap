@@ -68,7 +68,7 @@ Packets to R3 will appear to be from `10.0.0.2`
            Inside ─────────┘    └─────── Outside
 ```
 
-```console
+```console,editable
 !
 ! R1
 !

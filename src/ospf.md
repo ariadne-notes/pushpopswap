@@ -151,32 +151,31 @@ Should be set manually on each node.
 
 The defaults make 100Mbps and above all the same cost.
 
-```console
+```console,editable
 auto-cost reference-bandwidth 40,000
 ```
 
 ## Area Summary
 
-These will show up as a IA route in OSPF, and a route-to-null on the ABR.
+These will show up as an `O IA` route in OSPF, and a route-to-null on the ABR.
 
-- requires a route present in the RIB.
+- Requires a route present in the RIB
 
-v4 example.
+### v4 
 
-```console
+```console,editable
 router ospf 1
  router-id 2.2.2.2
  area 1 range 10.0.0.0 255.255.224.0
 ```
 
-v6 example.
+### v6
 
-```console
+```console,editable
 router ospfv3 1
  !
  address-family ipv6 unicast
   area 1 range 2001:DB8::/56
- exit-address-family
 ```
 
 ## Route-Filtering
@@ -187,17 +186,17 @@ You can use the same command to tell the router to ... exclude these routes from
 
 The area command is now a route-filter.
 
-v4 example.
+#### v4
 
-```console
+```console,editable
 router ospf 1
  router-id 2.2.2.2
  area 1 range 10.0.0.0 255.255.224.0 not-advertise
 ```
 
-v6 example.
+#### v6
 
-```console
+```console,editable
 router ospfv3 1
  !
  address-family ipv6 unicast
@@ -211,7 +210,7 @@ These are a bit harder to use, `in` and `out` are **inbound** and **outbound** t
 
 For this topology
 
-```console
+```text
              Area 0                               Area 1            
                                                                
                                  |           10.0.10.0/24           
@@ -229,7 +228,7 @@ For this topology
 
 v4
 
-```console
+```text,editable
 ip prefix-list PREFIX_LIST_LOOPBACK_v4 seq 10 deny 1.1.1.1/32
 ip prefix-list PREFIX_LIST_LOOPBACK_v4 seq 20 deny 2.2.2.2/32
 ip prefix-list PREFIX_LIST_LOOPBACK_v4 seq 30 deny 3.3.3.3/32
@@ -242,7 +241,7 @@ router ospf 1
 v6
 
 
-```console
+```console,editable
 !
 ipv6 prefix-list PREFIX_LIST_v6 seq 10 deny FD::1/128
 ipv6 prefix-list PREFIX_LIST_v6 seq 20 deny FD::3/128

@@ -142,7 +142,7 @@ To enable:
 
 In EIGRP these go under the interface, on the interface you want the summary to be sent out of.
 
-```console
+```console,editable
 ethernet 1
   ip summary-address eigrp 100 192.168.0.0/16
 ```
@@ -153,7 +153,7 @@ Name mode supports IPv6 inside a VRF.
 
 ### Minimum Config
 
-```console
+```console,editable
 router eigrp EIGRP_100
  !
  address-family ipv4 unicast autonomous-system 100
@@ -166,7 +166,7 @@ router eigrp EIGRP_100
 ### Using The Old Config, Then Having The Box Convert It For You
 
 
-```console
+```console,editable
 router eigrp 1
   eigrp upgrade-cli EIGRP_1
 ```
@@ -177,7 +177,7 @@ The Cisco RIB can only hold values that are unsigned 4 bytes. The EIGRP named me
 
 This is done automatically (and why the topology values don't match "show ip route". In the event you need to modify it, here it is.
 
-```console
+```console,editable
 router eigrp EIGRP_100
   address-family ipv4 unicast autonomous-system 100
     topology base
