@@ -1,4 +1,4 @@
-# BGP Route Reflector
+# BGP Route Reflectors
 
 **RR** --- Route Reflector
 

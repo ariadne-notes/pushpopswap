@@ -1,6 +1,6 @@
-# OSPF Type 1 LSA - Router
+# Type 4 LSA - ASBR Summary
 
-This LSA describes the networks attached to a router.
+This LSA describes how to reach an ASBR, via an ABR.
 
 Topology
 
@@ -27,58 +27,20 @@ Topology
 ## Example
 
 ```console
-R1# show ip ospf database router 
+R1# show ip ospf database asbr-summary 
 
             OSPF Router with ID (10.0.0.1) (Process ID 1)
 
-                Router Link States (Area 0)
+                Summary ASB Link States (Area 0)
 
-  LS age: 325
-  Options: (No TOS-capability, DC)
-  LS Type: Router Links
-  Link State ID: 10.0.0.1
-  Advertising Router: 10.0.0.1
-  LS Seq Number: 80000012
-  Checksum: 0xDC6
-  Length: 48
-  Number of Links: 2
-
-    Link connected to: a Stub Network
-     (Link ID) Network/subnet number: 10.0.0.1
-     (Link Data) Network Mask: 255.255.255.255
-      Number of MTID metrics: 0
-       TOS 0 Metrics: 1
-
-    Link connected to: a Transit Network
-     (Link ID) Designated Router address: 10.1.2.1
-     (Link Data) Router Interface address: 10.1.2.1
-      Number of MTID metrics: 0
-       TOS 0 Metrics: 1
-
-
-  LS age: 134
-  Options: (No TOS-capability, DC)
-  LS Type: Router Links
-  Link State ID: 10.0.0.2
+  LS age: 429
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(AS Boundary Router)
+  Link State ID: 10.0.0.33 (AS Boundary Router address)
   Advertising Router: 10.0.0.2
-  LS Seq Number: 80000014
-  Checksum: 0x26A4
-  Length: 48
-  Area Border Router
-  AS Boundary Router
-  Number of Links: 2
-
-    Link connected to: a Stub Network
-     (Link ID) Network/subnet number: 10.0.0.2
-     (Link Data) Network Mask: 255.255.255.255
-      Number of MTID metrics: 0
-       TOS 0 Metrics: 1
-
-    Link connected to: a Transit Network
-     (Link ID) Designated Router address: 10.1.2.1
-     (Link Data) Router Interface address: 10.1.2.2
-      Number of MTID metrics: 0
-       TOS 0 Metrics: 1
-
-
+  LS Seq Number: 80000008
+  Checksum: 0x4DAE
+  Length: 28
+  Network Mask: /0
+        MTID: 0         Metric: 2 
 ```

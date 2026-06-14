@@ -1,6 +1,6 @@
-# OSPF Type 3 LSA - Summary
+# Type 2 LSA - Network
 
-These describe networks, reachable via an ABR.
+This LSA describes a network vertex, a DR for a Broadcast Segment.
 
 Topology
 
@@ -24,23 +24,24 @@ Topology
                                                 └────┘     └─────┘ 10.77.78.0/24 └─────┘ 
 ```
 
-## Example
+### Example
 
 ```console
-R1# show ip ospf database summary 
+R1# show ip ospf database network 
 
             OSPF Router with ID (10.0.0.1) (Process ID 1)
 
-                Summary Net Link States (Area 0)
+                Net Link States (Area 0)
 
-  LS age: 1901
-  Options: (No TOS-capability, DC, Upward)
-  LS Type: Summary Links(Network)
-  Link State ID: 10.0.0.3 (summary Network Number)
-  Advertising Router: 10.0.0.2
-  LS Seq Number: 80000009
-  Checksum: 0x8693
-  Length: 28
-  Network Mask: /32
-        MTID: 0         Metric: 2 
+  LS age: 508
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.1.2.1 (address of Designated Router)
+  Advertising Router: 10.0.0.1
+  LS Seq Number: 80000008
+  Checksum: 0x5DA5
+  Length: 32
+  Network Mask: /24
+        Attached Router: 10.0.0.1
+        Attached Router: 10.0.0.2
 ```

@@ -1,4 +1,4 @@
-# Cisco Secure VPNS
+# Secure VPNS
 
 **IPSec**
 

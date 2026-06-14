@@ -1,4 +1,4 @@
-# IPv6 Address Architecture
+# IPv6 Network Address Planning
 
 Common subnets found in v6 BGP global table.
 

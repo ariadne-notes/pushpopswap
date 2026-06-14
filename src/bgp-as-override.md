@@ -1,4 +1,4 @@
-# BGP AS Override
+# BGP AS-Override
 
 This feature rewrites a customer `AS_PATH` attribute.
 

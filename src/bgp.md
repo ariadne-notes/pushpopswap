@@ -85,16 +85,16 @@ Soft reconfig is ancient, pre-RFC.
 
 ## BGP Best Path Selection
 
-```console
+```text
 - Higher Weigth                                       
 - Higher Local Preference                            
 - Locally Originated                                 (Network or Aggregate Command)
 - Shortest AS-PATH
 - Lowest Origin Type                                 (IGP > EGP > Incomplete)
 - Lowest MED                                         (Neighbor ASes must be the same)
-- Prefer eBGP > Confederated eBGP > iBGP
-- Prefer path with lowest IGP metric to next hop
-- Determine if bestpath is enabled
+- eBGP > Confederated eBGP > iBGP
+- Lowest IGP metric to next hop
+- Is Multipath enabled?
   - Prefer external path which is oldest
   - Prefer path from router with lower ID
   - Prefer path with shorter cluster length

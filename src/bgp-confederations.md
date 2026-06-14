@@ -1,4 +1,4 @@
-# BGP Confederation
+# BGP Confederations
 
 `NEXT_HOP` is preserved throughout the confederation.
 

@@ -1,4 +1,4 @@
-# Ariadne's Networking Notes
+# Push, Pop, Swap
 
 [Author](author.md)
 [License](license.md)
@@ -120,11 +120,11 @@
   - [OSPF DR Election](ospf-dr-election.md)
   - [OSPF DR LSAs](ospf-dr-lsas.md)
   - [OSPF LSA Types](ospf-lsa-types.md)
-    - [Type 1 LSA - Router](ospf-type-1-lsa-router.md)
-    - [Type 2 LSA - Network](ospf-type-2-lsa-network.md)
-    - [Type 3 LSA - Summary](ospf-type-3-lsa-summary.md)
-    - [Type 4 LSA - ASBR Summary](ospf-type-4-lsa-asbr-summary.md)
-    - [Type 5 LSA - External](ospf-type-5-lsa-external.md)
+    - [Type 1 LSA - Router](./ospf/type-1-lsa-router.md)
+    - [Type 2 LSA - Network](./ospf/type-2-lsa-network.md)
+    - [Type 3 LSA - Summary](./ospf/type-3-lsa-summary.md)
+    - [Type 4 LSA - ASBR Summary](./ospf/type-4-lsa-asbr-summary.md)
+    - [Type 5 LSA - External](./ospf/type-5-external.md)
   - [OSPFv2 Network and LSA Chart](ospfv2-network-and-lsa-chart.md)
   - [OSPFv2 LSA Default Routes](ospfv2-lsa-default-route.md)
   - [OSPF Network Types](ospf-network-types.md)
@@ -142,7 +142,7 @@
   - [IPv4 To Hex](ipv4-to-hex.md)
 
 - [BGP](bgp.md)
-  - [BGP Neighbor Finite State Machine](bgp-neighbor-fsm.md)
+  - [BGP Neighbor FSM](bgp-neighbor-fsm.md)
   - [BGP Confederations](bgp-confederations.md)
   - [BGP Route Reflectors](bgp-route-reflectors.md)
   - [BGP Multipath](bgp-multipath.md)
@@ -285,6 +285,7 @@
 - [Cisco ECMP](cisco-ecmp.md)
 - [Packet Drops](packet-drops.md)
 - [SecureCRT](securecrt.md)
+- [Add Cephfs to Debian](add-cephfs-to-debian.md)
 
 # Certification Stuff
 
