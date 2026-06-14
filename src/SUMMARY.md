@@ -148,6 +148,8 @@
   - [BGP Multipath](bgp-multipath.md)
   - [BGP Tuning](bgp-tuning.md)
   - [BGP Load Balancing](bgp-load-balancing.md)
+  - [BGP Allowas-In](bgp-allowas-in.md)
+  - [BGP AS-Override](bgp-as-override.md)
 
 # Routing Strategies
 

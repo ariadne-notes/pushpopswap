@@ -14,18 +14,15 @@ There are a lot of fundamentals changed with v6.
 - Mobile IPv6 lets mobile nodes remain reachable
 - No broadcast traffic
 
-## Header
+## Header Format
 
+RFCs really like groups of 32.
 
-RFCs really like groups of 32
+[RFC 2460 Section 3](https://www.rfc-editor.org/info/rfc2460/#section-3)
 
 ```plain
-Deering & Hinden            Standards Track                     [Page 3]
-
-RFC 2460                   IPv6 Specification              December 1998
-
-3.  IPv6 Header Format
-
+                     1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 
 ┌───────┬───────────────┬───────────────────────────────────────┐
 │Version│ Traffic Class │           Flow Label                  │
 ├───────┴───────────────┴───────┬───────────────┬───────────────┤
