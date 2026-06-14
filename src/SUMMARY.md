@@ -54,16 +54,12 @@
 # Ethernet
 
 - [802.1Q](802.1q.md)
-
-
 - [VLAN Access Control Lists](vlan-access-control-lists.md)
-
-
-
 
 # Quality of Service
 
 - [QoS](qos.md)
+  - [Congestion](congestion.md)
   - [Cisco IOS QoS Commands](cisco-ios-qos-commands.md)
 
 # Enterprise Switching

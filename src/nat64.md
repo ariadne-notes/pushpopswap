@@ -24,7 +24,7 @@ sequenceDiagram
 
 ## Config
 
-```console
+```console,editable
 ipv6 unicast-routing
 !
 ! Define NAT64 Prefix
@@ -64,7 +64,7 @@ apk add unbound
 apk add bind-tools
 rc-update add unbound default
 
-```console
+```console,editable
 DNS64:~# cat /etc/unbound/unbound.conf 
 server:
     interface: 0.0.0.0
@@ -97,7 +97,7 @@ apk add bind-tools
 rc-update add unbound default
 ```
 
-```console
+```console,editable
 DNS4:~$ cat /etc/unbound/unbound.conf
 server:
     interface: 0.0.0.0
