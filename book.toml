@@ -28,5 +28,5 @@ copy-js = true
 
 [output.html]
 additional-css = ["theme/custom.css"]
-additional-js = ["mermaid.min.js", "mermaid-init.js","editable-extras.js"]
-git-repository-url = "https://github.com/ariadne-notes/network-notes"
+additional-js = ["theme/mermaid.min.js", "theme/mermaid-init.js","theme/editable-extras.js"]
+git-repository-url = "https://github.com/ariadne-notes/pushpopswap"
