@@ -6,6 +6,8 @@
 - Northbound (towards applications)
   - REST/HTTPS
 
+Refers to SGTs as *Scalable Groups*
+
 ## Modules
 
 - **NCP:** Network Control Platform. This module is connect via API to the GUI, and is what talks to the network gear via NETCONF, SNMP, or SSH. Does all the underlay automation.

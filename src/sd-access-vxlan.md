@@ -30,7 +30,6 @@ Multi-destination Support is provided by multicast.
 - Virtual Tunnel End point.
 - Originates and Terminates tunnels.
   - push and pop VXLAN headers.
-- Somitems a hypervisor (for app hosting)
 
 ## VXLAN Segment
 
@@ -39,16 +38,25 @@ Multi-destination Support is provided by multicast.
 
 ## Layer 2 Overlay
 
-The VNI is matched to a VLAN.
+- Supports multiple SGTs
+- VNI is matched
+  - LISP Instance ID
+  - VLAN
 
 ## Layer 3 Overlay
 
-The VNI is matched to a VRF.
+- Supports multiple SGTs
+- Endpoints are routed
+- VNI is matched
+  - LISP Instance ID
+  - VRF
 
 ## References
+
+[Cisco Live - SD-Access Solution Fundamentals - Jerome Dolphin - BRKENS-2810](./pdfs/ciscolive/BRKENS-2810.pdf)
 
 [RFC 7348: Virtual eXtensible Local Area Network (VXLAN): A Framework for Overlaying Virtualized Layer 2 Networks over Layer 3 Networks | RFC Editor](https://www.rfc-editor.org/info/rfc7348/)
 
 [Introduction to VXLAN – Daniels Networking Blog](https://lostintransit.se/2023/08/17/introduction-to-vxlan/)
 
-[Cisco SD-Access Best Practices - Cisco Live 2025](https://www.ciscolive.com/c/dam/r/ciscolive/apjc/docs/2025/pdf/BRKENS-2502.pdf)
+[Cisco Live - SD-Access Best Practices - Ashley Burton - BRKENS-2502](./pdfs/ciscolive/BRKENS-2502.pdf)

@@ -1,8 +1,12 @@
 # SD-WAN ZTP
 
-- SD-WAN edge needs DHCP for ZTP to work.
-- SD-WAN Edge device added to the [PNP portal.](https://software.cisco.com/software/csws/ws/platform/login?route=module/pnp)
-- SD-WAN Manager synced to the PNP portal.
+Requirements
+
+- Edge needs DHCP
+- Edge gets added to the [PNP portal]
+- Manager synced to the [PNP portal]
+
+[PNP Portal]: https://software.cisco.com/software/csws/ws/platform/login?route=module/pnp
 
 > There is an air-gapped version of ZTP available on request.
 

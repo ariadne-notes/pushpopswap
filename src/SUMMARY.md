@@ -160,8 +160,12 @@
   - [Route Redistribution with Tags](route-redistribution-with-tags.md)
 - [Policy Based Routing](policy-based-routing.md)
 
-# IP Security
+# Security
 
+- [Cisco TrustSec](cisco-trustsec.md)
+  - [Zero Trust](zero-trust.md)
+  - [Cisco ISE](cisco-ise.md)
+  - [Cisco PxGrid](cisco-pxgrid.md)
 - [Encryption Fundamentals](encryption-fundamentals.md)
 - [IKE](ike.md)
 - [Secure VPNs](secure-vpns.md)
@@ -215,11 +219,14 @@
 
 - [OMP](omp.md)
 - [SD-WAN](sd-wan.md)
+  - [SD-WAN Node Types](sdwan-node-types.md)
+  - [SD-WAN Bootstrap](sdwan-bootstrap.md)
   - [SD-WAN ZTP](sdwan-ztp.md)
 - [SD-Access](sd-access.md)
   - [Cisco Catalyst Center](cisco-catalyst-center.md)
   - [SD-Access Lisp](sd-access-lisp.md)
   - [SD-Access VXLAN](sd-access-vxlan.md)
+  - [SD-Access VXLAN-GPO Header](sd-access-vxlan-gpo-header.md)
   - [SD-Access and Wireless Integration](sd-access-and-wireless-integration.md)
 
 # Timing
@@ -286,7 +293,7 @@
 - [Packet Drops](packet-drops.md)
 - [SecureCRT](securecrt.md)
 - [Add Cephfs to Debian](add-cephfs-to-debian.md)
-- [ISE and PxGrid](ise-and-pxgrid.md)
+
 
 # Certification Stuff
 

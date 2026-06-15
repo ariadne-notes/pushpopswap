@@ -95,9 +95,9 @@ Soft reconfig is ancient, pre-RFC.
 - eBGP > Confederated eBGP > iBGP
 - Lowest IGP metric to next hop
 - Is Multipath enabled?
-  - Prefer external path which is oldest
-  - Prefer path from router with lower ID
-  - Prefer path with shorter cluster length
+  - Oldest External
+  - Lower Router ID
+  - Shorter cluster length
   - Prefer path from lowest neighbor address
 ```
 
