@@ -111,4 +111,3 @@ These require a TLOC.
 [OMP route advertisements | Overlay Management Protocol | Routing Configuration Guide, Cisco IOS XE Catalyst SD-WAN Release 17.x - Cisco](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/routing/ios-xe-17/routing-configuration-guide-17-x/OMP-routing-protocol-ref/omp-route-advertisements.html)
 
 [Advanced SD-WAN Troubleshooting - Cisco Live](https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2023/pdf/BRKTRS-3793.pdf)
-
