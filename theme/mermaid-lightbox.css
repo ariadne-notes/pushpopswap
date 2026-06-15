@@ -1,0 +1,45 @@
+/* mermaid-lightbox.css — inline preview + fullscreen viewer.
+   The viewer inherits the active mdBook theme via mdBook's own CSS variables,
+   so it matches light / rust / coal / navy / ayu automatically. */
+
+/* ---- inline preview ---- */
+.mermaid{ cursor:zoom-in; }
+.mermaid:focus-visible{ outline:2px solid var(--links, #29b6e6); outline-offset:3px; }
+.mermaid svg{ max-height:480px; height:auto; }   /* cap tall previews; full size lives in the viewer */
+
+/* ---- fullscreen viewer ---- */
+.mlb-overlay{
+  position:fixed; inset:0; z-index:9999;
+  display:flex; flex-direction:column;
+  color-scheme: var(--color-scheme, light dark);
+  background: var(--bg, #1a1a1a);                                   /* solid fallback */
+  background: color-mix(in srgb, var(--bg, #1a1a1a) 92%, transparent);
+  backdrop-filter: blur(2px);
+}
+.mlb-toolbar{
+  display:flex; align-items:center; gap:6px; justify-content:flex-end;
+  padding:10px 14px;
+  background: var(--theme-popup-bg, var(--sidebar-bg, #2b2b2b));
+  border-bottom:1px solid var(--theme-popup-border, var(--table-border-color, #444));
+}
+.mlb-toolbar button{
+  font:13px/1 var(--mono-font, ui-monospace, "Cascadia Code", Menlo, monospace);
+  color: var(--fg, #ddd);
+  background: transparent;
+  border:1px solid var(--theme-popup-border, var(--table-border-color, #444));
+  border-radius:6px; padding:7px 11px; cursor:pointer;
+  transition:background .12s, color .12s, border-color .12s;
+}
+.mlb-toolbar button:hover{
+  background: var(--theme-hover, rgba(127,127,127,.18));
+  color: var(--icons-hover, var(--fg, #fff));
+  border-color: var(--links, var(--theme-popup-border, #666));
+}
+.mlb-toolbar button:focus-visible{ outline:2px solid var(--links, #29b6e6); outline-offset:2px; }
+.mlb-zoom{
+  font:12px/1 var(--mono-font, ui-monospace, Menlo, monospace);
+  color: var(--icons, var(--fg, #999)); min-width:50px; text-align:center; user-select:none;
+}
+.mlb-stage{ flex:1; overflow:hidden; cursor:grab; position:relative; }
+.mlb-stage:active{ cursor:grabbing; }
+.mlb-stage svg{ display:block; width:100%; height:100%; max-height:none; }

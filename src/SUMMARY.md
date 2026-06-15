@@ -219,10 +219,11 @@
 # Software Defined Networking
 
 - [OMP](omp.md)
-- [SD-WAN](sd-wan.md)
-  - [SD-WAN Node Types](sdwan-node-types.md)
-  - [SD-WAN Bootstrap](sdwan-bootstrap.md)
-  - [SD-WAN ZTP](sdwan-ztp.md)
+- [SDWAN](sdwan.md)
+  - [SDWAN Node Types](sdwan-node-types.md)
+  - [SDWAN Multicast](sdwan-multicast.md)
+  - [SDWAN Bootstrap](sdwan-bootstrap.md)
+  - [SDWAN ZTP](sdwan-ztp.md)
 - [SD-Access](sd-access.md)
   - [Cisco Catalyst Center](cisco-catalyst-center.md)
   - [SD-Access Lisp](sd-access-lisp.md)

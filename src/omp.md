@@ -1,8 +1,6 @@
 # OMP
 
-
 ## Terms
-
 
 **OMP** --- Overlay Management Protocol
 
@@ -105,6 +103,8 @@ These require a TLOC.
 | 1   | 172.17.0.0/16  | 10.0.0.11  | 10.0.0.11, biz-internet, IPsec   | connected | 0      | 200     |
 
 ## References
+
+[Cisco Live - Empowering your Network with SDWAN OMP - Waqas Daar - BKRENT-3115](./pdfs/ciscolive/BRKENT-3115.pdf)
 
 [LAB 1 - Hub-and-Spoke - Restricting spoke-to-spoke tunnels | NetworkAcademy.IO](https://www.networkacademy.io/ccie-enterprise/sdwan/lab1-restricting-spoke-to-spoke-tunnels)
 

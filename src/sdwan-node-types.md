@@ -2,15 +2,17 @@
 
 ## Manager
 
-- What a human interacts with, the GUI
 - AKA vManage
+- What a human interacts with, the GUI
+- Speaks NETCONF to configure the other nodes
 - AKA, the NMS
 
 ## Validator
 
-- Initial Authentication and provisioning, (Cisco calls this orchestration) 
+- AKA, vBond
+- Initial Authentication and provisioning,
 - Responsible for NAT traversal
-- AKA vBond
+- AKA, Orchestration
 
 Should be give a FQDN, so WAN edges have no problems finding it on connection to a DIA.
 
@@ -29,12 +31,26 @@ The Validator has a permanent dTLS tunnel to all the controllers.
 - AKA vSmart
 - Holds the current state of the network, (routes and data policy) maintains active connections to the edges and programs them.
   - dTLS connections
-    - OMP and NETCONF
+    - OMP towards the WAN Edge
+    - NETCONF towards the Manager
 - Keeps all the routes between sites, that are managed via the OMP protocol (like BGP, but proprietary)
 - Logical tunnel topologies (such as hub and spoke, regional, and partial mesh)
 - Service Chaining
 - Traffic Engineering
 - Segmentation per VPN
+
+```mermaid
+sequenceDiagram
+    participant Edge as SD-WAN Edge
+    participant Control as SD-WAN Controller
+
+    rect rgba(0, 0, 255, .1)
+    note over Edge, Control: dTLS Tunnel
+        Edge <<->>  Control: OMP
+        Edge <<->>  Control: SNMP
+        Edge <<->>  Control: Netconf
+    end
+```
 
 ## WAN Edge
 
@@ -44,3 +60,7 @@ The Validator has a permanent dTLS tunnel to all the controllers.
 - Has OMP, BGP, OSPF, EIGRP, ACLs, ARP, HA, and QoS
 - Connects via dTLS to the controllers
 - Connects via dTLS to other edges
+
+## References
+
+[Cisco Live - Empowering your Network with SDWAN OMP - Waqas Daar - BKRENT-3115](./pdfs/ciscolive/BRKENT-3115.pdf)

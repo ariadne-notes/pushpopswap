@@ -55,7 +55,7 @@ sequenceDiagram
     participant I as IKEv2 Initiator
     participant R as IKEv2 Responder
 
-    rect rgb(240, 248, 250)
+    rect rgb(240, 248, 250, .1)
     note over I,R: Initial Exchanges
     I->>R: IKE_SA_INIT Request
     R-->>I: IKE_SA_INIT Response
@@ -63,7 +63,7 @@ sequenceDiagram
     R-->>I: IKE_AUTH Response
     end
 
-    rect rgb(252, 244, 240)
+    rect rgb(252, 244, 240, .1)
     note over I,R: CREATE_CHILD_SA Exchange
     I->>R: CREATE_CHILD_SA Request
     R-->>I: CREATE_CHILD_SA Response
