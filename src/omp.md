@@ -4,6 +4,13 @@
 
 **OMP** --- Overlay Management Protocol
 
+```mermaid
+graph TB
+    subgraph OMP["Overlay Management Protocol (ZT)"]
+        TLOC["Transport Locators"]
+        SERVICE["Firewallls"]
+    end
+
 **OMP routes** 
 
 - AKA, vRoutes
@@ -11,14 +18,19 @@
 
 **TLOC** --- Transport Locator
 
-- A tunnel endpoint. A tunnel endpoint is a 3-tuple (System IP, Color, Encapsulation)
-
-**Full Mesh** 
-
 - Each TLOC will attempt a full-mesh connection with every other TLOC.
 - n*(n-1)/2
 
-- Service routes: Firewalls, IPS, and VPN labels.
+- Tunnel endpoint is a 3-tuple 
+  - System IP, 
+  - Color
+  - Encapsulation
+
+**Service Routes** 
+
+- Firewalls
+- IPS
+- VPN labels.
 
 ## TLOC Route Attributes
 
