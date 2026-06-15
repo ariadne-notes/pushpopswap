@@ -9,6 +9,8 @@ Loopguard enforces a simple rule.
 - This is one of the unidirectional preventatives
 - This is only for switch-to-switch ports
 
+... if a port doesn't get a BPDU, it enters `STP loop-inconsistent` disabling the port.
+
 ## Terms
 
 **Unidirectional Link**
@@ -27,16 +29,17 @@ A unidirectional failure will always result in one side not getting information.
 - SW2 will transition Port 1 to a RP
 
 ```plain
-┌────────────────────┐                            ┌─────────────────────┐
-│     ┌─────────────┐│                            │ ┌────────────┐      │
-│     │ Port ┌────┐ ││ BPDU ────►                 │ │┌────┐ Port │      │
-│     │  1   │ TX ├─││─────────────── Fiber Cut ──│─│┤ RX │  1   │      │
-│ SW1 │      └────┘ ││                            │ │└────┘      │ SW2  │
-│     │  RP  ┌────┐ ││                            │ │┌────┐  DP  │      │
-│     │      │ RX ├─││────────────────────────────│─│┤ TX │      │      │
-│     │      └────┘ ││                ◄───── BPDU │ │└────┘      │      │
-│     └─────────────┘│                            │ └────────────┘      │
-└────────────────────┘                            └─────────────────────┘
+                                                      No BPDU Received
+┌────────────────────┐                            ┌────────────────────┐
+│     ┌─────────────┐│                            │ ┌────────────┐     │
+│     │ Port ┌────┐ ││ BPDU ────►XXXX             │ │┌────┐ Port │     │
+│     │  1   │ TX ├─││────────────── Fiber Cut! ──│─│┤ RX │  1   │     │
+│ SW1 │      └────┘ ││                            │ │└────┘      │ SW2 │
+│     │  RP  ┌────┐ ││                            │ │┌────┐  DP  │     │
+│     │      │ RX ├─││────────────────────────────│─│┤ TX │      │     │
+│     │      └────┘ ││                ◄───── BPDU │ │└────┘      │     │
+│     └─────────────┘│                            │ └────────────┘     │
+└────────────────────┘                            └────────────────────┘
 ```
 
 ## Config
@@ -49,7 +52,7 @@ spanning-tree loopguard default
 
 ### Per Port
 
-```console
+```console, editable
 interface 1
   spanning-tree guard loop
 ```

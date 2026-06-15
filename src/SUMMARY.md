@@ -66,6 +66,7 @@
 
 - [Spanning Trees](spanning-trees.md)
   - [STP](stp.md)
+    - [Finding TCNs](finding-tcns.md)
   - [RSTP](rstp.md)
   - [MST](mst.md)
 

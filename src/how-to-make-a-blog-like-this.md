@@ -20,7 +20,7 @@ This blog follows the [Documentation as Code] ethos.
 
 There is some AI use here, the articles are 98% human written. 
 
-I use Anthropic's tools 
+I use Anthropic's tools.
 
 ## Where LLMs are used
 - [OCR] tasks
@@ -104,6 +104,6 @@ mdbook build
 
 ### Editable Extras
 
-Is a tiny js file that modifies `book.js` to allow editing console examples directly on the webpage.
+A tiny js file that modifies `book.js` to allow editing console examples directly on the webpage.
 
 This lives in the root of the repo.

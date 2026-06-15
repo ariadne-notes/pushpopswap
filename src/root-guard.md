@@ -4,19 +4,21 @@ Rootguard is an alternative to BPDU guard, when the port needs to participate in
 
 Normally SW1 is the root bridge
 
-<pre>
-┌───────────┐                                                                                      ┌───────────────┐
-│  SW1   DP ├──  0 / 1 / 52:54:00:e8:3a:ff ─────────────────────── 4096 / 1 / 52:54:00:4b:99:08  ──┤ RP     SW2    │
-└───────────┘                                                                                      └───────────────┘
-</pre>
+```text
+┌──────┐                                                      ┌──────┐
+│SW1 DP├─ 0/1/52:54:00:e8:3a:ff ─── 4096/1/52:54:00:4b:99:08 ─┤RP SW2│
+└──────┘                                                      └──────┘
+```
 
-Someone configures SW2 to be the root by making the switch priority 0.
+Someone configures SW2 to be the root by making the switch priority 0.  
 
-<pre>
-┌───────────┐                                                                                      ┌───────────────┐
-│  SW1   RP ├──  0 / 1 / 52:54:00:e8:3a:ff ───────────────────────    0 / 1 / 52:54:00:4b:99:08  ──┤ DP     SW2    │
-└───────────┘                                                                                      └───────────────┘
-</pre>
+```text
+┌──────┐                                                      ┌──────┐
+│SW1 RP├─ 0/1/52:54:00:e8:3a:ff ────── 0/1/52:54:00:4b:99:08 ─┤DP SW2│
+└──────┘                                                      └──────┘
+```
+
+## Config
 
 This can be prevented with this config. Root guard goes onto DPs.
 
@@ -29,7 +31,6 @@ interface 1
 ```
 
 ## Verification
-
 
 ```console
 sw1# show spanning-tree 
