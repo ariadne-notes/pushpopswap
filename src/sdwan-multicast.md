@@ -1,15 +1,23 @@
 # SDWAN Multicast
 
+> [!NOTE]
+> Data streams are forwarded to the receivers through replication.
+
 ## Terms
 
 **Replicator**
 
 The FHR forwards the multicast stream to the replicator.
 
-> [!NOTE]
-> Stream is forwarded to the receiver through the replicator.
->
-> Stream NEVER goes to SDWAN controller.
+## Multicast
+
+- [PIM-SM] is supported
+- the RP is one of the control nodes
+- No Support for
+  - BIDIR-PIM
+  - MSDP
+  
+[PIM-SM]: https://www.cisco.com/c/en/us/td/docs/routers/sdwan/26x-later/routing/routing-configuration-guide/multicast-overlay/multicast-overlay-routing-for-sd-wan.html
 
 ## Flow
 
@@ -23,7 +31,7 @@ sequenceDiagram
         participant Source as Source
         participant Edge1 as Edge 1<br/>FHR
     end
-    box rgba(120,144,156,0.10) RP site
+    box rgba(120,144,156,0.10) RP Site
         participant RP as RP
         participant Edge3 as Edge 3
     end
@@ -32,13 +40,13 @@ sequenceDiagram
         participant Ctrl as SD-WAN<br/>Controller
         participant RepB as Edge 5<br/>Replicator B
     end
-    box rgba(67,160,71,0.10) Receiver A Site
-        participant Edge2 as Edge2<br/>LHR
-        participant RecvA as Receiver-A
+    box rgba(67,160,71,0.10) Site A
+        participant Edge2 as Edge 2<br/>LHR
+        participant RecvA as Receiver A
     end
-    box rgba(255,167,38,0.10) Receiver B Site
-        participant Edge6 as Edge6<br/>LHR
-        participant RecvB as Receiver-B
+    box rgba(255,167,38,0.10) Site B
+        participant Edge6 as Edge 6<br/>LHR
+        participant RecvB as Receiver B
     end
 
     Note over   RP,RecvA: Phase 1 — Receiver-A (*,G) Towards RP

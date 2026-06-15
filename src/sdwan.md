@@ -95,6 +95,12 @@ Policies are further classified as
 - Edge sends HTTP probes to measure jitter and/or loss
 - 0 to 10, 10 being best
 
+## Colors
+
+[TLOC color] indicates if the connection is behind NAT or not.
+
+[TLOC color]: https://www.networkacademy.io/ccie-enterprise/sdwan/tloc-color-and-carrier
+
 ## VPNs
 
 | VPN | Name/Role          | Description             |
@@ -103,15 +109,19 @@ Policies are further classified as
 | 512 | Management         | Out-of-band Management  |
 | n   | Service-Side/LAN   | 1-65527, not 0 or 512   |
 
-## Multicast
+## SDWAN Analytics
 
-- [PIM-SM] is supported
-- the RP is one of the control nodes
-- No Support for
-  - BIDIR-PIM
-  - MSDP
+- Application Experience
+  - Application Use
+
+- Site Health
+  - Tunnel Health
+
+- Bandwidth Forecasting
+  - Capacity Planning
   
-[PIM-SM]: https://www.cisco.com/c/en/us/td/docs/routers/sdwan/26x-later/routing/routing-configuration-guide/multicast-overlay/multicast-overlay-routing-for-sd-wan.html
+- Talos Integration
+  - Threat Mitigation
 
 ## Commands
 
