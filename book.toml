@@ -27,6 +27,7 @@ editable = true
 copy-js = true
 
 [output.html]
+mathjax-support = true
 additional-css = ["theme/custom.css","theme/mermaid-lightbox.css"]
 additional-js = ["theme/svg-pan-zoom.min.js","theme/mermaid-lightbox.js","theme/mermaid.min.js", "theme/mermaid-init.js","theme/editable-extras.js"]
 git-repository-url = "https://github.com/ariadne-notes/pushpopswap"
