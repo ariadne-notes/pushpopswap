@@ -29,7 +29,6 @@ jobs:
       INFO: 2.0.0
       BOB: 0.3.0
       MAP: 0.2.0
-      BOB: 0.3.0
     
     steps:
     
