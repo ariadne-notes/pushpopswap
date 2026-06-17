@@ -28,21 +28,20 @@ jobs:
       MER: 0.17.0
       BOB: 0.3.0
       INFO: 2.0.0
+      MAP: 0.1.1
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Cache cargo binaries
-        uses: actions/cache@v4
+      - name: Install mdBook + preprocessors
+        uses: taiki-e/install-action@v2
         with:
-          path: ~/.cargo/bin
-          key: cargo-bin-${{ runner.os }}-mdbook-${{ env.BOOK }}-mermaid-${{ env.MER }}-svgbob-${{ env.BOB }}-gitinfo-${{ env.INFO }}
-      - name: Install mdBook
-        run: |
-          which mdbook || cargo install --version ${{ env.BOOK }} mdbook
-          which mdbook-mermaid || cargo install --version ${{ env.MER }} mdbook-mermaid
-          which mdbook-svgbob || cargo install --version ${{ env.BOB }} mdbook-svgbob
-          which mdbook-gitinfo || cargo install --version ${{ env.INFO }} mdbook-gitinfo
+          tool: |
+            mdbook@${{ env.BOOK }}
+            mdbook-mermaid@${{ env.MER }}
+            mdbook-svgbob@${{ env.BOB }}
+            mdbook-gitinfo@${{ env.INFO }}
+            mdbook-sitemap@${{ env.MAP }}
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
