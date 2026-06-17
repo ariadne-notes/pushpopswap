@@ -1,42 +1,43 @@
+// theme/mermaid-init.js — lazy-load mermaid, render on demand, re-render on theme toggle.
+// Pairs with mermaid-lightbox.js via the `mermaid:rendered` event (keep the name identical).
 (() => {
-    const darkThemes = ['ayu', 'navy', 'coal'];
-    const lightThemes = ['light', 'rust'];
+  const nodes = [...document.querySelectorAll("pre.mermaid, .mermaid")];
+  if (!nodes.length) return;                         // no diagrams on this page → never load mermaid
 
-    const classList = document.getElementsByTagName('html')[0].classList;
+  const DARK = ["ayu", "navy", "coal"];              // mdBook dark theme classes, applied to <html>
+  const themeNow = () =>
+    [...document.documentElement.classList].some(c => DARK.includes(c)) ? "dark" : "default";
 
-    let lastThemeWasLight = true;
-    for (const cssClass of classList) {
-        if (darkThemes.includes(cssClass)) {
-            lastThemeWasLight = false;
-            break;
-        }
-    }
+  const sources = nodes.map(el => el.textContent);   // stash graph source before mermaid consumes it
+  let lastTheme = themeNow();
+  let busy = false, queued = false;
 
-    const theme = lastThemeWasLight ? 'default' : 'dark';
-    mermaid.initialize({ startOnLoad: false, theme });
-
-    document.querySelectorAll('pre.mermaid').forEach(function (el) {
-        var div = document.createElement('div');
-        div.className = 'mermaid';
-        div.textContent = el.textContent;
-        el.replaceWith(div);
+  function render() {
+    if (busy) { queued = true; return; }             // coalesce toggles fired while a render is mid-flight
+    busy = true;
+    lastTheme = themeNow();
+    nodes.forEach((el, i) => {                        // restore source + clear the processed flag so
+      el.textContent = sources[i];                   // mermaid will reprocess these nodes
+      el.removeAttribute("data-processed");
     });
+    mermaid.initialize({ startOnLoad: false, theme: lastTheme });
+    mermaid.run({ nodes })
+      .then(() => document.dispatchEvent(new Event("mermaid:rendered")))
+      .finally(() => { busy = false; if (queued) { queued = false; render(); } });
+  }
 
-    mermaid.run();
+  const s = document.createElement("script");        // load the library only now, on a page that needs it
+  s.src = "/lazy-load-js/mermaid-11.15.0.min.js";    // verbatim passthrough from src/lazy-load-js/ (unhashed)
+  s.onload = render;
+  document.head.appendChild(s);
 
-    for (const darkTheme of darkThemes) {
-        document.getElementById('mdbook-theme-' + darkTheme).addEventListener('click', () => {
-            if (lastThemeWasLight) {
-                window.location.reload();
-            }
-        });
-    }
-
-    for (const lightTheme of lightThemes) {
-        document.getElementById('mdbook-theme-' + lightTheme).addEventListener('click', () => {
-            if (!lastThemeWasLight) {
-                window.location.reload();
-            }
-        });
-    }
+  // mdBook swaps the theme class on <html>; re-render when the theme actually changes.
+  let raf = 0;
+  new MutationObserver(() => {
+    if (!window.mermaid) return;                      // library not loaded yet → nothing to redo
+    cancelAnimationFrame(raf);                        // debounce the remove-old + add-new pair into one
+    raf = requestAnimationFrame(() => {
+      if (themeNow() !== lastTheme) render();
+    });
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 })();

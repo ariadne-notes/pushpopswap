@@ -5,22 +5,24 @@
 **OMP** --- Overlay Management Protocol
 
 ```mermaid
-graph TB
-    subgraph OMP["Overlay Management Protocol (ZT)"]
-        TLOC["Transport Locators"]
-        SERVICE["Firewallls"]
+graph LR
+    subgraph OMP["Overlay Management Protocol"]
+        OMP-Routes(["OMP Routes"])
+        TLOC(["Transport Locators"])
+        SERVICE(["Service Routes"])
     end
+```
 
 **OMP routes** 
 
 - AKA, vRoutes
 - AKA, Site prefixes `10.0.0.0/24`
+- Static, OSPF or BGP
 
 **TLOC** --- Transport Locator
 
-- Each TLOC will attempt a full-mesh connection with every other TLOC.
-- n*(n-1)/2
-
+- Each TLOC will attempt a full-mesh connection with every other TLOC
+  - Full Mesh
 - Tunnel endpoint is a 3-tuple 
   - System IP, 
   - Color
@@ -28,9 +30,14 @@ graph TB
 
 **Service Routes** 
 
-- Firewalls
-- IPS
-- VPN labels.
+- Embedded network services at the local-site
+  - Firewalls
+  - IPS
+
+**Full Mesh Equation**
+
+\\[ \frac{N(N-1)}{2} \\]
+
 
 ## TLOC Route Attributes
 
@@ -38,11 +45,12 @@ graph TB
 - Public Address (the NAT translated address)
 - Carrier (public or private)
 - Color
-- Encapsulation of tunnel (GRE or IPSec)
-- Preference (to choose between TLOCs)
-- Site ID (which site owns the TLOC)
+- Encapsulation of tunnel
+  - GRE, IPSec
+- Preference
+- Site ID
 - Tag
-- Weight (higher is better)
+- Weight
 
 ## OMP Route Attributes
 

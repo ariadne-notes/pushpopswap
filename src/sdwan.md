@@ -21,40 +21,25 @@
 
 [Portal Page]
 
-[Portale Page]: https://www.cisco.com/site/us/en/solutions/networking/sdwan/cloud-onramp/index.html
+[Portal Page]: https://www.cisco.com/site/us/en/solutions/networking/sdwan/cloud-onramp/index.html
 
 ### IAAS
 
-```mermaid
-flowchart LR
-    SDWAN(Cisco SD-WAN)
-    OnRamp((Cloud OnRamp<br>for MultiCloud))
+Used to interconnect devices within the Cloud.
 
-    SDWAN --> OnRamp
-    OnRamp --> Azure(Azure)
-    OnRamp --> AWS(AWS)
-    OnRamp --> GCP(Google Cloud)
+![IaaS](./images/cisco/cisco-sdwan-cloud-onramp-iaas.avif)
 
-    subgraph IaaS
-        Azure
-        AWS
-        GCP
-    end
-```
+Image courtesy of 
+[Cisco](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/cloudonramp/ios-xe-17/cloud-onramp-book-xe/m-cloud-onramp-iaas-wan.html).
 
 ### SaaS
 
-```mermaid
-flowchart LR
-    SDWAN(Cisco SD-WAN) --> OnRamp((Cloud OnRamp<br>for SaaS))
-    OnRamp --> O365(Office 365)
-    OnRamp --> SP(SharePoint)
+Used to pick network connections, or maybe even the overlay to use a different site.
 
-    subgraph SaaS
-        O365
-        SP
-    end
-```
+![SaaS](./images/cisco/cisco-sdwan-cloud-onramp-saas.avif)
+
+Image courtesy of 
+[Cisco](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/cloudonramp/ios-xe-17/cloud-onramp-book-xe/cor-saas-17-2-1r.html).
 
 ## SD-WAN Policy
 
@@ -113,7 +98,9 @@ Policies are further classified as
 - blue, green, red, bronze, silver, gold
 
 
-## VPNs
+## VPNs 
+
+VPNs are numbered. The underlay and transport is VPN 0.
 
 | VPN | Name/Role          | Description             |
 |-----|--------------------|-------------------------|
@@ -134,6 +121,20 @@ Policies are further classified as
   
 - Talos Integration
   - Threat Mitigation
+
+## Default Permissions Groups
+
+**Basic**
+
+Can view the system.
+
+**Operator**
+
+Can view the system.
+
+**Netadmin**
+
+Can perform all operations
 
 ## Commands
 
@@ -165,8 +166,12 @@ show orchestrator connections
 
 [Cisco Live - SD-WAN Start Here - Lars Granberg - BRKENT-2108](./pdfs/ciscolive/BRKENT-2108.pdf)
 
-[Network Academy - SD-WAN Deep-Dive](https://www.networkacademy.io/ccie-enterprise/sdwan)
+[Network Academy - SDWAN Deep-Dive](https://www.networkacademy.io/ccie-enterprise/sdwan)
 
-[Cisco Community - Cisco SD-WAN Webinar](https://community.cisco.com/t5/networking-knowledge-base/cisco-sd-wan-webinar-series/ta-p/5114270)
+[Cisco Community - Cisco SDWAN Webinar](https://community.cisco.com/t5/networking-knowledge-base/cisco-sd-wan-webinar-series/ta-p/5114270)
 
-[Design Zone for Branch/WAN - Cisco Catalyst SD-WAN Design Guide - Cisco](<https://www.cisco.com/c/en/us/td/docs/solutions/CVD/SDWAN/cisco-sdwan-design-guide.html>)
+[Cisco - Design Zone for Branch/WAN - SDWAN Design Guide](<https://www.cisco.com/c/en/us/td/docs/solutions/CVD/SDWAN/cisco-sdwan-design-guide.html>)
+
+[Cisco - SDWAN User Documentation](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/config/ios-xe-sdwan17.html)
+
+[Cisco - SDWAN High Availability Configuration Guide, IOS-XE 17](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/ha-scaling/ios-xe-17/high-availability-book-xe/m-high-availability-and-scaling.html)

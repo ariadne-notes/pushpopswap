@@ -224,6 +224,8 @@
   - [SDWAN Multicast](sdwan-multicast.md)
   - [SDWAN Bootstrap](sdwan-bootstrap.md)
   - [SDWAN ZTP](sdwan-ztp.md)
+  - [SDWAN Header](sdwan-header.md)
+  - [SDWAN HA](sdwan-ha.md)
 - [SD-Access](sd-access.md)
   - [Cisco Catalyst Center](cisco-catalyst-center.md)
   - [SD-Access Lisp](sd-access-lisp.md)
