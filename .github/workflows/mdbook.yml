@@ -26,29 +26,93 @@ jobs:
     env:
       BOOK: 0.5.3
       MER: 0.17.0
-      BOB: 0.3.0
       INFO: 2.0.0
-      MAP: 0.1.1
+      BOB: 0.3.0
+      MAP: 0.2.0
+      BOB: 0.3.0
+    
     steps:
+    
+      #
+      # This follows a build and cache method.
+      #
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Install mdBook + preprocessors
+
+      - name: Cache mdbook
+        id: cache-mdbook
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/mdbook
+          key: mdbook-${{ runner.os }}-${{ env.BOOK }}
+          
+      - name: Install mdbook
+        if: steps.cache-mdbook.outputs.cache-hit != 'true'
         uses: taiki-e/install-action@v2
         with:
-          tool: |
-            mdbook@${{ env.BOOK }}
-            mdbook-mermaid@${{ env.MER }}
-            mdbook-svgbob@${{ env.BOB }}
-            mdbook-gitinfo@${{ env.INFO }}
-            mdbook-sitemap@${{ env.MAP }}
+          tool: mdbook@${{ env.BOOK }}
+
+      - name: Cache mdbook-mermaid
+        id: cache-mermaid
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/mdbook-mermaid
+          key: mdbook-mermaid-${{ runner.os }}-${{ env.MER }}
+          
+      - name: Install mdbook-mermaid
+        if: steps.cache-mermaid.outputs.cache-hit != 'true'
+        uses: taiki-e/install-action@v2
+        with:
+          tool: mdbook-mermaid@${{ env.MER }}
+
+      - name: Cache mdbook-gitinfo
+        id: cache-gitinfo
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/mdbook-gitinfo
+          key: mdbook-gitinfo-${{ runner.os }}-${{ env.INFO }}
+          
+      - name: Install mdbook-gitinfo
+        if: steps.cache-gitinfo.outputs.cache-hit != 'true'
+        uses: taiki-e/install-action@v2
+        with:
+          tool: mdbook-gitinfo@${{ env.INFO }}
+
+      - name: Cache mdbook-sitemap-generator
+        id: cache-sitemap
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/mdbook-sitemap-generator
+          key: mdbook-sitemap-generator-${{ runner.os }}-${{ env.MAP }}
+          
+      - name: Install mdbook-sitemap-generator
+        if: steps.cache-sitemap.outputs.cache-hit != 'true'
+        uses: taiki-e/install-action@v2
+        with:
+          tool: mdbook-sitemap-generator@${{ env.MAP }}
+
+      - name: Cache mdbook-svgbob
+        id: cache-svgbob
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/mdbook-svgbob
+          key: mdbook-svgbob-${{ runner.os }}-${{ env.BOB }}
+          
+      - name: Install mdbook-svgbob
+        if: steps.cache-svgbob.outputs.cache-hit != 'true'
+        run: cargo install --version ${{ env.BOB }} --locked mdbook-svgbob
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-
+        
       - name: Build with mdBook
         run: mdbook build
-
+        
+      - name: Generate sitemap
+        run: mdbook-sitemap-generator -d pushpopswap.com -o ./book/sitemap.xml
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
