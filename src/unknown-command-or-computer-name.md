@@ -2,7 +2,7 @@
 
 ## The Problem
 
-Typing the wrong commands in Cisco CLI ... the equipment tries to use telnet.
+Typing the wrong commands in Cisco CLI ... the equipment tries to use Telnet.
 
 ```console
 R1# aoeu
@@ -27,7 +27,7 @@ This is from the [IOS-XE] guide.
 
 ## Config
 
-```console
+```console,editable
 configure terminal
 line console 0
  transport preferred none
@@ -63,7 +63,7 @@ Preferred transport is none
 
 
 ```console
-R1# show terminal              
+R1# show terminal
 Line 0, Location: "", Type: ""
 Length: 24 lines, Width: 80 columns
 Status: PSI Enabled, Ready, Active, Automore On
