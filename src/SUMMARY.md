@@ -154,6 +154,7 @@
 
 # Routing Strategies
 
+- [VRF Lite](vrf-lite.md)
 - [Route Redistribution](route-redistribution.md)
   - [Route Redistribution BGP](route-redistribution-bgp.md)
   - [Route Redistribution EIGRP](route-redistribution-eigrp.md)
