@@ -60,7 +60,7 @@
 
 - [QoS](qos.md)
   - [QoS Trust Boundaries](qos-trust-boundaries.md)
-  - [802.1p](802.1p.md)
+  - [802.1P](802.1p.md)
   - [Congestion](congestion.md)
   - [Cisco IOS QoS Commands](cisco-ios-qos-commands.md)
 

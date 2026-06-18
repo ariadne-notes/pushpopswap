@@ -27,6 +27,8 @@ editable = true
 copy-js = true
 
 [output.html]
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
 mathjax-support = true
 additional-css = ["theme/custom.css","theme/mermaid-lightbox.css"]
 additional-js = ["theme/svg-pan-zoom.min.js","theme/mermaid-lightbox.js","theme/mermaid-init.js","theme/editable-extras.js"]
