@@ -59,6 +59,8 @@
 # Quality of Service
 
 - [QoS](qos.md)
+  - [QoS Trust Boundaries](qos-trust-boundaries.md)
+  - [802.1p](802.1p.md)
   - [Congestion](congestion.md)
   - [Cisco IOS QoS Commands](cisco-ios-qos-commands.md)
 
@@ -225,6 +227,7 @@
   - [SDWAN Multicast](sdwan-multicast.md)
   - [SDWAN Bootstrap](sdwan-bootstrap.md)
   - [SDWAN ZTP](sdwan-ztp.md)
+  - [SDWAN QOS](sdwan-qos.md)
   - [SDWAN Header](sdwan-header.md)
   - [SDWAN HA](sdwan-ha.md)
 - [SD-Access](sd-access.md)
