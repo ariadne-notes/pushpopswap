@@ -276,12 +276,19 @@
 - [STDM](stdm.md)
 - [UDP](udp.md)
 
-# Etc (Stuff I Haven't Sorted)
+# Lab Work
 
 - [CML](cml.md)
-  - [iperf2](iperf2.md)
-  - [Claude](claude.md)
   - [Alpine on CML](alpine-on-cml.md)
+  - [IPERF 2](iperf2.md)
+  - [Working with an LLM](working-with-an-llm.md)
+    - [CML Breakout](cml-breakout.md)
+    - [CML MCP](cml-mcp.md)
+    - [Claude](claude.md)
+    - [PyATS](pyats.md)
+
+# Etc (Stuff I Haven't Sorted)
+
 - [Study Tables](study-tables.md)
 - [OS Architecture](os-architecture.md)
 - [Wiki.js, Duplicati, Traefik, Portainer](wikijs-duplicati-traefik-portainer.md)
@@ -301,7 +308,6 @@
 - [Packet Drops](packet-drops.md)
 - [SecureCRT](securecrt.md)
 - [Add Cephfs to Debian](add-cephfs-to-debian.md)
-
 
 # Certification Stuff
 

@@ -1,8 +1,6 @@
 # Claude
 
-I feed this into claude most of the time to get nice outputs to copy into gear for CML.
-
-```console
+```console, editable
 # Default config
 - enable on top
 - conf t underneath
@@ -39,8 +37,8 @@ I feed this into claude most of the time to get nice outputs to copy into gear f
   * Example: R5 would be fd::5/128
 
 # Routing
-- OSPFv2 process id 1
-- OSPFv3 process id 1
+- OSPFv2 process id 200
+- OSPFv3 process id 300
 - Manually specify the router-id for both, as loopback 0.
 - Unless specified, advertise all subnets into OSPFv2, under the interface use "ip 1 ospfv2 area 0"
 - Unless specified, advertise all subnets into OSPFv3, under the interface use "ip 1 ospfv3 area 0"
