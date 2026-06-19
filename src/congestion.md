@@ -2,16 +2,6 @@
 
 ## Terms
 
-**CC** --- Congestion Control
-
-**AQM** --- Active Queue Management
-
-Waiting for packets to be dropped when a queue is out of space causes global syncronization. 
-
-**RED** --- Random Early Detection
-
-Works based on a packet queue. If the queue is 100, RED starts at 30 packets and drop probability increases with queue depth.
-
 **Incipient Congestion**
 
 - Happens from multiplexing
@@ -23,6 +13,22 @@ Works based on a packet queue. If the queue is 100, RED starts at 30 packets and
 
 - Over-Subscription
 - Packet loss
+
+**CC** --- Congestion Control
+
+**AQM** --- Active Queue Management
+
+- Prevents the queue from filling even faster
+- Drops packets selectively
+
+**RED** --- Random Early Detection
+
+- Based on Queue Depth
+  - Queue is 100 packets
+    - 30 packets, drop rate of a new packet is 20%
+    - 50 packets, drop rate is 50%
+    - 100 packet, drop rate is 100%
+
 
 **Congestion Collapse**
 

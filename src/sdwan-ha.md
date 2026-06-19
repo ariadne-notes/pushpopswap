@@ -1,6 +1,6 @@
 # SDWAN HA
 
-SDWAN is a horizantally scaling solution. Just add more nodes.
+SDWAN is a horizontally scaling solution. Just add more nodes.
 
 ## Managers
 

@@ -98,15 +98,19 @@ Policies are further classified as
 - blue, green, red, bronze, silver, gold
 
 
-## VPNs 
+## VPNs
 
-VPNs are numbered. The underlay and transport is VPN 0.
+VPNs go from 0 to 65530.
 
-| VPN | Name/Role          | Description             |
-|-----|--------------------|-------------------------|
-| 0   | Transport/Underlay | ISP WAN Addresses       |
-| 512 | Management         | Out-of-band Management  |
-| n   | Service-Side/LAN   | 1-65527, not 0 or 512   |
+Some VPNS are already used.
+
+**VPN 0**
+
+The Underlay, transport VPN. All the dTLS connections live here.
+
+**VPN 512**
+
+OOB Management. This VPN isn't carried across the dTLS connections.
 
 ## SDWAN Analytics
 

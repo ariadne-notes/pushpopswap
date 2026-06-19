@@ -1,5 +1,7 @@
 # QoS
 
+... is planned unfairness. To make some traffic faster, other traffic must wait.
+
 ## Terms
 
 **FIFO** --- First in, First out
@@ -8,15 +10,15 @@
 
 **Differentiated Services**
 
+- AKA, DiffServ
 - Giving packet flows different levels of network service
 - Based on classification
-- AKA, DiffServ
 
 **Integrated Services**
 
+- AKA, IntServ
 - Packet flows explicitly reserve bandwidth along a path
 - Uses admission control
-- AKA, IntServ
 
 **RSVP** --- Resource Reservation Protocol
 
@@ -37,16 +39,17 @@
 **Queuing**
 
 - Hold a packet in memory
-- Delays transmission
-- Expensive, because memory is expensive
+  - Delays transmission
+  - Buffers have limits
+  - Expensive, because memory is expensive
+  - Enables [RED](./congestion.md)
 
-**LLQ** --- Low latency queuing
+**LLQ** --- Low Latency Queuing
 
-- Describes queue behavior for the EF PHB: 
-  - Never drop
-  - Never delay
-  - Send immediately
-  - Police aggressively
+- Describes queue behavior for the EF PHB
+  - Always service this queue first
+  - No RED
+  - Must be policed or it will starve other queues
 
 **EF** --- Expedited Forwarding
 
@@ -89,33 +92,33 @@
 
 ## Type of Service
 
-How these 8 bits get used has changed over the years.
+How these 8 bits work has changed over the years.
 
 ```text
-                   0 1 2 3 4 5 6 7
-                  ┌─────┬─────┬─┬─┐
-   RFC 791 (1981) │IP Pr│ ToS │0│0│
-                  └─────┴─────┴─┴─┘
+                 0 1 2 3 4 5 6 7
+                ┌─────┬─────┬─┬─┐
+ RFC 791 (1981) │IP Pr│ ToS │0│0│
+                └─────┴─────┴─┴─┘
 
-                   0 1 2 3 4 5 6 7
-                  ┌─────┬───────┬─┐
-  RFC 1349 (1992) │IP Pr│  TOS  │0│
-                  └─────┴───────┴─┘
+                 0 1 2 3 4 5 6 7
+                ┌─────┬───────┬─┐
+RFC 1349 (1992) │IP Pr│  TOS  │0│
+                └─────┴───────┴─┘
 
-                   0 1 2 3 4 5 6 7
-                  ┌───────────┬─┬─┐
-  RFC 2474 (1998) │    DSCP   │0│0│
-                  └───────────┴─┴─┘
+                 0 1 2 3 4 5 6 7
+                ┌───────────┬─┬─┐
+RFC 2474 (1998) │    DSCP   │0│0│
+                └───────────┴─┴─┘
 
-                   0 1 2 3 4 5 6 7
-                  ┌───────────┬───┐
-  RFC 3168 (2001) │    DSCP   │ECN│
-                  └───────────┴───┘
+                 0 1 2 3 4 5 6 7
+                ┌───────────┬───┐
+RFC 3168 (2001) │    DSCP   │ECN│
+                └───────────┴───┘
 ```
 
 ### PHB - Per Hop Behaviors
 
-| PHB | Name | Description |
+| PHB    | Name                  | Description                                        |
 |--------|-----------------------|----------------------------------------------------|
 | **CS** | Class Selector        | CS0 to CS7, backward compatible with IP Precedence |
 | **AF** | Assured Forwarding    | Modern Queuing and congestion avoidance            |
@@ -131,11 +134,12 @@ Within those classes, there is a drop precedence, or ... at what point of queue 
 
 Used for RED, or WRED.
 
-Four AF classes, each should get it's own resources.
+Four AF classes, each should get its own resources.
+
+### Binary
 
 ```plain
 Drop
-
  Precedence      Class 1        Class 2        Class 3       Class 4
 
             ┌───────────────┬───────────────┬───────────────┬──────────────┐
@@ -143,14 +147,13 @@ Drop
    Medium │ │ AF12  001 100 │ AF22  010 100 │ AF32  011 100 │ AF42 100 100 │
    High   ▼ │ AF13  001 110 │ AF23  010 110 │ AF33  011 110 │ AF43 100 110 │
             └───────────────┴───────────────┴───────────────┴──────────────┘
-             ────────────►  Importance  to Business/Net work ───────────►
+             ────────────► Importance to Organization ───────────►
 ```
 
-Again, with DSCP
+### DSCP
 
 ```plain
 Drop
-
  Precedence      Class 1        Class 2        Class 3       Class 4
 
             ┌───────────────┬───────────────┬───────────────┬──────────────┐
@@ -158,7 +161,7 @@ Drop
    Medium │ │ AF12  DSCP 12 │ AF22  DSCP 20 │ AF32  DSCP 28 │ AF42 DSCP 36 │
    High   ▼ │ AF13  DSCP 14 │ AF23  DSCP 22 │ AF33  DSCP 30 │ AF43 DSCP 38 │
             └───────────────┴───────────────┴───────────────┴──────────────┘
-             ────────────►  Importance  to Business/Network ───────────►
+             ────────────► Importance to Organization ───────────►
 ```
 
 Yields the following formula.
@@ -170,9 +173,9 @@ DSCP = 8 (class) + 2 (drop)
 LAN QoS with voice (buffer management)
 
 - One voice packet, no voice, but modem will retrain
-- Two voice packets, audio clip, fax call disconnection.
-- VoIP QoS cannot be fixed by adding bandwidth. You simply cannot drop these
-- packets.
+- Two voice packets, audio clip, fax call disconnection
+- VoIP QoS cannot be fixed by adding bandwidth
+  - It must be treated as LLQ
 
 ## QoS Commands
 
@@ -198,7 +201,6 @@ LAN QoS with voice (buffer management)
 | Bulk Data             | AF1x | 10/12/14 | Elastic          | BW Queue + DSCP WRED       | CDN Data, Email, FTP, Backup Apps         |
 | Best Effort           | DF   | 0        | Elastic          | Default Queue + RED        | Undifferentiated                          |
 | Scavenger             | CS1  | 8        | Elastic          | Min BW Queue (Deferential) | YouTube, BitTorent, Xbox Live             |
-
 
 > Source: RFC 4594 (Aug 2006), updated by RFC 5865 and RFC 8622.
 > AF drop precedence: x1=low, x2=medium, x3=high drop probability.
