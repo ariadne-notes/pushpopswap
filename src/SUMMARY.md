@@ -202,6 +202,7 @@
 - [Cisco AAA](cisco-aaa.md)
 - [TACACS+](tacacs-plus.md)
 - [Clouds](clouds.md)
+  - [VPCs](vpcs.md)
 
 # Network Services
 
@@ -226,6 +227,7 @@
   - [SDWAN Node Types](sdwan-node-types.md)
   - [SDWAN Multicast](sdwan-multicast.md)
   - [SDWAN Bootstrap](sdwan-bootstrap.md)
+  - [SDWAN Cloud](sdwan-cloud.md)
   - [SDWAN ZTP](sdwan-ztp.md)
   - [SDWAN QOS](sdwan-qos.md)
   - [SDWAN Header](sdwan-header.md)

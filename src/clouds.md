@@ -88,3 +88,7 @@ Merging some private cloud resources, with a public cloud offering.
 [800-145 The NIST Definition of Cloud Computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)
 
 [What is Hybrid Cloud? | IBM](https://www.ibm.com/think/topics/hybrid-cloud)
+
+[Apache - Configuring a Virtual Private Cloud](https://docs.cloudstack.apache.org/en/latest/adminguide/networking/virtual_private_cloud_config.html)
+
+[What is Amazon VPC? - Amazon Virtual Private Cloud](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html?utm_source=chatgpt.com)
