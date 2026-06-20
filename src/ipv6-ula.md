@@ -1,24 +1,25 @@
-# IPv6 Unique Link Local
+# IPv6 Unique Link Local Addressing
+
+Sort of but not quite equivalent to [RFC 1918].
+
+- Any site can generate a ULA and start using it
+- Not meant to go over the global v6 Internet
+
+[RFC 1918]: https://www.rfc-editor.org/info/rfc1918/
 
 ## Terms
 
 **ULA** --- Unique Local Address
 
-These addresses are meant to be globally unique.
+- Globally unique via randomness
+- Take the form, `fdxx:xxxx:xxxx::/48`
+- Five bytes or 40 bits of entropy
 
-ULAs take the form, `fdxx:xxxx:xxxx::/48`
-
-## Bits
-
-\\( 5 \times 8 = 40 \\)
-
-5 bytes and 8 bits to a byte, or 40 bits of entropy.
-
-## Site Prefix
+## Site Prefixes
 
 \\( 2^{40} = 1{,}099{,}511{,}627{,}776 \\)
 
-There are about 1 trillion unique site prefixes.
+Approximately 1 trillion unique site prefixes.
 
 ## Site Prefix Generation
 
