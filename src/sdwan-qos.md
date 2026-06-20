@@ -17,6 +17,15 @@ The default queue.
 
 If QoS is not configured, all user traffic will take Queue 2.
 
+## Queue Example
+
+```console,editable
+policy
+ class-map
+  class CL_REAL_TIME queue 0
+  class CL_CRITICAL_DATA queue 1
+  class CL_BEST_EFFORT queue 2
+```
 
 ## Tables
 

@@ -4,9 +4,13 @@
 
 ## Terms
 
+**BE** --- Best Effort
+
+- Default traffic class
+
 **FIFO** --- First in, First out
 
- - Default behavior
+- Default behavior
 
 **Differentiated Services**
 

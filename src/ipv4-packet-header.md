@@ -1,23 +1,5 @@
 # IPv4 Packet Header
 
-```mermaid
-packet
-0-3: "Version"
-4-7: "IHL"
-8-15: "Type Of Service"
-16-31: "Total Length"
-32-47: "Identification"
-48-50: "Flags"
-51-63: "Fragment Offset"
-64-71: "Time to Live"
-72-79: "Protocol"
-80-95: "Header Checksum"
-96-127: "Source Address"
-128-159: "Destination Address"
-160-183: "Options"
-184-191: "Padding"
-```
-
 ```text
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1

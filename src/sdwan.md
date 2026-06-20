@@ -54,24 +54,6 @@ Policies are further classified as
 - Edge sends HTTP probes to measure jitter and/or loss
 - 0 to 10, 10 being best
 
-## Colors
-
-[TLOC color] indicates if the connection is behind NAT or not.
-
-[TLOC color]: https://www.networkacademy.io/ccie-enterprise/sdwan/tloc-color-and-carrier
-
-**Private colors**
-
-- mpls, metro-ethernet
-- private1, private2, private3, etc.
-
-**Public Colors**
-
-- public-internet, biz-internet
-- 3g, lte
-- blue, green, red, bronze, silver, gold
-
-
 ## VPNs
 
 VPNs go from 0 to 65530.

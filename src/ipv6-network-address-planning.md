@@ -19,7 +19,7 @@ Found in the *APNIC BGP in 2025* pdf.
 
 ## Site Planning
 
-Since each site gets it's own `/48`, there are 65k networks to work with.
+Since each site gets its own `/48`, there are 65k networks to work with.
 
 ## References
 

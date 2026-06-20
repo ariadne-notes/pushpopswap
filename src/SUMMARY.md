@@ -23,12 +23,21 @@
   - [Git Restore](git-restore.md)
   - [Git Ignore](git-ignore.md)
 
-# IPv4
+# Routed Protocols
 
-- [IPv4 Addressing](ipv4-addressing.md)
-- [IPv4 Packet Header](ipv4-packet-header.md)
-- [IPv4 Address Planning](ipv4-address-planning.md)
-- [Classful Networking](classful-networking.md)
+- [IPv4](ipv4.md)
+  - [IPv4 Addressing](ipv4-addressing.md)
+  - [IPv4 Packet Header](ipv4-packet-header.md)
+  - [IPv4 Address Planning](ipv4-address-planning.md)
+  - [IPv4 Classful Networking](ipv4-classful-networking.md)
+
+- [IPv6](ipv6.md)
+  - [IPv6 Subnetting](ipv6-subnetting.md)
+  - [IPv6 Hextext Boundaries](ipv6-hextet-boundaries.md)
+  - [IPv6 Network Address Planning](ipv6-network-address-planning.md)
+  - [IPv6 Link Local Addressing](ipv6-link-local-addressing.md)
+  - [IPv6 Unique Link Local Addressing](ipv6-ula.md)
+  - [IPv6 Neighbor Discovery](ipv6-neighbor-discovery.md)
 
 # Subnetting
 
@@ -38,12 +47,7 @@
 
 # IPv6
 
-- [IPv6](ipv6.md)
-  - [IPv6 Subnetting](ipv6-subnetting.md)
-  - [IPv6 Hextext Boundaries](ipv6-hextet-boundaries.md)
-  - [IPv6 Network Address Planning](ipv6-network-address-planning.md)
-  - [IPv6 Unique Link Local Addressing](ipv6-ula.md)
-  - [IPv6 Neighbor Discovery](ipv6-neighbor-discovery.md)
+
 
 # IPv6 Transition Technology
 
@@ -203,7 +207,8 @@
 - [Cisco AAA](cisco-aaa.md)
 - [TACACS+](tacacs-plus.md)
 - [Clouds](clouds.md)
-  - [VPCs](vpcs.md)
+  - [Virtual Private Clouds](vpcs.md)
+  - [Cloud Interconnects](cloud-interconnects.md)
 
 # Network Services
 
@@ -223,12 +228,13 @@
 
 # Software Defined Networking
 
-- [OMP](omp.md)
 - [SDWAN](sdwan.md)
+  - [OMP](omp.md)
   - [SDWAN Node Types](sdwan-node-types.md)
   - [SDWAN Multicast](sdwan-multicast.md)
   - [SDWAN Bootstrap](sdwan-bootstrap.md)
   - [SDWAN Cloud](sdwan-cloud.md)
+  - [SDWAN Colors](sdwan-colors.md)
   - [SDWAN ZTP](sdwan-ztp.md)
   - [SDWAN QOS](sdwan-qos.md)
   - [SDWAN Header](sdwan-header.md)
