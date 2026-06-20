@@ -35,6 +35,7 @@
   - [IPv6 Subnetting](ipv6-subnetting.md)
   - [IPv6 Hextext Boundaries](ipv6-hextet-boundaries.md)
   - [IPv6 Network Address Planning](ipv6-network-address-planning.md)
+  - [IPv6 Multicast Addresses](ipv6-multicast-addresses.md)
   - [IPv6 Link Local Addressing](ipv6-link-local-addressing.md)
   - [IPv6 Unique Link Local Addressing](ipv6-ula.md)
   - [IPv6 Neighbor Discovery](ipv6-neighbor-discovery.md)
