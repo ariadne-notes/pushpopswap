@@ -16,7 +16,9 @@ Subnet Sizes (going down) - `128, 64, 32, 16, 8, 4, 2, 1`
 
 `/30` is the 1990s way of addressing a point-to-point link, which wastes two IPs.
 
-`/31` is *exactly* two IPs. This is the best subnet for point-to-point links.
+`/31` is *exactly* two IPs. This is the best subnet for [point-to-point] links.
+
+[point-to-point]: ./point-to-point-links.md
 
 `/32` is a single address. We call these host routes. `8.8.8.8/32` is Google's DNS.
 
