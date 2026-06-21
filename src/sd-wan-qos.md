@@ -1,4 +1,4 @@
-# SDWAN QOS
+# SD-WAN QOS
 
 ## Queues
 

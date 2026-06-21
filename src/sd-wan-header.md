@@ -1,4 +1,4 @@
-# SDWAN Headers
+# SD-WAN Headers
 
 Site local traffic is given a MPLS label to identify the VPN.
 

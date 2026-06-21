@@ -1,4 +1,4 @@
-# SDWAN Cloud
+# SD-WAN Cloud
 
 ## Terms
 

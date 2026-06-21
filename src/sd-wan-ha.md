@@ -1,4 +1,4 @@
-# SDWAN HA
+# SD-WAN HA
 
 SDWAN is a horizontally scaling solution. Just add more nodes.
 

@@ -95,8 +95,9 @@
 # SP Switching
 
 - [MPLS](mpls.md)
-- [MPLS DiffServ](mpls-diffserv.md)
   - [L3VPN](mpls-l3vpn.md)
+  - [MPLS DiffServ](mpls-diffserv.md)
+  - [IRB On the ASR9K](irb-on-the-asr9k.md)
 - [PBB](pbb.md)
 
 # Switch Features
@@ -183,6 +184,7 @@
 
 # Best Practices
 
+- [Network Management](network-management.md)
 - [Out Of Band Management](out-of-band-management.md)
 - [Point to Point Links](point-to-point-links.md)
 
@@ -213,26 +215,29 @@
 - [DNS](dns.md)
 - [SSH](ssh.md)
 - [NTP](ntp.md)
+- [Power Over Ethernet](power-over-ethernet.md)
+- [Cisco ECMP](cisco-ecmp.md)
+- [Flexible NetFlow](flexible-netflow.md)
 - [AAA with FreeRadius and Univention UCS](aaa-freeradius-and-univention-ucs.md)
 - [SNMP](snmp.md)
   - [SNMP Versions](snmp-versions.md)
 
 # Software Defined Networking
 
-- [SDWAN](sdwan.md)
-  - [OMP](omp.md)
-  - [SDWAN Node Types](sdwan-node-types.md)
-  - [SDWAN Multicast](sdwan-multicast.md)
-  - [SDWAN Bootstrap](sdwan-bootstrap.md)
-  - [SDWAN Cloud](sdwan-cloud.md)
-  - [SDWAN Colors](sdwan-colors.md)
-  - [SDWAN ZTP](sdwan-ztp.md)
-  - [SDWAN QOS](sdwan-qos.md)
-  - [SDWAN Header](sdwan-header.md)
-  - [SDWAN HA](sdwan-ha.md)
+- [SD-WAN](sd-wan.md)
+  - [SD-WAN OMP](sd-wan-omp.md)
+  - [SD-WAN Node Types](sd-wan-node-types.md)
+  - [SD-WAN Multicast](sd-wan-multicast.md)
+  - [SD-WAN Bootstrap](sd-wan-bootstrap.md)
+  - [SD-WAN Cloud](sd-wan-cloud.md)
+  - [SD-WAN Colors](sd-wan-colors.md)
+  - [SD-WAN ZTP](sd-wan-ztp.md)
+  - [SD-WAN QOS](sd-wan-qos.md)
+  - [SD-WAN Header](sd-wan-header.md)
+  - [SD-WAN HA](sd-wan-ha.md)
 - [SD-Access](sd-access.md)
   - [Cisco Catalyst Center](cisco-catalyst-center.md)
-  - [SD-Access Lisp](sd-access-lisp.md)
+  - [SD-Access LISP](sd-access-lisp.md)
   - [SD-Access VXLAN](sd-access-vxlan.md)
   - [SD-Access VXLAN-GPO Header](sd-access-vxlan-gpo-header.md)
   - [SD-Access and Wireless Integration](sd-access-and-wireless-integration.md)
@@ -241,7 +246,7 @@
 
 - [PTP](ptp.md)
 - [SyncE](synce.md)
-- [Flexible NetFlow](flexible-netflow.md)
+
 
 # Wireless
 
@@ -261,12 +266,10 @@
 
 # Layer 1
 
-
 - [G.709](g709.md)
 - [RPR - Resilient Packet Ring](rpr.md)
 - [SRP - Spatial Reuse protocol](srp.md)
 - [MLPPP over ATM](mlppp-over-atm.md)
-- [IRB On the ASR9K](irb-on-the-asr9k.md)
 - [WAN Considerations](wan-considerations.md)
 - [G8032](g8032.md)
 - [Back to Back Frame Relay](back-to-back-frame-relay.md)
@@ -298,14 +301,11 @@
 - [LISP](lisp.md)
   - [LISP Encapsulation](lisp-encapsulation.md)
 - [Multihoming](multihoming.md)
-- [Network Management](network-management.md)
 - [Certbot](certbot.md)
-- [Power Over Ethernet](power-over-ethernet.md)
 - [Wake on LAN](wake-on-lan.md)
 - [Grep](grep.md)
 - [Unknown Command or Computer Name](unknown-command-or-computer-name.md)
 - [Cisco C9000 Catalyst Troubleshooting](cisco-c9000-troubleshooting.md)
-- [Cisco ECMP](cisco-ecmp.md)
 - [Packet Drops](packet-drops.md)
 - [SecureCRT](securecrt.md)
 - [Add Cephfs to Debian](add-cephfs-to-debian.md)

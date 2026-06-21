@@ -2,29 +2,35 @@
 
 ## Definitions
 
-**Definition** --- I have defined this
+**MPL** --- Modern Parking Lot
 
-- This is a clean and easy way
-- To make maintainable [CommonMark]
-- It's supported everywhere
+- Uses [CommonMark]
+- Bold for the abbreviation, which is used in common speech
+- Expansion goes next to it with a hyphen train
+- Items go underneath as bullets 
+- Sort of resembles a parking lot
+- Never has periods on the end
 
 [CommonMark]: https://commonmark.org/
 
 **A** - Single hyphen
 
-**B** -- Double hyphen
+**Two** -- hyphens
 
-**C** --- Triple hyphen
+**Hyphen Train** --- Uses three hyphens
 
 What is a modern definition?
-: It uses the colon in front, but there is no easy way to do line breaks. It's weird about where it puts the first indent.
+: It uses the colon in front, but there is no easy way to do line breaks. It's weird about where it puts the first indent. It's also like, very tightly spaced?
 
-Does it support bullets?
+I guess this would be good for prose? Nope, doesn't respect indents.
+
+Does it support bullets --- or modern parking lot?
 :
 
+- Just bolds the whole thing
 - I mean not really?
 - There's a line space above the top bullet
-- Items like to be off by themselves.
+- Items like to be off by themselves
 
 ## Admonish
 
