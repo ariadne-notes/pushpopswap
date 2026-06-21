@@ -1,6 +1,6 @@
 # Ansible Basics
 
-## Basic ansible
+## Basic Ansible
 
 This was done on a home lab running Debian 11. `tesseract` is my control-node.
 
@@ -13,7 +13,7 @@ This was done on a home lab running Debian 11. `tesseract` is my control-node.
 1. Use an Ansible playbook to ping the devices
 1. Use an Ansible playbook to upgrade the devices
 
-### Add ansible to sources list
+### Add Ansible to sources list
 
 ```console
 echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/ansible.list
@@ -21,7 +21,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 sudo apt update
 ```
 
-### Install ansible
+### Install Ansible
 
 ```console
 sudo apt install ansible

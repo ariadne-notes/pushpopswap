@@ -22,7 +22,7 @@ PROPER = {
     "windows": "Windows", "intel": "Intel", "juniper": "Juniper",
     "openconfig": "OpenConfig", "github": "GitHub",
     "python": "Python", "sonet": "Sonet", "pagent": "Pagent",
-    "cisco's": "Cisco's",
+    "cisco's": "Cisco's", "ansible": "Ansible",
 }
 
 # Minor words that stay lowercase in Title Case (unless first/last word).
