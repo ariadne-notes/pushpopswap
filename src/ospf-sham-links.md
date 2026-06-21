@@ -1,12 +1,12 @@
 # OSPF Sham Links
 
-## The Problem
+## The problem
 
 A customer with L3VPN service via OSPF-BGP-VPNv4 decides to connect two sites together via OSPF backdoor, a direct connection they manage themselves.
 
 When they turn on their private OSPF peering, all the traffic between these two sites now prefers the new link, vs the L3VPN cloud.
 
-## The Solution
+## The solution
 
 Sham links are needed because the routes provided by an L3VPN are `O IA`. When the OSPF backdoor link comes up it will be preferred for two reasons:
 

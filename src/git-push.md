@@ -16,7 +16,7 @@ This is inside of `.git/config`
         fetch = +refs/heads/*:refs/remotes/origin/*
 ```
 
-### Format of Refspec
+### Format of refspec
 
 This is the `fetch` line from above.
 
@@ -25,7 +25,7 @@ This is the `fetch` line from above.
   - `<src>` source ref
   - `<dst>` destination ref
 
-## Updating History
+## Updating history
 
 Making a change on the remote, to the *commit history itself* requires force.
 

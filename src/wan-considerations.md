@@ -4,7 +4,7 @@
 
 - An ordinary connection to the Internet
 
-## Leased Lines
+## Leased lines
 
 - Point-to-point
 - Logically "a wire" between two sites
@@ -60,13 +60,13 @@
 - Much faster
 - Gets expensive when a SLA is required
 
-## MPLS Layer 3 VPN
+## MPLS layer 3 VPN
 
 - Can be multi-site
 - Relatively cheap
 - Requires peering with the provider who carries the routes between sites
 
-## MPLS Layer 2 VPNs
+## MPLS layer 2 VPNs
 
 - Always more expensive.
 - Required if your App needs direct adjacency
@@ -86,7 +86,7 @@
 - Can also offer high SLA
 - Usually easy to ask for more bandwidth
 
-## Fiber Technologies
+## Fiber technologies
 
 
 ### DWDM
@@ -107,7 +107,7 @@
 - Significantly cheaper that DWDM
 - 18 channels is common
 
-### Dark Fiber
+### Dark fiber
 
 - The DIY Solution
 - A business asks an ISP "do you have any fiber I can just .. use?"
@@ -119,13 +119,12 @@
 - Very secure once running
 - Tends to be cheaper
 
-
 ## Cloud
 
 - **Cloud Connect:** Not Internet, but a direct connection to something like AWS, Azure, or Google Cloud.
 - **Cloud On-Ramp:** A similar connection, but made via SD-WAN over DIA.
 
-## Cellular Wireless
+## Cellular wireless
 
 - If there are two numbers, the slower one is the upload.
 - These need to be secured via IPSec or another Overlay Technology.
@@ -137,13 +136,12 @@
 - 9600bps
 - ~1h to transfer 5MB
 
-
-- **GPRS**
+**GPRS**
 
 - 128 Kbps
 - ~5 minutes to transfer 5MB
 
-- **UMTS (3G)**
+**UMTS (3G)**
 
 - 1Mbps
 - ~8 seconds to transfer 5MB
@@ -174,17 +172,11 @@
 - ~16 seconds to upload a 20GB file
 
 
-## Overlay Technologies
+## Overlay technologies
 
-## [IPSec](./ipsec.md)
-
-- IPSec doesn't support routing protocols unless encapsulated in GRE
-
-## [GETVPN](./getvpn.md)
-
-- Doesn't change the outside IPs
-- Does not make an overlay network
-- Native Multicast
+- [IPSec](./ipsec.md)
+- [GETVPN](./getvpn.md)
+- [SDWAN](./sdwan.md)
 
 ## References
 [Leased line - Wikipedia](https://en.wikipedia.org/wiki/Leased_line)

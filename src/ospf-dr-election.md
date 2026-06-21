@@ -1,6 +1,6 @@
 # OSPF DR Election
 
-## DR And BDR
+## DR and BDR
 
 OSPF uses explicit acknowledgments (re-sending the LSAs), so as neighbors and adjacencies grow, the amount of OSPF traffic on a network increases.
 

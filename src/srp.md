@@ -1,4 +1,4 @@
-# SRP - Spatial Reuse protocol
+# SRP - Spatial Reuse Protocol
 
 SRP - Spatial Reuse protocol. This is used for fiber rings, its where the destination nodes pulls the info from the ring so it doesn't loop endlessly.
 

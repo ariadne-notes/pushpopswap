@@ -6,7 +6,7 @@
 - No DR election for this network type
 - Install a /32
 
-## What is Hub and Spoke
+## What is hub and spoke
 
 This network type assumes that spoke sites cannot reach each other directly, but are in the same L3 subnet.
 
@@ -22,7 +22,7 @@ If multicast works (even carried by mGRE) use`point-to-multipoint`.
 
 If multicast does not work, use `point-to-point non-broadcast` and manually define the neighbors under OSPF.
 
-## An Example Problem
+## An example problem
 
 A network is set up on Ethernet.
 
@@ -63,7 +63,7 @@ This will not work.
 - point-to-multipoint
 - point-to-multipoint non-broadcast
 
-### R1 - Doesn't Form a Full Mesh
+### R1 - doesn't form a full mesh
 
 `4.4.4.4` is broken.
 
@@ -78,7 +78,7 @@ Neighbor ID     Pri   State           Dead Time   Address         Interface
 3.3.3.3           0   FULL/  -        00:01:45    10.12.34.3      Ethernet0/0
 ```
 
-### R1 OSPF Debugs Show Adjacency Problems
+### R1 OSPF debugs show adjacency problems
 
 - R1-R4 Hello messages seem to work fine
 - DBD messages from R1 never get to R4.
@@ -133,7 +133,7 @@ R1#
 *Jun  2 23:40:55.909: OSPF-1 HELLO Et0/0: Rcv hello from 2.2.2.2 area 0 10.12.34.2
 ```
 
-### R1 - Routing Table is Weird
+### R1 - routing table is weird
 
 R1 thinks the way to get to R4 is via R2.
 
@@ -152,7 +152,7 @@ O        10.12.34.3/32 [110/10] via 10.12.34.3, 00:35:12, Ethernet0/0
 O        10.12.34.4/32 [110/20] via 10.12.34.2, 00:34:19, Ethernet0/0
 ```
 
-### R1 ARP is Correct.
+### R1 ARP is correct.
 
 L2 programming for a spoke site doesn't matter for Hub-and-Spoke designs.
 
@@ -165,7 +165,7 @@ Internet  10.12.34.3            128   aabb.cc00.4e00  ARPA   Ethernet0/0
 Internet  10.12.34.4            128   aabb.cc00.3e00  ARPA   Ethernet0/0
 ```
 
-### R1 - CEF Is Wrong
+### R1 - CEF is wrong
 
 This is how we know something is very wrong, a paradigm has been broken.
 
@@ -179,7 +179,7 @@ R1# show ip cef 10.12.34.4 detail
   nexthop 10.12.34.2 Ethernet0/0
 ```
 
-### Checking Router LSAs
+### Checking router LSAs
 
 #### Self-Originated Router-LSA on R4
 
@@ -334,7 +334,7 @@ R1# show ip ospf database router
        TOS 0 Metrics: 0
 ```
 
-#### The Capture
+#### The capture
 
 [OSPFv2-p2mp-failing](./captures/routing/OSPFv2-p2mp-failing.pcap)
 
@@ -390,7 +390,7 @@ Internet Control Message Protocol
             Source OSPF Router: 1.1.1.1
 ```
 
-## The OSPFv2 Shortest Path Topology.
+## The OSPFv2 shortest path topology.
 
 OSPF using `point-to-multipoint` assumes the topology looks like this.
 

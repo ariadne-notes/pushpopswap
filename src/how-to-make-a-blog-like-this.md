@@ -1,6 +1,6 @@
 # How to Make a Blog Like This
 
-## Documentation as Code
+## Documentation as code
 
 This blog follows the [Documentation as Code] ethos.
 
@@ -22,7 +22,7 @@ This blog follows the [Documentation as Code] ethos.
 [mdBook]: https://rust-lang.github.io/mdBook/
 [development environment]: https://docs.github.com/en/get-started/learning-to-code/developing-your-project-locally
 
-## My Development Environment
+## My development environment
 
 I use Notepad++ with [Syncthing].
 
@@ -110,15 +110,15 @@ mdbook build
 
 [Click on a SVG]:  https://github.com/bumbu/svg-pan-zoom
 
-## Custom Scripts
+## Custom scripts
 
-### Mermaid Lightbox
+### Mermaid lightbox
 
 - `mermaid-lightbox.js`
 - Enables svg-pan-zoom work with mermaid diagrams
 - Vibecoded
 
-### Editable Extras
+### Editable extras
 
 - `editable-extras.js`
 - modifies `book.js`

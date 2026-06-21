@@ -2,13 +2,13 @@
 
 Control plane traffic is CAPWAP inside of VXLAN-GPO. Dataplane traffic can just ride VXLAN-GPO
 
-## Fabric Design
+## Fabric design
 
 ***FEW*** --- Fabric Enabled wireless
 
 The client mac is the EID.
 
-### SD Access Wireless
+### SD access wireless
 
 - CAPWAP the control plane traffic
 - VXLAN-GPO the data plane, tunnel it to an edge node.
@@ -23,13 +23,13 @@ The client mac is the EID.
 - Join the WLC in Local mode
 - 20ms of latency, max
 
-## Nonfabric Design
+## Nonfabric design
 
 - AKA OTT (Over The Top)
 - Rides VXLAN, not VXLAN aware.
 - Good for existing networks, where the wireless is already working and disruption would be costly.
 
-### CUWN Wireless OTT
+### CUWN wireless OTT
 
 - **CUWN:** Cisco Unified Wireless Network
 
@@ -40,7 +40,7 @@ Everything is CAPWAP inside of VXLAN-GPO. Central switching.
 - CAPWAP Tunnel the control traffic.
 - Dump the traffic at the local switch.
 
-### Mixed Mode OTT
+### Mixed mode OTT
 
 - Some APs tunnel all their traffic back with CAPWAP.
 
@@ -48,7 +48,7 @@ Everything is CAPWAP inside of VXLAN-GPO. Central switching.
 
 - Subnet for the WLC goes into the underlay network, via an IGP.
 
-## IPAM Integraiton
+## IPAM integraiton
 
 - Infoblox
 - Bluecat

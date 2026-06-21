@@ -12,7 +12,7 @@ Each set of managers is a cluster. A cluster provides HA.
 
 For redundancy, use multiple clusters.
 
-## Disaster Recovery
+## Disaster recovery
 
 [Detailed requirements to implement disaster recovery](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/ha-scaling/ios-xe-17/high-availability-book-xe/m-disaster-recovery.html).
 

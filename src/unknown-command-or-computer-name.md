@@ -1,6 +1,6 @@
 # Unknown Command or Computer Name
 
-## The Problem
+## The problem
 
 Typing the wrong commands in Cisco CLI ... the equipment tries to use Telnet.
 
@@ -47,7 +47,7 @@ R1# aoeu
 R1#
 ```
 
-## Longer Verification
+## Longer verification
 
 DNS still works.
 

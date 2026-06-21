@@ -55,7 +55,7 @@ SGT Propagation
 
 ## ZTA
 
-### Client Based
+### Client based
 
 Uses the Cisco Secure Client.
 

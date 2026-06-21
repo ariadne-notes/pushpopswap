@@ -6,7 +6,7 @@ OSPF defaults to 4 paths.
 
 EIGRP defaults to 4 paths.
 
-## ECMP Algorithms
+## ECMP algorithms
 
 Your equipment might support different options.
 

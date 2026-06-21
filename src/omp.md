@@ -43,7 +43,7 @@ graph LR
 \\[ \frac{N(N-1)}{2} \\]
 
 
-## TLOC Route Attributes
+## TLOC route attributes
 
 - Private Address
 - Public Address (the NAT translated address)
@@ -56,7 +56,7 @@ graph LR
 - Tag
 - Weight
 
-## OMP Route Attributes
+## OMP route attributes
 
 OMP routes require OMP peering.
 
@@ -84,7 +84,7 @@ These require a TLOC.
 - VRF
 
 
-### OMP Preference
+### OMP preference
 
 1. Can it resolve?
 1. Route Preference (Intra region > core region. Prefer TR-sourced or ECMP.)
@@ -95,7 +95,7 @@ These require a TLOC.
 1. Lowest System IP
 1. Highest Private TLOC IP from the same site-id.
 
-## Example Network
+## Example network
 
 - Prefer the biz-internet connections.
 
@@ -114,7 +114,7 @@ These require a TLOC.
 | 10.0.0.11        | mpls         | GRE   | 200     | 0          | 10.0.0.11  |
 | 10.0.0.11        | biz-internet | IPsec | 200     | 100        | 10.0.0.11  |
 
-### OMP Routes
+### OMP routes
 
 | VPN | Prefix         | Originator | TLOC (System IP, Color, Encap)   | Origin    | Metric | Site ID |
 |-----|----------------|------------|----------------------------------|-----------|--------|---------|

@@ -9,7 +9,7 @@ These commands should be used with `--` otherwise Git doesn't know if you want a
 
 `--` means file.
 
-## Restore from Index
+## Restore from index
 
 - Copy a file to the working tree from the Index.
 
@@ -25,7 +25,7 @@ Work happens (in the working tree) now this file is broken.
 git restore -- hello.c
 ```
 
-## Restore the Index
+## Restore the index
 
 - Copy a file to the Index from the current commit..
 

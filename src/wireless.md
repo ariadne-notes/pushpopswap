@@ -4,10 +4,10 @@
 
 `show chassis rmi`
 
-## Lightweight Modes
+## Lightweight modes
 
 
-## Client-Serving AP Modes
+## Client-Serving AP modes
 
 - **Local:** This is the default mode. A local mode AP tunnels all client traffic, for all WLANs, in CAPWAP, to the controller. In this mode, the AP’s radios are operational only when the AP is connected to its controller. Local mode APs do not support mesh operation. All AP models support Local mode.
 
@@ -15,7 +15,7 @@
 
 - **Bridge and Flex+Bridge:** These modes are used in mesh deployments, where wireless rather than wired backhaul is used for CAPWAP connectivity. Not all AP models support these modes; see the relevant mesh documentation for information about support for mesh operation.
 
-## Network Management AP Modes
+## Network management AP modes
 
 - **Monitor:** In this mode, the AP radios are dedicated to monitoring the Wi-Fi channel for RRM and rogue detection. All AP models support this mode.
 

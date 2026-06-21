@@ -28,7 +28,7 @@ BFD Control is sent as SRC UDP 49512 --> Destination 3784
 
 BFD Payload is sent as SRC UDP 3785  --> Destination 3785
 
-## BFD Async without Echo
+## BFD async without echo
 
 - Control plane oriented
 
@@ -47,7 +47,7 @@ BFD Payload is sent as SRC UDP 3785  --> Destination 3785
 └───────┘ ◄────────────────────────────── └───────┘
 ```
 
-## BFD Async with Echo
+## BFD async with echo
 
 - Data plane oriented
 
@@ -81,7 +81,7 @@ Peer B's BFD process does not handle these packets, they are forwarded as data t
 ```
 
 
-## BFD State Machine
+## BFD state machine
 
 Courtesy of the RFC
 
@@ -118,7 +118,7 @@ DOWN│    │ INIT │--------------------->│  UP  │    │INIT, UP
 ```
 
 
-## IOS-XR Commands
+## IOS-XR commands
 
 ### Multipath
 
@@ -128,7 +128,7 @@ bundle coexistence bob-blb logical
 show tech-support routing bfd file
 ```
 
-### Take The Session Down If Latency Grows To 150ms For A Single Echo Packet
+### Take the session down if latency grows to 150ms for A single echo packet
 
 ```console
 bfd fast detect 
@@ -136,7 +136,7 @@ bfd multiplier 50
 echo latency detect
 ```
 
-### Take The Session Down If Latency Grows To 300ms For A Single Echo Packet
+### Take the session down if latency grows to 300ms for A single echo packet
 
 ```console
 bfd fast detect 
@@ -144,7 +144,7 @@ bfd multiplier 50
 bfd echo latency detect percentage 200
 ```
 
-### Take The Session Down If The Latency Grows To 150ms For 3 Consequitive Echo Packets
+### Take the session down if the latency grows to 150ms for 3 consequitive echo packets
 
 ```console
 bfd fast detect
@@ -152,7 +152,7 @@ bfd multiplier 50
 bfd echo latency detect percentage 100 count 3
 ```
 
-### Disable Echo Mode
+### Disable echo mode
 
 ```console
 bfd 
@@ -160,7 +160,7 @@ interface g0/0/0/0
  echo disable
 ```
 
-### Protecting The BFD Data-Plane Packets From QoS
+### Protecting the BFD Data-Plane packets from QoS
 
 `192.168.100.1 <-> 192.168.100.2`
 
@@ -189,9 +189,9 @@ interface TenGig <>
 !
 ```
 
-## Enabling BFD On RSVP (IOS)
+## Enabling BFD on RSVP (IOS)
 
-### A Config
+### A config
 
 ```console
 ip rsvp signalling bfd hello

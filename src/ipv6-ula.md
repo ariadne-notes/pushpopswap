@@ -15,13 +15,13 @@ Sort of but not quite equivalent to [RFC 1918].
 - Take the form, `fdxx:xxxx:xxxx::/48`
 - Five bytes or 40 bits of entropy
 
-## Site Prefixes
+## Site prefixes
 
 \\( 2^{40} = 1{,}099{,}511{,}627{,}776 \\)
 
 Approximately 1 trillion unique site prefixes.
 
-## Site Prefix Generation
+## Site prefix generation
 
 Each site should generate a unique ULA using a [RNG].
 

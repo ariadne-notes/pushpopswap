@@ -10,7 +10,7 @@ Subnet Sizes (going up) - `256, 512, 1024, 2048`
 
 Subnet Sizes (going down) - `128, 64, 32, 16, 8, 4, 2, 1`
 
-## Subnet Examples
+## Subnet examples
 
 `/24` is 256 IPs. Most gear complains if you use `.0` or `.256`, so we say 254 usable hosts.
 

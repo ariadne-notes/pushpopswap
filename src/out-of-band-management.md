@@ -40,12 +40,12 @@ A different routing table, not the global table.
 
 Splitting the network into an in-band, and OOB network via VRFs.
 
-## In-Band Access Examples
+## In-Band access examples
 
 - Internet
 - Company Network
 
-## Out-of-Band Examples
+## Out-of-Band examples
 
 - NMI network accessible via VPN only to Network Admins.
 - NMI Accessible via Jump Server.

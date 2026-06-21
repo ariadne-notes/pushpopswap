@@ -39,7 +39,7 @@ pubd             : Running
 ```
 
 
-## Get an IP Address
+## Get an IP address
 
 
 This is done from the linux commandline via curl
@@ -67,7 +67,7 @@ ariadne@tesseract:~$ curl --insecure --user admin:cisco123 \
 ```
 
 
-## Set an IP Address
+## Set an IP address
 
 
 More command line, just with a PATCH message.

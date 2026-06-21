@@ -2,7 +2,7 @@
 
 - Only works if the attached device sends a BPDU. Cannot prevent a switch from being attached to a port. 802.1x helps with that.
 
-## Detects A BPDU, And Err-Disables A Port
+## Detects A BPDU, and Err-Disables A port
 
 The global command only affects ports that have portfast already turned on, i.e. this is an edge feature.
 
@@ -12,7 +12,7 @@ switch(config)# spanning-tree portfast bpduguard default
 
 ... should be set so access ports go `errdisable` when a rogue switch is connected and require an operator to correct.
 
-## Seeing `err-disabled` Status
+## Seeing `err-disabled` status
 
 ```console
 switch# show int status
@@ -24,7 +24,7 @@ Et3/0                        connected    trunk        auto   auto unknown
 Et3/1                        connected    1            auto   auto unknown
 ```
 
-## Turning On Automated Recovery
+## Turning on automated recovery
 
 ```console
 switch(config)# errdisable recovery cause bpduguard

@@ -5,12 +5,12 @@
 16-bit ASN - 65,535
 32-bit ASN - 4,294,967,295
 
-### Private Numbers
+### Private numbers
 
 - 64,512 – 65,534
 - 4,200,000,000 – 4,294,967,294
 
-## BGP Path Attributes
+## BGP path attributes
 
 [RFC 4271 - BGP-4](https://www.rfc-editor.org/rfc/rfc4271#section-5)
 
@@ -33,12 +33,12 @@
 | ORIGINATOR_ID      | Optional Non-Transitive   |
 | CLUSTER_LIST       | Optional Non-Transitive   |
 
-## BGP Uses TCP
+## BGP uses TCP
 
 - Port 179
 - BGP is sensitive to IP fragmentation
 
-## Session Types
+## Session types
 
 - iBGP Administrative distance of 200
 - eBGP Administrative distance of 20
@@ -50,7 +50,7 @@
 - Check if the current AS_PATH has our AS.
 - Prepend AS into AS_PATH
 
-## BGP Packet Types
+## BGP packet types
 
 | Type | Name | Functional Overview |
 |------|--------------|--------------------------------------------------|
@@ -65,7 +65,7 @@
 - The default timer is 60 seconds with 180 seconds for hold time. This means worst-case is 3 minutes to fail-over.
 - BGP `aggregate-address` only works if there is a subnet inside the aggregate range in BGP.
 
-## Working With BGP
+## Working with BGP
 
  - Only consider traffic in one direction at a time
  - Accepting a route will affect outgoing traffic
@@ -77,13 +77,13 @@ On Cisco IOS `bgp soft-reconfig-backup` tells the router "if you must, save a en
 
 Soft reconfig is ancient, pre-RFC.
 
-## Soft Reconfig via Route Refresh (trusting the other device)
+## Soft reconfig via route refresh (trusting the other device)
 
 `clear ip bgp <neighbor_ip> soft in`[^clear-soft]
 
 [^clear-soft]: https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/xe-16/irg-xe-16-book/bgp-4-soft-configuration.html
 
-## BGP Best Path Selection
+## BGP best path selection
 
 ```text
 - Higher Weigth                                       
@@ -114,7 +114,7 @@ Soft reconfig is ancient, pre-RFC.
 - Controls traffic Outgoing traffic.
 - Only shared between iBGP peers, used to determine the exit. Higher is better.
 
-### AS Path
+### AS path
 
 These read left to right like a book. This prefix was most recently from AS `7018`.
 
@@ -123,7 +123,7 @@ These read left to right like a book. This prefix was most recently from AS `701
             ^ this means IGP, and AS 15 has an IGP route for it like OSPF or EIGRP
 ```
 
-### Next Hop
+### Next hop
 
 1. eBGP, routers in different AS, destination outside AS.  The Next hop will be the advertising router.
 1. iBGP, routers in same AS,      destination inside AS.   The Next hop will be the advertising router.
@@ -185,13 +185,13 @@ Usually used to tag routes from a specific customer.
 For route reflectors
 The origaning router puts its `Router_ID` here. If it sees this, it knows a loop as occured.
 
-#### BGP By Default Will Summarize
+#### BGP by default will summarize
 
 Use `no auto-summary`.
 
 Using redistribute under BGP will make the resulting route show up with an orign code of `incomplete`.
 
-#### Sending A Default Route
+#### Sending A default route
 
 `neighbor A.B.C.D default-originate`
 
@@ -203,7 +203,7 @@ To get iBGP routers to update the next-hop to be themselves when advertising to 
 
 This makes it so other iBGP routers don't need reachability information for the physical link to the next AS.
 
-#### BGP Neighbor States
+#### BGP neighbor states
 
 **Idle**
 
@@ -219,7 +219,7 @@ This makes it so other iBGP routers don't need reachability information for the 
 
 
 
-#### Fixing Next-Hop Issues
+#### Fixing Next-Hop issues
 
 Just because the route shows up in `show ip bgp` doesn't mean it will install. BGP needs to be able to reach the next-hop.
 

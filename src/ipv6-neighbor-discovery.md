@@ -12,7 +12,7 @@ In v6, routers can just advertise the prefix of the attached subnet and options 
 
 **RDNSS** --- Recursive DNS Server
 
-## Router Advertisements
+## Router advertisements
 
 From RFC [4861]: Neighbor Discovery for IP version 6 (IPv6).
 
@@ -33,7 +33,7 @@ packet
   128-159: "Options ..."
 ```
 
-## RDNS Server Option
+## RDNS server option
 
 From RFC [8106]: IPv6 Router Advertisement Options for DNS Configuration
 
@@ -48,7 +48,7 @@ packet
   64-127: "Addresses of IPv6 Recursive DNS Servers"
 ```
 
-## Packet Capture
+## Packet capture
 
 Taken from my home router 13-July-2026, I've modified the IPs.
 

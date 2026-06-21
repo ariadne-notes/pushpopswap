@@ -46,7 +46,7 @@ This service doesn't provide strong authentication.
 ```
 
 
-## ESP/UDP Encapsulation
+## ESP/UDP encapsulation
 
 This is a version of ESP that's been extended to provide authentication.
 

@@ -53,7 +53,7 @@ sequenceDiagram
     KS -->> GM: HDR, encryption and authentication, responder ID, authentication data,<br/>sequence, group security association, key download
 ```
 
-### Migration Help
+### Migration help
 
 [Walkthrough](https://www.cisco.com/c/en/us/td/docs/routers/ios-xe/security-vpn/security-vpn/m_sec-get-vpn-gikev2.html)
 

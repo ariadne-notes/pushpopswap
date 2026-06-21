@@ -2,7 +2,7 @@
 
 Most of this is based on the NIST definitions.
 
-## NIST Characteristics
+## NIST characteristics
 
 **On-Demand**
 
@@ -29,7 +29,7 @@ Most of this is based on the NIST definitions.
 
 - Resource usage is monitored controlled and reported
 
-## Service Models
+## Service models
 
 **SaaS** --- Software as a Service
 

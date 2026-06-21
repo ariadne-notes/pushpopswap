@@ -20,7 +20,7 @@ Refers to SGTs as *Scalable Groups*
 - Cisco DNA Advantage
 - 3, 5, and 7 year terms
 
-### License Features
+### License features
 
 [Switch Features](https://www.cisco.com/c/m/en_us/products/software/dna-subscription-switching/en-sw-sub-matrix-switching.html)
 

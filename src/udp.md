@@ -1,6 +1,6 @@
 # UDP
 
-## UDP Checksum
+## UDP checksum
 
 UDP does try to send error-free packets by including a checksum, the below via the RFC
 
@@ -16,10 +16,11 @@ UDP does try to send error-free packets by including a checksum, the below via t
 > checksum  value means that the transmitter  generated  no checksum  (for
 > debugging or for higher level protocols that don't care).
 
-## UDP Header
+## UDP header
 
 ```plain
- 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 ┌────────────────────────────────┬───────────────────────────────┐
 │          Source Port           │       Destination Port        │
 ├────────────────────────────────┼───────────────────────────────┤
@@ -29,7 +30,7 @@ UDP does try to send error-free packets by including a checksum, the below via t
 └────────────────────────────────►
 ```
 
-## TFTP Read Request
+## TFTP read request
 
 ```plain
 Frame 115: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interface -, id 0
@@ -49,7 +50,7 @@ Frame 115: 69 bytes on wire (552 bits), 69 bytes captured (552 bits) on interfac
         Type: octet
 ```
 
-## TFTP Data Packet
+## TFTP data packet
 
 ```plain
 Frame 116: 562 bytes on wire (4496 bits), 562 bytes captured (4496 bits) on interface

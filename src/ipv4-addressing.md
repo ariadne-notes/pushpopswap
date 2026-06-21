@@ -1,6 +1,6 @@
 # IPv4 Addressing
 
-## Address Ranges
+## Address ranges
 
 | Range              | Purpose                          | RFC           | IPs         |
 |--------------------|----------------------------------|---------------|-------------|

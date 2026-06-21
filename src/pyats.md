@@ -11,7 +11,7 @@ PyATS includes tools:
 **Genie** --- Manages node representations
 
 
-#### Unicon - Connection State Machine
+#### Unicon - connection state machine
 
 [Unicon] manages the different states a connection could be in.
 
@@ -23,7 +23,7 @@ PyATS includes tools:
 - --More--
 - "Press Return to get started"
 
-#### Genie - Python Objects
+#### Genie - Python objects
 
 [Genie] uses [models] to create objects that describe operational states.
 
@@ -32,7 +32,7 @@ PyATS includes tools:
 [models]: https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/models
 
 
-## PyATS Install
+## PyATS install
 
 I already have python3 installed.
 

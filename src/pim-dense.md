@@ -1,4 +1,4 @@
-# Pim Dense
+# PIM Dense
 
 Based on RFC 3973 Protocol Independent Multicast Dense Mode (PIM-DM)
 

@@ -1,4 +1,4 @@
-# BGP load Balancing
+# BGP Load Balancing
 
 ## Inbound
 
@@ -15,10 +15,10 @@
 - Filter the provider routes and only install a subset into the RIB.
 - Use AS_Path filtering
 
-## BGP Multipath
+## BGP multipath
 
 - Uses the `maximum-paths` keyword.
 
-## Do not become a Transit Network
+## Do not become a transit network
 
 - Filter your routes, only advertise subnets you own.

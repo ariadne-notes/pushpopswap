@@ -120,14 +120,14 @@ MST keeps track of a few things:
 
 
 
-## Basic Config
+## Basic config
 
 ```console
 spanning-tree mode mst
 ```
 
 
-## More Involved Config
+## More involved config
 
 ```console
 default spanning-tree mst configuration
@@ -137,7 +137,7 @@ spanning-tree mst configuration
  instance 1 vlan 10, 20, 30, 40
 ```
 
-### Config Validation
+### Config validation
 
 ```console
 S21# show spanning-tree mst configuration 

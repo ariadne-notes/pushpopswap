@@ -42,7 +42,7 @@ Used to ensure the LSA was transmitted without corruption. Everything is checked
 
 LSAs time out in an hour, and are refreshed every 30 minutes. LSA Age increments when they go through routers.
 
-## Packet Types
+## Packet types
 
 | Type | Name                                  | Purpose                                                         |
 |------|---------------------------------------|---------                                                        |
@@ -52,7 +52,7 @@ LSAs time out in an hour, and are refreshed every 30 minutes. LSA Age increments
 | 4    | **Link-State Update (LSU)**           | Sending a specific LSA.                                         |
 | 5    | **Link-State Acknowledgment (LSAck)** | Acknowledging a specific LSA.                                   |
 
-## Hello Packets
+## Hello packets
 
 These things must match for an adjacency to form
 
@@ -72,7 +72,7 @@ These must not match
 
 Check with `debug ip ospf event`
 
-## Identical Databases
+## Identical databases
 
 Each router can perform it's own SPT via [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm).
 
@@ -112,7 +112,7 @@ Can also check with [checksums](https://en.wikipedia.org/wiki/Fletcher%27s_check
 
 `show ip ospf | i Checksum`
 
-## Adjacency State Machine
+## Adjacency state machine
 
 | State | Description |
 | ----------- |-------------|
@@ -124,7 +124,7 @@ Can also check with [checksums](https://en.wikipedia.org/wiki/Fletcher%27s_check
 | Loading     | Router DB has been exchanged, router is requesting specific LSAs. |
 | Full        | LSDBs for this area are identical on both sides. |
 
-## Routing Hierarchy
+## Routing hierarchy
 
 OSPF has four levels of routing hierarchy.
 
@@ -137,7 +137,7 @@ OSPF has four levels of routing hierarchy.
 
 The `bit E` is what makes E1 and E2 routes. The bit being set is an E2 route, which is considered less preferred.
 
-## Default Route
+## Default route
 
 OSPF has two ways of originating a default route.
 
@@ -155,7 +155,7 @@ The defaults make 100Mbps and above all the same cost.
 auto-cost reference-bandwidth 40,000
 ```
 
-## Area Summary
+## Area summary
 
 These will show up as an `O IA` route in OSPF, and a route-to-null on the ABR.
 
@@ -183,7 +183,7 @@ router ospfv3 1
 
 You can use the same command to tell the router to ... exclude these routes from the backbone, via the `not-advertise` keyword.
 
-### Using Range
+### Using range
 
 The area command is now a route-filter.
 
@@ -255,14 +255,14 @@ router ospfv3 1
   area 1 filter-list prefix PREFIX_LIST_v6 in
 ```
 
-### Area Types
+### Area types
 
-#### No External Network Connections
+#### No external network connections
 
 - **Stub:** From the RFC, these don't have LSA-5 in them, so no external routes. A stub gets a default injected.
 - **Totally Stubby:** A Cisco area, This blocks LSA-3, LSA-4, and LSA-5. The only injected LSA is a LSA-3 from the ABR for the default.
 
-#### External Network connections
+#### External network connections
 
 - **NSSA:** From the RFC, this is a stub area with an ASBR. The LSAs within the area are LSA-7, and they get converted to LSA-5 by the ABR.
 - **Totally Stubby NSSA:**, same as above, used to connect an external network, a default is injected as a LSA-3.

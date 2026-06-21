@@ -27,9 +27,9 @@ This solution relies on:
              └──────────────┘
 ```
 
-## Cisco Side
+## Cisco side
 
-### AAA Config
+### AAA config
 
 ```console,editable
 aaa new-model
@@ -47,10 +47,10 @@ line vty 0 15
  transport input ssh
 ```
 
-## Univention UCS Side
+## Univention UCS side
 
 
-### LDAP - Create the Groups
+### LDAP - create the groups
 
 This loads the `dc=` stuff into `ldap_base`
 
@@ -76,7 +76,7 @@ udm groups/group create \
   --set description="Read-only RADIUS access to network devices"
 ```
 
-### LDAP - Verifying The Groups
+### LDAP - verifying the groups
 
 ```console,editable
 udm groups/group list --filter name="RADIUS Network Admins"
@@ -84,7 +84,7 @@ udm groups/group list --filter name="RADIUS Network Admins"
 udm groups/group list --filter name="RADIUS Network Read Only"
 ```
 
-### Add Users
+### Add users
 
 Users need to be added to this group directly.
 
@@ -96,13 +96,13 @@ udm groups/group modify \
   --append users="uid=ariadne,cn=users,$ldap_base"
 ```
 
-### Verify Users
+### Verify users
 
 ```console,editable
 udm users/user list --filter uid=ariadne | grep -i group
 ```
 
-### FreeRADIUS Clients
+### FreeRADIUS clients
 
 ```console,editable
 cat >> /etc/freeradius/3.0/clients.conf << 'EOF'
@@ -115,7 +115,7 @@ client internal_network {
 EOF
 ```
 
-### FreeRADIUS Cisco AV Pairs
+### FreeRADIUS Cisco AV pairs
 
 ```console,editable
 eval $(ucr shell)
@@ -141,13 +141,13 @@ EOF
 test aaa group radius ariadne my-password legacy
 ```
 
-## Testing On UCS
+## Testing on UCS
 
 ```console,editable
 radtest <user-in-ldap> <ldap-password> <server-ip> 0 <FreeRADIUS-secret>
 ```
 
-### Do Packets Arrive
+### Do packets arrive
 
 ```console,editable
 tcpdump -i any -n udp port 1812
@@ -162,7 +162,7 @@ systemctl status freeradius
 freeradius -X
 ```
 
-## After It's Working, RSYNC It
+## After it's working, RSYNC it
 
 
 

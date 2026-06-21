@@ -12,7 +12,7 @@ Start with a `/24`, eight bits, or values from 0 to 256.
 
 `0000 0000`
 
-## 100 Hosts
+## 100 hosts
 
 
 A subnet needs 100 hosts, to represent that in binary, we'd need at least 7 bits, or 128.
@@ -21,13 +21,13 @@ A `/24` would be too large, (256 IPs), remove a bit, and we get a `/25`.
 
 `10.0.0.0/25.`
 
-## Borrowing One Bit
+## Borrowing one bit
 
 `0000 0000`
 
 `1000 0000`
 
-## 20 Hosts
+## 20 hosts
 
 
 We already spent the first portion of the address space, from 0 to 127.

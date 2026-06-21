@@ -1,6 +1,6 @@
-# How To Take Notes
+# How to Take Notes
 
-## The Process
+## The process
 
 ### Consistency
 

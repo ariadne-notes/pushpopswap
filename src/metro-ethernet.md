@@ -1,6 +1,6 @@
 # Metro Ethernet
 
-## General Caveats
+## General caveats
 
 - Shut down interfaces before configuring (best practice on ME3400)
 - **No DTP** — dynamic trunk negotiation does not exist
@@ -11,9 +11,9 @@
 
 ---
 
-## Port Types (MEF Terminology)
+## Port types (MEF terminology)
 
-### UNI — User Network Interface
+### UNI — user network interface
 
 - Connects to **customer end devices** (phones, computers, routers at the customer site)
 - All ports except uplinks default to UNI
@@ -22,21 +22,21 @@
 - **No CDP**
 - **No Link Aggregation**
 
-### ENI — Enhanced Network Interface
+### ENI — enhanced network interface
 
 - Connects to **routers or switches** (slightly trusted devices)
 - Supports **STP**
 - Supports **CDP**
 - Supports **Link Aggregation**
 
-### NNI — Network Node Interface
+### NNI — network node interface
 
 - **Network-to-Network** — connects to other provider nodes/uplinks
 - **No Layer 2 protocol filtering** — passes BPDUs, CDP, etc. transparently
 
 ---
 
-## Port Type Comparison
+## Port type comparison
 
 | Feature              | UNI | ENI | NNI |
 |----------------------|-----|-----|-----|

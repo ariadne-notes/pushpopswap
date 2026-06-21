@@ -33,14 +33,14 @@ address-family ipv4 unicast vrf red
  neighbor 4.4.4.4 activate ! this is if you speak BGP to them. It could be any VRF aware IGP. You need to redistribute from the IGP into BGP
 ```
 
-## Route Distinguishers
+## Route distinguishers
 
 
 - ALL CE routes from ALL VRFs are placed into the same VPNv4 table. What makes them unique to vrfs are the RDs.
   - Transparent to the customer, and only lives on the PE router
   - `100:100:192.168.10/24`
 
-## Route Targets
+## Route targets
 
 - This is the BGP extended community
 - `route-target export` adds the community to the outbound update

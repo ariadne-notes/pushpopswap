@@ -30,7 +30,7 @@ If a port, is running portfast, this feature will transmit a few BPDUs when the 
 spanning-tree portfast bpdufilter default
 ```
 
-## Per Interface
+## Per interface
 
 This port will never send BPDUs.
 

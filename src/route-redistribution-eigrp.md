@@ -1,16 +1,16 @@
 # Route Redistribution EIGRP
 
-## Seed Metric
+## Seed metric
 
 | Administrative Distance | Metric   |
 |-------------------------|----------|
 | 170                     | Infinity |
 
-## Set Seed Metric
+## Set seed metric
 
 `default-metric bandwidth delay reliability load mtu`
 
-## Route Feedback Solutions
+## Route feedback solutions
 
 **The Problem**
 

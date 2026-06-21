@@ -69,7 +69,7 @@ SSO/NSF/NSR are all vendor features that do no share state with the neighbor. GR
 
 This means the neighbor has shared the its entire routing table.
 
-## Graceful Restart
+## Graceful restart
 
 **Restart Timer**
 
@@ -79,7 +79,7 @@ If I drop the BGP session, Please wait this long before you stop forwarding me m
 
 Once I send an open message, that means I'm working, so please give me this long before flushing my routes. (Default is 6 minutes)
 
-## Graceful Restart Mechanics
+## Graceful restart mechanics
 
 This is a BGP Example.
 

@@ -1,6 +1,10 @@
-# STDM
+# TDM
 
-The common STDM system in the US is T-Carrier.
+The common TDM system in the US is T-Carrier.
+
+**TDM**
+
+- Time-Division Multiplexing
 
 **STDM**
 
@@ -56,7 +60,7 @@ The common STDM system in the US is T-Carrier.
 
 - Access Circuit Redundancy.
 
-## Cisco CEM Terms
+## Cisco CEM terms
 
 - **ACR** - Adaptive Clock Recovery, A technique to recovery the clock based on the fill level of the jitter buffer.
 

@@ -1,6 +1,6 @@
 # LISP Encapsulation
 
-## A Packet (an ICMP Request)
+## A packet (an ICMP request)
 
 [Capture is here](https://github.com/ariadne-notes/networking/blob/main/packet-captures/lisp/lisp-icmp-ping.pcapng)
 
@@ -66,7 +66,7 @@ Internet Control Message Protocol
 0020  28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37   ()*+,-./01234567
 ```
 
-## Lisp Packet In The RFC
+## Lisp packet in the RFC
 
 ```plain
 Farinacci, et al.             Experimental                     [Page 15]

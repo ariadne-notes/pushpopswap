@@ -7,13 +7,13 @@ This command was added to Git in 2019 (2.23), after user feedback that `checkout
 >[!IMPORTANT]
 > The destructive form of this command is `--discard-changes`.
 
-## Make A New Branch
+## Make A new branch
 
 ```console
 git switch -c newbranch
 ```
 
-## Make A New Branch From A Specific Commit
+## Make A new branch from A specific commit
 
 ```console
 git switch -c newbranch <commit>

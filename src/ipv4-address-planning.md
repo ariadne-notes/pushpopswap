@@ -4,7 +4,7 @@
 2. Plan the ipv4 range
 3. Document the plan
 
-## Example Standards
+## Example standards
 
 - Statically assign network infrastructure
 - User devices are DHCP.
@@ -17,11 +17,11 @@
 - How many IPs are needed?
 - Do any devices need to be reachable from the outside?
 
-## Best Practices
+## Best practices
 
 - Address internal hosts with RFC1918 addresses.
 
-### Recommended Networks
+### Recommended networks
 
 | Purpose                | Size  |
 | ---------------------- | ----- |

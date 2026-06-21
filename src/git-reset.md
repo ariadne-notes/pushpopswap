@@ -4,7 +4,7 @@ Reset changes what commit `HEAD` points to. This is one way to undo a bad local 
 
 Reset always modifies history.
 
-## Soft Reset
+## Soft reset
 
 AKA, *Squashing*
 
@@ -21,7 +21,7 @@ git reset --soft HEAD~3
 git commit
 ```
 
-## Mixed Reset
+## Mixed reset
 
 Creates Intermediate Commits.
 
@@ -41,7 +41,7 @@ git add file4.c
 git commit -m "Final commit"
 ```
 
-## Hard Reset
+## Hard reset
 
 > [!CAUTION]
 > This erases uncommitted work. This creates dangling local commits.

@@ -15,7 +15,7 @@ The sequence of `Cluster_IDs` through which the route has passed. If a router se
 - The router that introduced the route into the AS.
 - Used to prevent loops between clients.
 
-## Route Reflection Rules
+## Route reflection rules
 
 
 A RR will not change any attributes of a route.
@@ -29,7 +29,7 @@ A RR will not change any attributes of a route.
 - Route reflectors can be clients of each other. This causes extra overhead.
 - If multiple route reflectors server the same cluster they should have the same `Cluster_ID`.
 
-## BGP Route Reflectors Loop Prevention
+## BGP route reflectors loop prevention
 
 - If a BGP router that receives a route from an iBGP neighbor in the incoming update detects the presence of its own Router-ID in the Originator-ID attribute it will reject the update.
 - If a BGP router that receives a route from an iBGP neighbor is configured to operate as a route reflector and in the incoming update detects the presence of its own `Cluster-ID` in the

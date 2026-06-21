@@ -1,6 +1,6 @@
 # OSPF LSAs
 
-## Type 1 - Router
+## Type 1 - router
 
 ### DR
 
@@ -54,7 +54,7 @@ R4#show ip ospf database router 4.4.4.4
        TOS 0 Metrics: 10
 ```
 
-## Type 2 - Network
+## Type 2 - network
 
 ```console
 R4# show ip ospf database network 

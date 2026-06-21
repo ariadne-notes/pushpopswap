@@ -12,7 +12,7 @@ Traffic types that aren't great at being point-to-point.
 
 ## Types
 
-### Layer 2 Overlay
+### Layer 2 overlay
 
 - Anycast gateway enabled
   - Flooding is disabled
@@ -23,7 +23,7 @@ Traffic types that aren't great at being point-to-point.
   
 Flooding uses a multicast p2mp tunnel.
 
-### Layer 3 Overlay
+### Layer 3 overlay
 
 Stretched subnets, with Anycast gateways.
 
@@ -58,9 +58,9 @@ Cisco extended the VXLAN header to include SGTs (Now called Scalable Group Tags)
 
 Communication between VNs must go to a fusion router or a firewall.
 
-## SD Access Nodes
+## SD access nodes
 
-### Control Plane
+### Control plane
 
 - LISP MS/MR databases Endpoint-to-location, or EID-to-RLOC
 - Each node contains the full database
@@ -69,7 +69,7 @@ Communication between VNs must go to a fusion router or a firewall.
   - IPv6
   - MAC Address
 
-### Fabric Edge
+### Fabric edge
 
 - AKA FE.
 - Identifies and Auths wired endpoints.
@@ -80,12 +80,12 @@ Communication between VNs must go to a fusion router or a firewall.
 - Provides the guest functionality for wireless guest.
 - Is a LISP xTR, with an anycast gateway, with overlay host protocols, (like DHCP).
 
-### Fabric Border
+### Fabric border
 
 
 - Connects other L3 networks to SDA fabric.
 
-#### Fabric Border Nodes Types
+#### Fabric border nodes types
 
 - **Border:** Known Destinations: datacenter, private cloud.
 - **Default Border:** Unknown traffic, Internet
@@ -93,7 +93,7 @@ Communication between VNs must go to a fusion router or a firewall.
 
 The border nodes do context changes, going from one VRF to another.
 
-### Fabric Intermediate
+### Fabric intermediate
 
 Only does IP transport
 
@@ -101,7 +101,7 @@ Only does IP transport
 - Multicast
 
 
-## Fabric Edge Onboarding
+## Fabric edge onboarding
 
 - (Method 1) Open Auth or MAB, user connects to a port -> host pool.
 - (Method 2) 802.1x authenticates the device -> host pool.
@@ -110,15 +110,15 @@ Only does IP transport
 - Host address is now an EID (MAC, /32 IPv4, /128 IPv6), that can be registered with the control plane node.
 - Control plane signaling is LISP, dataplane is managed via VXLAN-GPO.
 
-## Fusion Device
+## Fusion device
 
 Lets devices talk between VNs.
 
-## Policy Management
+## Policy management
 
 SGACLs, via ISE.
 
-## Site Size
+## Site size
 
 | Size         | Endpoints | WLCs | APs    | IP Pools | VNs | BNs | CPs | ENs  | Notes                                     |
 |--------------|-----------|------|--------|----------|-----|-----|-----|------|-------------------------------------------|

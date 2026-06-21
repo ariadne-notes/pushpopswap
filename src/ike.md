@@ -49,7 +49,7 @@ Retransmissions use the same Message ID.
 
 Responses use the same Message ID.
 
-## Process Flow
+## Process flow
 
 ```mermaid
 sequenceDiagram

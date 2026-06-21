@@ -12,7 +12,7 @@ The best practice is to configure this on every port connected to hosts.
 > This stops TCNs, which cause the max-age timer to reduce to the duration of the forward delay on receipt of a TCN.
 
 
-## Hosts wich require Portfast
+## Hosts wich require portfast
 
 - PXE
 - DHCP

@@ -2,19 +2,19 @@
 
 Always name branches as lowercase, as case-sensitive branches do not work across all operating systems.
 
-## Create a New Branch
+## Create a new branch
 
 ```console
 git branch --copy new-branch
 ```
 
-### Create a Branch From a Specific Branch
+### Create a branch from a specific branch
 
 ```console
 git branch --copy new-branch old-branch
 ```
 
-## Delete a Branch
+## Delete a branch
 
 Only works if it's fully merged.
 
@@ -22,7 +22,7 @@ Only works if it's fully merged.
 git branch --delete dev
 ```
 
-## Delete a Remote Branch
+## Delete a remote branch
 
 Only works if it's fully merged.
 
@@ -30,13 +30,13 @@ Only works if it's fully merged.
 git branch --delete --remotes dev
 ```
 
-## Move a Branch
+## Move a branch
 
 ```console
 git branch --move old-branch new-branch
 ```
 
-## See all Branches
+## See all branches
 
 ```console
 git branch --all

@@ -9,7 +9,7 @@ ip address add 10.0.20.20/24 dev eth0
 ip route add default via 10.0.20.1
 ```
 
-## Setting Addresses after it's booted
+## Setting addresses after it's booted
 
 
 ```console

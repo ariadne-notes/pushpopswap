@@ -1,6 +1,6 @@
 # Route Redistribution OSPF
 
-## Seed Metrics
+## Seed metrics
 
 | Administrative Distance | Source Protocol | Metric   | Route Type |
 |-------------------------|-----------------|----------|------------|

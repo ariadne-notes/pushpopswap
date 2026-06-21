@@ -27,7 +27,7 @@
 
 - Combing tunnels with dual-stack.
 
-## Native Mode
+## Native mode
 
 Both stacks are running on clients. The clients request A and AAAA records near simultaneously.
 
@@ -42,7 +42,7 @@ Do whatever is fastest.
 - Reduces MTU by 20 bytes.
 - The preferred tunnel is GRE.
 
-## Automatic Tunnels
+## Automatic tunnels
 
 **6to4**
 
@@ -62,7 +62,7 @@ Do whatever is fastest.
 
 - Much like NAT
 
-## DNS64 And NAT64
+## DNS64 and NAT64
 
 **DNS64**
 

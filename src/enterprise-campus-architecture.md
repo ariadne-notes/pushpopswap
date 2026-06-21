@@ -2,29 +2,29 @@
 
 The C9000-L series, does not support Catalyst Center, and has lower stackwise Speeds.
 
-## Two Tier Collapsed Core
+## Two tier collapsed core
 
 ![cisco-campus-two-tier-collapsed-core-cisco](./images/cisco-campus/cisco-campus-two-tier-collapsed-core-cisco.jpg)
 
 - The core and distribution switches are the same
 - The center is running StackWise Virtual
 
-## Three Tier
+## Three tier
 
 ![cisco-campus-three-tier-with-network-services-layer](./images/cisco-campus/cisco-campus-three-tier-with-network-services-layer.jpg)
 
-## Layer 2 Access With Traditional Multilayer
+## Layer 2 access with traditional multilayer
 
 - Layer 2 is a single wiring closest, or access uplink pair.
 - FHRP is used, but limits bandwidth to one uplink, vs both.
 
-## The Campus Network
+## The campus network
 
 - Campus networks are always oversubscribed.
 - Over-subscription rates between 4-20 are common.
 - Networks with over-subscription that results in queuing should implement QoS for voice traffic.
 
-## Core Layer
+## Core layer
 
 Fast and expensive.
 
@@ -42,7 +42,7 @@ Fast and expensive.
 
 ![cisco-campus-lan-core](./images/cisco-campus/cisco-campus-lan-core.jpg)
 
-## Distribution Layer Considerations
+## Distribution layer considerations
 
 Purpose
 - Aggregates wiring closets.
@@ -73,7 +73,7 @@ Purpose
 - Also contains the failure domain of the access layer.
 - Simplified Distribution, using stackwise virtual to remove FHRP.
 
-## Access Layer
+## Access layer
 
 Set ports to access ports.
 
@@ -112,14 +112,14 @@ Set ports to access ports.
 - Link Aggregation
   - LACP/PAGP
 
-## Traditional Design
+## Traditional design
 
 ![cisco-campus-looped-access](./images/cisco-campus/cisco-campus-looped-access.jpg)
 
 - Needs STP to block ports
 - VLANS can span multiple switches.
 
-### Traditional Design - Loop Free
+### Traditional design - loop free
 
 - This relies on SVI [Autostate].
 - VLANs cannot span multiple switches.
@@ -128,7 +128,7 @@ Set ports to access ports.
 
 ![cisco-campus-loop-free-access](./images/cisco-campus/cisco-campus-loop-free-access.jpg)
 
-## Other Designs
+## Other designs
 
 ### SD-Access
 
@@ -137,14 +137,14 @@ Set ports to access ports.
 
 ![cisco-campus-sd-access-design](./images/cisco-campus/cisco-campus-sd-access-design.jpg)
 
-### Open Standards Based Overlay
+### Open standards based overlay
 
 - MP-BGP
 - VXLAN
 
 ![cisco-campus-bgp-evpn-vxlan](./images/cisco-campus/cisco-campus-bgp-evpn-vxlan.jpg)
 
-## Campus LAN Best Practices - Security
+## Campus LAN best practices - security
 
 - DHCP Snooping, to prevent users from hooking up a DHCP server from home on accident.
 
@@ -156,7 +156,7 @@ Set ports to access ports.
 
 - Cisco Umbrella, Cisco's DNS offering.
 
-## Campus LAN Best Practices - High Availability
+## Campus LAN best practices - high availability
 
 - **SSO:** Stateful Switch Over, used to sync RPs in modular switches.
 

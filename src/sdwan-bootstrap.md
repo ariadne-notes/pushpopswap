@@ -10,7 +10,7 @@ The Manager can create a [bootable] USB drive.
 
 [bootable]: https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/sdwan-xe-gs-book/hardware-and-software-installation.html
 
-### Paste Method
+### Paste method
 
 This can be used to paste in a bootstrap so you can just erase and reload the device
 
@@ -27,7 +27,7 @@ puts [open "bootflash:name-of-bootstrap-file.cfg" w+] {
 }
 ```
 
-## Python Webserver
+## Python webserver
 
 This uses python to start a small webserver to copy the bootstrap via HTTP.
 

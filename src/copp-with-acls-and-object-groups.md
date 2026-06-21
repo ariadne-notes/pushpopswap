@@ -62,7 +62,7 @@ router# show policy-map control-plane input
       Match: any
 ```
 
-## Test Setup
+## Test setup
 
 This uses python3, scapy, and sendpfast, to send icmp packets with random sources.
 

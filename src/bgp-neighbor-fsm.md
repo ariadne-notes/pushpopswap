@@ -4,7 +4,7 @@
 
 There are 28 events total.
 
-### Administrative Events
+### Administrative events
 
 Things the operator can set.
 
@@ -17,7 +17,7 @@ Things the operator can set.
 - Event 7: `AutomaticStart_with_DampPeerOscillations_and_PassiveTcpEstablishment`
 - Event 8: `AutomaticStop`
 
-### Timer Events
+### Timer events
 
 - Event 9: `ConnectRetryTimer_Expires`
 - Event 10 `HoldTimer_Expires`

@@ -6,7 +6,7 @@
 - Can be ordinary TCP.
 - Can also use gRPC, to add TLS.
 
-## TCP Dial-out
+## TCP dial-out
 
 ```mermaid
 sequenceDiagram
@@ -19,7 +19,7 @@ sequenceDiagram
     R->>C: Telemetry data
 ```
 
-## TCP Dial-in
+## TCP dial-in
 
 ```mermaid
 sequenceDiagram

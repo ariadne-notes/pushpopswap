@@ -48,7 +48,7 @@ Use v4 connectivity to emulate a NBMA network. Wrap the v6 packet inside v4.
        Interface                                  Interface  
 ```
 
-## ISATAP Interface in v6
+## ISATAP interface in v6
 
 All ISATAP interfaces look like this. The giveaway is `0000:5EFE` in the host portion.
 

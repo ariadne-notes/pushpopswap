@@ -24,7 +24,7 @@ Decorate with all branches, even rebased ones.
 git log --oneline --decorate --graph --all
 ```
 
-## Before Rebasing
+## Before rebasing
 
 This can help find a commit in the event you need it again.
 

@@ -22,7 +22,7 @@ mls qos trust dscp
 mls qos trust dscp
 ```
 
-## DSCP Transparency
+## DSCP transparency
 
 Is **off** by default.
 
@@ -31,7 +31,7 @@ This means the CoS bits take priority and re-write the DSCP portion of the L3 he
 To turn this feature on, (to let DSCP move transparently through the switches) use `no mls qos rewrite ip dscp`
 
 
-## IOS-XE C9300 Trust and Queuing Behavior
+## IOS-XE C9300 trust and queuing behavior
 
 An example for one platform to demonstrate how complex QoS trust can become.
 

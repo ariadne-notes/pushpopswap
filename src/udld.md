@@ -28,7 +28,7 @@ From Cisco:
 udld enable
 ```
 
-## Per Interface
+## Per interface
 
 ```console
 interface 1

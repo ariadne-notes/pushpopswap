@@ -7,7 +7,7 @@ On the outside are two [COA](https://en.wikipedia.org/wiki/Certificate_of_authen
 
 **Goal:** I want to keep this install of Windows 10 working, and copy the OS into Proxmox. I want to virtualize this OS.
 
-## My Setup
+## My setup
 
 I am adding a compute node to an existing proxmox hypervisor cluster.
 
@@ -31,9 +31,9 @@ A lot of this is to enable a clean "recovery" of the OS once it's copied over. M
 
 ## Dataloss
 
-### These Tools Cause Dataloss.
+### These tools cause dataloss.
 
-### A Typo Will Destroy A Filesystem.
+### A typo will destroy A filesystem.
 
 Before doing this, practice both making and recovering bare metal restores (BMRs) ... I used [Clonezilla.](https://clonezilla.org/)
 
@@ -43,7 +43,7 @@ Clonezilla [Docs](https://clonezilla.org/clonezilla-live-doc.php)
 
 My Windows 10 BMR is 11GB stored as bzip2.
 
-## If Possible Just Clone the Disk
+## If possible just clone the disk
 
 I wanted to go from a larger drive (512GB) to a smaller drive (64GB). That meant instead of copying the devices, I needed to copy the partitions, *after* resizing them.
 
@@ -59,7 +59,7 @@ Most of the time was spent inside of recovery OSes, working with unmounted files
 
 [Clonezilla](https://clonezilla.org/) - A bare metal recovery tool.
 
-## Preparing Windows 10 To Be Virtualized
+## Preparing Windows 10 to be virtualized
 
 My Windows 10 machine had some extras on it I didn't want to virtualize.
 
@@ -166,7 +166,7 @@ My Windows 10 machine had some extras on it I didn't want to virtualize.
 
 
 
-## Creating the Virtual Machine
+## Creating the virtual machine
 
 I used PVE - [Proxmox Virtual Environment](https://www.proxmox.com/en/proxmox-virtual-environment/overview) as my hypervisor. Any hypervisor should work.
 
@@ -174,7 +174,7 @@ I used the Proxmox GUI to assign the VM a hard disk of 64GB.
 
 I boot the VM with SystemRescue, and make sure it can get a working IP address.
 
-## Preparing the Hard Drive on the Virtual Machine
+## Preparing the hard drive on the virtual machine
 
 There are four partitions on my windows 10 machine. I want to copy them over-the-network using [netcat.](https://en.wikipedia.org/wiki/Netcat)
 
@@ -218,7 +218,7 @@ There are four partitions on my windows 10 machine. I want to copy them over-the
    `dd bs=16M if=/dev/nvme0n1p1 | bzip2 -c | nc <ip_address> <port>`
 
 
-## Windows 10 Recovery
+## Windows 10 recovery
 
 I went from a NVMe drive to a IDE drive. I still needed to recover the bootdata.
 

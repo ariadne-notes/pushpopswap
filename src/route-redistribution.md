@@ -53,7 +53,7 @@ Always provide a meaningful seed metric.
 
 Show changes to the routing table.
 
-## Seed Metric Preference
+## Seed metric preference
 
 If multiple seed metrics are applied, this is the order of preference.
 

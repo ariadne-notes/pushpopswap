@@ -153,7 +153,7 @@ Eth0 │
  └───────┘                                                                   
 ```
 
-## Port Types
+## Port types
 
 **Designated ports**
 
@@ -169,13 +169,13 @@ Eth0 │
     - OR Lowest advertised priority
       - OR Lowest advertised port ID (interface number)
 
-## Root Path Cost
+## Root path cost
 
 **Root Path Cost**
 
 What the interfaces costs + the advertised cost to the root. The root sends a cost of 0.
 
-### STP Path Calculations
+### STP path calculations
 
 `spanning-tree pathcost method long`
 
@@ -251,7 +251,7 @@ Spanning Tree Protocol
     Forward Delay: 15
 ```
 
-### STP Header
+### STP header
 
 Times in in 256th of a second.
 
@@ -297,7 +297,7 @@ Times in in 256th of a second.
 
 `Bridge Priority, Vlan, Bridge MAC, Port Priority, Port Number`
 
-## Default Settings
+## Default settings
 
 Who is the root?
 
@@ -315,7 +315,7 @@ SW1 wins with `4b`. SW1 has the lower MAC address.
 
 `32768 / 1 / 52:54:00:4b:99:08 / 8001` < `32768 / 1 / 52:54:00:e8:3a:ff`
 
-## Setting Bridge Priority To Zero
+## Setting bridge priority to zero
 
 Who is the root?
 
@@ -380,7 +380,7 @@ interface 3
  spanning-tree vlan 1 port-priority 0
 ```
 
-## Port blocking, Cost
+## Port blocking, cost
 
 Which ports block?
 

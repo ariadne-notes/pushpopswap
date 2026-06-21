@@ -8,7 +8,7 @@ DNS uses TCP and UDP.
   - Requests exceed 512 bytes
   - DNSSEC/EDNS
 
-## DNS Resource Records
+## DNS resource records
 
 | RR    | Description                                                           |
 | ----- | --------------------------------------------------------------------- |
@@ -20,7 +20,7 @@ DNS uses TCP and UDP.
 | PTR   | Reverse Mapping of an IP. Used to find the host that "owns" the IP    |
 | SOA   | Start of Authority. Which DNS server is authorative for the zone.     |
 
-## DHCP & DNS Placement
+## DHCP & DNS placement
 
 Always in groups of at least two, this is a HA service.
 

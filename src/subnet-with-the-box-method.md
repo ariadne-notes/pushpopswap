@@ -4,7 +4,7 @@ For visual learners.
 
 For a `/24` network, thats 256 addresses, or ... this box.
 
-## Start With A /24
+## Start with A /24
 
 Write the first IP in the top corner, the last IP in the bottom corner.
 
@@ -31,7 +31,7 @@ Write the first IP in the top corner, the last IP in the bottom corner.
 └─────────────────────────────────┘
 ```
 
-## Cut In Half (1)
+## Cut in half (1)
 
 
 Write the last number in the bottom corner, next number in the top corner.
@@ -61,7 +61,7 @@ Write the last number in the bottom corner, next number in the top corner.
 
 Two `/25` networks.
 
-## Cut In Half (2)
+## Cut in half (2)
 
 
 ```bob
@@ -90,7 +90,7 @@ Two `/25` networks.
 - One `/25`
 - Two `/26` networks.
 
-## Cut In Half (3)
+## Cut in half (3)
 
 ```bob
 ┌───────┬────────┬────────────────┐
@@ -118,7 +118,7 @@ Two `/25` networks.
 - One `/25`
 - Four `/27`
 
-## Cut In Half (4)
+## Cut in half (4)
 
 ```bob
 ┌───────┬────────┬────────────────┐

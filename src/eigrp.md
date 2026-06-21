@@ -34,7 +34,7 @@
 
 - If you must advertise a network out the same interface it was received on, advertise the delay as infinity.
 
-## Feasible Successor Algorithm
+## Feasible successor algorithm
 
 **Topology**
 
@@ -81,7 +81,7 @@ P 10.0.0.0/24, 1 successors, FD is 2100                <--- Feasible Distance
                                                              (RD 2000 < FD 2100)
 ```
 
-## Unequal Cost Multi Path
+## Unequal cost multi path
 
 EIGRP can load balance over the successor and feasible successor routes with a variance command.
 
@@ -90,7 +90,7 @@ EIGRP can load balance over the successor and feasible successor routes with a v
 - Hello packets are every 5 seconds, on 60 seconds on T1 links
   - The deadtime is 3x the hello timer
 
-## Initial Bringup
+## Initial bringup
 
 - Send Hello packets, to 224.0.0.10
   - Doesn't' require multicast to be on
@@ -98,14 +98,14 @@ EIGRP can load balance over the successor and feasible successor routes with a v
     - Neighbor Sends back Ack as prior sequence number
     - Update Messages
 
-## Stuck in Active
+## Stuck in active
 
 - The router is too busy to answer the query (generally due to high CPU utilization)
 - The router has memory problems and cannot allocate the memory to process the query or build the reply packet
 - The circuit between the two routers is not good; there are not enough packets that get through to keep the neighbor relationship up, but some queries or replies are lost between the routers
 - unidirectional links (a link on which traffic can only flow in one direction because of a failure)
 
-## Update Message
+## Update message
 
 - AS number
 - Prefixes
@@ -128,7 +128,7 @@ EIGRP can load balance over the successor and feasible successor routes with a v
 - Next-hop
 - Prefix Length
 
-## Auto Summary
+## Auto summary
 
 Off by default on versions later than IOS 15.
 
@@ -138,7 +138,7 @@ To enable:
 
 `auto-summary`
 
-## Manual Summaries
+## Manual summaries
 
 In EIGRP these go under the interface, on the interface you want the summary to be sent out of.
 
@@ -147,11 +147,11 @@ ethernet 1
   ip summary-address eigrp 100 192.168.0.0/16
 ```
 
-## Named Mode
+## Named mode
 
 Name mode supports IPv6 inside a VRF.
 
-### Minimum Config
+### Minimum config
 
 ```console,editable
 router eigrp EIGRP_100
@@ -163,7 +163,7 @@ router eigrp EIGRP_100
  exit-address-family
 ```
 
-### Using The Old Config, Then Having The Box Convert It For You
+### Using the old config, then having the box convert it for you
 
 
 ```console,editable
@@ -171,7 +171,7 @@ router eigrp 1
   eigrp upgrade-cli EIGRP_1
 ```
 
-### RIB Scaling
+### RIB scaling
 
 The Cisco RIB can only hold values that are unsigned 4 bytes. The EIGRP named metrics are 64-bit.
 
@@ -187,7 +187,7 @@ router eigrp EIGRP_100
 ## Variance
 
 
-### Shorter Delays
+### Shorter delays
 
 In this example, the delay scale is 1x, 2x, 3x, 4x, 5x, 6x, 7x.
 
@@ -228,7 +228,7 @@ D        2.2.2.2 [90/433] via 10.12.1.2, 00:02:35, GigabitEthernet0/1
 ```
 
 
-### Longer Delays
+### Longer delays
 
 In this example, the delay scale is: 1x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x
 
@@ -275,7 +275,7 @@ D        2.2.2.2 [90/3398] via 10.12.1.2, 00:00:04, GigabitEthernet0/1
                  [90/5177] via 10.12.7.2, 00:00:04, GigabitEthernet0/7
 ```
 
-## Network Parser
+## Network parser
 
 - The CLI parser is converting the IP into binary, then comparing it to the wild mask.
 - The CLI parser will only save the matched bits of the IP.

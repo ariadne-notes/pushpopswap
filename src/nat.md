@@ -49,7 +49,7 @@ Global │  Global│  Global│  ──► How it appears out on the Internet
 
 Based on a diagram [here.](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/13772-12.html)
 
-## NAT Overload - Port Address Translation or PAT
+## NAT overload - port address translation or PAT
 
 
 This is Source NAT.[^source]
@@ -100,7 +100,7 @@ interface Ethernet0/1
 ip route 0.0.0.0 0.0.0.0 10.0.0.2
 ```
 
-## R2 Debugs during NAT
+## R2 debugs during NAT
 
 ```console
 R2# debug ip nat 1

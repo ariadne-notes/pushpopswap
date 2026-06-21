@@ -36,7 +36,7 @@ Public colors are behind [NAT].
 
 - AK, NAT address
 
-## Communication Between Colors
+## Communication between colors
 
 If two TLOCs try to make a tunnel, they will fall back to both using Public IPs, if either has a Public IP.
 

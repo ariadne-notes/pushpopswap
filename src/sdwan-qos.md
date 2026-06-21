@@ -19,7 +19,7 @@ The default queue.
 
 If QoS is not configured, all user traffic will take Queue 2.
 
-## Queue Example
+## Queue example
 
 ```console,editable
 policy

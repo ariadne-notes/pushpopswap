@@ -60,7 +60,7 @@ POS - Spawned interface from SONET controller.
 
 Sonet YELLOW is RDI (Remote Defect indication)
 
-## Packet Over Sonet
+## Packet over Sonet
 
 ```console
 Document: Troubleshooting Bit Error on SONET Links
@@ -76,21 +76,21 @@ B2: B2 can detect a far higher number of errors per frame. The exact number incr
 B3: B3 can detect up to eight parity errors in the entire SPE. This number produces acceptable resolution for a channelized interface because, (for example) each STS-1 in an STS-3 has a path overhead and B3 byte. However, this number produces poor resolution over concatenated payloads in which a single set of path overhead must cover a relatively large payload frame.
 ```
 
-## Packet Over SONET Commands
+## Packet over SONET commands
 
-## Displays Information About The Automatic Protection Switching Feature
+## Displays information about the automatic protection switching feature
 
 `show aps`
 
-## Displays Information About The Hardware
+## Displays information about the hardware
 
 `show controller sonet slot/port-adapter/port`
 
-## Displays Information About The Interface
+## Displays information about the interface
 
 `show controllers pos`
 
-## SRP - Spatial Reuse protocol
+## SRP - spatial reuse protocol
 
 This is used for fiber rings, its where the destination nodes pulls the info from the ring so it doesn't loop endlessly.
 
@@ -106,7 +106,7 @@ to reuse the bandwidth. Data packets travel on one ring, while associated contro
 direction on the alternate ring, ensuring that the data takes the shortest path to its destination.
 ```
 
-## RPR - Resilient Packet Ring
+## RPR - resilient packet ring
 
 802.17
 

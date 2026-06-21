@@ -9,13 +9,13 @@ To change this use `bgp redistribute-internal`.
 >
 > The IGPs should have route filters set.
 
-## Seed Metric
+## Seed metric
 
 | Administrative Distance | Metric     |
 |-------------------------|------------|
 | 20                      | IGP to MED |
 
-## Redistribute Transport Networks
+## Redistribute transport networks
 
 This is the safe way to redistribute connected networks. Useful for transit or peering links.
 
@@ -28,7 +28,7 @@ route-map RM_BGP_LOOPBACK permit 10
  match interface Loopback0
 ```
 
-## Redistribute All OSPF Routes
+## Redistribute all OSPF routes
 
 ```conosle,editable
 router bgp 100

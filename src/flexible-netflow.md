@@ -72,7 +72,7 @@ interface ten 1/1
   flow ipv4 monitor MONITOR_MAP_INTERNET sampler SAMPLER_MAP_INTERNET egress
 ```
 
-## Lab Validations
+## Lab validations
 
 ```console
 R1# show flow monitor FLOW_MONITOR_IPV4 statistics 

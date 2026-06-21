@@ -16,7 +16,7 @@
 - Use the exposed DSCP when there is no label.
 - When mpls2ip is done, act on the ip information not the prior EXP bits.
 
-## Pipe Mode (Multiple DiffServ Domains, Default, No Change To CE Marking)
+## Pipe mode (multiple DiffServ domains, default, no change to CE marking)
 
 - ip2mpls # Maybe copy DSCP to EXP.
 - SP MPLS exp may be remarked in transit

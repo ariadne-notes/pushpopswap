@@ -10,7 +10,7 @@
 
 - Traffic that is one-to-many
 
-## Interface Local Scope
+## Interface local scope
 
 - Never goes onto the wire
 - Popular for neighbor discovery
@@ -21,7 +21,7 @@
 | FF01::2      | All Routers               | [4291]    |
 | FF01::FB     | mDNSv6                    | [6762]    |
 
-## Link Local Scope
+## Link local scope
 
 - Never routed
 

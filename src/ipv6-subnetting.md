@@ -10,7 +10,7 @@ Could be useful to work with [NPTv6]
 
 [NPTv6]: https://www.rfc-editor.org/info/rfc6296/
 
-## Blessed Subnets
+## Blessed subnets
 
 The easy v6 networks to subnet fall on hex digit boundaries of /4.
 
@@ -72,7 +72,7 @@ A `/48` is three hextets, worth of bits.
 - `3fff:0:3::/48`
 - `3fff:0:4::/48`
 
-## Cursed Subnets
+## Cursed subnets
 
 What if instead, we try and subnet, inside a hex digit?
 

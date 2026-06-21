@@ -18,7 +18,7 @@ Fundamentals changed with v6:
 - No broadcast traffic
 - No ARP
 
-## Header Format
+## Header format
 
 RFCs really like groups of 32.
 
@@ -63,7 +63,7 @@ The groups are called **hextets**, as they are made with hex digits.
   - 4 bits
   - A nibble
 
-## Alternative Representation of a IPv6 Address
+## Alternative representation of a IPv6 address
 
 RFC 4291 allows this:
 
@@ -75,13 +75,13 @@ These are only API addresses to represent to a IPv6 App, that this is an IPv4 ho
 
 They don't go anywhere.
 
-## IPv6 Global Address Block
+## IPv6 global address block
 
 All globally routeable IPv6 addresses fit into this block.
 
 `2000::/3`
 
-## IPv6 Special Address Blocks
+## IPv6 special address blocks
 
 **WKP** --- Well Known Prefix
 

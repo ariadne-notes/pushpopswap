@@ -19,7 +19,7 @@ Same as above, basically an upgraded version, not backward compatible.
 
 802.1x, used for LAN Auth, only works with RADIUS.
 
-## TACACS+ Authentication Messages
+## TACACS+ authentication messages
 
 ```mermaid
 sequenceDiagram
@@ -37,7 +37,7 @@ sequenceDiagram
     Note over C: Authentication Complete
 ```
 
-## TACACS Authorization and Accounting Messages
+## TACACS authorization and accounting messages
 
 ```mermaid
 sequenceDiagram

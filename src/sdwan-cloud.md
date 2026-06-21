@@ -31,7 +31,7 @@ Image courtesy of
 
 [Cisco](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/cloudonramp/ios-xe-17/cloud-onramp-book-xe/cor-saas-17-2-1r.html).
 
-## Cisco SD-WAN Cloud OnRamp
+## Cisco SD-WAN cloud OnRamp
 
 - Figures out the best path and measures jitter
 
@@ -54,7 +54,7 @@ Image courtesy of
 
 [Cisco](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/cloudonramp/ios-xe-17/cloud-onramp-book-xe/m-cloud-onramp-iaas-wan.html).
 
-### SDWAN Multicloud
+### SDWAN multicloud
 
 - TGW native
 - Automation for instantiaton

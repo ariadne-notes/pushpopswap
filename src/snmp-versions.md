@@ -5,16 +5,16 @@
 - Cleartext
 - Uses a community string for a basic password
 
-### Changing The Equipment
+### Changing the equipment
 
 - Set Request
 
-### Getting Outputs
+### Getting outputs
 
 - Get Request
 - GetNext
 
-### Receiving Outputs
+### Receiving outputs
 
 - Get Response
 - Trap
@@ -24,7 +24,7 @@
 - Cleartext
 - Uses a community string for a basic password
 
-### New Message types
+### New message types
 
 - Get Bulk (get lots of things)
 - Inform Request (acknowledge this bad thing happening)

@@ -102,7 +102,7 @@ Invented by [Steve Deering], in his 1988 PhD thesis work *[Multicast Routing in 
 
 - Used in PIDIR-PIM
 
-## RPF - Reverse Path Forwarding
+## RPF - reverse path forwarding
 
 PIM is protocol independent, in the sense, that if a stream turns on, it must have a source, so it takes the form `(0.0.0.1, 239.1.1.1)`, a `(S,G)`.
 
@@ -116,7 +116,7 @@ The PIM neighbor on the RPF is called the *RPF neighbor*.
 
 Any multi-cast traffic from any given source, not received on the RPF is discarded. This prevents loops.
 
-## Shared Trees
+## Shared trees
 
 (*,G) entries in the mroute table require fewer resources, since multiple sources can use the same tree.
 
@@ -139,9 +139,9 @@ A multicast address always start with `1110`
 | `233.0.0.0/8`       | GLOP! Companies with a 16-bit ASN can have globally static multicast. 233.X.Y.0/24   |
 | `239.0.0.0/8`       | Organization-Local Scope. Exactly like RFC1918, but for multicast.                   |
 
-## Common L3 Addresses
+## Common L3 addresses
 
-### Same Broadcast Domain
+### Same broadcast domain
 
 | Protocol           | Multicast Address |
 | -------------------| ------------------|
@@ -154,7 +154,7 @@ A multicast address always start with `1110`
 | PIM                | 224.0.0.13        |
 | mDNS               | 224.0.0.251       |
 
-### Can Be Forwarded
+### Can be forwarded
 
 | Protocol           | Multicast Address | Notes                                              |
 | -------------------|-------------------|----------------------------------------------------|
@@ -195,7 +195,7 @@ The multicast source is the root of the tree. Packets flow downstream from the s
 | PIM-SSM              | Source Specific       | No RP. Receiver specifies both source and group (S,G).                                                                 |
 
 
-## PIM Message Types
+## PIM message types
 
 | Type | Message Type               | Destination                       | Purpose                                                                                            |
 |------|----------------------------|-----------------------------------|----------------------------------------------------------------------------------------------------|
@@ -222,7 +222,7 @@ The multicast source is the root of the tree. Packets flow downstream from the s
 - Source trees are better distributed, hence they are more robust
 - RP Selection is a hassle
 
-## Source Based Multicast (S,G)
+## Source based multicast (S,G)
 
 - PIM dense uses a separate tree for each multicast source and destination group.
 - Groups do not share trees.
@@ -268,7 +268,7 @@ FLAGS
 
 `show forwarding multicast route group <>`
 
-## Lab Stuff
+## Lab stuff
 
 BPF - Capture all PIM, but not PIM hello messages.
 

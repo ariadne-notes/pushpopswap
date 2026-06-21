@@ -15,14 +15,14 @@
 
 [BFD]: bfd.md
 
-## SD-WAN Policy
+## SD-WAN policy
 
 Policies are further classified as
 
 - **Local Policy:** Programed on the edges. ACLs, QoS, routing, and AAA.
 - **Centralized Policy:** Route policy, before being sent to the edges, (Topology, VPN Membership, Application Aware Routing)
 
-## Application Aware Routing
+## Application aware routing
 
 **AAR** --- Application Aware Routing
 
@@ -69,7 +69,7 @@ The Underlay, transport VPN. All the dTLS connections live here.
 
 OOB Management. This VPN isn't carried across the dTLS connections.
 
-## SDWAN Analytics
+## SDWAN analytics
 
 - Application Experience
   - Application Use
@@ -83,7 +83,7 @@ OOB Management. This VPN isn't carried across the dTLS connections.
 - Talos Integration
   - Threat Mitigation
 
-## Default Permissions Groups
+## Default permissions groups
 
 **Basic**
 

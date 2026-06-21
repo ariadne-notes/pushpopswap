@@ -53,11 +53,11 @@ This is a footnote[^note].
 
 [Duck Duck Go]: http://www.duckduckgo.com
 
-## Theme Break
+## Theme break
 
 ***
 
-## A Code block
+## A code block
 
     I'm wondering
     if this is 

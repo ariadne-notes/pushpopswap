@@ -30,9 +30,6 @@
   - [IPv4 Packet Header](ipv4-packet-header.md)
   - [IPv4 Address Planning](ipv4-address-planning.md)
   - [IPv4 Classful Networking](ipv4-classful-networking.md)
-  - [Subnetting with Fingers](subnet-with-fingers.md)
-  - [Subnetting with the Box Method](subnet-with-the-box-method.md)
-  - [Subnetting with Binary](subnet-with-binary.md)
 
 - [IPv6](ipv6.md)
   - [IPv6 Subnetting](ipv6-subnetting.md)
@@ -50,10 +47,13 @@
 
 # Subnetting
 
-
+  - [Subnetting with Fingers](subnet-with-fingers.md)
+  - [Subnetting with the Box Method](subnet-with-the-box-method.md)
+  - [Subnetting with Binary](subnet-with-binary.md)
 
 # Ethernet
 
+- [10G Ethernet](10-gig-ethernet.md)
 - [802.1Q](802.1q.md)
 - [VLAN Access Control Lists](vlan-access-control-lists.md)
 
@@ -99,10 +99,6 @@
 - [MPLS DiffServ](mpls-diffserv.md)
   - [L3VPN](mpls-l3vpn.md)
 - [PBB](pbb.md)
-
-# ISP Features
-
-- [Circuit Emulation](cem.md)
 
 # Switch Features
 
@@ -266,19 +262,20 @@
 
 # Layer 1
 
-- [10G Ethernet](10-gig-ethernet.md)
-- [SONET](sonet.md)
-  - [SONET C2 Byte](sonet-c2-byte.md)
+
 - [G.709](g709.md)
 - [RPR - Resilient Packet Ring](rpr.md)
 - [SRP - Spatial Reuse protocol](srp.md)
-- [T1](t1.md)
 - [MLPPP over ATM](mlppp-over-atm.md)
 - [IRB On the ASR9K](irb-on-the-asr9k.md)
 - [WAN Considerations](wan-considerations.md)
 - [G8032](g8032.md)
 - [Back to Back Frame Relay](back-to-back-frame-relay.md)
-- [STDM](stdm.md)
+- [TDM](tdm.md)
+  - [T1](t1.md)
+  - [SONET](sonet.md)
+    - [SONET C2 Byte](sonet-c2-byte.md)
+  - [Circuit Emulation](cem.md)
 - [UDP](udp.md)
 
 # Lab Work

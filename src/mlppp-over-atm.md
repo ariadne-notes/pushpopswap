@@ -473,7 +473,7 @@ control-plane
 !
 ```
 
-## 3900 - Pagent Box
+## 3900 - Pagent box
 
 ```console
 pagent #show run

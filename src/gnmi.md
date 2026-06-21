@@ -13,7 +13,7 @@ A gRPC based protocol to do the following:
 
 > **replaces** SNMP
 
-## Setting an IPv4 Address
+## Setting an IPv4 address
 
 This is done in gNMI via gRPC and a YANG model.
 

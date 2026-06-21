@@ -75,7 +75,7 @@
 - All clocks in a subdomain sync to the master
 - The master sync's to the grand master.
 
-## Time Terms
+## Time terms
 
 **Epoch**
 
@@ -129,7 +129,7 @@ sequenceDiagram
 
     - Records t2
 
-### Follow Up
+### Follow up
 
 (Nicer equipment doesn't need to send a Follow Up, if the first Sync contains an accurate timestamp)
 
@@ -141,7 +141,7 @@ sequenceDiagram
   - Records t1
 
 
-### Delay Request
+### Delay request
 
 - Client sends Delay-Request
   - Creates t3
@@ -150,7 +150,7 @@ sequenceDiagram
 - Server receives Delay-Req
   - Creates t4
 
-### Delay Response
+### Delay response
 
 - Server sends Delay-Response
   - Contains t4

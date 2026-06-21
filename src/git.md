@@ -58,7 +58,7 @@ The list of files and their hashes is called the **Index.**
 - In detached HEAD state, points directly to a commit
 - Works like the playhead on a tapedeck
 
-### Working Tree
+### Working tree
 
 - AKA, project directory
 - AKA, user directory
@@ -66,7 +66,7 @@ The list of files and their hashes is called the **Index.**
 - This is where project files are modified
 - Directory inside `git init` was ran
 
-### The Index
+### The index
 
 - `.git/index`
 - AKA, staging
@@ -79,7 +79,7 @@ The list of files and their hashes is called the **Index.**
   - Writes the blob to .git/objects/
 - Files in the Index are tracked
 
-## Local Files Overview
+## Local files overview
 
 Git tries to avoid touching working tree files. When a file is added, a snapshot is taken at that time.
 
@@ -87,7 +87,7 @@ Git tries to avoid touching working tree files. When a file is added, a snapshot
 
 Image courtesy of [Derrick Stolee].
 
-## Branch Example
+## Branch example
 
 ```mermaid
 gitGraph
@@ -106,7 +106,7 @@ I think of it like a tape deck, the `HEAD` can be played backwards or forwards.
 
 `commit` moves the `HEAD` forward, and `reset` moves the `HEAD` backwards.
 
-## Remote and Local Overview
+## Remote and local overview
 
 A basic example: a local repo, and a remote repo.
 
@@ -154,7 +154,7 @@ flowchart TD
 git push
 ```
 
-## Git Operations
+## Git operations
 
 ![git-operations-chart](./images/git/git-operations-chart.png)
 

@@ -40,19 +40,19 @@
 - Routing within a L2 area.
 - The L2 area.
 
-## Types of Routers
+## Types of routers
 
-### L2 Routers
+### L2 routers
 
 IS-IS doesn't refer to a backbone, but L2 routers perform the same function. They should be center-of-topology.
 
-### L1L2 Routers
+### L1L2 routers
 
 These routes have topology information for the L1 area and the L2 area.
 
 These are kind of like ABRs in OSPF.
 
-### L1 Router
+### L1 router
 
 These are the Area routers. They do not flood their link state databases into L2.
 
@@ -136,7 +136,7 @@ To do Multipoint NBMA you need to include CLNS resolution.
 L1 areas must match
 
 
-### IS-IS Narrow
+### IS-IS narrow
 
 The Cisco default link cost is 10.
 
@@ -145,7 +145,7 @@ These are the limits:
 - 63 per link
 - 1 023 per path
 
-### IS-IS Wide
+### IS-IS wide
 
 - 16 777 215 per link
 - 4 294 967 295 per path
@@ -160,7 +160,7 @@ Enable wide metrics:
 metric-style wide
 ```
 
-#### Metric Transition Commands
+#### Metric transition commands
 
 Used when migrating from narrow to wide without a hard cutover:
 
@@ -170,7 +170,7 @@ Used when migrating from narrow to wide without a hard cutover:
 | `metric-style narrow transition`  | Transitioning — still **advertising narrow** (old)       |
 | `metric-style wide transition`    | Transitioning — now **advertising wide** (new)           |
 
-### IS-IS Authentication
+### IS-IS authentication
 
 - Plaintext
   - Link, Area, or Domain

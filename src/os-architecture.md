@@ -1,6 +1,6 @@
 # OS Architecture
 
-## IO Pathways
+## IO pathways
 
 Device controller tells the CPU it's done (put data into a buffer) by sending an interrupt.
 
@@ -19,15 +19,15 @@ Traps or exceptions are software generated interrupts
 
 Most operating systems are interrupt driven.
 
-## Storage Structures
+## Storage structures
 
 
-### Main Memory (DRAM)
+### Main memory (DRAM)
 
 - Random Access
 - Lost with power outage (volatile)
 
-### Secondary Storage
+### Secondary storage
 
 - Larger
 - Not lost with power outage (non-volatile)
@@ -41,7 +41,7 @@ Copying data from secondary storage to main memory
 Storage Hierarchy
 Registers > cache > main memory (dram) > solid-state disks > spinning disks > optical disks > magnetic tapes.
 
-### Direct Memory Access (DMA)
+### Direct memory access (DMA)
 
 Some amount of DRAM is owned directly by an IO controller, and uses the DRAM for the buffer.
 When done, the IO controller sends an interrupt.
@@ -56,12 +56,12 @@ When done, the IO controller sends an interrupt.
 
 While one thread is asking for memory, execute the other thread. Go back and forth.
 
-### Dual Mode
+### Dual mode
 
 User mode and Kernel mode, with a mode bit.
 Kernel mode is also called privileged.
 
-#### System Calls
+#### System calls
 
 System calls are how user mode apps interact with the kernel.
 APIs are provided facilities to access the kernel without using system calls (which may not be allowed)
@@ -70,7 +70,7 @@ APIs are provided facilities to access the kernel without using system calls (wh
 - POSIX API (Unix, Linux, Mac OS X)
 - Java API for Java Virtual Machine (JVM)
 
-## Load Averages
+## Load averages
 
 Windows will show a percentage of CPU. Linux systems instead show the number of processes waiting to acces the CPU. It can get to double digits.
 
@@ -78,7 +78,7 @@ Windows will show a percentage of CPU. Linux systems instead show the number of 
 
 A single-thread process has a program counter that says "go here to read the next instruction please"
 
-## Memory Management
+## Memory management
 
 Copying from storage into dram, into cache. Only stuff in L1 cache can be executed.
 
@@ -119,13 +119,13 @@ Kernighan's Law
 
 Write easy to understand code, planning on future debugging.
 
-## Communications Models
+## Communications models
 
-### Message Passing (modern)
+### Message passing (modern)
 
 - Puts messages into a shared queue, gives it a number, tell the other app "Go read this message"
 
-### Shared Memory (ancient)
+### Shared memory (ancient)
 
 - Applications can just overwrite each others data.
 
@@ -139,7 +139,7 @@ Write easy to understand code, planning on future debugging.
   * Involved, emulates time-slices
   * N tasks, each task gets 1/N time.
 
-### Multilevel Queue - Done in Linux
+### Multilevel queue - done in Linux
 
 - Foreground, Background
   * Foreground gets 80% as RR
@@ -147,12 +147,12 @@ Write easy to understand code, planning on future debugging.
 - Background
   * FCFS
   
-## Process Environment
+## Process environment
 
 - Argument vector - the command line arguments used to invoke the running program
 - Environment vector - the list of "NAME=VALUE" pairs
 
-## Static and Dynamic Linking
+## Static and dynamic linking
 
 - **Static** - the library functions are embedded in the executable.
 - **Dynamic** - the library functions are at a place in memory, and shared.

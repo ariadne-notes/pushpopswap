@@ -5,7 +5,7 @@
 >
 > `merge` is designed to combine **committed** changes. You can lose work.
 
-## How Does Merge Work
+## How does merge work
 
 `E` is the last shared commit.
 
@@ -42,9 +42,9 @@ gitGraph
    merge feature id: "HEAD → H"
 ```
 
-## Merge Types
+## Merge types
 
-### Fast Forward
+### Fast forward
 
 The default `merge` is called fast forward, or FF.
 
@@ -113,7 +113,7 @@ gitGraph
    commit id: "HEAD → E"
 ```
 
-### True Merge
+### True merge
 
 This happens trying to update the part of a file, someone else has already updated.
 
@@ -128,7 +128,7 @@ This happens trying to update the part of a file, someone else has already updat
 
 1. A ref called `AUTO_MERGE` gets created.
 
-## Conflict Resolution
+## Conflict resolution
 
 After the `merge`, Git will say what files need to be resolved. This is called **Conflict Resolution.**
 
@@ -139,7 +139,7 @@ To resolve:
 1. Delete lines you don't want.
 1. Delete the markers.
 
-### Two way Conflict
+### Two way conflict
 
 In Conflict.
 
@@ -167,7 +167,7 @@ Your change  ┌───  Conflict resolution is hard;
                    And here is another line that is cleanly resolved or unmodified.
 ```
 
-### Three Way Conflict
+### Three way conflict
 
 `zdiff3` shows the conflict with the original text, adding the `|||||||` marker.
 
@@ -199,7 +199,7 @@ Resolved, kept their lines.
                  And here is another line that is cleanly resolved or unmodified.
 ```
 
-### Conflicts Resolved
+### Conflicts resolved
 
 This will also check the merge status.
 
@@ -207,7 +207,7 @@ This will also check the merge status.
 git merge --continue
 ```
 
-### Abort A Merge
+### Abort A merge
 
 ```plain
 merge --abort

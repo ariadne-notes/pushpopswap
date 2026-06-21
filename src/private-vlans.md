@@ -17,7 +17,7 @@ vlan 100
 
 This example uses a ME3400.
 
-## Config Example
+## Config example
 
 ```console,editable
 vlan 100

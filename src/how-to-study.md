@@ -1,4 +1,4 @@
-# How to study
+# How to Study
 
 I do something like:
 

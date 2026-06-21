@@ -50,7 +50,7 @@ A unidirectional failure will always result in one side not getting information.
 spanning-tree loopguard default
 ```
 
-### Per Port
+### Per port
 
 ```console, editable
 interface 1

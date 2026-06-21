@@ -16,14 +16,14 @@ Setting as oscillator to a frequency is syntonization.
 
 - **ITU-T Rec. G.8264** - Ethernet Synchronization Messaging Channel (ESMC)
 
-### Config Options
+### Config options
 
-#### ITU-T G.813 Option 1 clock (QL-SEC)
+#### ITU-T G.813 option 1 clock (QL-SEC)
 
 `EEC-option 1`
 
 
-#### ITU-T G.812 Type IV Clock (QL-ST3)
+#### ITU-T G.812 type IV clock (QL-ST3)
 
 
 `EEC-option 2`

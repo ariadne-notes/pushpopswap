@@ -62,7 +62,7 @@
   - "Yeah, I agree"
   - Transition immediately to forwarding
 
-## Packet Headers
+## Packet headers
 
 ```text
 Spanning Tree Protocol
@@ -96,7 +96,7 @@ Is this port full-duplex? If so, it's point-to-point, and if so, there is a RP a
 
 No BPDUs being received? Wait for the forward delay, transition port to forwarding.
 
-## Fastest Scenario, The Would-Be DP Is Already Transmitting
+## Fastest scenario, the Would-Be DP is already transmitting
 
 ```bob
 ┌─────────┐                      ┌─────────┐

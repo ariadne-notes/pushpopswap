@@ -19,7 +19,7 @@ My Ceph version is 19 -- that's Squid.
 
 I use `sudo su -` before all of this.
 
-### Add the Repo
+### Add the repo
 
 ```text,editable
 wget -q -O- 'https://download.ceph.com/keys/release.asc' | apt-key add -
@@ -27,13 +27,13 @@ echo deb https://download.ceph.com/debian-squid/ $(lsb_release -sc) main \
     | tee /etc/apt/sources.list.d/ceph.list
 ```
 
-### Update and Install
+### Update and install
 
 ```text,editable
 apt update && apt install ceph-common
 ```
 
-### Request Permissions
+### Request permissions
 
 On the cluster, using Ceph, request permissions for the *would-be* mount point.
 
@@ -41,7 +41,7 @@ On the cluster, using Ceph, request permissions for the *would-be* mount point.
 ceph fs authorize cephfs client.grove /docker rw
 ```
 
-### Get the Key
+### Get the key
 
 ```text,editable
 ceph auth get-or-create client.grove
@@ -57,13 +57,13 @@ Mine looks like this.
         caps osd = "allow rw tag cephfs data=cephfs"
 ```
 
-### Copy Key to the Client
+### Copy key to the client
 
 It goes here.
 
 `/etc/ceph/ceph.keyring`
 
-### Modify Fstab
+### Modify fstab
 
 This is inside of `/etc/fstab`
 
@@ -73,7 +73,7 @@ This is `TAB` spaced, with six columns.
 :/docker        /mnt/docker-on-ceph     ceph   name=orchard,_netdev,noatime 0       0
 ```
 
-### Make the Mount Point
+### Make the mount point
 
 ```text,editable
 mkdir /mnt/docker-on-ceph

@@ -6,11 +6,11 @@ The address is built by combining these three things.
 
 `Multicast Prefix` + `0` + `low-order-23-bits-from-v4`
 
-## Multicast Prefix
+## Multicast prefix
 
 The Multicast Prefix is `01:00:5E` 3 bytes or 24 bits.
 
-## 25th Bit
+## 25th bit
 
 A binary zero `0`
 
@@ -30,7 +30,7 @@ Copy the low order 23 bits directly from the v4 address.
 
 `000 1010 0000 1010 0000 1010`
 
-## Building the Address
+## Building the address
 
 Using `232.10.10.10`
 
@@ -45,7 +45,7 @@ Using `232.10.10.10`
 
 becomes `01:00:5E:0A:0A:0A`
 
-## Multicast Overlap
+## Multicast overlap
 
 To express a v4 multicast address uniquely in L2 we need 28 bits, since the first 4 bits of every v4 multicast address are `1110`
 

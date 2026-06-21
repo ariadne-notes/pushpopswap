@@ -4,7 +4,7 @@ Can be IPs and/or MACs.
 
 These work on routed or switched traffic.
 
-## Routed Flow
+## Routed flow
 
 ```mermaid
 block
@@ -38,7 +38,7 @@ columns 1
     style id6 fill:#1A1,stroke:#333,stroke-width:2px
 ```
 
-## Switched Flow
+## Switched flow
 
 The VLAN ACL is only processed once, on switching operation.
 

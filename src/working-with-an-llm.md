@@ -1,4 +1,4 @@
-# Working With An LLM
+# Working with an LLM
 
 If I need to lab something, most of the time I have an LLM generate the configs
 

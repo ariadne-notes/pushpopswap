@@ -229,7 +229,7 @@ update();
 </script>
 
 
-## Wide Network Vectors
+## Wide network vectors
 
 <pre>
 RFC 7868                      Cisco's EIGRP                     May 2016
@@ -255,7 +255,7 @@ RFC 7868                      Cisco's EIGRP                     May 2016
            o Energy - accumulative
 </pre>
 
-## Wide Metric Conversion Constants
+## Wide metric conversion constants
 
 <pre>
 
@@ -330,7 +330,7 @@ RFC 7868                      Cisco's EIGRP                     May 2016
                              EIGRP_DELAY_PICO
 </pre>
 
-## Composite Calculation
+## Composite calculation
 
 <pre>
 RFC 7868                      Cisco's EIGRP                     May 2016

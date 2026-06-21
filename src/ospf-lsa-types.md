@@ -1,6 +1,6 @@
 # OSPF LSA Types
 
-## LSA Type to Route Type
+## LSA type to route type
 
 | Number | Route  | RFC Name         | Purpose                      | Description                                          |
 |--------| -------| ---------------- | ---------------------------- | ---------------------------------------------------- |

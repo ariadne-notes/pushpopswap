@@ -1,12 +1,12 @@
 # Git Commit
 
-## Ordinary Commit
+## Ordinary commit
 
 ```console
 git commit -m "Here is what I did"
 ```
 
-## Amend - Change the Last Commit Message
+## Amend - change the last commit message
 
 > [!WARNING]
 > Do not amend commits that have already been published.

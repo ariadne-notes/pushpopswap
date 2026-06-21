@@ -33,7 +33,7 @@
 - Terminates the 6RD tunnels
 - AKA, Border Relay
 
-## What does 6RD Solve?
+## What does 6RD solve?
 
 "We can't deploy v6, because our BNG does *(put-feature-here)* and we need that!
 
@@ -61,7 +61,7 @@ This way, the customer gets dual stack without the ISP needing to upgrade a lega
                           └────────────────────────────┘
 ```
 
-## The Four Things Required To Setup
+## The four things required to setup
 
 - **IPv4 Common Prefix:** - The high order bits every CE has in common for their v4 deployments.
 
@@ -73,7 +73,7 @@ If every customer was given an IP on the 10.0.0.0/24 network, the bits they woul
 
 (there is a neat way to derive the 6rd prefix, refer to Cisco's IOS-XE manual, that's closest to how it's done.)
 
-## Sample Config (from Cisco's PDF)
+## Sample config (from Cisco's PDF)
 
 ```console
 !

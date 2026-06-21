@@ -15,13 +15,13 @@ PA Addresses
 Asymmetric Flow
   : Egress traffic and Ingress traffic are via different ISPs.
 
-## BGP Multihoming
+## BGP multihoming
 
 **Best Scenario:** Announce PI prefixes to both provider via BGP.
 
 To have BGP multi-homing, a v4 site with PI addressing needs at least a /24 prefix for v4 and a /48 for v6.
 
-## BGP Filtering
+## BGP filtering
 
 - Filter outbound prefixes to match networks you have. Do not re-advertise the full table, back out.
 

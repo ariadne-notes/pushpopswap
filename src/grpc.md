@@ -30,7 +30,7 @@ flowchart LR
     cpp -->|"Proto Response(s)"| stub1
 ```
 
-## Protocol Buffers
+## Protocol buffers
 
 This defines the data structure to send.
 

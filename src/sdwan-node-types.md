@@ -52,7 +52,7 @@ sequenceDiagram
     end
 ```
 
-## WAN Edge
+## WAN edge
 
 - AKA vEdge, AKA Viptela (legacy gear)
 - Dataplane, and Onsite

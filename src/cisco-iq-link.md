@@ -11,7 +11,7 @@ Telemetry examples:
 
 Can also use Data Connectors to talk to other Managers, like On-Prem SD-WAN Manager, or On-Prem Catalyst Center.
 
-## VM Requirements
+## VM requirements
 
 This set of requirements is for 10K devices:
 
@@ -21,13 +21,13 @@ This set of requirements is for 10K devices:
   - Thick Provision
   - Disk write speed must be greater than 70 megabytes per second
 
-## IPv4 and DNS Requirements
+## IPv4 and DNS requirements
 
 - a v4 address
 - DNS A Record (for the VM)
 - DNS PTR Record (for the IP the VM is using)
 
-## External Network Connectivity Requirements
+## External network connectivity requirements
 
 These must work and be reachable in DNS.
 
@@ -46,7 +46,7 @@ These must work and be reachable in DNS.
 - ap-southeast-2.iq.cisco.com
 - ng.acs.agent.apjc.csco.cloud
 
-## Port Requirements
+## Port requirements
 
 | Port | Protocol | Purpose                     |
 |------|----------|-----------------------------|
@@ -56,13 +56,13 @@ These must work and be reachable in DNS.
 | 123  | UDP      | NTP                         |
 | 161  | UDP      | SNMP                        |
 
-## Supported Hypervisors
+## Supported hypervisors
 
 - VMware ESXi
 - Microsoft Hyper-V Server
 - Red Hat KVM
 
-## Internal Network Requirements
+## Internal network requirements
 
 The internal network needs at least v4 `/20`, 4096 IPv4 addresses.
 
@@ -74,7 +74,7 @@ OK candidates are:
 
 **This cannot overlap** with anything Cisco IQ Link needs to reach on the managed network.
 
-## Data Connectors
+## Data connectors
 
 - Intersight
 - Meraki Dashboard

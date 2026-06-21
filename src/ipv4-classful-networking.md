@@ -40,7 +40,7 @@ If someone gives you an IP, you can **never guess** its network without also bei
 
 My personal favorite is `8.8.8.8/32` [Google DNS](https://en.wikipedia.org/wiki/Google_Public_DNS) it works by [Anycast!](https://en.wikipedia.org/wiki/Anycast)
 
-##  Classful Networking, the RFC
+## Classful networking, the RFC
 
 
 

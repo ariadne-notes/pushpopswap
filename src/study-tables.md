@@ -1,6 +1,6 @@
 # Study Tables
 
-## Log Message Severity Levels
+## Log message severity levels
 
 | **Keyword**     | **Severity** | **Description**                     | **Mnemonic**                     |
 |-----------------|--------------|-------------------------------------|----------------------------------|
@@ -15,7 +15,7 @@
 
 Mnemonic courtesy of [Romelchand](https://learningnetwork.cisco.com/s/article/syslog-severity-amp-level)
 
-## IP Protocol Numbers
+## IP protocol numbers
 
 When IP encapsulates another protocol it labels the `protocol` field with a number to define the next layer.
 
@@ -40,7 +40,7 @@ When IP encapsulates another protocol it labels the `protocol` field with a numb
 
 [Protocol Numbers - IANA](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 
-## Cisco Administrative Distance
+## Cisco administrative distance
 
 | Protocol                        | Administrative Distance |
 | ----------------                | ----------------------- |

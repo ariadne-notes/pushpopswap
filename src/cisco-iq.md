@@ -52,7 +52,7 @@ Once obsolete, the Product is not sold, improved, maintained, or supported.
 
 The last date to receive support as entitled by active service contracts for covered Cisco hardware and software. After this date, support is no longer available.
 
-## Support Tiers
+## Support tiers
 
 These are tied to service contract levels.
 
@@ -87,7 +87,7 @@ These are tied to service contract levels.
 
 Feature availability is tied to the support level: Basic, Standard, or Signature
 
-### Assets Application
+### Assets application
 
 - Overview
   - Device Discovery
@@ -100,7 +100,7 @@ Feature availability is tied to the support level: Basic, Standard, or Signature
 - Service Contracts
 - End-of-Life
 
-### Assessments Overview
+### Assessments overview
 
 - Findings by Asset
 - Security Advisories
@@ -108,13 +108,13 @@ Feature availability is tied to the support level: Basic, Standard, or Signature
 - Configuration
 - Field Notices
 
-### Support Application
+### Support application
 
 - Overview
   - Cases
   - RMAs
 
-### AI Assistant
+### AI assistant
 
 - Security Hardening compared to CISA hardening guidelines
 - Configuration evaluation against best practices
@@ -125,7 +125,7 @@ Feature availability is tied to the support level: Basic, Standard, or Signature
   - Request a new engineer
   - Re-queue the case
 
-## Deployment Models
+## Deployment models
 
 **SaaS**
 
@@ -152,7 +152,7 @@ Comes with an optional collector called [Cisco IQ Link](./cisco-iq-link.md)
 
 Same as above, but no automatic updates, and no external connections.
 
-## Cisco Live AI Integration Examples
+## Cisco Live AI integration examples
 
 **Peer Benchmarking**
 

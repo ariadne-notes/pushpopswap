@@ -22,7 +22,7 @@ Each router is inside a different area type.
                                          └────┘
 ```
 
-## Type 3 Default
+## Type 3 default
 
 ```console
 R2# show ip ospf database summary 0.0.0.0 self-originate 
@@ -71,7 +71,7 @@ R2# show ip ospf database summary 0.0.0.0 self-originate
         MTID: 0         Metric: 1
 ```
 
-## Type 5 Default
+## Type 5 default
 
 ```console
 R2# show ip ospf database external 0.0.0.0 self-originate 
@@ -96,7 +96,7 @@ R2# show ip ospf database external 0.0.0.0 self-originate
         External Route Tag: 1
 ```
 
-## Type 7 Default
+## Type 7 default
 
 ```console
 R2# show ip ospf database nssa-external 0.0.0.0 self-originate

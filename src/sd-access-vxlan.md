@@ -32,19 +32,19 @@ Multi-destination Support is provided by multicast.
 - Originates and Terminates tunnels.
   - push and pop VXLAN headers.
 
-## VXLAN Segment
+## VXLAN segment
 
 - Only devices with the same VNI can communicate.
 - AKA Overlay Network
 
-## Layer 2 Overlay
+## Layer 2 overlay
 
 - Supports multiple SGTs
 - VNI is matched
   - LISP Instance ID
   - VLAN
 
-## Layer 3 Overlay
+## Layer 3 overlay
 
 - Supports multiple SGTs
 - Endpoints are routed
