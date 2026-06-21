@@ -46,7 +46,9 @@
   - [IPv6 Multicast Addresses](ipv6-multicast-addresses.md)
   - [IPv6 Link Local Addressing](ipv6-link-local-addressing.md)
   - [IPv6 Unique Link Local Addressing](ipv6-ula.md)
-  - [IPv6 Neighbor Discovery](ipv6-neighbor-discovery.md)
+  - [IPv6 Neighbor Discovery](ipv6-nd.md)
+    - [IPv6 ND Router Solicitation](ipv6-nd-ra.md)
+  - [IPv6 ICMPv6](ipv6-icmpv6.md)
   
 
 
@@ -86,6 +88,8 @@
   - [ARP Attacks](arp-attacks.md)
   - [DAI](dai.md)
   - [Proxy ARP](proxy-arp.md)
+- [VTP](vtp.md)
+  - [VTP Bomb](vtp-bomb.md)
 
 # SP Ethernet
 
