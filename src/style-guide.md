@@ -28,7 +28,6 @@ Does it support bullets --- or modern parking lot?
 :
 
 - Just bolds the whole thing
-- I mean not really?
 - There's a line space above the top bullet
 - Items like to be off by themselves
 

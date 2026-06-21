@@ -13,7 +13,7 @@ Two reasons:
 - Wire the topology
 - Show the physical connections
 - Take a screenshot
-- Point the LLM at an [instruction link](./claude.md)
+- Point the LLM at an [instruction link](./llm-instructions.md)
 - Ask for the config files
 - Drop them in
 
