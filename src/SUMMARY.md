@@ -30,6 +30,9 @@
   - [IPv4 Packet Header](ipv4-packet-header.md)
   - [IPv4 Address Planning](ipv4-address-planning.md)
   - [IPv4 Classful Networking](ipv4-classful-networking.md)
+  - [Subnetting with Fingers](subnet-with-fingers.md)
+  - [Subnetting with the Box Method](subnet-with-the-box-method.md)
+  - [Subnetting with Binary](subnet-with-binary.md)
 
 - [IPv6](ipv6.md)
   - [IPv6 Subnetting](ipv6-subnetting.md)
@@ -39,23 +42,15 @@
   - [IPv6 Link Local Addressing](ipv6-link-local-addressing.md)
   - [IPv6 Unique Link Local Addressing](ipv6-ula.md)
   - [IPv6 Neighbor Discovery](ipv6-neighbor-discovery.md)
-
-# Subnetting
-
-- [Subnetting with Fingers](subnet-with-fingers.md)
-- [Subnetting with the Box Method](subnet-with-the-box-method.md)
-- [Subnetting with Binary](subnet-with-binary.md)
-
-# IPv6
-
-
-
-# IPv6 Transition Technology
-
+  
 - [IPv4 to IPV6 Migration Strategies](ipv4-to-ipv6-migration-strategies.md)
   - [ISATAP](isatap.md)
   - [6RD](6rd.md)
   - [NAT64](nat64.md)
+
+# Subnetting
+
+
 
 # Ethernet
 

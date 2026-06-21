@@ -1,11 +1,31 @@
 # IPv4 to IPV6 Migration Strategies
 
-- **Dual-stack:** AKA, Native Mode. Both at the same time. Twice the administrative overhead
-- **Tunneling:** Send the IPv6 packets to tunnel to cross a IPv4 core.
-- **Translation:** Make the IPv6 packets back into IPv4 packets.
-- **Hybrid Model:** Uses ISATAP
-- **ISATAP:** Intra-Site Automatic Tunneling Addressing
-- **Service Blocks:** Combing tunnels with dual-stack.
+**Dual-stack**
+
+- AKA, Native Mode
+- AKA, Ships in the Night
+- Both at the same time
+- Twice the administrative overhead
+
+**Tunneling**
+
+- Encapsulate the IPv6 packets
+- Into IPv4
+- Send
+
+**Translation**
+
+- Make the IPv6 packets back into IPv4 packets.
+
+**ISATAP** --- Intra-Site Automatic Tunneling Addressing
+
+**Hybrid Model**
+
+- Uses ISATAP
+
+**Service Blocks**
+
+- Combing tunnels with dual-stack.
 
 ## Native Mode
 
