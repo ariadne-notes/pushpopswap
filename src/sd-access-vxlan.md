@@ -15,7 +15,8 @@ VXLAN is VTEP to VTEP.
  - Outer-IP-DST IP, VTEP that needs the packet.
  - Outer-MAC-SRC, VTEP that created the packet.
  - Outer-MAC-DST, the device to reach the VTEP, the gateway.
- 
+
+
 Multi-destination Support is provided by multicast.
 
 ## VNI

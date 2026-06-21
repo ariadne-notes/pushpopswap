@@ -1,12 +1,13 @@
-# Working with an LLM
+# Working With An LLM
 
 If I need to lab something, most of the time I have an LLM generate the configs
 
 Two reasons:
+
 - Troubleshooting Practice
 - Learning the minimum to design a solution
 
-## Low Tech Method
+## Low tech method
 
 This is accessible way:
 
@@ -18,7 +19,7 @@ This is accessible way:
 - Ask for the config files
 - Drop them in
 
-## High Tech Method
+## High tech method
 
 Tooling:
 

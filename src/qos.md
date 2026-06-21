@@ -80,7 +80,8 @@
 
 **CBWFQ** --- Class Based Weighted Fair Queuing
 
-- AKA, Modular QoS 
+- AKA, Modular QoS
+
 - Multiple queues
 - Bandwidth limits
 - Different kinds of queues, like LLQ

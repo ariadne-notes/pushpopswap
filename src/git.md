@@ -16,20 +16,20 @@ The list of files and their hashes is called the **Index.**
 
 - `.git/`
 - AKA, Repo
-- AKA, the object store.
-- Content Addressable Filesystem.
-- Key-value based. All of Git is key-value.
-- De-Duplicated. If two files have the same SHA-1, git stores 1 blob.
-  - Git stores: blobs, trees, commits, and tags.
-- Interacted with almost purely via `git`.
+- AKA, the object store
+- Content Addressable Filesystem
+- Key-value based. All of Git is key-value
+- De-Duplicated. If two files have the same SHA-1, git stores 1 blob
+  - Git stores: blobs, trees, commits, and tags
+- Interacted with almost purely via `git`
 
 ### Commits
 
 - Takes a snapshot of the current Index
-- SHA-1 entity that points to a specific tree.
-- Metadata: author, commiter, timestamp, messages, parent commit.
-- Commits are backwards chains.
-  - All commits store the hash of previous commits.
+- SHA-1 entity that points to a specific tree
+- Metadata: author, commiter, timestamp, messages, parent commit
+- Commits are backwards chains
+  - All commits store the hash of previous commits
 
 ### Tree
 
@@ -37,47 +37,47 @@ The list of files and their hashes is called the **Index.**
   - Mode (file type and permissions)
   - Name (file or directory)
   - SHA-1 (the hash)
-  - Trees point to blobs and other trees.
+  - Trees point to blobs and other trees
   
 ### Blob
 
-- A key-value pair that represents a file.
+- A key-value pair that represents a file
 - `82da472f6d00dc5f0a651f33ebb320aa9c7b08d0  LICENSE`
 - The SHA-1 is used to find the compressed content of `LICENSE`
 
 ### Branch
 
-- A named pointer to a specific commit.
-- Commits are stored as nodes on a [DAG].
-- Merge commits have two or more parents.
-- The init commit has no parents.
+- A named pointer to a specific commit
+- Commits are stored as nodes on a [DAG]
+- Merge commits have two or more parents
+- The init commit has no parents
 
 ### HEAD
 
-- A named pointer to the current branch.
-- In detached HEAD state, points directly to a commit.
-- Works like the playhead on a tapedeck.
+- A named pointer to the current branch
+- In detached HEAD state, points directly to a commit
+- Works like the playhead on a tapedeck
 
 ### Working Tree
 
-- AKA, project directory.
-- AKA, user directory.
+- AKA, project directory
+- AKA, user directory
 - AKA, your files
-- This is where project files are modified.
-- Directory inside `git init` was ran.
+- This is where project files are modified
+- Directory inside `git init` was ran
 
 ### The Index
 
 - `.git/index`
 - AKA, staging
-- AKA, cache.
-- AKA, pre-commit.
-- AKA, git's files.
+- AKA, cache
+- AKA, pre-commit
+- AKA, git's files
 - Invoked with `git add`
 - Adding a file does two things:
-  - SHA-1 of the file, adding it to the Index.
+  - SHA-1 of the file, adding it to the Index
   - Writes the blob to .git/objects/
-- Files in the Index are tracked.
+- Files in the Index are tracked
 
 ## Local Files Overview
 

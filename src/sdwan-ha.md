@@ -22,7 +22,8 @@ The Managers can sync over the datacenter interconnect.
 
 ![sdwan-disaster-recovery](./images/cisco/cisco-sdwan-disaster-recovery.avif)
 
-Image courtesy of 
+Image courtesy of
+
 [Cisco](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/ha-scaling/ios-xe-17/high-availability-book-xe/m-disaster-recovery.html).
 
 ## References

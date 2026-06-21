@@ -127,7 +127,8 @@ mdbook build
 
 ## AI
 
-There is some AI use here, the articles are 98% human written. 
+There is some AI use here, the articles are 98% human written.
+
 
 I use Anthropic's tools.
 

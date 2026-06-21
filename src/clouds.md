@@ -15,11 +15,13 @@ Most of this is based on the NIST definitions.
 **Resource Pooling**
 
 - Multi-tenant
-- Location independence 
+- Location independence
+
 
 **Rapid Elasticity**
 
-- Capabilities can be provisioned and released, in some cases automatically 
+- Capabilities can be provisioned and released, in some cases automatically
+
 - Resources often appear unlimited
 - Scales with demand
 
@@ -43,7 +45,8 @@ Running a providers app on their cloud infrastructure.
 Deploy your own apps into a cloud.
 
 - AWS: Elastic Beanstalk (Java, Python etc.)
-- Azure App Service 
+- Azure App Service
+
 - Google App Engine
 - IBM Cloud Foundry
 

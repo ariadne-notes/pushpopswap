@@ -1,6 +1,7 @@
 # Windows 10 Physical to Virtual
 
-I bought a used Intel i7 Windows 10 machine with a 512 GB NVMe drive. 
+I bought a used Intel i7 Windows 10 machine with a 512 GB NVMe drive.
+
 
 On the outside are two [COA](https://en.wikipedia.org/wiki/Certificate_of_authenticity#COAs_for_software) stickers, one for Windows 10 Pro, and another for MS Office 2019.
 

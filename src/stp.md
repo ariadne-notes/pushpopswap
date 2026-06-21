@@ -6,15 +6,18 @@
 
 - Frequently cited as `802.1D`
 
-**Bridge** 
+**Bridge**
+
 
 - A device that participates in the spanning tree algorithm
 
-**Root Bridge** 
+**Root Bridge**
+
 
 - The bridge that wins the STP election
 
-**Bridge ID** 
+**Bridge ID**
+
 
 - Three fields, next to each other
 - `Bridge Priority, Extension ID (the VLAN), MAC Address`
@@ -152,14 +155,17 @@ Eth0 │
 
 ## Port Types
 
-**Designated ports** 
+**Designated ports**
+
 
 - Send BPDUs downstream
 
-**Root Ports** 
+**Root Ports**
+
 
 - The selected port towards the root bridge
-  - Lowest total cost 
+  - Lowest total cost
+
     - OR Lowest advertised priority
       - OR Lowest advertised port ID (interface number)
 
@@ -440,5 +446,3 @@ R. Perlman, *Interconnections: Bridges, Routers, Switches, and Internetworking P
 [Understand and Tune Spanning Tree Protocol Timers - Cisco](https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/19120-122.html)
 
 [Layer 2 Configuration Guide, Cisco IOS-XE 17.16.X](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9200/software/release/17-16/configuration_guide/lyr2/b_1716_lyr2_9200_cg/configuring_spanning_tree_protocol.html)
-
-

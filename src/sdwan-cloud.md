@@ -27,7 +27,8 @@ Used to pick network connections, or maybe even the overlay to use a different s
 
 ![SaaS](./images/cisco/cisco-sdwan-cloud-onramp-saas.avif)
 
-Image courtesy of 
+Image courtesy of
+
 [Cisco](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/cloudonramp/ios-xe-17/cloud-onramp-book-xe/cor-saas-17-2-1r.html).
 
 ## Cisco SD-WAN Cloud OnRamp
@@ -49,7 +50,8 @@ Used to interconnect devices within the Cloud.
 
 ![IaaS](./images/cisco/cisco-sdwan-cloud-onramp-iaas.avif)
 
-Image courtesy of 
+Image courtesy of
+
 [Cisco](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/cloudonramp/ios-xe-17/cloud-onramp-book-xe/m-cloud-onramp-iaas-wan.html).
 
 ### SDWAN Multicloud

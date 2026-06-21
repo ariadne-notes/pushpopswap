@@ -8,7 +8,8 @@ PyATS includes tools:
 
 **Unicon** --- Manages the connection state machine
 
-**Genie** --- Manages node representations 
+**Genie** --- Manages node representations
+
 
 #### Unicon - Connection State Machine
 

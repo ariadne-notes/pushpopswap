@@ -1,7 +1,9 @@
 # SyncE
 
-SyncE synchronizes clock frequency over an Ethernet port. 
- 
+SyncE synchronizes clock frequency over an Ethernet port.
+
+
+
  It does not synchronize time-of-day, that's done by PTP, IEEE 1588.
 
 Setting as oscillator to a frequency is syntonization.

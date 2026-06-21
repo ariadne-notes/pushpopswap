@@ -26,4 +26,3 @@ then bridges find a spanning tree.
 L2 networks were getting larger, and a common mistake was creating a loop, where frame would go around infinitely.
 
 Spanning Tree Protocol **STP** disables ports to break L2 loops.
-

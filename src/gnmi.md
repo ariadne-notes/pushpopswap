@@ -28,4 +28,3 @@ This is done in gNMI via gRPC and a YANG model.
 [GitHub - openconfig/gnmi: gRPC Network Management Interface · GitHub](https://github.com/openconfig/gnmi)
 
 [OpenConfig - gRPC Network Management Interface (gNMI) specification](https://openconfig.net/docs/gnmi/gnmi-specification/)
-

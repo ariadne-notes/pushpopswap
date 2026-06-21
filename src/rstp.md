@@ -51,7 +51,8 @@
 **Propose bit**
 
 - Added in 802.1w
-- Switches compare BPDUs 
+- Switches compare BPDUs
+
   - Switch with Superior BPDU
     - Sets the `Propose` and `DP` bits
 

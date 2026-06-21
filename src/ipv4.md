@@ -28,4 +28,3 @@ Concepts from the 1974 IEEE paper:
 [IPv4 - Wikipedia](https://en.wikipedia.org/wiki/IPv4)
 
 [RFC 791: Internet Protocol | RFC Editor](https://www.rfc-editor.org/info/rfc791/)
-

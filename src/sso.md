@@ -29,11 +29,13 @@ To get zero packet loss during a RP failure, without notifying the peer or dropp
 
 ## Terms
 
-**RIB** --- Routing Information Base. 
+**RIB** --- Routing Information Base.
+
 
 This is where the RP stores its routes.
 
-**FIB** --- Forwarding Information Base. 
+**FIB** --- Forwarding Information Base.
+
 
 This is the information necessary to program the linecard to pass traffic.
 
@@ -45,7 +47,8 @@ The RPs sync with each other and share state, (hopefully) enough state to preven
 
 All necessary information to perform the task is already on the standby RP.
 
-**Non-Stop Routing** 
+**Non-Stop Routing**
+
 
 The Control plane relationships and RIB are both checkpointed.
 
@@ -61,7 +64,8 @@ The FIB is checkpointed.
 
 SSO/NSF/NSR are all vendor features that do no share state with the neighbor. GR is an IETF capability both devices must have turned on.
 
-**EoR** --- End-of-RIB. 
+**EoR** --- End-of-RIB.
+
 
 This means the neighbor has shared the its entire routing table.
 

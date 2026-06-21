@@ -38,19 +38,22 @@ Invented by [Steve Deering], in his 1988 PhD thesis work *[Multicast Routing in 
 
 - A router designated as the root of a shared tree
 
-**(*, G)** 
+**(*, G)**
+
 
 - Pronounced as "Star comma Gee"
 -  AKA, a shared tree
 - Require a RP
 - Called Star comma Gee, because typing "show ip mroute" ... this is what shows up
 
-**(S, G)** 
+**(S, G)**
+
 
 - Pronounced as "Ess comma Gee"
 - AKA a source tree. These do not require a RP
 
-**Source Tree** 
+**Source Tree**
+
 
 - AKA, SPT, or shortest path tree. SPT is best tree.
 
@@ -70,7 +73,8 @@ Invented by [Steve Deering], in his 1988 PhD thesis work *[Multicast Routing in 
 
 - Towards the source
 
-**Downstream** 
+**Downstream**
+
 
 - Towards group members
 
@@ -93,7 +97,8 @@ Invented by [Steve Deering], in his 1988 PhD thesis work *[Multicast Routing in 
 
 **RIB** --- Routing Information Base
 
-**DF** --- Designated Forwarder 
+**DF** --- Designated Forwarder
+
 
 - Used in PIDIR-PIM
 
@@ -158,7 +163,8 @@ A multicast address always start with `1110`
 | cisco-rp-discovery | 224.0.1.40        | Mapping agent floods RP-to-group mappings.         |
 
 
-### PIM 
+### PIM
+
 
 PIM forms adjacencies in only one direction
 

@@ -2,7 +2,8 @@
 
 ## Terms
 
-**RADIUS** --- Remote Authentication Dial-In User Service. 
+**RADIUS** --- Remote Authentication Dial-In User Service.
+
 
 Created to provide AAA for ISP users, or Dial-In for businesses.
 

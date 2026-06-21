@@ -4,13 +4,15 @@
 
 **1 millisecond:** Network latency is measured in ms, or 1 thousandth of a second 0.001.
 
-**1 microsecond** 
+**1 microsecond**
+
 
 - 1 μs (a millionth) of a second
 - 0.000 001
 - 1000 μs is 1 ms
 
-**1 nanosecond** 
+**1 nanosecond**
+
 
 - 1 ns (a billionth) of a second
 - 0.000 000 001
@@ -120,9 +122,11 @@ sequenceDiagram
 
 - Server sends Sync
   - Creates t1
-    
+
+
 - Client gets Sync
-  - Creates t2 
+  - Creates t2
+
     - Records t2
 
 ### Follow Up
@@ -131,9 +135,11 @@ sequenceDiagram
 
 - Server sends Follow-Up
   - Contains t1
-    
+
+
 - Client receives Follow-Up
-  - Records t1 
+  - Records t1
+
 
 ### Delay Request
 
@@ -250,4 +256,3 @@ end
 [Cisco - Whitepaper - PTP and SyncE basics with Cisco IOS XR Configuration](https://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/ios-xr-software/217579-configure-ptp-and-synce-basics-with-cisc.html)
 
 [Riedel - Transparent versus Boundary Clocks (PTP) in Broadcast Environments](https://www.riedel.net/fileadmin/user_upload/800-downloads/07-Guides/Transparent_versus_Boundary_Clocks.pdf)
-

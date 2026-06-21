@@ -2,7 +2,8 @@
 
 ## Queues
 
-SD-WAN has 8 queues. 
+SD-WAN has 8 queues.
+
 
 **Queue 0**
 
@@ -13,7 +14,8 @@ SD-WAN has 8 queues.
 
 **Queue 2**
 
-The default queue. 
+The default queue.
+
 
 If QoS is not configured, all user traffic will take Queue 2.
 

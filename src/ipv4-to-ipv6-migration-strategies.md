@@ -44,7 +44,8 @@ Do whatever is fastest.
 
 ## Automatic Tunnels
 
-**6to4** 
+**6to4**
+
 
 - Uses `2002::/16`
 
@@ -52,7 +53,8 @@ Do whatever is fastest.
 
 - The ISP uses its own addressing.
 
-**ISATAP** --- Intra-site Automatic Tunnel Addressing Protocol 
+**ISATAP** --- Intra-site Automatic Tunnel Addressing Protocol
+
 
 - Uses these 32 bits to denotes ISATAP `0000:5EFE`
 
@@ -62,11 +64,13 @@ Do whatever is fastest.
 
 ## DNS64 And NAT64
 
-**DNS64** 
+**DNS64**
+
 
 - DNS creates synthetic AAAA records, so a v4 client can connect to a v6 service.
 
-**NAT64** 
+**NAT64**
+
 
 - A router translates IPv6 traffic to IPv4 traffic.
 

@@ -60,4 +60,3 @@ When IP encapsulates another protocol it labels the `protocol` field with a numb
 ## References
 
 [Troubleshooting TechNotes - What is Administrative Distance? - Cisco](https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html#topic2)
-

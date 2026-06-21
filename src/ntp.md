@@ -51,7 +51,8 @@ ntp server pool.ntp.org
 ### A public config
 
 > [!WARNING]
-> Does your organization use time in a way that human lives depend on it being correct? 
+> Does your organization use time in a way that human lives depend on it being correct?
+
 
 > **You shouldn't "just get it off the Internet"**
 >

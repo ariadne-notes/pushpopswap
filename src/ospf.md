@@ -161,7 +161,8 @@ These will show up as an `O IA` route in OSPF, and a route-to-null on the ABR.
 
 - Requires a route present in the RIB
 
-### v4 
+### v4
+
 
 ```console,editable
 router ospf 1

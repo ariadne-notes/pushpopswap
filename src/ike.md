@@ -10,7 +10,8 @@ All of IKE is Request Response Pairs.
 
 **SA** --- Security Association
 
-- Shared Secret 
+- Shared Secret
+
 - Set of Agreed on and Shared Cryptographic algorithms to transport information
 
 **Message ID**

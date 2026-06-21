@@ -1,6 +1,7 @@
 # EIGRP Stub Routing
 
-- Normally a hub-and-spoke technology. 
+- Normally a hub-and-spoke technology.
+
 - Deployed at the spoke sites.
 - Simplifies EIGRP config.
 - Prevents a stub site from being used as transit.

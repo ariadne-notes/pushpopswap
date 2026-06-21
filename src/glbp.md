@@ -4,7 +4,8 @@ This is a Cisco proprietary FHRP. The v4 and v6 exist for IOS, but v6 is missing
 
 ## Terms
 
-**GLBP** 
+**GLBP**
+
 
 - Gateway Load Balancing Protocol
 - Cisco Proprietary
@@ -17,7 +18,8 @@ This is a Cisco proprietary FHRP. The v4 and v6 exist for IOS, but v6 is missing
 - Can reply with a different MAC addresses to load balance
 - Highest priority router is the AVG
 
-**AVF** 
+**AVF**
+
 
 - Active Virtual Forwarder
 - Two states {Active, Listen}

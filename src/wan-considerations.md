@@ -9,7 +9,8 @@
 - Point-to-point
 - Logically "a wire" between two sites
 - ISP makes the wire look continuous
-- Usually 
+- Usually
+
   - Based on T-Carrier, or OCx technology
   - Takes months to provision
   - Older tech
@@ -134,7 +135,8 @@
 **GSM**
 
 - 9600bps
-- ~1h to transfer 5MB 
+- ~1h to transfer 5MB
+
 
 - **GPRS**
 
@@ -169,7 +171,8 @@
 **5G**
 
 - 20/10 Gbps
-- ~16 seconds to upload a 20GB file 
+- ~16 seconds to upload a 20GB file
+
 
 ## Overlay Technologies
 

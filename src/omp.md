@@ -13,7 +13,8 @@ graph LR
     end
 ```
 
-**OMP routes** 
+**OMP routes**
+
 
 - AKA, vRoutes
 - AKA, Site prefixes `10.0.0.0/24`
@@ -23,12 +24,15 @@ graph LR
 
 - Each TLOC will attempt a full-mesh connection with every other TLOC
   - Full Mesh
-- Tunnel endpoint is a 3-tuple 
-  - System IP, 
+- Tunnel endpoint is a 3-tuple
+
+  - System IP,
+
   - Color
   - Encapsulation
 
-**Service Routes** 
+**Service Routes**
+
 
 - Embedded network services at the local-site
   - Firewalls
@@ -77,7 +81,8 @@ These require a TLOC.
 - Originator
 - Preference (Higher is more preferred)
 - Tag
-- VRF 
+- VRF
+
 
 ### OMP Preference
 

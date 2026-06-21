@@ -16,7 +16,8 @@ In 1986 NSA sponsored security protocols under the Secure Data Network Systems (
 
 **[NRL]** --- Naval Research Laboratory, USA.
 
-In 1992, NRL was funded by DARPA to implement IPv6 and research packet encryption in BSD 4.4. 
+In 1992, NRL was funded by DARPA to implement IPv6 and research packet encryption in BSD 4.4.
+
 
 [NRL]: https://en.wikipedia.org/wiki/United_States_Naval_Research_Laboratory
 

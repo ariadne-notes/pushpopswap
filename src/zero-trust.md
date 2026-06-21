@@ -65,7 +65,7 @@ Works with either Auto-Enrollment or SAML.
 
 SPA works with a ZTA headend, and supports TCP or UDP.
 
-### Clientless 
+### Clientless
 
 SPA, no enrollment, uses SAML re-directs and browser challenges.
 

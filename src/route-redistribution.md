@@ -18,7 +18,8 @@ Used nearer the core, the router redistributes both ways. This can cause feedbac
 
 **Seed Metric**
 
-The values given to the receiving routing protocol. 
+The values given to the receiving routing protocol.
+
 
 **Route Loop**
 

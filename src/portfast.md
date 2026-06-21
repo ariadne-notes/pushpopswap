@@ -7,7 +7,8 @@ The best practice is to configure this on every port connected to hosts.
 - Do not send TCN BPDUs
 
 > [!NOTE]
-> 
+>
+
 > This stops TCNs, which cause the max-age timer to reduce to the duration of the forward delay on receipt of a TCN.
 
 

@@ -97,7 +97,8 @@ The idea was, you could look at a v6 address with `64` in the front and understa
 | `64:ff9b::/96`       | WKP Translation      | [6052] | NAT64 IPv4/IPv6 translation                                                |
 | `64:ff9b:1::/48`     | Local Translation    | [8215] | Local-use IPv4/IPv6 translation                                            |
 | `100::/64`           | RTBH                 | [6666] | Discard prefix                                                             |
-| `2000::/3`           | Global Scope         | [4291] | The v6 Internet                                                            | 
+| `2000::/3`           | Global Scope         | [4291] | The v6 Internet                                                            |
+
 | `2001::/32`          | Teredo               | [4380] | Tunneling                                                                  |
 | `2001:db8::/32`      | Documentation        | [3849] | Intended for labs, books, documents                                        |
 | `2002::/16`          | 6to4                 | [3056] | Translation                                                                |
@@ -124,5 +125,3 @@ The idea was, you could look at a v6 address with `64` in the front and understa
 [RFC 2460 - Internet Protocol, Version 6 (IPv6)](https://www.rfc-editor.org/rfc/rfc2460)
 
 [IPv6 address - Wikipedia](https://en.wikipedia.org/wiki/IPv6_address)
-
-

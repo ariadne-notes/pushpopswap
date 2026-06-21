@@ -37,7 +37,8 @@ The Layer 3 network VXLAN-GPO travels thru.
 
 No VRFs, no features. Just lots of `/31` links.
 
-Typically deployed with IS-IS since it's v4 and v6 agnostic. 
+Typically deployed with IS-IS since it's v4 and v6 agnostic.
+
 
 This part can be automated.
 
@@ -79,7 +80,8 @@ Communication between VNs must go to a fusion router or a firewall.
 - Provides the guest functionality for wireless guest.
 - Is a LISP xTR, with an anycast gateway, with overlay host protocols, (like DHCP).
 
-### Fabric Border 
+### Fabric Border
+
 
 - Connects other L3 networks to SDA fabric.
 
@@ -96,7 +98,8 @@ The border nodes do context changes, going from one VRF to another.
 Only does IP transport
 
 - Routing
-- Multicast 
+- Multicast
+
 
 ## Fabric Edge Onboarding
 
@@ -143,5 +146,3 @@ SGACLs, via ISE.
 [Cisco - SD-Access Wireless Design and Deployment Guide - Cisco DNA center 2.1.1](https://www.cisco.com/c/dam/en/us/td/docs/cloud-systems-management/network-automation-and-management/dna-center/deploy-guide/cisco-dna-center-sd-access-wl-dg.pdf)
 
 [Cisco SD-Access Fabric Resources - Cisco Community](https://community.cisco.com/t5/networking-knowledge-base/cisco-sd-access-fabric-resources/ta-p/4196271)
-
-

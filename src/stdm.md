@@ -9,17 +9,20 @@ The common STDM system in the US is T-Carrier.
 **DS0**
 
 - Level 0. One timeslot.
-- A timeslot carries 8 bits. 
+- A timeslot carries 8 bits.
+
 - Frame rate is 8000 Hz. 8 × 8000 = 64 Kbps.
 
 **B8ZS**
 
-- Binary Eight Zero Substitution. 
+- Binary Eight Zero Substitution.
+
 - A special way to encode `0000 0000` for DS1/T1 lines.
 
 **T1 Frame**
 
-- T-Carrier, Level 1. 
+- T-Carrier, Level 1.
+
 - Aggregates 24 DS0 frames, or 192 bits.
 - The T1 gets an extra bit for framing, so 193. 193 × 8000 = 1.544 Mbps.
 
@@ -35,7 +38,8 @@ The common STDM system in the US is T-Carrier.
 **APS**
 
 - Automatic Protection Switching.
-- The device engaging in APS sends the data on *both* links, the working link and the protected link. 
+- The device engaging in APS sends the data on *both* links, the working link and the protected link.
+
 - The receiving device devices which to use.
 
 **DS1**

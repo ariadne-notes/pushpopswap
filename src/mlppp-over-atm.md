@@ -45,7 +45,8 @@ One of the more involved things I've built to find a bug.
                                       └──────┘               .1│         │.2           VRF ISP │      Peer   │                           
                                                                └─────────┘                   .1│             │ Lo20                      
                                                 22.1.1.0/24                   21.1.1.0/30      └─────────────┘ VRF ISP                   
-                                                                                                               20.1.1.2/32               
+                                                                                                               20.1.1.2/32
+
 </pre>
 
 ## CPE

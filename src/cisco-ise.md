@@ -1,12 +1,14 @@
 # Cisco ISE
 
-Required for 
+Required for
+
 
 - pxGrid
 - SGTs
 - Microsegmentation
 
-Provides 802.1x, Mac Authentication Bypass (MAB), or Web Authentication (WebAuth). 
+Provides 802.1x, Mac Authentication Bypass (MAB), or Web Authentication (WebAuth).
+
 
 ISE is *tightly* integrated via API calls to CatC.
 

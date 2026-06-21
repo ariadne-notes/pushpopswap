@@ -177,7 +177,8 @@ Used when migrating from narrow to wide without a hard cutover:
     - Link is between routers
     - Area is every router must have a matching password
     - L2 and L1/L2 router use domain authentication.
-    
+
+
 ### Notes
 
 Default route injected via route-map.

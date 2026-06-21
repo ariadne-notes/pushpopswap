@@ -38,4 +38,3 @@ router ospf 1
 ## References
 
 [Configure Routing Protocol Redistribution - Cisco](https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8606-redist.html)
-

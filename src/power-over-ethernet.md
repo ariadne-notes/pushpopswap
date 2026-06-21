@@ -102,4 +102,3 @@ flowchart LR
 [Cisco - Industrial Power over Ethernet (PoE)](https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2024/pdf/BRKIOT-1128.pdf?cachemode=refresh)
 
 [Cisco UPOE+- The Catalyst for Expanded IT-OT Convergence White Paper - Cisco](https://www.cisco.com/c/en/us/solutions/collateral/enterprise-networks/nb-06-upoe-plus-it-ot-wp-cte-en.html)
-

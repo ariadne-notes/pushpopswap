@@ -163,7 +163,8 @@ freeradius -X
 ```
 
 ## After It's Working, RSYNC It
- 
+
+
 
 ```console,editable
 rsync -av /etc/freeradius/3.0/clients.conf \

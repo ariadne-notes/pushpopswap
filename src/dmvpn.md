@@ -33,7 +33,8 @@ DMVPN has a lot of benefits:
 ## Caveats
 
 > [!WARNING]
-> 
+>
+
 > OSPF `point-to-multipoint` needs the following config
 
 ```text,editable

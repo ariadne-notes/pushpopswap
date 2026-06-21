@@ -6,7 +6,8 @@
 
 A web dashboard meant to help with the Cisco CX experience, harnessing a combination of Agentic AI, and customer provided Telemetry.
 
-The Basic Tier works with just the cloud dashboard [iq.cisco.com](http://iq.cisco.com) 
+The Basic Tier works with just the cloud dashboard [iq.cisco.com](http://iq.cisco.com)
+
 
 Standard and Signature use the same dashboard, enhanced with Telemetry from Cisco IQ Link, the On-Prem data collector.
 
@@ -18,11 +19,14 @@ From the [News Release].
 
 > Over 40 percent of outages start as misconfigurations nobody caught in time.
 >
-> Sophisticated actors do not need a novel exploit. 
+> Sophisticated actors do not need a novel exploit.
+
 >
-> They are going after aged infrastructure organizations knew about and did not prioritize. 
+> They are going after aged infrastructure organizations knew about and did not prioritize.
+
 >
-> Our Talos team confirmed it: 40% of top-targeted vulnerabilities last year impacted end-of-life devices. 
+> Our Talos team confirmed it: 40% of top-targeted vulnerabilities last year impacted end-of-life devices.
+
 >
 > 32% are over a decade old.
 >
@@ -36,9 +40,11 @@ Cisco's name for their customer support organization.
 
 **EOL** --- End of Life
 
-A process that guides the final business operations associated with the Cisco Product life cycle. 
+A process that guides the final business operations associated with the Cisco Product life cycle.
 
-The end-of-life process consists of a series of technical and business milestones and activities that, once completed, make a Product obsolete. 
+
+The end-of-life process consists of a series of technical and business milestones and activities that, once completed, make a Product obsolete.
+
 
 Once obsolete, the Product is not sold, improved, maintained, or supported.
 
