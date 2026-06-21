@@ -18,7 +18,7 @@ The CML Web UI provides download for this tool. It's available at a link like th
 
 - How the console ports are currently mapped
 
-### Breakout-config.yml
+### breakout-config.yml
 
 ```console
 ariadne@tesseract:~/claude-mcp-cml$ cat breakout-config.yml 
@@ -46,7 +46,7 @@ verify_tls: false
 vnc_start_port: 5900
 ```
 
-### Breakout-map.yml
+### breakout-map.yml
 
 ```console,editable
 ariadne@tesseract:~/claude-mcp-cml$ cat lab-connections-and-state.yaml 

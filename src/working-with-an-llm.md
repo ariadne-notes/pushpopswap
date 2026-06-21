@@ -4,12 +4,10 @@ If I need to lab something, most of the time I have an LLM generate the configs
 
 Two reasons:
 
-- Troubleshooting Practice
+- Troubleshooting practice
 - Learning the minimum to design a solution
 
 ## Low tech method
-
-This is accessible way:
 
 - Drag and drop the nodes
 - Wire the topology
@@ -21,9 +19,15 @@ This is accessible way:
 
 ## High tech method
 
+Describe the topology at a high level with design constraints.
+
+- Solution being tested
+- Protocols used
+- Pass/Fail conditions
+
 Tooling:
 
 - [PyATS](./pyats.md)
-
 - [CML MCP](./cml-mcp.md)
+- [CML Breakout](./cml-breakout.md)
 

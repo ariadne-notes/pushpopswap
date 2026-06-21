@@ -2,16 +2,9 @@
 
 PyATS interacts with raw TCP ports expecting the other side to be Cisco CLI.
 
-It shoud be paired with [CML Breakout](cml-breakout.md)
+It should be paired with [CML Breakout](cml-breakout.md)
 
-PyATS includes tools:
-
-**Unicon** --- Manages the connection state machine
-
-**Genie** --- Manages node representations
-
-
-#### Unicon - connection state machine
+## Unicon
 
 [Unicon] manages the different states a connection could be in.
 
@@ -23,7 +16,7 @@ PyATS includes tools:
 - --More--
 - "Press Return to get started"
 
-#### Genie - Python objects
+## Genie
 
 [Genie] uses [models] to create objects that describe operational states.
 
@@ -31,11 +24,9 @@ PyATS includes tools:
 
 [models]: https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/models
 
-
-## PyATS install
+## Install
 
 I already have python3 installed.
-
 
 ```console,editable
 #

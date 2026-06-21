@@ -4,9 +4,9 @@
 
 **MCP** --- Model Context Protocol
 
-**CML** --- Cisco Modeling Labs
+- MCP is a formal way to define tools a LLM can use
 
-MCP is a formal way to define tools a LLM can use.
+**CML** --- Cisco Modeling Labs
 
 ## Abilities
 
@@ -26,7 +26,9 @@ MCP is a formal way to define tools a LLM can use.
   
 - Packet Captures
 
-CML-MCP isn't great after the lab has been started to make modifications or tweaks, for that, use [PyATS](./pyats.md)
+CML-MCP isn't great after the lab has been started to make modifications or tweaks, for that, use [PyATS].
+
+[PyATS]: ./pyats.md
 
 ## GitHub
 
@@ -38,7 +40,7 @@ git clone https://github.com/xorrkaz/cml-mcp/
 
 I followed [this guide](https://github.com/xorrkaz/cml-mcp/blob/main/INSTALLATION.md)
 
-```
+```text,editable
 ariadne@orchard:~/docker/cml-mcp$ cat docker-compose.yml 
 services:
   cml-mcp:

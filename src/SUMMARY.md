@@ -286,7 +286,7 @@
   - [Working with an LLM](working-with-an-llm.md)
     - [CML Breakout](cml-breakout.md)
     - [CML MCP](cml-mcp.md)
-    - [Claude](claude.md)
+    - [LLM Instructions](llm-instructions.md)
     - [PyATS](pyats.md)
 
 # Etc (Stuff I Haven't Sorted)
