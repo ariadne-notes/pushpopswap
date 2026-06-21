@@ -1,0 +1,21 @@
+# lychee link-checker config. Lives in scripts/, so it is not auto-discovered;
+# pass it explicitly. Run from the repo root with:
+#   lychee --config scripts/lychee.toml './src/**/*.md'
+
+# Quiet output and reuse the on-disk cache (.lycheecache).
+no_progress = true
+cache = true
+
+# Treat these as success. Cisco docs return 403 to automated checkers,
+# LinkedIn returns 999 — both are bot-blocking, not real breakage.
+# 429 is rate-limiting.
+accept = ["200..=204", "403", "429", "999"]
+
+# Pretend to be a browser so fewer sites reject the request outright.
+user_agent = "Mozilla/5.0 (compatible; lychee link checker)"
+
+# Don't fail on links lychee can't resolve from source but that work
+# in the built mdBook (e.g. .html targets with query strings/anchors).
+exclude = [
+  '\.html\?',
+]

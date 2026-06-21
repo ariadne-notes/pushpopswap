@@ -2,7 +2,7 @@
 
 Public colors are behind [NAT].
 
-[NAT]: (./nat.md)
+[NAT]: ./nat.md
 
 | Public (NAT)    | Private        |
 |-----------------|----------------|

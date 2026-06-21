@@ -31,9 +31,6 @@ In the diagram (from the RFC), everything connects to N2, so problem solved.
                           Broadcast or NBMA networks
 ```
 
-See [OSPF LSAs](./ospf-lsas.md) to see what the actual contents of the LSAs are.
-
-
 ### DR
 
 Forms full adjacencies.

@@ -16,7 +16,7 @@ A `/24` is 24 n-bits and 8 h-bits.
 
 Since [classful networking is dead], unless we are told the subnet mask, we cannot guess what the subnet size is from an IP
 
-[classful networking is dead]: (./ipv4-classful-networking.md)
+[classful networking is dead]: ./ipv4-classful-networking.md
 
 ## Terms
 

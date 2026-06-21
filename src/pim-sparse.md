@@ -34,4 +34,4 @@ The RP always gets the stream, even if it has no receivers to forward it to.
 
 ## Captures
 
-[PIM-SM-register-register-stop-prune.pcap](https://github.com/user/repo/raw/main/captures/multicast/PIM-SM-register-register-stop-prune.pcap)
+[PIM-SM-register-register-stop-prune.pcap](./captures/multicast/PIM-SM-register-register-stop-prune.pcap)

@@ -4,7 +4,7 @@
 
 **NVO** --- Network Virtualization Overlay
 
-- Usually [VXLAN](./vxlan.md)
+- Stuff like VXLAN
 
 **BUM** -- Broadcast, Unknown Unicast, Multicast
 
