@@ -34,12 +34,11 @@
     - [Subnetting with the Box Method](subnet-with-the-box-method.md)
     - [Subnetting with Binary](subnet-with-binary.md)
     - [IPv4 Classful Networking](ipv4-classful-networking.md)
-  - [IPv4 to IPV6 Migration Strategies](ipv4-to-ipv6-migration-strategies.md)
-    - [ISATAP](isatap.md)
-    - [6RD](6rd.md)
-    - [Stateful NAT64](stateful-nat64.md)
-    - [Stateless NAT64](stateless-nat64.md)
-
+- [IPv4 to IPV6 Migration Strategies](ipv4-to-ipv6-migration-strategies.md)
+  - [ISATAP](isatap.md)
+  - [6RD](6rd.md)
+  - [Stateful NAT64](stateful-nat64.md)
+  - [Stateless NAT64](stateless-nat64.md)
 - [IPv6](ipv6.md)
   - [IPv6 Subnetting](ipv6-subnetting.md)
   - [IPv6 Hextext Boundaries](ipv6-hextet-boundaries.md)
@@ -47,10 +46,9 @@
   - [IPv6 Multicast Addresses](ipv6-multicast-addresses.md)
   - [IPv6 Link Local Addressing](ipv6-link-local-addressing.md)
   - [IPv6 Unique Link Local Addressing](ipv6-ula.md)
+  - [IPv6 ICMPv6](ipv6-icmpv6.md)
   - [IPv6 Neighbor Discovery](ipv6-nd.md)
     - [IPv6 ND Router Solicitation](ipv6-nd-ra.md)
-  - [IPv6 ICMPv6](ipv6-icmpv6.md)
-  
 
 
 # Ethernet
@@ -140,12 +138,10 @@
 
 - [EIGRP](eigrp.md)
   - [EIGRP Stub Routing](eigrp-stub-routing.md)
-  - [EIGRP Classic Metric](eigrp-classic-metric.md)
-  - [EIGRP Wide Metric](eigrp-metric-wide.md)
   
 - [IS-IS](is-is.md)
   - [IS-IS Network Design](is-is-network-design.md)
-  - [IPv4 To Hex](ipv4-to-hex.md)
+
 
 - [BGP](bgp.md)
   - [BGP Neighbor FSM](bgp-neighbor-fsm.md)
@@ -318,10 +314,17 @@
 - [Cisco Architecture](cisco-architecture.md)
   - [Cisco Silicon One](cisco-silicon-one.md)
 - [Internet Routing Registry](internet-routing-registry.md)
+- [In Buiding Wireless](./in-building-wireless.md)
 
 # Certification Stuff
 
 - [Cisco Certifications](cisco-certifications.md)
+
+# Tools
+
+- [IPv4 To Hex](ipv4-to-hex.md)
+- [EIGRP Classic Metric](eigrp-classic-metric.md)
+- [EIGRP Wide Metric](eigrp-wide-metric.md)
 
 # The End
 
