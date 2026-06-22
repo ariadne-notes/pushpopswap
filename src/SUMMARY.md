@@ -221,6 +221,7 @@
 - [NTP](ntp.md)
 - [Power Over Ethernet](power-over-ethernet.md)
 - [Cisco ECMP](cisco-ecmp.md)
+  - [Port Channel Load Balancing](port-channel-load-balancing.md)
 - [Flexible NetFlow](flexible-netflow.md)
 - [AAA with FreeRadius and Univention UCS](aaa-freeradius-and-univention-ucs.md)
 - [SNMP](snmp.md)
@@ -309,10 +310,10 @@
 - [Wake on LAN](wake-on-lan.md)
 - [Grep](grep.md)
 - [Unknown Command or Computer Name](unknown-command-or-computer-name.md)
-- [Cisco C9000 Catalyst Troubleshooting](cisco-c9000-troubleshooting.md)
-- [Packet Drops](packet-drops.md)
+- [Cisco C9000 Packet Drops](c9000-packet-drops.md)
 - [SecureCRT](securecrt.md)
 - [Add Cephfs to Debian](add-cephfs-to-debian.md)
+- [Cisco Architecture](cisco-architecture.md)
 
 # Certification Stuff
 
