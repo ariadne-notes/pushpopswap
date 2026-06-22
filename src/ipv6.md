@@ -1,6 +1,6 @@
 # IPv6
 
-Fundamentals changed with v6:
+## Fundamentals
 
 - 128 bits
 - Global Scoped address tend to be Globally Unique
@@ -17,6 +17,23 @@ Fundamentals changed with v6:
 - Mobile IPv6 lets mobile nodes remain reachable
 - No broadcast traffic
 - No ARP
+
+## Bits
+
+IPv6 address takes this form:
+
+`FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF`
+
+The groups are called **hextets**, as they are made with hex digits.
+
+- `FFFF`
+  - 16 bits
+- `FF`
+  - 8 bits
+  - One byte
+- `F`
+  - 4 bits
+  - A nibble
 
 ## Header format
 
@@ -46,48 +63,10 @@ IPv6 addresses are 4 groups of 32.
 └───────────────────────────────────────────────────────────────┘
 ```
 
-## Bits
 
-IPv6 address takes this form:
 
-`FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF`
 
-The groups are called **hextets**, as they are made with hex digits.
-
-- `FFFF`
-  - 16 bits
-- `FF`
-  - 8 bits
-  - One byte
-- `F`
-  - 4 bits
-  - A nibble
-
-## Alternative representation of a IPv6 address
-
-RFC 4291 allows this:
-
-`0:0:0:0:0:0:10.0.0.1`
-
-`::10.0.0.1`
-
-These are only API addresses to represent to a IPv6 App, that this is an IPv4 host.
-
-They don't go anywhere.
-
-## IPv6 global address block
-
-All globally routeable IPv6 addresses fit into this block.
-
-`2000::/3`
-
-## IPv6 special address blocks
-
-**WKP** --- Well Known Prefix
-
-The idea was, you could look at a v6 address with `64` in the front and understand it had been translated. These aren't popular anymore
-
-### Blocks
+## Address Blocks
 
 | Address Block        | Name                 | RFC    | Notes                                                                      |
 |----------------------|----------------------|--------|----------------------------------------------------------------------------|
@@ -97,8 +76,7 @@ The idea was, you could look at a v6 address with `64` in the front and understa
 | `64:ff9b::/96`       | WKP Translation      | [6052] | NAT64 IPv4/IPv6 translation                                                |
 | `64:ff9b:1::/48`     | Local Translation    | [8215] | Local-use IPv4/IPv6 translation                                            |
 | `100::/64`           | RTBH                 | [6666] | Discard prefix                                                             |
-| `2000::/3`           | Global Scope         | [4291] | The v6 Internet                                                            |
-
+| `2000::/3`           | Global Scope         | [4291] | The current v6 Internet                                                    |
 | `2001::/32`          | Teredo               | [4380] | Tunneling                                                                  |
 | `2001:db8::/32`      | Documentation        | [3849] | Intended for labs, books, documents                                        |
 | `2002::/16`          | 6to4                 | [3056] | Translation                                                                |
@@ -120,8 +98,39 @@ The idea was, you could look at a v6 address with `64` in the front and understa
 [9637]: https://www.rfc-editor.org/rfc/rfc9637
 [9602]: https://www.rfc-editor.org/rfc/rfc9602
 
+### IPv6 special address blocks
+
+**WKP** --- Well Known Prefix
+
+This idea was from RFC [6052].
+
+The idea was, you could look at a v6 address with `64` in the front and understand it had been translated. 
+
+These aren't popular anymore
+
+### IPv4-Compatible IPv6 Address
+
+**deprecated**
+
+RFC [4291 Section 2.5.5.1] allows this:
+
+[4291 Section 2.5.5.1]: https://www.rfc-editor.org/info/rfc4291/#section-2.5.5.1
+
+`0:0:0:0:0:0:10.0.0.1`
+
+`::10.0.0.1`
+
+These are only API addresses to represent to a IPv6 App, that this is an IPv4 host.
+
+They don't go anywhere.
+
 ## References
 
 [RFC 2460 - Internet Protocol, Version 6 (IPv6)](https://www.rfc-editor.org/rfc/rfc2460)
 
 [IPv6 address - Wikipedia](https://en.wikipedia.org/wiki/IPv6_address)
+
+[Cisco Live - IPv6:: It's Happening - Nathan Sherrard - BRKIPV-2191](./pdfs/ciscolive/BRKARC-1011.pdf)
+
+[RFC 9099: Operational Security Considerations for IPv6 Networks](https://www.rfc-editor.org/rfc/rfc9099.html)
+

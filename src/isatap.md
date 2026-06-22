@@ -1,5 +1,6 @@
 # ISATAP
 
+- **Deprecated**
 - Packet-in-packet technology
 - Mostly historical
 - Used within one site, **not** an Internet Technology

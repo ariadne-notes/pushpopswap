@@ -37,7 +37,8 @@
   - [IPv4 to IPV6 Migration Strategies](ipv4-to-ipv6-migration-strategies.md)
     - [ISATAP](isatap.md)
     - [6RD](6rd.md)
-    - [NAT64](nat64.md)
+    - [Stateful NAT64](stateful-nat64.md)
+    - [Stateless NAT64](stateless-nat64.md)
 
 - [IPv6](ipv6.md)
   - [IPv6 Subnetting](ipv6-subnetting.md)
@@ -314,6 +315,8 @@
 - [SecureCRT](securecrt.md)
 - [Add Cephfs to Debian](add-cephfs-to-debian.md)
 - [Cisco Architecture](cisco-architecture.md)
+  - [Cisco Silicon One](cisco-silicon-one.md)
+- [Internet Routing Registry](internet-routing-registry.md)
 
 # Certification Stuff
 

@@ -2,6 +2,11 @@
 
 ## Terms
 
+**S1** --- Silicon One
+
+- Made by Cisco
+- Single Architecture forwarding ASIC
+
 **PHY** --- Physical
 
 - Converts external signals on the wire into signals inside the transceiver.
@@ -86,4 +91,9 @@ show platform hardware fed active fwd-asic counters 0 counters_all
 
 [Cisco Live - C9000 - Packet Journey - Ivan Shirshin & Nathan Pan - BRKARC-3090](./pdfs/ciscolive/BRKARC-3090.pdf)
 
+[Cisco Live - C9000 - Packet Journey - Jaroslaw Gawron & Ivan Shirshin - BRKARC-2100](./pdfs/ciscolive/BRKARC-2100.pdf)
+
 [Cisco Live - C9000 - Troubleshooting - Michel Peters - BRKTRS-3090](./pdfs/ciscolive/BRKTRS-3090.pdf)
+
+[Cisco Live - Silicon One - Andreas Bovopoulos - BRKARC-1011](./pdfs/ciscolive/BRKARC-1011.pdf)
+
