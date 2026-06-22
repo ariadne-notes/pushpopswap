@@ -1,6 +1,6 @@
 # Push, Pop, Swap
 
-[Author](author.md)
+[Ariadne's Network Notes](ariadnes-network-notes.md)
 [License](license.md)
 
 ----

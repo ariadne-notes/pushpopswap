@@ -1,6 +1,6 @@
 # VTP
 
-> [!WARNING]
+> [!CAUTION]
 >
 > VTP Melts Networks.
 >
