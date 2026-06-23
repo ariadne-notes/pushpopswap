@@ -28,7 +28,7 @@ Invented by [Steve Deering], in his 1988 PhD thesis work *[Multicast Routing in 
 
 **OIL** --- Outgoing Interface List
 
- - Part of the MDT
+- Part of the MDT
 
 **MDT** --- Multicast Distribution Tree
 
@@ -40,26 +40,27 @@ Invented by [Steve Deering], in his 1988 PhD thesis work *[Multicast Routing in 
 
 **(*, G)**
 
-
+- AKA, a shared tree
 - Pronounced as "Star comma Gee"
--  AKA, a shared tree
 - Require a RP
 - Called Star comma Gee, because typing "show ip mroute" ... this is what shows up
 
 **(S, G)**
 
-
+- AKA, a source tree
+- These do not require a RP
 - Pronounced as "Ess comma Gee"
-- AKA a source tree. These do not require a RP
+
 
 **Source Tree**
 
-
-- AKA, SPT, or shortest path tree. SPT is best tree.
+- AKA, SPT
+- Shortest path tree
+- SPT is best tree
 
 **RPT** --- Rendezvous Point Tree
 
-- *,G that points towards the RP.
+- *,G that points towards the RP
 
 **ASM** --- Any Source Multicast
 
@@ -74,7 +75,6 @@ Invented by [Steve Deering], in his 1988 PhD thesis work *[Multicast Routing in 
 - Towards the source
 
 **Downstream**
-
 
 - Towards group members
 
@@ -162,29 +162,15 @@ A multicast address always start with `1110`
 | cisco-rp-announce  | 224.0.1.39        | Candidate RPs announce every 60s. Highest IP wins. |
 | cisco-rp-discovery | 224.0.1.40        | Mapping agent floods RP-to-group mappings.         |
 
+[IANA Assignments](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml)
 
 ### PIM
 
+PIM forms adjacencies in only one direction.
 
-PIM forms adjacencies in only one direction
+The multicast source is the root of the tree. Packets flow downstream from the source. Control plane traffic like PIM joins flow upstream to the RP, or to the receiver.
 
-The multicast source is the root of the tree. Packets flow downstream from the source. Control plane traffic like PIM joins flow upstream to the RP, or to the reciever.
-
-
-| Protocol           | Multicast Address |
-| -------------------| ------------------|
-| all-hosts          | 224.0.0.1         |
-| all-routers        | 224.0.0.2         |
-| OSPF-hello         | 224.0.0.5         |
-| OSPF-DR            | 224.0.0.6         |
-| RIPv2              | 224.0.0.9         |
-| EIGRP              | 224.0.0.10        |
-| PIM                | 224.0.0.13        |
-| mDNS               | 224.0.0.251       |
-
-[IANA Assignments](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml)
-
-## PIM
+## PIM Modes
 
 | PIM Mode             | Full Name             | How it works                                                                                                           |
 | ---------------------|-----------------------|------------------------------------------------------                                                                  |
@@ -224,9 +210,9 @@ The multicast source is the root of the tree. Packets flow downstream from the s
 
 ## Source based multicast (S,G)
 
-- PIM dense uses a separate tree for each multicast source and destination group.
-- Groups do not share trees.
-  - 3 Sources 3 trees.
+- PIM dense uses a separate tree for each multicast source and destination group
+- Groups do not share trees
+  - 3 Sources 3 trees
 
 ## Commands
 

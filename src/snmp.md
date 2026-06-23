@@ -1,29 +1,60 @@
 # SNMP
 
-- **NMS:** Network Management System
+**NMS** --- Network Management System
 
-- **[SNMP](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol):** Simple Network Management Protocol. a protocol to exchange network device statistics.
+**[SNMP]** --- Simple Network Management Protocol
 
-- **Device Statistics:** ... uptime, packets sent, packets received, packets dropped, memory used, CPU used, temperature, fan-speed.
+- Protocol to exchange network device statistics
 
-- **The Device:** A router, switch, or server.
+**SNMP Agent** 
 
-- **The Agent:** Lives on the network device and collecting and storing metrics in a MIB, reading to send them with SNMP.
+- Lives on network equipment
+- Collecting and stores information in a MIB
+- Does not store history
 
-- **[MIB](https://en.wikipedia.org/wiki/Management_information_base):** Management Information Base. An on-device database. This is how the SNMP agent stores its information.
+**[MIB]** --- Management Information Base
 
-- **[ITU](https://en.wikipedia.org/wiki/International_Telecommunication_Union):** International Telecommunication Union. A UN agency responsible for international telecommunications.
+- On-device SNMP database
+- The schema for the database
+- How the SNMP agent stores information
 
-- **OID Tree** An ITU, [X.660](https://www.itu.int/rec/T-REC-X.660-201107-I/en) standardized tree.
+**[ITU]** --- International Telecommunication Union
 
+- UN agency responsible for international telecommunications
 
-- **[OID](https://en.wikipedia.org/wiki/Object_identifier):** Object identifier. A node on an OID tree.
+**OID Tree** 
 
-- **[IETF MIB](https://en.wikipedia.org/wiki/Management_information_base#IETF_maintained):** A standard MIB, defined by the IETF. These aren't very popular.
+- An ITU, [X.660] standardized tree
 
-- **Vendor MIB:** In contrast to the IETF MIDs, vendors can create their own MIBs, attached to the OID tree.
+**[OID]** --- Object identifier
 
-## Finding used CPU time
+- Node on an OID tree
+
+**[IETF MIB]**
+
+- A standard MIB, defined by the IETF
+- Not popular
+
+**Vendor MIB**
+
+- Contrast to the IETF MIB
+- Vendors can create their own MIBs, attached to the Global OID tree
+
+[SNMP]: https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol
+[MIB]: https://en.wikipedia.org/wiki/Management_information_base
+[ITU]: https://en.wikipedia.org/wiki/International_Telecommunication_Union
+[X.660]: https://www.itu.int/rec/T-REC-X.660-201107-I/en
+[OID]: https://en.wikipedia.org/wiki/Object_identifier
+[IETF MIB]: https://en.wikipedia.org/wiki/Management_information_base#IETF_maintained
+
+## What is stored in MIBs
+
+**Device Statistics**
+
+- Uptime, packets sent, packets received, packets dropped
+- Memory used, CPU used, temperature, fan-speed
+
+## Using SNMP to track CPU time
 
 On the device, I run a normal command, and look at the outputs:
 
@@ -32,12 +63,14 @@ switch # show processes cpu | i util
 CPU utilization for five seconds: 20%/0%; one minute: 21%; five minutes: 20%
 ```
 
-So I want to figure out how to get the switch to report the first value "20" for "CPU used in the last 5 seconds."
+I want to figure out how to get the switch to report the first value "20" for "CPU used in the last 5 seconds."
 
 - What MIB does a C3560CX support?
 - I find the formal specification for the MIB somewhere on the vendor website: `CISCO-PROCESS-MIB (109)`
-- Looking at the [OID tree first](https://github.com/cisco/cisco-mibs/blob/main/oid/CISCO-PROCESS-MIB.oid) I identify a possible leaf: `cpmCPUTotal1minRev via 1.3.6.1.4.1.9.9.109.1.1.1.1.7`
-- Looking at the [MIB](https://github.com/cisco/cisco-mibs/blob/main/v2/CISCO-PROCESS-MIB.my) itself, I make sure it's a supported OID, by searching for `cpmCPUTotal1minRev`
+- Looking at the [OID tree first](https://github.com/cisco/cisco-mibs/blob/main/oid/CISCO-PROCESS-MIB.oid) I identify a possible leaf
+  - `cpmCPUTotal1minRev via 1.3.6.1.4.1.9.9.109.1.1.1.1.7`
+- Looking at the [MIB](https://github.com/cisco/cisco-mibs/blob/main/v2/CISCO-PROCESS-MIB.my) itself, I make sure it's a supported OID
+  - I search for `cpmCPUTotal1minRev`
 
 I find this...
 
@@ -157,6 +190,13 @@ logging snmp-trap alerts
 logging snmp-trap critical
 ```
 
+## Is SNMP to configure devices
+
+Nope. See [RFC 3535].
+
+[RFC 3535]: https://www.rfc-editor.org/info/rfc3535/#section-2.1
+
+> SNMP works reasonably well for device monitoring.  The stateless nature of SNMP is useful for statistical and status polling.
 
 ## Refereces
 

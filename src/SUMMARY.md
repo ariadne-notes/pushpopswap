@@ -34,11 +34,7 @@
     - [Subnetting with the Box Method](subnet-with-the-box-method.md)
     - [Subnetting with Binary](subnet-with-binary.md)
     - [IPv4 Classful Networking](ipv4-classful-networking.md)
-- [IPv4 to IPV6 Migration Strategies](ipv4-to-ipv6-migration-strategies.md)
-  - [ISATAP](isatap.md)
-  - [6RD](6rd.md)
-  - [Stateful NAT64](stateful-nat64.md)
-  - [Stateless NAT64](stateless-nat64.md)
+    
 - [IPv6](ipv6.md)
   - [IPv6 Subnetting](ipv6-subnetting.md)
   - [IPv6 Hextext Boundaries](ipv6-hextet-boundaries.md)
@@ -49,6 +45,12 @@
   - [IPv6 ICMPv6](ipv6-icmpv6.md)
   - [IPv6 Neighbor Discovery](ipv6-nd.md)
     - [IPv6 ND Router Solicitation](ipv6-nd-ra.md)
+    
+- [IPv4 to IPV6 Migration Strategies](ipv4-to-ipv6-migration-strategies.md)
+  - [ISATAP](isatap.md)
+  - [6RD](6rd.md)
+  - [Stateful NAT64](stateful-nat64.md)
+  - [Stateless NAT64](stateless-nat64.md)
 
 
 # Ethernet
@@ -84,10 +86,12 @@
   - [UplinkFast](uplinkfast.md)
   - [Port Security](port-security.md)
   - [UDLD](udld.md)
+
 - [ARP](arp.md)
   - [ARP Attacks](arp-attacks.md)
   - [DAI](dai.md)
   - [Proxy ARP](proxy-arp.md)
+
 - [VTP](vtp.md)
   - [VTP Bomb](vtp-bomb.md)
 
@@ -102,6 +106,7 @@
   - [L3VPN](mpls-l3vpn.md)
   - [MPLS DiffServ](mpls-diffserv.md)
   - [IRB On the ASR9K](irb-on-the-asr9k.md)
+
 - [PBB](pbb.md)
 
 # Switch Features
@@ -119,6 +124,8 @@
   - [Multicast L2 Addressing](multicast-l2-addressing.md)
 
 # Routing
+
+- [Static Routing](static-routing.md)
 
 - [OSPF](ospf.md)
   - [OSPF DR Election](ospf-dr-election.md)
@@ -156,11 +163,13 @@
 # Routing Strategies
 
 - [VRF Lite](vrf-lite.md)
+
 - [Route Redistribution](route-redistribution.md)
   - [Route Redistribution BGP](route-redistribution-bgp.md)
   - [Route Redistribution EIGRP](route-redistribution-eigrp.md)
   - [Route Redistribution OSPF](route-redistribution-ospf.md)
   - [Route Redistribution with Tags](route-redistribution-with-tags.md)
+  
 - [Policy Based Routing](policy-based-routing.md)
 
 # Security
@@ -169,9 +178,11 @@
   - [Zero Trust](zero-trust.md)
   - [Cisco ISE](cisco-ise.md)
   - [Cisco PxGrid](cisco-pxgrid.md)
+
 - [Encryption Fundamentals](encryption-fundamentals.md)
-- [IKE](ike.md)
+
 - [Secure VPNs](secure-vpns.md)
+  - [IKE](ike.md)
   - [GRE](gre.md)
   - [IPSec](ipsec.md)
     - [IPSec Authentication Header](ipsec-ah.md)
@@ -219,7 +230,6 @@
 - [NTP](ntp.md)
 - [Power Over Ethernet](power-over-ethernet.md)
 - [Cisco ECMP](cisco-ecmp.md)
-  - [Port Channel Load Balancing](port-channel-load-balancing.md)
 - [Flexible NetFlow](flexible-netflow.md)
 - [AAA with FreeRadius and Univention UCS](aaa-freeradius-and-univention-ucs.md)
 - [SNMP](snmp.md)
@@ -238,6 +248,7 @@
   - [SD-WAN QOS](sd-wan-qos.md)
   - [SD-WAN Header](sd-wan-header.md)
   - [SD-WAN HA](sd-wan-ha.md)
+
 - [SD-Access](sd-access.md)
   - [Cisco Catalyst Center](cisco-catalyst-center.md)
   - [SD-Access LISP](sd-access-lisp.md)
@@ -250,22 +261,22 @@
 - [PTP](ptp.md)
 - [SyncE](synce.md)
 
-
 # Wireless
 
 - [Wireless](wireless.md)
 
 # Automation
 
+- [YANG](yang.md)
+  - [RESTCONF](restconf.md)
+  - [NETCONF](netconf.md)
+  - [gRPC](grpc.md)
+  - [gNMI](gnmi.md)
+  - [MDT](mdt.md)
+  - [RFC 3535, 20 Years Later](rfc-3535-20-years-later.md)
 - [Cisco IQ](cisco-iq.md)
   - [Cisco IQ Link](cisco-iq-link.md)
 - [Ansible Basics](ansible-basics.md)
-- [RESTCONF](restconf.md)
-- [NETCONF](netconf.md)
-- [gRPC](grpc.md)
-- [gNMI](gnmi.md)
-- [YANG](yang.md)
-- [MDT](mdt.md)
 
 # Layer 1
 

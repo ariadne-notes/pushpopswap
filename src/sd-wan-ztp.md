@@ -29,6 +29,8 @@ Requirements
 
 ## References
 
+[RFC 8572 - Secure Zero Touch Provisioning (SZTP)](https://datatracker.ietf.org/doc/html/rfc8572)
+
 [Onboard New vEdge Device by SD-WAN ZTP Process - Cisco](https://www.cisco.com/c/en/us/support/docs/routers/vedge-router/220445-onboard-new-vedge-device-by-sd-wan-ztp-p.html)
 
 [Solutions - Cisco SD-WAN Onboarding Guide - Cisco](https://www.cisco.com/c/en/us/solutions/collateral/enterprise-networks/sd-wan/guide-c07-742221.html)

@@ -108,21 +108,61 @@ The idea was, you could look at a v6 address with `64` in the front and understa
 
 These aren't popular anymore
 
-### IPv4-Compatible IPv6 Address
+### IPv4-Compatible IPv6 address
 
 **deprecated**
 
-RFC [4291 Section 2.5.5.1] allows this:
+RFC [4291 Section 2.5.5.1] provided this:
 
 [4291 Section 2.5.5.1]: https://www.rfc-editor.org/info/rfc4291/#section-2.5.5.1
 
-`0:0:0:0:0:0:10.0.0.1`
-
 `::10.0.0.1`
 
-These are only API addresses to represent to a IPv6 App, that this is an IPv4 host.
+These are only API addresses to represent to a IPv6 App, "this is actually a IPv4 host"
 
 They don't go anywhere.
+
+### IPv4-Mapped IPv6 address
+
+RFC [4291 Section 2.5.5.2] provides this:
+
+These are used in [RFC 4038].
+
+`::FFFF:10.0.0.1`
+
+[RFC 4038]: https://www.rfc-editor.org/info/rfc4038/
+
+Intended for [this flow] where an IPv6 only app can work with IPv4 addresses.
+
+[this flow]: https://www.rfc-editor.org/info/rfc4038/#section-4.2
+
+```text
+┌──────────────────────────────────────────────┐
+│ ┌──────────────────────────────────────────┐ │
+│ │                                          │ │
+│ │          IPv6-only applications          │ │
+│ │                                          │ │
+│ └────────────────────┬─────────────────────┘ │
+│                      │                       │
+│ ┌────────────────────┴─────────────────────┐ │
+│ │                                          │ │
+│ │   TCP / UDP / others (SCTP, DCCP, etc.)  │ │
+│ │                                          │ │
+│ └─────────────────┬────────┬───────────────┘ │
+│    IPv4-mapped    │        │    IPv6         │
+│  IPv6 addresses   │        │   addresses     │
+│ ┌─────────────────┴──┐ ┌───┴───────────────┐ │
+│ │        IPv4        │ │       IPv6        │ │
+│ └────────────┬───────┘ └───────┬───────────┘ │
+│   IPv4       │                 │             │
+│   addresses  │                 │             │
+└───────────── │ ─────────────── │ ────────────┘
+               │                 │              
+          IPv4 packets      IPv6 packets        
+```
+
+
+[4291 Section 2.5.5.2]: https://www.rfc-editor.org/info/rfc4291/#section-2.5.5.1
 
 ## References
 

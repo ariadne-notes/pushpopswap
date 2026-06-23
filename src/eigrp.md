@@ -2,37 +2,87 @@
 
 ## Terms
 
+**[DUAL]** --- Diffusing update algorithm
+
+[DUAL]: https://en.wikipedia.org/wiki/Diffusing_update_algorithm
+
+- Invented by J.J. Garcia-Luna-Aceves
+- Feasibility conditions
+
 **Successor route**
 
-- The current best path, with the smallest metric. The "successful" route.
+- AKA, Successful Route
+- The current best path
+- Smallest metric
 
 **Successor**
 
-- The first next-hop router for the successor route.
+- First next-hop router for the successor route
 
 **Feasible distance (FD)**
 
-- Lowest metric to reach a subnet. The sum of the RD + local cost.
+- Lowest metric to reach a subnet
+- Sum of the RD + local cost
 
 **Reported distance (RD)**
 
-- The metric inside a route update from another router. The sending router included it's FD, which becomes out RD.
+- Metric inside a route update from another router
+- The sending router included its FD, which becomes our RD
 
 **Feasibility condition**
 
-- If another path is *actually a backup*, the RD will be less than the current FD.
+- Easy backup routes
+- Not all possible backup routes
+- Mathematical 
+- If backup
+  -  RD is be less than the current FD
 
 **Feasible successor**
 
-- A route that satisfies the feasibility condition and is maintained as a backup route.
+- Route
+  - Satisfies the feasibility condition
+  - Maintained as a backup route
 
 **Split Horizon**
 
-- Never advertise a network, out the same interface it was learned on.
+- Never advertise a network, out the same interface it was learned on
 
 **Poison Reverse**
 
-- If you must advertise a network out the same interface it was received on, advertise the delay as infinity.
+- If you must advertise a network out the same interface it was received on, advertise the delay as infinity
+
+**Count to Infinity**
+
+- If EIGRP reaches 100 hops, the route is discarded
+
+**RTP** --- Reliable Transport Protocol
+
+- Used for EIGRP packets
+
+**Topology Table**
+
+- Metric information for all known routes
+
+## Packet types
+
+EIGRP uses a mixture of unicast and multicast while its working.
+
+Multicast is `224.0.0.10`
+
+| Packet              | Reliable | Purpose                      | Multicast                               | Unicast                    |
+|---------------------|----------|------------------------------|-----------------------------------------|----------------------------|
+| Hello/Ack           | No       | Neighbor Adjacency           | Every 5s, 60s on WAN ≤ 1.544 Mbps       | —                          |
+| Update              | Yes      | Routing info                 | Inform neighbors of link/metric changes | New Neighbors              |
+| Query/Reply         | Yes      | Query for feasible successor | Ask neighbors                           | Reply to query             |
+| SIA-Query/SIA-Reply | Yes      | Stuck in Active Outstanding  | —                                       | Reply to SIA-query         |
+
+## Metrics
+
+- See [EIGRP Classic Metric].
+- See [EIGRP Wide Metric].
+
+[EIGRP Classic Metric]: ./eigrp-classic-metric.md
+[EIGRP Wide Metric]: ./eigrp-wide-metric.md
 
 ## Feasible successor algorithm
 
@@ -55,10 +105,10 @@ R3 Sends an update
 
 - 10.0.0.0/24 - RD is 2050
 
-R1 calculates total path metric.
+R1 calculates total path metric
 
-- R2 is 2000 + 1000 = 3000.
-- R3 is 2050 +   50 = 2100.  < - Successor route.
+- R2 is 2000 + 1000 = 3000
+- R3 is 2050 +   50 = 2100  < - Successor route
 
 **Results**
 
@@ -165,7 +215,6 @@ router eigrp EIGRP_100
 
 ### Using the old config, then having the box convert it for you
 
-
 ```console,editable
 router eigrp 1
   eigrp upgrade-cli EIGRP_1
@@ -184,8 +233,12 @@ router eigrp EIGRP_100
       metric rib-scale 100
 ```
 
-## Variance
+## EIGRP Scaling
 
+- Route Summarization
+- Multiple EIGRP autonomous systems
+
+## Variance
 
 ### Shorter delays
 
@@ -289,6 +342,8 @@ D        2.2.2.2 [90/3398] via 10.12.1.2, 00:00:04, GigabitEthernet0/1
 
 ## References
 
+[RFC 7868: Cisco's Enhanced Interior Gateway Routing Protocol (EIGRP) | RFC Editor](https://www.rfc-editor.org/info/rfc7868/)
+
 [Cisco - Understand and Use the Enhanced Interior Gateway Routing Protocol](https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html)
 
 [Cisco - Configure EIGRP Named Mode](https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/200156-Configure-EIGRP-Named-Mode.html)
@@ -300,3 +355,9 @@ D        2.2.2.2 [90/3398] via 10.12.1.2, 00:00:04, GigabitEthernet0/1
 [Cisco - Troubleshooting EIGRP Variance](https://community.cisco.com/t5/networking-knowledge-base/troubleshooting-eigrp-variance-command/ta-p/3129662)
 
 [Blame The Network - Stuck in Active](https://blamethe.network/posts/stuck-in-the-eigrp-queue/)
+
+[Diffusing update algorithm - Wikipedia](https://en.wikipedia.org/wiki/Diffusing_update_algorithm)
+
+[Cisco Live - EIGRP, The Usual Suspects - Steven Moore - BRKENT-2050](./pdfs/ciscolive/BRKENT-2050.pdf)
+
+[Cisco Live - EIGRP, Introduction and Overview - Steven Moore - BRKENT-2799](./pdfs/ciscolive/BRKENT-2799.pdf)

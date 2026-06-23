@@ -3,7 +3,7 @@
 ## What is IS-IS
 
 - Intermediate System To Intermediate System
-- An ISO standard open protocol.
+- An ISO standard open protocol
 - Link State and Shortest Path
 - Good for large flat networks
 
@@ -27,17 +27,17 @@
 **ES**
 
 - End Station
-- A PC, or a server.
+- A PC, or a server
 
 **Station Routing**
 
 - AKA, intra-area
-- Routing within a L1 area.
+- Routing within a L1 area
 
 **Area Routing**
 
 - AKA, inter-area
-- Routing within a L2 area.
+- Routing within a L2 area
 - The L2 area.
 
 ## Types of routers
@@ -105,18 +105,18 @@ packet-beta
 
 **Area ID**
 
-- Variable, and ... *includes* the AFI.
+- Variable, and ... *includes* the AFI
 
 **System ID**
 
-- 6 bytes, can fit a MAC address or a v4 address.
-- Must be unique in an area for L1.
-- Must be unique in a domain for L2.
+- 6 bytes, can fit a MAC address or a v4 address
+- Must be unique in an area for L1
+- Must be unique in a domain for L2
 
 **SEL**
 
-- Selector - 1 byte.
-- This is always `00` to mean router.
+- Selector - 1 byte
+- This is always `00` to mean router
 
 
 **Example**
