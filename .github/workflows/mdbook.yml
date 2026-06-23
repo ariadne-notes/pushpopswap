@@ -28,7 +28,6 @@ jobs:
       MER: 0.17.0
       INFO: 2.0.0
       BOB: 0.3.0
-      MAP: 0.2.0
     
     steps:
     
@@ -78,19 +77,6 @@ jobs:
         with:
           tool: mdbook-gitinfo@${{ env.INFO }}
 
-      - name: Cache mdbook-sitemap-generator
-        id: cache-sitemap
-        uses: actions/cache@v4
-        with:
-          path: ~/.cargo/bin/mdbook-sitemap-generator
-          key: mdbook-sitemap-generator-${{ runner.os }}-${{ env.MAP }}
-          
-      - name: Install mdbook-sitemap-generator
-        if: steps.cache-sitemap.outputs.cache-hit != 'true'
-        uses: taiki-e/install-action@v2
-        with:
-          tool: mdbook-sitemap-generator@${{ env.MAP }}
-
       - name: Cache mdbook-svgbob
         id: cache-svgbob
         uses: actions/cache@v4
@@ -108,10 +94,17 @@ jobs:
         
       - name: Build with mdBook
         run: mdbook build
-        
+
+      - name: Stamp page mtimes from git (for per-page <lastmod>)
+        run: scripts/sitemap/stamp-page-mtimes.sh
+
       - name: Generate sitemap
-        run: mdbook-sitemap-generator -d pushpopswap.com -o ./book/sitemap.xml
-        
+        run: |
+          npx static-sitemap-cli \
+            --base https://pushpopswap.com \
+            --root book \
+            --format xml
+              
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
