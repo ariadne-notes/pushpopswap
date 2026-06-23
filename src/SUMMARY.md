@@ -326,6 +326,7 @@
   - [Cisco Silicon One](cisco-silicon-one.md)
 - [Internet Routing Registry](internet-routing-registry.md)
 - [In Buiding Wireless](./in-building-wireless.md)
+- [Sitemaps](./sitemaps.md)
 
 # Certification Stuff
 

@@ -1,4 +1,4 @@
-// theme/mermaid-init.js — lazy-load mermaid, render on demand, re-render on theme toggle.
+// theme/mermaid-lazyload.js — lazy-load mermaid, render on demand, re-render on theme toggle.
 // Pairs with mermaid-lightbox.js via the `mermaid:rendered` event (keep the name identical).
 (() => {
   const nodes = [...document.querySelectorAll("pre.mermaid, .mermaid")];
@@ -27,7 +27,7 @@
   }
 
   const s = document.createElement("script");        // load the library only now, on a page that needs it
-  s.src = "/lazy-load-js/mermaid-11.15.0.min.js";    // verbatim passthrough from src/lazy-load-js/ (unhashed)
+  s.src = "/lazyload-js/mermaid-11.15.0.min.js";    // verbatim passthrough from src/lazyload-js/ (unhashed)
   s.onload = render;
   document.head.appendChild(s);
 

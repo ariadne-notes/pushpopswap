@@ -18,7 +18,7 @@ This blog follows the [Documentation as Code] ethos.
 [GitHub]: https://github.com/
 [Git Fundamentals]: https://www.youtube.com/results?search_query=git+fundamentals
 [Markdown]: https://www.markdownguide.org/basic-syntax/
-[Deploy script on GitHub]: https://github.com/ariadne-notes/networking/blob/main/.github/workflows/mdbook.yml
+[Deploy script on GitHub]: https://github.com/ariadne-notes/pushpopswap/blob/main/.github/workflows/mdbook.yml
 [mdBook]: https://rust-lang.github.io/mdBook/
 [development environment]: https://docs.github.com/en/get-started/learning-to-code/developing-your-project-locally
 
@@ -83,16 +83,6 @@ Then mdbook needs to be rebuilt:
 mdbook build
 ```
 
-### SVGBOB
-
-- [Converts ASCII Art to a SVG]
-  - Buggy
-- It does this on build
-
-[Converts ASCII Art to a SVG]: https://ivanceras.github.io/svgbob-editor
-
-`mdbook-svgbob` uses the above [embed svgbob into mdBook](https://github.com/boozook/mdbook-svgbob)
-
 ### GitInfo
 
 - [Injects Git Metadata into the rendered HTML articles]
@@ -110,25 +100,55 @@ mdbook build
 
 [Click on a SVG]:  https://github.com/bumbu/svg-pan-zoom
 
+### SVGBOB
+
+- **buggy**
+- [Converts ASCII Art to a SVG]
+- It does this on build
+
+[Converts ASCII Art to a SVG]: https://ivanceras.github.io/svgbob-editor
+
+`mdbook-svgbob` uses the above [embed svgbob into mdBook](https://github.com/boozook/mdbook-svgbob)
+
 ## Custom scripts
 
 ### Mermaid lightbox
 
-- `mermaid-lightbox.js`
-- Enables svg-pan-zoom work with mermaid diagrams
-- Vibecoded
+[mermaid-lightbox.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/mermaid-lightbox.js)
+
+Mermaid diagrams can't be zoom'd natively on desktop. 
+
+There are some very large diagrams on this site.
+
+Connected to
+-`svg-pan-zoom`
+-`mermaid-11.15.0.min.js`
+-`mermaid-lazyload.js`
 
 ### Editable extras
 
-- `editable-extras.js`
-- modifies `book.js`
+[editable-extras.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/editable-extras.js)
+
+- Modifies `book.js`
   - Enables editing console examples directly on the webpage
+  - Uses code fences: ` ```text,editable `
 - Vibecoded
+
+
+
+### Stamp page mtimes
+
+Necessary for accurate dates on pages.
+
+This is run right before build.
+
+- Vibecoded
+
+[stamp-page-mtimes.sh](https://github.com/ariadne-notes/pushpopswap/blob/main/scripts/sitemap/stamp-page-mtimes.sh)
 
 ## AI
 
 There is some AI use here, the articles are 98% human written.
-
 
 I use Anthropic's tools.
 

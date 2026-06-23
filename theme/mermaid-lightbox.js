@@ -2,7 +2,7 @@
    fullscreen pan/zoom viewer powered by svg-pan-zoom (bumbu/svg-pan-zoom v3.6.1).
 
    Load order (additional-js): svg-pan-zoom.min.js BEFORE this file.
-   Pairs with mermaid-init.js, which dispatches `mermaid:rendered` on the document
+   Pairs with mermaid-lazyload.js, which dispatches `mermaid:rendered` on the document
    each time diagrams (re)render — including on theme toggle — so decoration is
    event-driven rather than polled.
 
@@ -195,7 +195,7 @@
   var lightbox  = createLightbox();
   wireTriggers(lightbox);
 
-  // Decorate whenever mermaid-init.js (re)renders, plus once now in case a page
+  // Decorate whenever mermaid-lazyload.js (re)renders, plus once now in case a page
   // ever ships pre-rendered diagrams. Idempotent, so double-firing is harmless.
   document.addEventListener("mermaid:rendered", decorator.decorate);
   decorator.decorate();
