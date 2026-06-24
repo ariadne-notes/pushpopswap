@@ -332,6 +332,7 @@
 - [Internet Routing Registry](internet-routing-registry.md)
 - [In Buiding Wireless](./in-building-wireless.md)
 - [Boot with TFTP](boot-with-tftp.md)
+- [Telnet With No User Accounts](telnet-with-no-user-accounts.md)
 - [Sitemaps](./sitemaps.md)
 
 # Certification Stuff
