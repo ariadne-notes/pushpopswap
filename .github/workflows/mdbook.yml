@@ -107,6 +107,7 @@ jobs:
           npx static-sitemap-cli \
             --base https://pushpopswap.com \
             --root book \
+            --no-clean \
             --format xml
 
       # IndexNow ownership file. The key lives only in the encrypted secret;
