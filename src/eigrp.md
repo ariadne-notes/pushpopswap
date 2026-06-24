@@ -354,10 +354,15 @@ D        2.2.2.2 [90/3398] via 10.12.1.2, 00:00:04, GigabitEthernet0/1
 
 [Cisco - Troubleshooting EIGRP Variance](https://community.cisco.com/t5/networking-knowledge-base/troubleshooting-eigrp-variance-command/ta-p/3129662)
 
-[Blame The Network - Stuck in Active](https://blamethe.network/posts/stuck-in-the-eigrp-queue/)
-
-[Diffusing update algorithm - Wikipedia](https://en.wikipedia.org/wiki/Diffusing_update_algorithm)
-
 [Cisco Live - EIGRP, The Usual Suspects - Steven Moore - BRKENT-2050](./pdfs/ciscolive/BRKENT-2050.pdf)
 
-[Cisco Live - EIGRP, Introduction and Overview - Steven Moore - BRKENT-2799](./pdfs/ciscolive/BRKENT-2799.pdf)
+[Cisco Live - EIGRP, Introduction and Overview - Steven Moore - BRKENT-1187](./pdfs/ciscolive/BRKENT-1187.pdf)
+
+[Wikipedia - Diffusing update algorithm](https://en.wikipedia.org/wiki/Diffusing_update_algorithm)
+
+[Blame The Network - Stuck in Active](https://blamethe.network/posts/stuck-in-the-eigrp-queue/)
+
+## Removed
+
+~~BRKENT-2799 is "EIGRP, Introduction and Overview" 2023~~
+- BRKENT-1187 is "EIGRP, Introduction and Overview" 2024
