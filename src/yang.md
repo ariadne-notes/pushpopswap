@@ -8,6 +8,20 @@ Data Modeled
 - RPCs (to make changes)
 - Notifications (to get events)
 
+YANG was intended for NETCONF.
+
+> 1.  Functional Overview
+>
+>   YANG is a language used to model data for the NETCONF protocol.  A
+>   YANG module defines a hierarchy of data that can be used for NETCONF-
+>   based operations, including configuration, state data, Remote
+>   Procedure Calls (RPCs), and notifications.  This allows a complete
+>   description of all data sent between a NETCONF client and server.
+
+Source [RFC 6020 Section 4.1].
+
+[RFC 6020 Section 4.1]: https://www.rfc-editor.org/info/rfc6020/#section-4.1
+
 ## Terms
 
 **YANG** --- Yet Another Next Generation
@@ -31,7 +45,7 @@ Device CLI output provides **unstructured** data
 
 YANG provides **structured** data which follows a **schema**
 
-```
+```xml
 <config xmlns="http://tail-f.com/ns/config/1.0">
   <router xmlns="http://com/example/routermodel">
     <name>switch</name>
@@ -72,6 +86,16 @@ YANG provides **structured** data which follows a **schema**
 
 ## Models
 
+Different organizations make different models.
+
+At present multiple models are needed to get all features.
+
+This is a BGP example.
+
+![ietf-98-openconfig-models](./images/ietf/ietf-98-openconfig-models.png)
+
+Courtesy of IETF 98, Rob Shakir & Anees Shaikh
+
 **[Cisco]**
 
 [Cisco]: https://github.com/YangModels/yang/tree/main/vendor/cisco
@@ -85,7 +109,9 @@ YANG provides **structured** data which follows a **schema**
 
 [OpenConfig]: https://www.openconfig.net/projects/models/
 
-- Well Supported
+- Industry supported
+- Primary focus: operational usability
+- Secondary focus: ease to implement
 
 **[IETF]**
 
@@ -94,9 +120,9 @@ YANG provides **structured** data which follows a **schema**
 - Not widely implemented
 - A standards body
 - Other works include
-  - [YANG]
-  - NETCONF
-  - RESTCONF
+  - [YANG](./yang.md)
+  - [NETCONF](./netconf.md)
+  - [RESTCONF](./restconf.md)
   
 **[IEEE]**
 
@@ -106,32 +132,28 @@ YANG provides **structured** data which follows a **schema**
 
 [YANG]: https://datatracker.ietf.org/doc/html/rfc7950
 
-**ONF**
+**[ONF]**
 
-https://opennetworking.org/
+[ONF]: https://opennetworking.org/
+
+- Associated with the Linux Foundation
 
 **[IANA]**
 
 [IANA]: https://github.com/YangModels/yang/tree/main/standard/iana
 
-## OpenConfig
-
-To configure an IP address, use this schema:
-
-| Module                      | Purpose                     |
-| ----------------------------|-----------------------------|
-| openconfig-if-ethernet.yang | duplex, speed, flow control |
-| openconfig-interfaces.yang  | if-name, if-type, shutdown  |
-| openconfig-if-ip.yang       | v4-addr, v6-addr            |
 
 ## References
 
-[Native, IETF, OpenConfig... Why so many YANG models? - Hank Preston - Cisco Blog](https://blogs.cisco.com/developer/which-yang-model-to-use)
+[Cisco Blog - Native, IETF, OpenConfig... Why so many YANG models? - Hank Preston](https://blogs.cisco.com/developer/which-yang-model-to-use)
 
 [Cisco Live - ... Understand ... YANG with NETCONF and RESTCONF ... - Bryan Byrne & Hank Preston - BRKDEV-1368](./pdfs/ciscolive/BRKDEV-1368.pdf)
 
 [Cisco Live - Exploring YANG Data Modeling - Aayushi Mahajan - DEVNET-1882](./pdfs/ciscolive/DEVNET-1882.pdf)
 
-[OpenConfig YANG models - GitHub](https://github.com/openconfig/public/tree/master/release/models)
+[GitHub - OpenConfig YANG models](https://github.com/openconfig/public/tree/master/release/models)
+
+[IETF 98 - Observations on Modeling Configuration and State in YANG](./pdfs/ietf/slides-98-rtgwg-openconfig-modeling-and-observations-00.pdf)
 
 [RFC 6020 - YANG - A Data Modeling Language for the Network Configuration Protocol (NETCONF)](https://datatracker.ietf.org/doc/rfc6020/)
+

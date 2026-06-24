@@ -54,7 +54,7 @@ You can take handwritten notes, just OCR them into digitals. The AI is decent at
 
 If typing is painful consider a much nicer keyboard and something like [Dvorak].
 
-[Dvorak]: https://www.dvzine.org/zine/TheDvorakZine.pdf
+[Dvorak]: ./pdfs/TheDvorakZine.pdf
 
 ## References
 

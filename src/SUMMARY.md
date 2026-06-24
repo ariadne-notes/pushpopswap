@@ -234,6 +234,7 @@
 - [AAA with FreeRadius and Univention UCS](aaa-freeradius-and-univention-ucs.md)
 - [SNMP](snmp.md)
   - [SNMP Versions](snmp-versions.md)
+  - [SNMP is Dead](snmp-is-dead.md)
 
 # Software Defined Networking
 
@@ -267,13 +268,19 @@
 
 # Automation
 
-- [YANG](yang.md)
+- [Openconfig Automation](openconfig-automation.md)
+  - [gRPC](grpc.md)
+    - [gNMI](gnmi.md)
+    - [gNOI](gnoi.md)
+    - [gNSI](gnsi.md)
+    - [gRIBI](gribi.md)
+    - [gNxI](gnxi.md)
+- [IETF Automation](ietf-automation.md)
+  - [YANG](yang.md)
   - [RESTCONF](restconf.md)
   - [NETCONF](netconf.md)
-  - [gRPC](grpc.md)
-  - [gNMI](gnmi.md)
-  - [MDT](mdt.md)
   - [RFC 3535, 20 Years Later](rfc-3535-20-years-later.md)
+- [MDT](mdt.md)
 - [Cisco IQ](cisco-iq.md)
   - [Cisco IQ Link](cisco-iq-link.md)
 - [Ansible Basics](ansible-basics.md)

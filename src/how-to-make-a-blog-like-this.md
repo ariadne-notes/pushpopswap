@@ -123,7 +123,21 @@ There are some very large diagrams on this site.
 Connected to
 -`svg-pan-zoom`
 -`mermaid-11.15.0.min.js`
--`mermaid-lazyload.js`
+-`mermaid-init.js`
+
+### Mermaid lazyload
+
+[mermaid-lazyload.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/mermaid-lazyload.js)
+
+The `mermaid-11.15.0.min.js` is 3MB which hurts [Lighthouse] scores, by slowing down page painting.
+
+This script is put into the render blocking path. The big mermaid file is only loaded on pages with Mermaid.
+
+Connected to:
+- `mermaid-11.15.0.min.js`
+- `mermaid-lightbox.js`
+
+[Lighthouse]: https://developer.chrome.com/docs/lighthouse/
 
 ### Editable extras
 
@@ -133,8 +147,6 @@ Connected to
   - Enables editing console examples directly on the webpage
   - Uses code fences: ` ```text,editable `
 - Vibecoded
-
-
 
 ### Stamp page mtimes
 
