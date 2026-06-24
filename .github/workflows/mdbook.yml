@@ -23,6 +23,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Touched-page URLs (computed from this push's git diff) handed to the
+    # IndexNow job, which submits exactly these after deploy.
+    outputs:
+      changed_urls: ${{ steps.changed.outputs.urls }}
     env:
       BOOK: 0.5.3
       MER: 0.17.0
@@ -104,7 +108,27 @@ jobs:
             --base https://pushpopswap.com \
             --root book \
             --format xml
-              
+
+      # IndexNow ownership file. The key lives only in the encrypted secret;
+      # it is never committed. We write it into the built site so it is served
+      # at https://pushpopswap.com/<key>.txt for engines to verify. Done after
+      # sitemap generation so the .txt is never pulled into the sitemap.
+      - name: Write IndexNow key file
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          if [[ -z "$INDEXNOW_KEY" ]]; then
+            echo "error: INDEXNOW_KEY secret is not set" >&2
+            exit 1
+          fi
+          printf '%s' "$INDEXNOW_KEY" > "book/${INDEXNOW_KEY}.txt"
+
+      # Map the source files this push changed to their built page URLs. The
+      # script writes the list to this step's `urls` output.
+      - name: Compute touched page URLs for IndexNow
+        id: changed
+        run: scripts/indexnow/changed-urls.sh "${{ github.event.before }}" "${{ github.sha }}"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -121,3 +145,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  # IndexNow: a separate job so a slow or failed submission never affects the
+  # deploy job's status or the github-pages environment. Runs after deploy so
+  # the submitted pages and the ownership file (book/<key>.txt) are live.
+  #
+  # Submits exactly the pages this push touched (computed in the build job from
+  # the git diff) -- nudging Bing, Yandex, Seznam, Naver via api.indexnow.org.
+  # Google does NOT use IndexNow -- for Google, rely on Search Console.
+  #
+  # Skipped entirely when the push changed no published pages.
+  indexnow:
+    runs-on: ubuntu-latest
+    needs: [build, deploy]
+    if: ${{ needs.build.outputs.changed_urls != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit touched URLs to IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          CHANGED_URLS: ${{ needs.build.outputs.changed_urls }}
+        run: printf '%s' "$CHANGED_URLS" | scripts/indexnow/submit.sh
