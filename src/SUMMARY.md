@@ -52,7 +52,6 @@
   - [Stateful NAT64](stateful-nat64.md)
   - [Stateless NAT64](stateless-nat64.md)
 
-
 # Ethernet
 
 - [Ethernet CSMA/CD](ethernet-csma-cd.md)
@@ -148,7 +147,6 @@
   
 - [IS-IS](is-is.md)
   - [IS-IS Network Design](is-is-network-design.md)
-
 
 - [BGP](bgp.md)
   - [BGP Neighbor FSM](bgp-neighbor-fsm.md)
@@ -333,6 +331,7 @@
   - [Cisco Silicon One](cisco-silicon-one.md)
 - [Internet Routing Registry](internet-routing-registry.md)
 - [In Buiding Wireless](./in-building-wireless.md)
+- [Boot with TFTP](boot-with-tftp.md)
 - [Sitemaps](./sitemaps.md)
 
 # Certification Stuff
