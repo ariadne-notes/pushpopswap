@@ -1,4 +1,4 @@
-# OSPF LFA
+# OSPFv2 LFA
 
 Relies on Triangles.
 

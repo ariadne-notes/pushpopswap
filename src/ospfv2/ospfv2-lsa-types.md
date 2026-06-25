@@ -1,4 +1,4 @@
-# OSPF LSA Types
+# OSPFv2 LSA Types
 
 ## LSA type to route type
 

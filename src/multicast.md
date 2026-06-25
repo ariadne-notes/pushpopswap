@@ -1,6 +1,6 @@
 # Multicast
 
-Invented by [Steve Deering], in his 1988 PhD thesis work *[Multicast Routing in a Datagram Internetwork].*
+Invented by [Steve Deering], in his 1991 PhD thesis work *[Multicast Routing in a Datagram Internetwork].*
 
 [Steve Deering]: https://en.wikipedia.org/wiki/Steve_Deering
 [Multicast Routing in a Datagram Internetwork]: ./pdfs/ADA325909.pdf

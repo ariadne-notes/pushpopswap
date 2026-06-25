@@ -1,61 +1,78 @@
-# OSPF
+# OSPFv2
 
-OSPF is protocol 89.
+OSPFv2 is protocol 89.
 
 ## Terms
 
-**IFF** --- If and only if
+**LS** --- Link State
 
 **LSA** --- Link State Advertisement
 
 **LSDB** --- Link-State Database
 
-**OSPF Process ID**
+**RID** --- Router ID
 
-Just where the databases lives. Not transmitted. Allows multiple OSPF processes.
+- Unique 32-bit number to identify the router in a graph
+- Doesn't have to be an on-the-box IP, but is usually a loopback
+- Should be easy to identify from a Router-ID subnet
+
+**Process ID**
+
+- Where the databases lives
+- Not transmitted
+- Allows multiple OSPFv2 processes
 
 **DR** --- Designated Router
 
-The network vertex for a broadcast or NBMA network. Used to simplify the number of FULL adjacencies.
+- Network vertex for a broadcast or NBMA network
+- Used to reduce the number of FULL adjacencies
 
 **Advertising Router**
 
-The router that created the LSA. The value in this field is the RID.
+- Router that created the LSA
+- Value in this field is the RID
 
-**RID** --- Router ID
 
-A unique 32-bit number to identify the router in a graph. Doesn't have to be an IP-the-box, but is usually a loopback.
 
 **The Update Rule**
 
-A router can only modify an LSA, iff it's RID is inside the "Advertising Router" field.
+- Routers can only modify LSAs they originate
+- Its RID is inside the "Advertising Router" field
 
 **LS Sequence**
 
-Higher sequence numbers are newer LSAs. The first sequence number in any LSA is `0x80000001`
+- The first sequence number in any LSA is `0x80000001`
+- Higher sequence numbers are newer LSAs
 
 **LS Checksum**
 
-Used to ensure the LSA was transmitted without corruption. Everything is checked **except** LS Age.
+- Used to ensure the LSA was transmitted without corruption
+- Everything is checked **except** LS Age
 
 **LS Age**
 
-LSAs time out in an hour, and are refreshed every 30 minutes. LSA Age increments when they go through routers.
+- LSAs time out in an hour
+- Refreshed every 30 minutes
+- LSA Age increments traveling through routers
+
+**IFF** --- If and only if
 
 ## Packet types
 
-| Type | Name                                  | Purpose                                                         |
-|------|---------------------------------------|---------                                                        |
-| 1    | **Hello**                             | OSPF puts the neighbor ID into it's hello messages.             |
-| 2    | **Database Description (DBD/DDP)**    | A LSA that contains LSA headers, "I have these LSAs"            |
-| 3    | **Link-State Request (LSR)**          | Requesting a specific LSA.                                      |
-| 4    | **Link-State Update (LSU)**           | Sending a specific LSA.                                         |
-| 5    | **Link-State Acknowledgment (LSAck)** | Acknowledging a specific LSA.                                   |
+| Type | Name                  | Short Name | Purpose                                              |
+|------|-----------------------|------------|------------------------------------------------------|
+| 1    | Hello                 | Hello      | OSPFv2 puts the neighbor ID into it's hello messages |
+| 2    | Database Description  | DBD/DDP    | A LSA that contains LSA headers, "I have these LSAs" |
+| 3    | LS Request            | LSR        | Requesting a specific LSA                            |
+| 4    | LS Update             | LSU        | Send a specific LSA                                  |
+| 5    | LS Acknowledgment     | LSAck      | Acknowledging a specific LSA                         |
 
 ## Hello packets
 
 These things must match for an adjacency to form
 
+- Hello time
+- Dead time
 - Subnet
 - Subnet mask
 - Interface MTU
@@ -63,8 +80,6 @@ These things must match for an adjacency to form
 - Area flags (NSSA, Stub)
 - Is DR/BDR enabled
 - Authentication
-- Hello time
-- Dead time
 
 These must not match
 
@@ -116,8 +131,8 @@ Can also check with [checksums](https://en.wikipedia.org/wiki/Fletcher%27s_check
 
 | State | Description |
 | ----------- |-------------|
-| Down        | OSPF is running, no hello packets received yet. |
-| Attempt     | NBMA mode, the router has sent OSPF packets. |
+| Down        | OSPFv2 is running, no hello packets received yet. |
+| Attempt     | NBMA mode, the router has sent OSPFv2 packets. |
 | Init        | The router sees hello packets. |
 | 2-Way       | The router sees it's own router-id in the hello packet. |
 | ExStart     | Routers vote on who exchanges LSDB first. |
@@ -126,12 +141,12 @@ Can also check with [checksums](https://en.wikipedia.org/wiki/Fletcher%27s_check
 
 ## Routing hierarchy
 
-OSPF has four levels of routing hierarchy.
+OSPFv2 has four levels of routing hierarchy.
 
 | Preference   | Route   | Purpose                                                |
 |--------------|---------|--------------------------------------------------------|
 | 1            | O       | Intra-area (same area)                                 |
-| 2            | O IA    | Inter-area (same OSPF domain)                          |
+| 2            | O IA    | Inter-area (same OSPFv2 domain)                        |
 | 3            | E1      | External type 1 (seed metric + IGP metric)             |
 | 4            | E2      | External type 2 (just seed metric)                     |
 
@@ -139,7 +154,7 @@ The `bit E` is what makes E1 and E2 routes. The bit being set is an E2 route, wh
 
 ## Default route
 
-OSPF has two ways of originating a default route.
+OSPFv2 has two ways of originating a default route.
 
 `default-information originate` if a default route is present.
 
@@ -157,7 +172,7 @@ auto-cost reference-bandwidth 40,000
 
 ## Area summary
 
-These will show up as an `O IA` route in OSPF, and a route-to-null on the ABR.
+These will show up as an `O IA` route in OSPFv2, and a route-to-null on the ABR.
 
 - Requires a route present in the RIB
 
@@ -257,16 +272,12 @@ router ospfv3 1
 
 ### Area types
 
-#### No external network connections
+I made a [chart].
 
-- **Stub:** From the RFC, these don't have LSA-5 in them, so no external routes. A stub gets a default injected.
-- **Totally Stubby:** A Cisco area, This blocks LSA-3, LSA-4, and LSA-5. The only injected LSA is a LSA-3 from the ABR for the default.
-
-#### External network connections
-
-- **NSSA:** From the RFC, this is a stub area with an ASBR. The LSAs within the area are LSA-7, and they get converted to LSA-5 by the ABR.
-- **Totally Stubby NSSA:**, same as above, used to connect an external network, a default is injected as a LSA-3.
+[chart]: ./ospfv2-network-and-lsa-chart.md
 
 ## References
 
-[RFC 2328 - OSPF](https://datatracker.ietf.org/doc/html/rfc2328)
+[RFC 2328 - OSPF Version 2](https://datatracker.ietf.org/doc/html/rfc2328)
+
+J. T. Moy, OSPF: Anatomy of an Internet Routing Protocol. Reading, MA: Addison-Wesley, 1998.

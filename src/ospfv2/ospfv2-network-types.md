@@ -1,4 +1,4 @@
-# OSPF Network Types
+# OSPFv2 Network Types
 
 [OSPF Representation of routers and networks](https://www.rfc-editor.org/rfc/rfc2328#page-13)
 

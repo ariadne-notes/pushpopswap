@@ -131,5 +131,3 @@
   </tbody>
 </table>
 </div>
-
-v3.1 (9-June-2026)

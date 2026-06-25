@@ -135,6 +135,10 @@ To do Multipoint NBMA you need to include CLNS resolution.
 
 L1 areas must match
 
+## Supported Network Types
+
+- Point-to-point
+- Broadcast
 
 ### IS-IS narrow
 

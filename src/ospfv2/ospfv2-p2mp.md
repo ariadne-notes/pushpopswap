@@ -20,7 +20,7 @@ The use-case for this network type is frame-relay, older network types where tra
 
 If multicast works (even carried by mGRE) use`point-to-multipoint`.
 
-If multicast does not work, use `point-to-point non-broadcast` and manually define the neighbors under OSPF.
+If multicast does not work, use `point-to-point non-broadcast` and manually define the neighbors under OSPFv2.
 
 ## An example problem
 
@@ -58,7 +58,7 @@ This will not work.
 - 3.3.3.3
 - 4.4.4.4
 
-**OSPF Network Types**, attempted.
+**OSPFv2 Network Types**, attempted.
 
 - point-to-multipoint
 - point-to-multipoint non-broadcast
@@ -78,7 +78,7 @@ Neighbor ID     Pri   State           Dead Time   Address         Interface
 3.3.3.3           0   FULL/  -        00:01:45    10.12.34.3      Ethernet0/0
 ```
 
-### R1 OSPF debugs show adjacency problems
+### R1 OSPFv2 debugs show adjacency problems
 
 - R1-R4 Hello messages seem to work fine
 - DBD messages from R1 never get to R4.
@@ -137,7 +137,7 @@ R1#
 
 R1 thinks the way to get to R4 is via R2.
 
-Notice the other OSPF routers are fine.
+Notice the other OSPFv2 routers are fine.
 
 ```console
 R1# show ip route
@@ -185,7 +185,7 @@ R1# show ip cef 10.12.34.4 detail
 
 Point-to-Multipoint describes the network as a series of `/32` links. What does that mean?
 
-It means when a router goes `FULL` the first thing it does is advertise its own connected IP directly into OSPF as a stub Network.
+It means when a router goes `FULL` the first thing it does is advertise its own connected IP directly into OSPFv2 as a stub Network.
 
 ```console
 R4# show ip ospf database router self-originate 
@@ -336,7 +336,7 @@ R1# show ip ospf database router
 
 #### The capture
 
-[OSPFv2-p2mp-failing](./captures/routing/OSPFv2-p2mp-failing.pcap)
+[OSPFv2-p2mp-failing](../captures/routing/OSPFv2-p2mp-failing.pcap)
 
 R1 sends a unicast DBD packet to R4, but uses the wrong mac address.
 
@@ -392,7 +392,7 @@ Internet Control Message Protocol
 
 ## The OSPFv2 shortest path topology.
 
-OSPF using `point-to-multipoint` assumes the topology looks like this.
+OSPFv2 using `point-to-multipoint` assumes the topology looks like this.
 
 ```plain
          ┌──────┐              

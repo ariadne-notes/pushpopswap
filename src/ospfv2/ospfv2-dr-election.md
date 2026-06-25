@@ -1,12 +1,12 @@
-# OSPF DR Election
+# OSPFv2 DR Election
 
 ## DR and BDR
 
-OSPF uses explicit acknowledgments (re-sending the LSAs), so as neighbors and adjacencies grow, the amount of OSPF traffic on a network increases.
+OSPFv2 uses explicit acknowledgments (re-sending the LSAs), so as neighbors and adjacencies grow, the amount of OSPFv2 traffic on a network increases.
 
-A network with six ospf routers forming a full-mesh requires 15 adjacencies.
+A network with six OSPFv2 routers forming a full-mesh requires 15 adjacencies.
 
-To mitigate the scaling problem, on broadcast segments OSPF elects a DR, and BDR, to maintain the LSDB.
+To mitigate the scaling problem, on broadcast segments OSPFv2 elects a DR, and BDR, to maintain the LSDB.
 
 The RFC calls this a "network vertex". We can also use the term DR.
 

@@ -69,6 +69,8 @@ This is inside of `/etc/fstab`
 
 This is `TAB` spaced, with six columns.
 
+Remember to change the `name=` to something else.
+
 ```text,editable
 :/docker        /mnt/docker-on-ceph     ceph   name=orchard,_netdev,noatime 0       0
 ```
@@ -77,6 +79,14 @@ This is `TAB` spaced, with six columns.
 
 ```text,editable
 mkdir /mnt/docker-on-ceph
+```
+
+### Copy the ceph.conf file from the cluster
+
+I do this by hand with 
+
+```console,editable
+cat /etc/pve/ceph.conf
 ```
 
 ### Mount
