@@ -2,7 +2,7 @@
 
 ## LSA type to route type
 
-| Number | Route  | RFC Name         | Purpose                      | Description                                          |
+| Type   | Route  | RFC Name         | Purpose                      | Description                                          |
 |--------| -------| ---------------- | ---------------------------- | ---------------------------------------------------- |
 | 1      | O      | Router-LSA       | interfaces on a router       | Flooded, Single Area, never crosses area boundary    |
 | 2      | O      | Network-LSA      | routers on a network         | Flooded, Single area, only sent by the DR            |

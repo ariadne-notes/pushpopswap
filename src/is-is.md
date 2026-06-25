@@ -1,32 +1,37 @@
 # IS-IS
 
-## What is IS-IS
+**IS-IS** --- Intermediate System To Intermediate System
 
-- Intermediate System To Intermediate System
 - An ISO standard open protocol
 - Link State and Shortest Path
+- Multi-protocol
 - Good for large flat networks
 
-### Terms
+[RFC 1195] added ipv4 support.
 
-**IS**
+[RFC 5308] added ipv6 support.
 
-- Intermediate System
+[RFC 5120] added multi topology.
+
+[RFC 1195]: https://www.rfc-editor.org/info/rfc1195/
+[RFC 5308]: https://www.rfc-editor.org/info/rfc5308/
+[RFC 5120]: https://www.rfc-editor.org/info/rfc5120/
+
+## Terms
+
+**IS** --- Intermediate System
+
 - A router
 
-**NSAP**
+**NSAP** --- Network Service Access Point
 
-- Network Service Access Point
+**NET** --- Network Entity Title
 
-**NET**
-
-- Network Entity Title
 - A router
 - Also refers to the address NSAP
 
-**ES**
+**ES** --- End Station
 
-- End Station
 - A PC, or a server
 
 **Station Routing**
@@ -40,15 +45,19 @@
 - Routing within a L2 area
 - The L2 area.
 
+**TLV** -- Type Length Value
+
 ## Types of routers
 
 ### L2 routers
 
-IS-IS doesn't refer to a backbone, but L2 routers perform the same function. They should be center-of-topology.
+- AKA, backbone
+- Center of topology
 
-### L1L2 routers
+### L1/L2 routers
 
-These routes have topology information for the L1 area and the L2 area.
+- Topology info for L2
+- Topology info for L1
 
 These are kind of like ABRs in OSPF.
 
@@ -81,12 +90,15 @@ These are the Area routers. They do not flood their link state databases into L2
 
 **Single Topology**
 
-- All Routed Protocols must be configured on all enabled interfaces.
+- All Routed Protocols must be configured on all enabled interfaces
 - e.g. v4 and v6 on all interfaces.
 
 **Multi-Topology**
 
-- Some interfaces can be v4, others can be v6, others can be both.
+- Requires wide metrics
+- Links can have different costs
+- Some interfaces can be v4, others can be v6, others can be both
+- IOS-XR default to MT
 
 ### Addressing scheme
 
@@ -182,12 +194,49 @@ Used when migrating from narrow to wide without a hard cutover:
     - Area is every router must have a matching password
     - L2 and L1/L2 router use domain authentication.
 
-
 ### Notes
 
 Default route injected via route-map.
 
+## Config
+
+### Single topology v6
+
+```console, editable
+interface Gi1
+  ip address 10.0.0.1 255.255.255.0
+  ipv6 address fe80::1 link-local
+  !
+  ! This means only send IPv6 TLVs
+  !
+  ipv6 router isis
+!
+! This is single topology
+! 
+router isis
+  net 49.0001.1111.1111.1111.00
+```
+
+### Multi topology v6
+
+```console,editable
+interface Gi1
+  ip address 10.0.0.1 255.255.255.0
+  ipv6 address fe80::1 link-local
+  ip router isis
+  ipv6 router isis
+  isis ipv6 metric 1234
+!
+router isis
+  net 49.0001.1111.1111.1111.00
+  metric-style wide
+  address-family ipv6
+    multi-topology
+```
+
 ## References
+
+[RFC 5120: M-ISIS: MT Routing in IS-IS | RFC Editor](https://www.rfc-editor.org/info/rfc5120/)
 
 [RFC 1195: Use of OSI IS-IS for routing in TCP/IP and dual environments | RFC Editor](https://www.rfc-editor.org/info/rfc1195/)
 

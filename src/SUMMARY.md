@@ -142,6 +142,8 @@
   - [OSPFv2 LFA](./ospfv2/ospfv2-lfa.md)
   - [OSPFv2 Sham Links](./ospfv2/ospfv2-sham-links.md)
 
+- [OSPFv3](./ospfv3.md)
+
 - [EIGRP](eigrp.md)
   - [EIGRP Stub Routing](eigrp-stub-routing.md)
   
@@ -153,6 +155,7 @@
   - [BGP Confederations](bgp-confederations.md)
   - [BGP Route Reflectors](bgp-route-reflectors.md)
   - [BGP Multipath](bgp-multipath.md)
+  - [BGP Multihop](bgp-multihop.md)
   - [BGP Tuning](bgp-tuning.md)
   - [BGP Load Balancing](bgp-load-balancing.md)
   - [BGP Allowas-In](bgp-allowas-in.md)
