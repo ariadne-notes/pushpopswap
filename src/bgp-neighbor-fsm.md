@@ -1,4 +1,4 @@
-# Neighbor FSM
+# BGP Neighbor FSM
 
 ## Events
 

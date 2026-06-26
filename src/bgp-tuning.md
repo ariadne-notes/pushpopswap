@@ -1,4 +1,4 @@
-# Tuning
+# BGP Tuning
 
 1. Enabling TCP Path MTU discovery for every neighbor, to allow the TCP selecting optimum MSS size.
    Notice that this requires that no firewall blocks the ICMP unreachable messages used during the

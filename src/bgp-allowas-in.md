@@ -1,8 +1,8 @@
-# AS-Override
+# BGP Allowas-In
 
-This feature rewrites a customer `AS_PATH` attribute.
+This feature turns off BGPs check of its own AS number in the `AS_PATH` attribute.
 
-This command is run on the ISP router.
+This command is run on R1 and R2.
 
 ## Example
 
@@ -11,7 +11,7 @@ This command is run on the ISP router.
 
 ```
           ┌─ eBGP ─┐        ┌─ eBGP ─┐          
-          ▼        ▼        ▼        ▼          
+     CE   ▼        ▼   PE   ▼        ▼   CE     
  ┌────────┐        ┌────────┐        ┌────────┐ 
  │   R1   │        │  ISP   │        │   R2   │ 
  │AS 64496├────────┤AS 64511├────────┤AS 64496│ 
@@ -21,10 +21,10 @@ This command is run on the ISP router.
 
 R1 and R2 would like to exchange reachability information with each other, but the ISP router is between them.
 
-When the ISP router gets the updates, it will re-write `64496`, as `64511`.
+When R1 gets R2s info, without this command, it will drop the routes.
 
 ## References
 
-[SunilKhanna - Cisco Community - BGP AS Override](https://community.cisco.com/t5/networking-knowledge-base/understanding-bgp-as-override-feature/ta-p/3111967)
+[Peter Paluch - Allowas-IN - Cisco Community](https://community.cisco.com/t5/routing-and-sd-wan/neighbor-allowas-in/m-p/2648046/highlight/true#M248441)
 
-[Peter Paluch - Cisco Community - BGP Allowas-IN](https://community.cisco.com/t5/routing-and-sd-wan/neighbor-allowas-in/m-p/2648046/highlight/true#M248441)
+[Configure Allowas-in Feature in BGP - Cisco](https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/112236-allowas-in-bgp-config-example.html)

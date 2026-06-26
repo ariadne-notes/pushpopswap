@@ -153,16 +153,16 @@
 - [IS-IS](is-is.md)
   - [IS-IS Network Design](is-is-network-design.md)
 
-- [BGP](bgp/bgp.md)
-  - [Neighbor FSM](bgp/neighbor-fsm.md)
-  - [Confederations](bgp/confederations.md)
-  - [Route Reflectors](bgp/route-reflectors.md)
-  - [Multipath](bgp/multipath.md)
-  - [Multihop](bgp/multihop.md)
-  - [Tuning](bgp/tuning.md)
-  - [Load Balancing](bgp/load-balancing.md)
-  - [Allowas-In](bgp/allowas-in.md)
-  - [AS-Override](bgp/as-override.md)
+- [BGP](bgp.md)
+  - [BGP Neighbor FSM](bgp-neighbor-fsm.md)
+  - [BGP Confederations](bgp-confederations.md)
+  - [BGP Route Reflectors](bgp-route-reflectors.md)
+  - [BGP Multipath](bgp-multipath.md)
+  - [BGP Multihop](bgp-multihop.md)
+  - [BGP Tuning](bgp-tuning.md)
+  - [BGP Load Balancing](bgp-load-balancing.md)
+  - [BGP Allowas-In](bgp-allowas-in.md)
+  - [BGP AS-Override](bgp-as-override.md)
 
 # Routing Strategies
 
