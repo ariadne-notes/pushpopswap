@@ -32,7 +32,7 @@ jobs:
       MER: 0.17.0
       INFO: 2.0.0
       BOB: 0.3.0
-      H1_FROM_SUMMARY_REV: e7ac0221097f448f9d50e0a9e6a7e4de54707825
+      H1_FROM_SUMMARY_REV: 629b04bab1c36e8bac3baa8e55e93b4225038264
     
     steps:
     
