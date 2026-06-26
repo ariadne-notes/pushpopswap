@@ -16,7 +16,7 @@ Normally a hub-and-spoke technology
 
 More details on page 174 of [BRKENT-1187]
 
-[BRKENT-1187]: ./pdfs/ciscolive/BRKENT-1187.pdf
+[BRKENT-1187]: ../pdfs/ciscolive/BRKENT-1187.pdf
 
 ## Commands
 

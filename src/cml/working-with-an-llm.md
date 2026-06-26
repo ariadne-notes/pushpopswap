@@ -13,7 +13,7 @@ Two reasons:
 - Wire the topology
 - Show the physical connections
 - Take a screenshot
-- Point the LLM at an [instruction link](../llm-instructions.md)
+- Point the LLM at an [instruction link](./working-with-an-llm/instructions.md)
 - Ask for the config files
 - Drop them in
 
@@ -27,7 +27,7 @@ Describe the topology at a high level with design constraints.
 
 Tooling:
 
-- [PyATS](../pyats.md)
-- [CML MCP](../cml-mcp.md)
-- [CML Breakout](../cml-breakout.md)
+- [PyATS](./working-with-an-llm/pyats.md)
+- [CML MCP](./working-with-an-llm/mcp.md)
+- [CML Breakout](./working-with-an-llm/breakout.md)
 

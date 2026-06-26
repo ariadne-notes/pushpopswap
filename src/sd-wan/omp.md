@@ -129,7 +129,7 @@ These require a TLOC.
 
 ## References
 
-[Cisco Live - Empowering your Network with SDWAN OMP - Waqas Daar - BKRENT-3115](./pdfs/ciscolive/BRKENT-3115.pdf)
+[Cisco Live - Empowering your Network with SDWAN OMP - Waqas Daar - BKRENT-3115](../pdfs/ciscolive/BRKENT-3115.pdf)
 
 [LAB 1 - Hub-and-Spoke - Restricting spoke-to-spoke tunnels | NetworkAcademy.IO](https://www.networkacademy.io/ccie-enterprise/sdwan/lab1-restricting-spoke-to-spoke-tunnels)
 

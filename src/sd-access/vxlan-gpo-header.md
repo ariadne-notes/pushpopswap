@@ -87,4 +87,4 @@ Frame Check Sequence
 
 [Cisco Community - SD-Access Segmentation Design Guide](https://community.cisco.com/t5/networking-knowledge-base/sd-access-segmentation-design-guide/ta-p/4935734)
 
-[Cisco Live - Deployment of Micro-Segmentation in Cisco NX-OS VXLAN EVPN Fabrics with VXLAN GRoup Policy Option - Max Ardica](./pdfs/ciscolive/BRKDCN-2633.pdf)
+[Cisco Live - Deployment of Micro-Segmentation in Cisco NX-OS VXLAN EVPN Fabrics with VXLAN GRoup Policy Option - Max Ardica](../pdfs/ciscolive/BRKDCN-2633.pdf)

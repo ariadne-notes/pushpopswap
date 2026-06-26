@@ -54,10 +54,10 @@ Multi-destination Support is provided by multicast.
 
 ## References
 
-[Cisco Live - SD-Access Solution Fundamentals - Jerome Dolphin - BRKENS-2810](./pdfs/ciscolive/BRKENS-2810.pdf)
+[Cisco Live - SD-Access Solution Fundamentals - Jerome Dolphin - BRKENS-2810](../pdfs/ciscolive/BRKENS-2810.pdf)
 
 [RFC 7348: Virtual eXtensible Local Area Network (VXLAN): A Framework for Overlaying Virtualized Layer 2 Networks over Layer 3 Networks | RFC Editor](https://www.rfc-editor.org/info/rfc7348/)
 
 [Introduction to VXLAN – Daniels Networking Blog](https://lostintransit.se/2023/08/17/introduction-to-vxlan/)
 
-[Cisco Live - SD-Access Best Practices - Ashley Burton - BRKENS-2502](./pdfs/ciscolive/BRKENS-2502.pdf)
+[Cisco Live - SD-Access Best Practices - Ashley Burton - BRKENS-2502](../pdfs/ciscolive/BRKENS-2502.pdf)
