@@ -63,7 +63,7 @@ Image courtesy of
 
 ## References
 
-[Cisco Live - SDWAN Cloud OnRamp for Multicloud BRKENT-2060](../pdfs/ciscolive/BRKENT-2060.pdf)
+[Cisco Live - SDWAN Cloud OnRamp for Multicloud BRKENT-2060](./pdfs/ciscolive/BRKENT-2060.pdf)
 
 [Cisco - Whitepaper - SDWAN Cloud OnRamp for IaaS](https://www.cisco.com/c/en/us/solutions/collateral/enterprise-networks/sd-wan/white-paper-c11-742817.html)
 

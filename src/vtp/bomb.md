@@ -4,7 +4,7 @@ Caused when one VTP switch overwrites the VLANS of other VTP switches.
 
 See [VTP Design Guidance].
 
-[VTP Design Guidance]: ../vtp.md#design-guidance
+[VTP Design Guidance]: ./vtp.md#design-guidance
 
 ## Terms
 

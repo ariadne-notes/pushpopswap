@@ -2,7 +2,7 @@
 
 Public colors are behind [NAT].
 
-[NAT]: ../nat.md
+[NAT]: ./nat.md
 
 | Public (NAT)    | Private        |
 |-----------------|----------------|
@@ -30,7 +30,7 @@ Public colors are behind [NAT].
 - AKA Native IP
 - AKA [RFC 1918] address
 
-[RFC 1918]: ../ipv4/addressing.md
+[RFC 1918]: ./ipv4-addressing.md
 
 **Public IP**
 

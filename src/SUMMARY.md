@@ -8,33 +8,35 @@
 # Basics
 
 - [How To](how-to.md)
-  - [Study](how-to/study.md)
-  - [Take Notes](how-to/take-notes.md)
-  - [Make a Blog Like This](how-to/make-a-blog-like-this.md)
-  - [Use Git](git.md)
-    - [Merge](how-to/use-git/merge.md)
-    - [Branch](how-to/use-git/branch.md)
-    - [Switch](how-to/use-git/switch.md)
-    - [Push](how-to/use-git/push.md)
-    - [Log](how-to/use-git/log.md)
-    - [Rebase](how-to/use-git/rebase.md)
-    - [Reset](how-to/use-git/reset.md)
-    - [RM](how-to/use-git/rm.md)
-    - [Commit](how-to/use-git/commit.md)
-    - [Restore](how-to/use-git/restore.md)
-    - [Ignore](how-to/use-git/ignore.md)
+  - [Study](./how-to/study.md)
+  - [Take Notes](./how-to/take-notes.md)
+  - [Make a Blog Like This](./how-to/make-a-blog-like-this.md)
+  - [Use Git](./git.md)
+    - [Merge](./how-to/use-git/merge.md)
+    - [Branch](./how-to/use-git/branch.md)
+    - [Switch](./how-to/use-git/switch.md)
+    - [Push](./how-to/use-git/push.md)
+    - [Log](./how-to/use-git/log.md)
+    - [Rebase](./how-to/use-git/rebase.md)
+    - [Reset](./how-to/use-git/reset.md)
+    - [RM](./how-to/use-git/rm.md)
+    - [Commit](./how-to/use-git/commit.md)
+    - [Restore](./how-to/use-git/restore.md)
+    - [Ignore](./how-to/use-git/ignore.md)
+  
 
 # Routed Protocols
 
 - [IPv4](ipv4.md)
-  - [IPv4 Addressing](ipv4/addressing.md)
-  - [IPv4 Packet Header](ipv4/packet-header.md)
-  - [IPv4 Address Planning](ipv4/address-planning.md)
-  - [Classful Networking](ipv4/classful-networking.md)
-  - [Subnetting](ipv4/subnetting.md)
-    - [with Fingers](ipv4/subnetting/with-fingers.md)
-    - [with the Box Method](ipv4/subnetting/with-the-box-method.md)
-    - [with Binary](ipv4/subnetting/with-binary.md)
+  - [IPv4 Addressing](./ipv4/addressing.md)
+  - [IPv4 Packet Header](./ipv4/packet-header.md)
+  - [IPv4 Address Planning](./ipv4/address-planning.md)
+  - [Classful Networking](./ipv4/classful-networking.md)
+  - [Subnetting](./ipv4/subnetting.md)
+    - [with Fingers](./ipv4/subnetting/with-fingers.md)
+    - [with the Box Method](./ipv4/subnetting/with-the-box-method.md)
+    - [with Binary](./ipv4/subnetting/with-binary.md)
+   
 
 - [IPv6](ipv6.md)
   - [Subnetting](ipv6/subnetting.md)
@@ -127,24 +129,24 @@
 
 - [Static Routing](static-routing.md)
 
-- [OSPFv2](ospfv2.md)
-  - [DR Election](ospfv2/dr-election.md)
-    - [LSAs](ospfv2/dr-lsas.md)
-  - [LSA](ospfv2/lsa-types.md)
-    - [1 LSA - Router](ospfv2/type-1-lsa-router.md)
-    - [2 LSA - Network](ospfv2/type-2-lsa-network.md)
-    - [3 LSA - Summary](ospfv2/type-3-lsa-summary.md)
-    - [4 LSA - ASBR Summary](ospfv2/type-4-lsa-asbr-summary.md)
-    - [5 LSA - External](ospfv2/type-5-external.md)
-  - [Network and LSA Chart](ospfv2/network-and-lsa-chart.md)
-  - [LSA Default Routes](ospfv2/lsa-default-route.md)
-  - [Network Types](ospfv2/network-types.md)
-    - [Point-to-Multipoint](ospfv2/p2mp.md)
-  - [LFA](ospfv2/lfa.md)
-  - [Sham Links](ospfv2/sham-links.md)
-  - [Incremental SPF](ospfv2/incremental-spf.md)
+- [OSPFv2](./ospfv2.md)
+  - [DR Election](./ospfv2/dr-election.md)
+    - [LSAs](./ospfv2/dr-lsas.md)
+  - [LSA](./ospfv2/lsa-types.md)
+    - [1 LSA - Router](./ospfv2/type-1-lsa-router.md)
+    - [2 LSA - Network](./ospfv2/type-2-lsa-network.md)
+    - [3 LSA - Summary](./ospfv2/type-3-lsa-summary.md)
+    - [4 LSA - ASBR Summary](./ospfv2/type-4-lsa-asbr-summary.md)
+    - [5 LSA - External](./ospfv2/type-5-external.md)
+  - [Network and LSA Chart](./ospfv2/network-and-lsa-chart.md)
+  - [LSA Default Routes](./ospfv2/lsa-default-route.md)
+  - [Network Types](./ospfv2/network-types.md)
+    - [Point-to-Multipoint](./ospfv2/p2mp.md)
+  - [LFA](./ospfv2/lfa.md)
+  - [Sham Links](./ospfv2/sham-links.md)
+  - [Incremental SPF](./ospfv2/incremental-spf.md)
 
-- [OSPFv3](ospfv3.md)
+- [OSPFv3](./ospfv3.md)
 
 - [EIGRP](eigrp.md)
   - [Stub Routing](eigrp/stub-routing.md)
@@ -152,8 +154,7 @@
 - [IS-IS](is-is.md)
   - [Network Design](is-is/network-design.md)
 
-- [BGP](bgp.md) 
-  - [Path Attributes](bgp/path-attributes.md)
+- [BGP](bgp.md)
   - [Neighbor FSM](bgp/neighbor-fsm.md)
   - [Confederations](bgp/confederations.md)
   - [Route Reflectors](bgp/route-reflectors.md)
@@ -173,7 +174,7 @@
   - [EIGRP](route-redistribution/eigrp.md)
   - [OSPF](route-redistribution/ospf.md)
   - [with Tags](route-redistribution/with-tags.md)
-
+  
 - [Policy Based Routing](policy-based-routing.md)
 
 # Security
@@ -194,7 +195,7 @@
   - [DMVPN](dmvpn.md)
     - [NHRP](nhrp.md)
   - [GETVPN](getvpn.md)
-
+  
 # DDoS Prevention
 
 - [uRPF](urpf.md)
@@ -318,8 +319,6 @@
 
 # Etc
 
-<!-- h1-from-summary-ignore:start -->
-
 - [Etc](etc.md)
   - [Study Tables](study-tables.md)
   - [OS Architecture](os-architecture.md)
@@ -339,13 +338,11 @@
   - [Cisco Architecture](cisco-architecture.md)
     - [Cisco Silicon One](cisco-silicon-one.md)
   - [Internet Routing Registry](internet-routing-registry.md)
-  - [In Buiding Wireless](in-building-wireless.md)
+  - [In Buiding Wireless](./in-building-wireless.md)
   - [Boot with TFTP](boot-with-tftp.md)
   - [Telnet With No User Accounts](telnet-with-no-user-accounts.md)
-  - [Sitemaps](sitemaps.md)
+  - [Sitemaps](./sitemaps.md)
   - [Socket Statistics](socket-statistics.md)
-
-<!-- h1-from-summary-ignore:end -->
 
 # Certification Stuff
 
