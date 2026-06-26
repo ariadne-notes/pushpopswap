@@ -1,4 +1,4 @@
-# with the Box Method
+# Subnetting with the Box Method
 
 For visual learners.
 

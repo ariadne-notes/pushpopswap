@@ -1,4 +1,4 @@
-# with Fingers
+# Subnetting with Fingers
 
 I just memorize these sequences, ungainly, but works.
 
