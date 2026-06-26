@@ -129,7 +129,7 @@
 
 - [Static Routing](static-routing.md)
 
-- [OSPFv2](./ospfv2/ospfv2.md)
+- [OSPFv2](./ospfv2.md)
   - [DR Election](./ospfv2/dr-election.md)
     - [LSAs](./ospfv2/dr-lsas.md)
   - [LSA Type](./ospfv2/lsa-types.md)
@@ -154,7 +154,7 @@
 - [IS-IS](is-is.md)
   - [IS-IS Network Design](is-is-network-design.md)
 
-- [BGP](bgp/bgp.md)
+- [BGP](bgp.md)
   - [Neighbor FSM](bgp/neighbor-fsm.md)
   - [Confederations](bgp/confederations.md)
   - [Route Reflectors](bgp/route-reflectors.md)
@@ -256,11 +256,11 @@
   - [HA](sd-wan/ha.md)
 
 - [SD-Access](sd-access.md)
-  - [Cisco Catalyst Center](cisco-catalyst-center.md)
-  - [SD-Access LISP](sd-access-lisp.md)
-  - [SD-Access VXLAN](sd-access-vxlan.md)
-  - [SD-Access VXLAN-GPO Header](sd-access-vxlan-gpo-header.md)
-  - [SD-Access and Wireless Integration](sd-access-and-wireless-integration.md)
+  - [Cisco Catalyst Center](sd-access/cisco-catalyst-center.md)
+  - [LISP](sd-access/lisp.md)
+  - [VXLAN](sd-access/vxlan.md)
+  - [VXLAN-GPO Header](sd-access/vxlan-gpo-header.md)
+  - [and Wireless Integration](sd-access/wireless-integration.md)
 
 # Timing
 

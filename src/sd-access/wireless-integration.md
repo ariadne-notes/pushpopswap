@@ -1,4 +1,4 @@
-# SD-Access and Wireless Integration
+# and Wireless Integration
 
 Control plane traffic is CAPWAP inside of VXLAN-GPO. Dataplane traffic can just ride VXLAN-GPO
 

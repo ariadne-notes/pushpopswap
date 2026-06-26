@@ -1,4 +1,4 @@
-# SD-Access VXLAN-GPO Header
+# VXLAN-GPO Header
 
 ```text
 Outer Ethernet Header

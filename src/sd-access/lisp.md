@@ -1,4 +1,4 @@
-# SD-Access LISP
+# LISP
 
 LISP
 : Locater Identifier Separation Protocol
