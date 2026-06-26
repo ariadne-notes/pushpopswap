@@ -1,4 +1,4 @@
-# Reset
+# Git Reset
 
 Reset changes what commit `HEAD` points to. This is one way to undo a bad local commit, or a series of bad local commits.
 

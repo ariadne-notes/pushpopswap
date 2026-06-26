@@ -1,4 +1,4 @@
-# Ignore
+# Git Ignore
 
 The `.gitignore` file is useful for things that should not be included in Git.
 

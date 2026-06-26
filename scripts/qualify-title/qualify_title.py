@@ -39,7 +39,7 @@ DEBUG = bool(os.environ.get("QUALIFY_TITLE_DEBUG"))
 DEFAULTS = {
     "separator": " ",
     "leaf-separator": None,      # falls back to `separator` when unset
-    "levels": 0,                 # 0 = all ancestors (full chain), 1 = immediate parent, N = last N
+    "levels": 1,                 # 1 = immediate parent, 0 = all, N = last N
     "inject-if-missing": True,
 }
 

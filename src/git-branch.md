@@ -1,4 +1,4 @@
-# Branch
+# Git Branch
 
 Always name branches as lowercase, as case-sensitive branches do not work across all operating systems.
 

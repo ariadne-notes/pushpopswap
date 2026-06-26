@@ -1,4 +1,4 @@
-# Log
+# Git Log
 
 Top down, the normal view.
 

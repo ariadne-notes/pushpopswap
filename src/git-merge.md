@@ -1,4 +1,4 @@
-# Merge
+# Git Merge
 
 > [!WARNING]
 > Do not perform `pull` or a `merge` with uncommitted changes.

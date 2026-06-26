@@ -1,4 +1,4 @@
-# Push
+# Git Push
 
 Git has a default setup for where it plans to perform the `push`. This is the `push.default`.
 

@@ -1,4 +1,4 @@
-# Switch
+# Git Switch
 
 This command was added to Git in 2019 (2.23), after user feedback that `checkout` was destructive in some cases.
 

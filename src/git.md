@@ -1,4 +1,4 @@
-# Use Git
+# Git
 
 Git is a collaborative code tool. It allows distributed development, with yourself or others.
 
