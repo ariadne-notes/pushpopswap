@@ -1,4 +1,4 @@
-# Git RM
+# RM
 
 Used to remove files from the Index, in the event they are deleted from the working tree, and need to be deleted from future commits.
 

@@ -1,4 +1,4 @@
-# Git Rebase
+# Rebase
 
 > [!CAUTION]
 >

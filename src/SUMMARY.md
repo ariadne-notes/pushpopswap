@@ -5,23 +5,25 @@
 
 ----
 
-# Studying
+# Basics
 
-- [How to Study](how-to-study.md)
-- [How to Take Notes](how-to-take-notes.md)
-- [How to Make a Blog Like This](how-to-make-a-blog-like-this.md)
-- [Git](git.md)
-  - [Git Merge](git-merge.md)
-  - [Git Branch](git-branch.md)
-  - [Git Switch](git-switch.md)
-  - [Git Push](git-push.md)
-  - [Git Log](git-log.md)
-  - [Git Rebase](git-rebase.md)
-  - [Git Reset](git-reset.md)
-  - [Git RM](git-rm.md)
-  - [Git Commit](git-commit.md)
-  - [Git Restore](git-restore.md)
-  - [Git Ignore](git-ignore.md)
+- [How To](how-to.md)
+  - [Study](./how-to/study.md)
+  - [Take Notes](./how-to/take-notes.md)
+  - [Make a Blog Like This](./how-to/make-a-blog-like-this.md)
+  - [Use Git](./git.md)
+    - [Merge](./how-to/use-git/merge.md)
+    - [Branch](./how-to/use-git/branch.md)
+    - [Switch](./how-to/use-git/switch.md)
+    - [Push](./how-to/use-git/push.md)
+    - [Log](./how-to/use-git/log.md)
+    - [Rebase](./how-to/use-git/rebase.md)
+    - [Reset](./how-to/use-git/reset.md)
+    - [RM](./how-to/use-git/rm.md)
+    - [Commit](./how-to/use-git/commit.md)
+    - [Restore](./how-to/use-git/restore.md)
+    - [Ignore](./how-to/use-git/ignore.md)
+  
 
 # Routed Protocols
 
@@ -130,13 +132,13 @@
 
 - [OSPFv2](./ospfv2/ospfv2.md)
   - [DR Election](./ospfv2/dr-election.md)
-    - [DR LSAs](./ospfv2/dr-lsas.md)
-  - [LSA Types](./ospfv2/lsa-types.md)
-    - [Type 1 LSA - Router](./ospfv2/type-1-lsa-router.md)
-    - [Type 2 LSA - Network](./ospfv2/type-2-lsa-network.md)
-    - [Type 3 LSA - Summary](./ospfv2/type-3-lsa-summary.md)
-    - [Type 4 LSA - ASBR Summary](./ospfv2/type-4-lsa-asbr-summary.md)
-    - [Type 5 LSA - External](./ospfv2/type-5-external.md)
+    - [LSAs](./ospfv2/dr-lsas.md)
+  - [LSA Type](./ospfv2/lsa-types.md)
+    - [1 LSA - Router](./ospfv2/type-1-lsa-router.md)
+    - [2 LSA - Network](./ospfv2/type-2-lsa-network.md)
+    - [3 LSA - Summary](./ospfv2/type-3-lsa-summary.md)
+    - [4 LSA - ASBR Summary](./ospfv2/type-4-lsa-asbr-summary.md)
+    - [5 LSA - External](./ospfv2/type-5-external.md)
   - [Network and LSA Chart](./ospfv2/network-and-lsa-chart.md)
   - [LSA Default Routes](./ospfv2/lsa-default-route.md)
   - [Network Types](./ospfv2/network-types.md)

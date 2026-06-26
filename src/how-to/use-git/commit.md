@@ -1,4 +1,4 @@
-# Git Commit
+# Commit
 
 ## Ordinary commit
 
