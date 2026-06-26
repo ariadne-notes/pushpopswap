@@ -1,10 +1,10 @@
-# VXLAN
+# SD-Access VXLAN
 
 MAC-in-UDP Encapsulation.
 
 Extends vlans to support 16 million network segments in the same administrative domain.
 
-![VXLAN_header](../images/other-blogs/VXLAN_header-1024x335.png)
+![VXLAN_header](./images/other-blogs/VXLAN_header-1024x335.png)
 
 [Image courtesy of Lost In Transit]
 
