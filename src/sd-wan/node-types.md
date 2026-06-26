@@ -63,4 +63,4 @@ sequenceDiagram
 
 ## References
 
-[Cisco Live - Empowering your Network with SDWAN OMP - Waqas Daar - BKRENT-3115](./pdfs/ciscolive/BRKENT-3115.pdf)
+[Cisco Live - Empowering your Network with SDWAN OMP - Waqas Daar - BKRENT-3115](../pdfs/ciscolive/BRKENT-3115.pdf)

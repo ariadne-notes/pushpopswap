@@ -6,7 +6,7 @@
 >
 > See [VTP Bomb].
 
-[VTP Bomb]: ./vtp-bomb.md
+[VTP Bomb]: ./vtp/bomb.md
 
 **VTP** --- Vlan Trunk Protocol
 

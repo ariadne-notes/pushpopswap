@@ -20,7 +20,7 @@ Most of the existing network paradigms fail at scale.
 
 SNMP at scale is [very broken].
 
-[very broken]: ./snmp-is-dead.md
+[very broken]: ./snmp/is-dead.md
 
 [FOSS]: https://en.wikipedia.org/wiki/Free_and_open-source_software
 

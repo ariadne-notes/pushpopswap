@@ -18,8 +18,13 @@ time-format = "%l:%M %P UTC%Z"
 [preprocessor.gitinfo.message]
 footer = "Last Modified{{sep}}{{date}}{{sep}}Commit: {{hash}}"
 
+<<<<<<< HEAD
 [preprocessor.qualify-title]
 command = "python3 scripts/qualify-title/qualify_title.py"
+=======
+[preprocessor.h1-from-summary]
+command = "mdbook-h1-from-summary"
+>>>>>>> 58321dc (fixing lots of links after implementing h1-from-summary)
 
 [output.html.fold]
 enable = true

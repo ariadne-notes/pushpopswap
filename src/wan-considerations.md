@@ -176,7 +176,7 @@
 
 - [IPSec](./ipsec.md)
 - [GETVPN](./getvpn.md)
-- [SDWAN](./sdwan.md)
+- [SDWAN](./sd-wan.md)
 
 ## References
 [Leased line - Wikipedia](https://en.wikipedia.org/wiki/Leased_line)
