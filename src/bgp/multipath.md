@@ -1,4 +1,4 @@
-# BGP Multipath
+# Multipath
 
 BGP on its own does not perform ECMP[^ECMP].
 
@@ -49,7 +49,7 @@ router bgp 64496
 
 ## References
 
-[Cisco Live - A Deep Dive into Basic and Design Best Practices for BGP and L3VPN](./pdfs/ciscolive/BRKMPL-2103.pdf)
+[Cisco Live - A Deep Dive into Basic and Design Best Practices for BGP and L3VPN](../pdfs/ciscolive/BRKMPL-2103.pdf)
 
 [Cisco - eiBGP Multipath for Non-VRF Interfaces (IPv4/IPv6) - IP Routing Configuration Guide, IOS-XE 17.x](https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-routing/b-ip-routing/m_irg-eibgp-multipath-for-nonvrf-interfaces.html)
 

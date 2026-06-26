@@ -1,4 +1,4 @@
-# BGP Load Balancing
+# Load Balancing
 
 ## Inbound
 

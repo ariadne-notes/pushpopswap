@@ -1,4 +1,4 @@
-# BGP Multihop
+# Multihop
 
 - eBGP defaults to a TTL of 1
 

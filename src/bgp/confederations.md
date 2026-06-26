@@ -1,4 +1,4 @@
-# BGP Confederations
+# Confederations
 
 External peers see the `confederation_id`.
 
