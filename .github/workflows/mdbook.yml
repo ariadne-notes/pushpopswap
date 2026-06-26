@@ -32,7 +32,6 @@ jobs:
       MER: 0.17.0
       INFO: 2.0.0
       BOB: 0.3.0
-      SUMMARY_H1_REV: e7ac0221097f448f9d50e0a9e6a7e4de54707825
     
     steps:
     
@@ -93,16 +92,8 @@ jobs:
         if: steps.cache-svgbob.outputs.cache-hit != 'true'
         run: cargo install --version ${{ env.BOB }} --locked mdbook-svgbob
 
-      - name: Cache mdbook-summary-h1
-        id: cache-summary-h1
-        uses: actions/cache@v4
-        with:
-          path: ~/.cargo/bin/mdbook-summary-h1
-          key: mdbook-summary-h1-${{ runner.os }}-${{ env.SUMMARY_H1_REV }}
-
       - name: Install mdbook-summary-h1
-        if: steps.cache-summary-h1.outputs.cache-hit != 'true'
-        run: cargo install --git https://github.com/ariadne-notes/mdbook-summary-h1 --rev ${{ env.SUMMARY_H1_REV }} --locked mdbook-summary-h1
+        run: cargo install --git https://github.com/ariadne-notes/mdbook-summary-h1 --locked mdbook-summary-h1
 
       - name: Setup Pages
         id: pages
