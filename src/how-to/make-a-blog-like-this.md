@@ -24,11 +24,11 @@ This blog follows the [Documentation as Code] ethos.
 
 ## My development environment
 
-I use [Samba] to connect to a Linux system running `mdbook serve`
+I use Notepad++ with [Syncthing].
 
-When I edit a file on my computer, the change propagates to the server and I see it.
+[Syncthing]: https://syncthing.net
 
-[Samba]: https://www.samba.org/
+When I save a file in Notepad++, Syncthing is notified of the change and propagates it to `tesseract`. mdBook sees the modification and rebuilds the webpage.
 
 ```console
 ariadne@tesseract:~/git/pushpopswap$ mdbook serve -n 0.0.0.0
@@ -59,13 +59,6 @@ These tools extend the html features, typically with [JavaScript].
 ## Preprocessing
 
 These are tasks mdBook cannot do without addons.
-
-### H1 From Summary
-
-- Reads the `SUMMARY.md` file and leaf files to [modify H1 headings].
-- Vibecoded
-
-[modify H1 headings]: https://github.com/ariadne-notes/mdbook-h1-from-summary
 
 ### Mermaid
 
