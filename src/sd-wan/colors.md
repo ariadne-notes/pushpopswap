@@ -1,4 +1,4 @@
-# SD-WAN Colors
+# Colors
 
 Public colors are behind [NAT].
 

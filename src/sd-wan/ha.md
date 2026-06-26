@@ -1,4 +1,4 @@
-# SD-WAN HA
+# HA
 
 SDWAN is a horizontally scaling solution. Just add more nodes.
 
@@ -20,7 +20,7 @@ It's recommended to keep another cluster available as a backup.
 
 The Managers can sync over the datacenter interconnect.
 
-![sdwan-disaster-recovery](./images/cisco/cisco-sdwan-disaster-recovery.avif)
+![sdwan-disaster-recovery](../images/cisco/cisco-sdwan-disaster-recovery.avif)
 
 Image courtesy of
 

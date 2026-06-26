@@ -1,4 +1,4 @@
-# SD-WAN Bootstrap
+# Bootstrap
 
 ## USB
 
