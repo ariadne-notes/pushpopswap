@@ -1,4 +1,4 @@
-# Subnetting with Binary
+# with Binary
 
 - A bit is `on` or `off`
 - A nibble is four bits `0000`
