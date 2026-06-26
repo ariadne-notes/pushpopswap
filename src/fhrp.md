@@ -1,4 +1,4 @@
-# First Hop Redundancy Protocol
+# FHRP
 
 Useful for hosts, which cannot configure more than one IP.
 
