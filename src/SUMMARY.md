@@ -39,17 +39,17 @@
    
 
 - [IPv6](ipv6.md)
-  - [IPv6 Subnetting](ipv6-subnetting.md)
-  - [IPv6 Hextext Boundaries](ipv6-hextet-boundaries.md)
-  - [IPv6 Network Address Planning](ipv6-network-address-planning.md)
-  - [IPv6 Multicast Addresses](ipv6-multicast-addresses.md)
-  - [IPv6 Link Local Addressing](ipv6-link-local-addressing.md)
-  - [IPv6 Unique Link Local Addressing](ipv6-ula.md)
-  - [IPv6 ICMPv6](ipv6-icmpv6.md)
-  - [IPv6 Neighbor Discovery](ipv6-nd.md)
-    - [IPv6 ND Router Solicitation](ipv6-nd-ra.md)
+  - [Subnetting](ipv6/subnetting.md)
+  - [Hextet Boundaries](ipv6/hextet-boundaries.md)
+  - [Network Address Planning](ipv6/network-address-planning.md)
+  - [Multicast Addresses](ipv6/multicast-addresses.md)
+  - [Link Local Addressing](ipv6/link-local-addressing.md)
+  - [Unique Local Addressing](ipv6/ula.md)
+  - [ICMPv6](ipv6/icmpv6.md)
+  - [Neighbor Discovery](ipv6/neighbor-discovery.md)
+    - [Router Advertisements](ipv6/neighbor-discovery/router-advertisements.md)
 
-- [IPv4 to IPV6 Migration Strategies](ipv4-to-ipv6-migration-strategies.md)
+- [IPv4 to IPv6 Migration Strategy](ipv4-to-ipv6-migration-strategies.md)
   - [ISATAP](isatap.md)
   - [6RD](6rd.md)
   - [Stateful NAT64](stateful-nat64.md)
@@ -65,37 +65,37 @@
 # Quality of Service
 
 - [QoS](qos.md)
-  - [QoS Trust Boundaries](qos-trust-boundaries.md)
+  - [Trust Boundaries](qos/trust-boundaries.md)
   - [802.1P](802.1p.md)
   - [Congestion](congestion.md)
   - [Cisco IOS QoS Commands](cisco-ios-qos-commands.md)
 
 # Enterprise Switching
 
-- [Spanning Trees](spanning-trees.md)
+- [Spanning Tree](spanning-trees.md)
   - [STP](stp.md)
     - [Finding TCNs](finding-tcns.md)
   - [RSTP](rstp.md)
   - [MST](mst.md)
 
 - [Defend Spanning Tree](defend-spanning-tree.md)
-  - [DTP](dtp.md)
-  - [Portfast](portfast.md)
-  - [BPDU Guard](bpdu-guard.md)
-  - [BPDU Filter](bpdu-filter.md)
-  - [Root Guard](root-guard.md)
-  - [Loop Guard](loop-guard.md)
-  - [UplinkFast](uplinkfast.md)
-  - [Port Security](port-security.md)
-  - [UDLD](udld.md)
+  - [with DTP](defend-spanning-tree-with/dtp.md)
+  - [with Portfast](defend-spanning-tree-with/portfast.md)
+  - [with BPDU Guard](defend-spanning-tree-with/bpdu-guard.md)
+  - [with BPDU Filter](defend-spanning-tree-with/bpdu-filter.md)
+  - [with Root Guard](defend-spanning-tree-with/root-guard.md)
+  - [with Loop Guard](defend-spanning-tree-with/loop-guard.md)
+  - [with UplinkFast](defend-spanning-tree-with/uplinkfast.md)
+  - [with Port Security](defend-spanning-tree-with/port-security.md)
+  - [with UDLD](defend-spanning-tree-with/udld.md)
 
 - [ARP](arp.md)
-  - [ARP Attacks](arp-attacks.md)
+  - [Attacks](arp/attacks.md)
   - [DAI](dai.md)
   - [Proxy ARP](proxy-arp.md)
 
 - [VTP](vtp.md)
-  - [VTP Bomb](vtp-bomb.md)
+  - [Bomb](vtp/bomb.md)
 
 # SP Ethernet
 
@@ -106,7 +106,7 @@
 
 - [MPLS](mpls.md)
   - [L3VPN](mpls-l3vpn.md)
-  - [MPLS DiffServ](mpls-diffserv.md)
+  - [DiffServ](mpls/diffserv.md)
   - [IRB On the ASR9K](irb-on-the-asr9k.md)
 
 - [PBB](pbb.md)
@@ -123,7 +123,7 @@
   - [BIDIR-PIM](bidir-pim.md)
   - [Auto-RP](auto-rp.md)
   - [MSDP](msdp.md)
-  - [Multicast L2 Addressing](multicast-l2-addressing.md)
+  - [L2 Addressing](multicast/l2-addressing.md)
 
 # Routing
 
@@ -132,7 +132,7 @@
 - [OSPFv2](./ospfv2.md)
   - [DR Election](./ospfv2/dr-election.md)
     - [LSAs](./ospfv2/dr-lsas.md)
-  - [LSA Type](./ospfv2/lsa-types.md)
+  - [LSA](./ospfv2/lsa-types.md)
     - [1 LSA - Router](./ospfv2/type-1-lsa-router.md)
     - [2 LSA - Network](./ospfv2/type-2-lsa-network.md)
     - [3 LSA - Summary](./ospfv2/type-3-lsa-summary.md)
@@ -149,10 +149,10 @@
 - [OSPFv3](./ospfv3.md)
 
 - [EIGRP](eigrp.md)
-  - [EIGRP Stub Routing](eigrp-stub-routing.md)
+  - [Stub Routing](eigrp/stub-routing.md)
   
 - [IS-IS](is-is.md)
-  - [IS-IS Network Design](is-is-network-design.md)
+  - [Network Design](is-is/network-design.md)
 
 - [BGP](bgp.md)
   - [Neighbor FSM](bgp/neighbor-fsm.md)
@@ -170,10 +170,10 @@
 - [VRF Lite](vrf-lite.md)
 
 - [Route Redistribution](route-redistribution.md)
-  - [Route Redistribution BGP](route-redistribution-bgp.md)
-  - [Route Redistribution EIGRP](route-redistribution-eigrp.md)
-  - [Route Redistribution OSPF](route-redistribution-ospf.md)
-  - [Route Redistribution with Tags](route-redistribution-with-tags.md)
+  - [BGP](route-redistribution/bgp.md)
+  - [EIGRP](route-redistribution/eigrp.md)
+  - [OSPF](route-redistribution/ospf.md)
+  - [with Tags](route-redistribution/with-tags.md)
   
 - [Policy Based Routing](policy-based-routing.md)
 
@@ -190,8 +190,8 @@
   - [IKE](ike.md)
   - [GRE](gre.md)
   - [IPSec](ipsec.md)
-    - [IPSec Authentication Header](ipsec-ah.md)
-    - [IPSec Encapsulating Security Payload](ipsec-esp.md)
+    - [Authentication Header](ipsec/ah.md)
+    - [Encapsulating Security Payload](ipsec/esp.md)
   - [DMVPN](dmvpn.md)
     - [NHRP](nhrp.md)
   - [GETVPN](getvpn.md)
@@ -219,14 +219,14 @@
 - [TACACS+](tacacs-plus.md)
 - [Clouds](clouds.md)
   - [Virtual Private Clouds](vpcs.md)
-  - [Cloud Interconnects](cloud-interconnects.md)
+  - [Interconnects](clouds/interconnects.md)
 
 # Network Services
 
-- [FHRP](fhrp.md)
-  - [VRRP](vrrp.md)
-  - [GLBP](glbp.md)
-  - [HSRP](hsrp.md)
+- [First Hop Redundancy Protocol](fhrp.md)
+  - [VRRP](fhrp/vrrp.md)
+  - [GLBP](fhrp/glbp.md)
+  - [HSRP](fhrp/hsrp.md)
 - [ACLs](acls.md)
 - [CoPP with ACLs and Object Groups](copp-with-acls-and-object-groups.md)
 - [NAT](nat.md)
@@ -238,8 +238,8 @@
 - [Flexible NetFlow](flexible-netflow.md)
 - [AAA with FreeRadius and Univention UCS](aaa-freeradius-and-univention-ucs.md)
 - [SNMP](snmp.md)
-  - [SNMP Versions](snmp-versions.md)
-  - [SNMP is Dead](snmp-is-dead.md)
+  - [Versions](snmp/versions.md)
+  - [is Dead](snmp/is-dead.md)
 
 # Software Defined Networking
 
@@ -275,11 +275,11 @@
 
 - [Openconfig Automation](openconfig-automation.md)
   - [gRPC](grpc.md)
-    - [gNMI](gnmi.md)
-    - [gNOI](gnoi.md)
-    - [gNSI](gnsi.md)
-    - [gRIBI](gribi.md)
-    - [gNxI](gnxi.md)
+    - [gNMI](grpc/gnmi.md)
+    - [gNOI](grpc/gnoi.md)
+    - [gNSI](grpc/gnsi.md)
+    - [gRIBI](grpc/gribi.md)
+    - [gNxI](grpc/gnxi.md)
 - [IETF Automation](ietf-automation.md)
   - [YANG](yang.md)
   - [RESTCONF](restconf.md)
@@ -287,7 +287,7 @@
   - [RFC 3535, 20 Years Later](rfc-3535-20-years-later.md)
 - [MDT](mdt.md)
 - [Cisco IQ](cisco-iq.md)
-  - [Cisco IQ Link](cisco-iq-link.md)
+  - [Link](cisco-iq/link.md)
 - [Ansible Basics](ansible-basics.md)
 
 # Layer 1
@@ -302,7 +302,7 @@
 - [TDM](tdm.md)
   - [T1](t1.md)
   - [SONET](sonet.md)
-    - [SONET C2 Byte](sonet-c2-byte.md)
+    - [C2 Byte](sonet/c2-byte.md)
   - [Circuit Emulation](cem.md)
 - [UDP](udp.md)
 
@@ -311,37 +311,38 @@
 - [CML](cml.md)
   - [Alpine on CML](alpine-on-cml.md)
   - [IPERF 2](iperf2.md)
-  - [Working with an LLM](working-with-an-llm.md)
-    - [CML Breakout](cml-breakout.md)
-    - [CML MCP](cml-mcp.md)
-    - [LLM Instructions](llm-instructions.md)
-    - [PyATS](pyats.md)
+  - [Working with an LLM](cml/working-with-an-llm.md)
+    - [Breakout](cml/working-with-an-llm/breakout.md)
+    - [MCP](cml/working-with-an-llm/mcp.md)
+    - [Instructions](cml/working-with-an-llm/instructions.md)
+    - [PyATS](cml/working-with-an-llm/pyats.md)
 
-# Etc (Stuff I Haven't Sorted)
+# Etc
 
-- [Study Tables](study-tables.md)
-- [OS Architecture](os-architecture.md)
-- [Wiki.js, Duplicati, Traefik, Portainer](wikijs-duplicati-traefik-portainer.md)
-- [Windows 10 Physical to Virtual](windows-10-physical-to-virtual.md)
-- [BFD](bfd.md)
-- [LISP](lisp.md)
-  - [LISP Encapsulation](lisp-encapsulation.md)
-- [Multihoming](multihoming.md)
-- [Certbot](certbot.md)
-- [Wake on LAN](wake-on-lan.md)
-- [Grep](grep.md)
-- [Unknown Command or Computer Name](unknown-command-or-computer-name.md)
-- [Cisco C9000 Packet Drops](c9000-packet-drops.md)
-- [SecureCRT](securecrt.md)
-- [Add Cephfs to Debian](add-cephfs-to-debian.md)
-- [Cisco Architecture](cisco-architecture.md)
-  - [Cisco Silicon One](cisco-silicon-one.md)
-- [Internet Routing Registry](internet-routing-registry.md)
-- [In Buiding Wireless](./in-building-wireless.md)
-- [Boot with TFTP](boot-with-tftp.md)
-- [Telnet With No User Accounts](telnet-with-no-user-accounts.md)
-- [Sitemaps](./sitemaps.md)
-- [Socket Statistics](socket-statistics.md)
+- [Etc](etc.md)
+  - [Study Tables](study-tables.md)
+  - [OS Architecture](os-architecture.md)
+  - [Wiki.js, Duplicati, Traefik, Portainer](wikijs-duplicati-traefik-portainer.md)
+  - [Windows 10 Physical to Virtual](windows-10-physical-to-virtual.md)
+  - [BFD](bfd.md)
+  - [LISP](lisp.md)
+    - [Encapsulation](lisp/encapsulation.md)
+  - [Multihoming](multihoming.md)
+  - [Certbot](certbot.md)
+  - [Wake on LAN](wake-on-lan.md)
+  - [Grep](grep.md)
+  - [Unknown Command or Computer Name](unknown-command-or-computer-name.md)
+  - [Cisco C9000 Packet Drops](c9000-packet-drops.md)
+  - [SecureCRT](securecrt.md)
+  - [Add Cephfs to Debian](add-cephfs-to-debian.md)
+  - [Cisco Architecture](cisco-architecture.md)
+    - [Cisco Silicon One](cisco-silicon-one.md)
+  - [Internet Routing Registry](internet-routing-registry.md)
+  - [In Buiding Wireless](./in-building-wireless.md)
+  - [Boot with TFTP](boot-with-tftp.md)
+  - [Telnet With No User Accounts](telnet-with-no-user-accounts.md)
+  - [Sitemaps](./sitemaps.md)
+  - [Socket Statistics](socket-statistics.md)
 
 # Certification Stuff
 

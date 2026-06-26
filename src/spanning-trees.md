@@ -1,4 +1,4 @@
-# Spanning Trees
+# Spanning Tree
 
 ## Algorhyme
 
