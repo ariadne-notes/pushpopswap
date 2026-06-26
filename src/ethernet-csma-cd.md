@@ -4,10 +4,14 @@ Is used when the link is half-duplex. For full-duplex links CDMA/CD isn't used.
 
 > This standard provides for **two modes of operation of the MAC sublayer:**
 >
-> a) In half duplex mode, stations contend for the use of the physical medium, using the CSMA/CD algorithms specified. 
-> 
-> Bidirectional communication is accomplished by rapid exchange of frames, rather than full duplex operation. 
-> 
+> a) In half duplex mode, stations contend for the use of the physical medium, using the CSMA/CD algorithms specified.
+
+>
+
+> Bidirectional communication is accomplished by rapid exchange of frames, rather than full duplex operation.
+
+>
+
 > Half duplex operation is possible on all supported media; it is required on those media that are incapable of supporting simultaneous transmission and reception without interference, for example, 10BASE2 and 100BASE-T4.
 >
 > b) The full duplex mode of operation can be used when all of the following are true:

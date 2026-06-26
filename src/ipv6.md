@@ -104,7 +104,8 @@ IPv6 addresses are 4 groups of 32.
 
 This idea was from RFC [6052].
 
-The idea was, you could look at a v6 address with `64` in the front and understand it had been translated. 
+The idea was, you could look at a v6 address with `64` in the front and understand it had been translated.
+
 
 These aren't popular anymore
 

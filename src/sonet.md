@@ -29,7 +29,7 @@ If a SONET reciever at the Line level counts a BIP, it returns it to sender. The
 
 It's been a while, the below might be wrong.
 
-<pre>
+```plain
 ┌────────────────────────────────────────────────── PATH ─────────────────────────────────────────────────┐
 │                                                                                                         │
 │   ┌─────────────── LINE ────────────────────┐            ┌────────────────── LINE ──────────────────┐   │
@@ -45,8 +45,7 @@ It's been a while, the below might be wrong.
     ▲      ▲            ▲       ▲     ▲       ▲            ▲      ▲     ▲       ▲            ▲        ▲
     └──────┘            └───────┘     └───────┘            └──────┘     └───────┘            └────────┘
     SECTION              SECTION       SECTION             SECTION       SECTION              SECTION
-
-</pre>
+```
 
 Monitoring at each Network Element is usually helpful
 
@@ -96,7 +95,7 @@ This is used for fiber rings, its where the destination nodes pulls the info fro
 
 Like taken from a standards document someplace
 
-```console
+```text
 Spatial Reuse Protocol (SRP) is a media-independent MAC layer protocol that operates over two counterrotating
 fiber-optic rings. The dual rings provide survivability of data in case of a failed node or a break in
 connecting cables by rerouting the data path over the alternate ring. SRP provides a more efficient use of

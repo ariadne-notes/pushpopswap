@@ -6,7 +6,8 @@
 
 - Protocol to exchange network device statistics
 
-**SNMP Agent** 
+**SNMP Agent**
+
 
 - Lives on network equipment
 - Collecting and stores information in a MIB
@@ -22,7 +23,8 @@
 
 - UN agency responsible for international telecommunications
 
-**OID Tree** 
+**OID Tree**
+
 
 - An ITU, [X.660] standardized tree
 

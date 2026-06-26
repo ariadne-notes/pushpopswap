@@ -7,7 +7,7 @@ A different service, a mapping agent, will read these messages, pick a winner, t
 - 5.5.5.5, Candidate RP.
 - 4.4.4.4, mapping agent.
 
-<pre>
+```console
 R4# show ip pim autorp
 
 AutoRP Information:
@@ -19,11 +19,11 @@ AutoRP Information:
 
 PIM AutoRP Statistics: Sent/Received
   RP Announce: 0/16, RP Discovery: 64/42
-</pre>
+```
 
 These packets are slow.
 
-<pre>
+```console
 R4# debug ip pim auto-rp
 
 PIM Auto-RP debugging is on
@@ -46,7 +46,7 @@ PIM Auto-RP debugging is on
 *Apr 25 19:58:30.160:  prm_rp->bidir_mode = 0 vs bidir = 0 (224.0.0.0/4, RP:5.5.5.5), PIMv2 v1
 R4# undebug all
 All possible debugging has been turned off
-</pre>
+```
 
 ## References
 

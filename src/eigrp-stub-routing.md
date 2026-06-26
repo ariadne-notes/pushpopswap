@@ -12,7 +12,8 @@ Normally a hub-and-spoke technology
     - Redistributed Static
     - External
     - Internal
-    
+
+
 More details on page 174 of [BRKENT-1187]
 
 [BRKENT-1187]: ./pdfs/ciscolive/BRKENT-1187.pdf

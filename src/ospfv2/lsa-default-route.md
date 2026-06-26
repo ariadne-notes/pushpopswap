@@ -1,4 +1,4 @@
-# OSPFv2 LSA Default Routes
+# LSA Default Routes
 
 R2 is advertising a default route to these routers.
 

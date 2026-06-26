@@ -1,4 +1,4 @@
-# OSPFv2 Network and LSA Chart
+# Network and LSA Chart
 
 <div><style>
   .ospf-table { border-collapse: collapse; width: 100%; font-size: 0.9em; }

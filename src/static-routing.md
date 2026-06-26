@@ -16,7 +16,8 @@ ip route 0.0.0.0 0.0.0.0 192.168.0.1
 
 Maybe the network already has a default route from an IGP like OSPFv2.
 
-Since the OSPFv2 route is already present this won't be installed. 
+Since the OSPFv2 route is already present this won't be installed.
+
 
 We call that **floating**.
 

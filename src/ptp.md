@@ -213,7 +213,7 @@ ptp property P_GENERALIZED_PTP
 ptp dot1as extend property P_GENERALIZED_PTP
 ```
 
-### PTP
+### Standard PTP
 
 AKA [IEEE 1588](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9500/software/release/17-17/configuration_guide/lyr2/b_1717_lyr2_9500_cg/configuring_precision_time_protocol__ptp_.html)
 

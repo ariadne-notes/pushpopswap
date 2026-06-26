@@ -27,7 +27,7 @@ Flooding uses a multicast p2mp tunnel.
 
 Stretched subnets, with Anycast gateways.
 
-## Terms
+## More terms
 
 ### Underlay
 

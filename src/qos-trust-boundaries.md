@@ -77,6 +77,6 @@ An example for one platform to demonstrate how complex QoS trust can become.
 | 48–55      |         6 |
 | 56–63      |         7 |
 
-# References
+## References
 
 [Cisco - QoS Configuration Guide, Cisco IOS-XE - 26.x.x - C9300](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/26-x/configuration_guide/qos/b_26x_qos_9300_cg/configuring_qos.html)

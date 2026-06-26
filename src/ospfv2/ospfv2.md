@@ -202,7 +202,7 @@ You can use the same command to tell the router to ... exclude these routes from
 
 The area command is now a route-filter.
 
-#### v4
+#### Range v4
 
 ```console,editable
 router ospf 1
@@ -210,7 +210,7 @@ router ospf 1
  area 1 range 10.0.0.0 255.255.224.0 not-advertise
 ```
 
-#### v6
+#### Range v6
 
 ```console,editable
 router ospfv3 1
@@ -274,7 +274,7 @@ router ospfv3 1
 
 I made a [chart].
 
-[chart]: ./ospfv2-network-and-lsa-chart.md
+[chart]: ./network-and-lsa-chart.md
 
 ## References
 

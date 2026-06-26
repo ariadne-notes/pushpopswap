@@ -83,7 +83,8 @@ mkdir /mnt/docker-on-ceph
 
 ### Copy the ceph.conf file from the cluster
 
-I do this by hand with 
+I do this by hand with
+
 
 ```console,editable
 cat /etc/pve/ceph.conf

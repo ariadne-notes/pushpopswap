@@ -1,4 +1,4 @@
-# OSPFv2 Sham Links
+# Sham Links
 
 ## The problem
 

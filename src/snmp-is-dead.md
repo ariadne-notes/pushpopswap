@@ -12,9 +12,11 @@ The delay between the counter and the MIB update can be 30 to 60 seconds behind.
 
 We never see real-time data.
 
-**Timeouts** 
+**Timeouts**
 
-SNMP frequently fails to return anything at all, even under modest load conditions. 
+
+SNMP frequently fails to return anything at all, even under modest load conditions.
+
 
 When the data is graphed, the most impactful data (the spikes) will not show up, because the SNMP agent didn't return a result.
 

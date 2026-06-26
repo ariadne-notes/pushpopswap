@@ -1,4 +1,5 @@
-# OpenConfig Automation 
+# OpenConfig Automation
+
 
 - Consortium of network operators
 - Not a Standards Org
@@ -21,7 +22,8 @@ SNMP at scale is [very broken].
 
 [very broken]: ./snmp-is-dead.md
 
-[FOSS]: https://en.wikipedia.org/wiki/Free_and_open-source_software 
+[FOSS]: https://en.wikipedia.org/wiki/Free_and_open-source_software
+
 
 ![nanog-90-shakir](./images/nanog-90-shakir.jpg)
 

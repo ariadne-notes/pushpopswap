@@ -4,23 +4,23 @@ For any of these, to subnet them, just change the final hex digit.
 
 ## Groups of 64
 
-<pre>
+```text
 /64   FFFF:FFFF:FFFF:FFFF::
 /128  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF
-</pre>
+```
 
 ## Groups of 32
 
-<pre>
+```text
 /32   FFFF:FFFF::
 /64   FFFF:FFFF:FFFF:FFFF::
 /96   FFFF:FFFF:FFFF:FFFF:FFFF:FFFF::
 /128  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF
-</pre>
+```
 
 ## As groups of 16
 
-<pre>
+```text
 /16   FFFF::
 /32   FFFF:FFFF::
 /48   FFFF:FFFF:FFFF::
@@ -29,11 +29,11 @@ For any of these, to subnet them, just change the final hex digit.
 /96   FFFF:FFFF:FFFF:FFFF:FFFF:FFFF::
 /112  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF::
 /128  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF
-</pre>
+```
 
 ## Groups of 8
 
-<pre>
+```text
 /8    FF::
 /16   FFFF::
 /24   FFFF:FF::
@@ -50,11 +50,11 @@ For any of these, to subnet them, just change the final hex digit.
 /112  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF::
 /120  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FF::
 /128  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF
-</pre>
+```
 
 ## Groups of 4
 
-<pre>
+```text
 /4    F::
 /8    FF::
 /12   FFF::
@@ -87,4 +87,4 @@ For any of these, to subnet them, just change the final hex digit.
 /120  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FF::
 /124  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFF::
 /128  FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF:FFFF
-</pre>
+```

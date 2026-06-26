@@ -12,7 +12,8 @@ A tech from an earlier time.
 
 Applying `aaa new-model` will immediately remove the `login` lines, breaking login.
 
-Tested on IOSv, Version 15.9(3)M8. 
+Tested on IOSv, Version 15.9(3)M8.
+
 
 [Deprecated]: https://www.merriam-webster.com/dictionary/deprecate
 

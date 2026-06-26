@@ -34,7 +34,8 @@
     - [Subnetting with the Box Method](subnet-with-the-box-method.md)
     - [Subnetting with Binary](subnet-with-binary.md)
     - [IPv4 Classful Networking](ipv4-classful-networking.md)
-    
+
+
 - [IPv6](ipv6.md)
   - [IPv6 Subnetting](ipv6-subnetting.md)
   - [IPv6 Hextext Boundaries](ipv6-hextet-boundaries.md)
@@ -45,7 +46,8 @@
   - [IPv6 ICMPv6](ipv6-icmpv6.md)
   - [IPv6 Neighbor Discovery](ipv6-nd.md)
     - [IPv6 ND Router Solicitation](ipv6-nd-ra.md)
-    
+
+
 - [IPv4 to IPV6 Migration Strategies](ipv4-to-ipv6-migration-strategies.md)
   - [ISATAP](isatap.md)
   - [6RD](6rd.md)
@@ -127,20 +129,21 @@
 - [Static Routing](static-routing.md)
 
 - [OSPFv2](./ospfv2/ospfv2.md)
-  - [OSPFv2 DR Election](./ospfv2/ospfv2-dr-election.md)
-  - [OSPFv2 DR LSAs](./ospfv2/ospfv2-dr-lsas.md)
-  - [OSPFv2 LSA Types](./ospfv2/ospfv2-lsa-types.md)
-    - [Type 1 LSA - Router](./ospfv2/ospfv2-type-1-lsa-router.md)
-    - [Type 2 LSA - Network](./ospfv2/ospfv2-type-2-lsa-network.md)
-    - [Type 3 LSA - Summary](./ospfv2/ospfv2-type-3-lsa-summary.md)
-    - [Type 4 LSA - ASBR Summary](./ospfv2/ospfv2-type-4-lsa-asbr-summary.md)
-    - [Type 5 LSA - External](./ospfv2/ospfv2-type-5-external.md)
-  - [OSPFv2 Network and LSA Chart](./ospfv2/ospfv2-network-and-lsa-chart.md)
-  - [OSPFv2 LSA Default Routes](./ospfv2/ospfv2-lsa-default-route.md)
-  - [OSPFv2 Network Types](./ospfv2/ospfv2-network-types.md)
-    - [OSPFv2 Point-to-Multipoint](./ospfv2/ospfv2-p2mp.md)
-  - [OSPFv2 LFA](./ospfv2/ospfv2-lfa.md)
-  - [OSPFv2 Sham Links](./ospfv2/ospfv2-sham-links.md)
+  - [DR Election](./ospfv2/dr-election.md)
+    - [DR LSAs](./ospfv2/dr-lsas.md)
+  - [LSA Types](./ospfv2/lsa-types.md)
+    - [Type 1 LSA - Router](./ospfv2/type-1-lsa-router.md)
+    - [Type 2 LSA - Network](./ospfv2/type-2-lsa-network.md)
+    - [Type 3 LSA - Summary](./ospfv2/type-3-lsa-summary.md)
+    - [Type 4 LSA - ASBR Summary](./ospfv2/type-4-lsa-asbr-summary.md)
+    - [Type 5 LSA - External](./ospfv2/type-5-external.md)
+  - [Network and LSA Chart](./ospfv2/network-and-lsa-chart.md)
+  - [LSA Default Routes](./ospfv2/lsa-default-route.md)
+  - [Network Types](./ospfv2/network-types.md)
+    - [Point-to-Multipoint](./ospfv2/p2mp.md)
+  - [LFA](./ospfv2/lfa.md)
+  - [Sham Links](./ospfv2/sham-links.md)
+  - [Incremental SPF](./ospfv2/incremental-spf.md)
 
 - [OSPFv3](./ospfv3.md)
 

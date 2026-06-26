@@ -57,6 +57,6 @@ sequenceDiagram
     S -->> C: RESPONSE (Accounting) – SUCCESS
 ```
 
-# References
+## References
 
 A. Woland, V. Santuka, J. Sanbower, and C. Mitchell, *Integrated Security Technologies and Solutions – Volume II: Cisco Security Solutions for Network Access Control, Segmentation, Context Sharing, Secure Connectivity, and Virtualization*. Hoboken, NJ, USA: Cisco Press, 2019, ISBN 978-1-58714-707-4.

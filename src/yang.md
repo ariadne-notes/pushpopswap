@@ -35,7 +35,7 @@ Source [RFC 6020 Section 4.1].
 
 - Rules around how data is allowed to be structured
 
-# Why
+## Why
 
 Device CLI output provides **unstructured** data
 

@@ -1,9 +1,15 @@
-disabled-rules = ["MD012", "MD013","MD033","MD036","CONTENT004","MD044","MD049","MD052"]
+disabled-rules = ["MD012", "MD013","MD027","MD030","MD033","MD036","CONTENT003","CONTENT004","CONTENT005","CONTENT007","CONTENT011","MD044","MD049","MD052"]
 # MD012 - multiple consecutive blank lines, Ascii art
 # MD013 - 80 character line length
+# MD027 - Multiple spaces after blockquote symbol, off because the indentation is deliberate in quoted RFC excerpts/nested lists; autofix also shatters multi-line blockquotes by inserting blank lines
+# MD030 - Spaces after list marker, off because of false positives on un-fenced Cisco debug output (lines beginning with *timestamp); autofix corrupts those log dumps
 # MD033 - HTML Tags being used ... <pre> for ASCII art
 # MD036 - Emphasis as heading, off because of **Term** definition-label idiom (bold term followed by a list)
+# CONTENT003 - Chapter word-count minimum, off because terse notes and stub/index pages are intentional on a reference wiki
 # CONTENT004 - Heading Title Case, off by policy: H1 is Title Case, all sub-headings are sentence case
+# CONTENT005 - Intro before subheading, off: terse notes legitimately jump straight to a subheading
+# CONTENT007 - Inconsistent terminology, off: info-level nag that flip-flops between "config" and "configuration"
+# CONTENT011 - Future tense, off: info-level nag, "you will..." is natural tutorial prose
 # MD044 - Proper Names Capitalization, off because of "ip" inside of code blocks
 # MD049 - Emphasis style, false positives from underscores in identifiers (e.g. MULTI_EXIT_DISC)
 # MD052 - Reference link undefined, false positives from JS bracket syntax in eigrp calculator pages

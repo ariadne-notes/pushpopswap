@@ -25,7 +25,8 @@ An hour long meeting? One page of notes. Don't overdo it.
 ### I don't need to take notes. I can remember everything just fine
 
 Note down what you will not remember
- 
+
+
 - Bit counts
 - Packet headers
 - Tiny specific interactions

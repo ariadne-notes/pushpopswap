@@ -198,7 +198,7 @@ Used when migrating from narrow to wide without a hard cutover:
 
 Default route injected via route-map.
 
-## Config
+## Topology config
 
 ### Single topology v6
 

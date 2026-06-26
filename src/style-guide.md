@@ -7,7 +7,8 @@
 - Uses [CommonMark]
 - Bold for the abbreviation, which is used in common speech
 - Expansion goes next to it with a hyphen train
-- Items go underneath as bullets 
+- Items go underneath as bullets
+
 - Sort of resembles a parking lot
 - Never has periods on the end
 

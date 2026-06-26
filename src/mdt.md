@@ -12,7 +12,8 @@
 ## TCP dial-in
 
 - Collector establishes a connection
-- Then subscribes 
+- Then subscribes
+
 
 ```mermaid
 sequenceDiagram

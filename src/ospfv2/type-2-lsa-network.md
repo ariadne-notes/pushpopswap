@@ -24,7 +24,7 @@ Topology
                                                 └────┘     └─────┘ 10.77.78.0/24 └─────┘ 
 ```
 
-### Example
+## Example
 
 ```console
 R1# show ip ospf database network 

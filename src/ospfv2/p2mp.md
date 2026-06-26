@@ -1,4 +1,4 @@
-# OSPFv2 Point-to-Multipoint
+# Point-to-Multipoint
 
 **p2mp** --- point-to-multipoint
 

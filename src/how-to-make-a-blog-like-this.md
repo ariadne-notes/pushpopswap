@@ -116,7 +116,8 @@ mdbook build
 
 [mermaid-lightbox.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/mermaid-lightbox.js)
 
-Mermaid diagrams can't be zoom'd natively on desktop. 
+Mermaid diagrams can't be zoom'd natively on desktop.
+
 
 There are some very large diagrams on this site.
 

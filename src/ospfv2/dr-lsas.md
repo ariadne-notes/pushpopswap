@@ -1,4 +1,4 @@
-# OSPFv2 LSAs
+# DR LSAs
 
 ## Type 1 - router
 

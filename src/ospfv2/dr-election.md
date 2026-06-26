@@ -1,4 +1,4 @@
-# OSPFv2 DR Election
+# DR Election
 
 ## DR and BDR
 

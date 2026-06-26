@@ -36,7 +36,8 @@ When a portion of the 32-bit space is used to make a subnet mask, we call these 
 
 [`/31`]: ./point-to-point-links.md
 
-| Borrowed Bits | Binary   | Decimal | Masks               | 
+| Borrowed Bits | Binary   | Decimal | Masks               |
+
 | --------------|----------| --------| --------------------|
 | 0             | 00000000 | 0       | /0, /8, /16, /24    |
 | 1             | 10000000 | 128     | /1, /9, /17, /25    |

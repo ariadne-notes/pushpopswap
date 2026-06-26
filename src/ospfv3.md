@@ -50,7 +50,7 @@ Exactly one mode has working interop.
 
 Courtesy of [BRKIPV-2418].
 
-[BRKIPV-2418]: BRKIPV-2418.pdf
+[BRKIPV-2418]: ./pdfs/ciscolive/BRKIPV-2418.pdf
 
 ## Config
 

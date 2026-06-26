@@ -1,5 +1,7 @@
 # BGP Confederations
 
+External peers see the `confederation_id`.
+
 `NEXT_HOP` is preserved throughout the confederation.
 
 `MED` is preserved for routes advertised into the confederation.

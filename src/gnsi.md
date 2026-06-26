@@ -2,7 +2,7 @@
 
 **gNSI** -- gRPC Network Security Interface
 
-# Functions
+## Functions
 
 **Certz**
 
