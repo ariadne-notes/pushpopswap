@@ -1,4 +1,4 @@
-# Cloud
+# SD-WAN Cloud
 
 ## Terms
 
@@ -25,7 +25,7 @@ A CSP construct to connect multiple VPCs
 
 Used to pick network connections, or maybe even the overlay to use a different site.
 
-![SaaS](../images/cisco/cisco-sdwan-cloud-onramp-saas.avif)
+![SaaS](./images/cisco/cisco-sdwan-cloud-onramp-saas.avif)
 
 Image courtesy of
 
@@ -48,7 +48,7 @@ Image courtesy of
 
 Used to interconnect devices within the Cloud.
 
-![IaaS](../images/cisco/cisco-sdwan-cloud-onramp-iaas.avif)
+![IaaS](./images/cisco/cisco-sdwan-cloud-onramp-iaas.avif)
 
 Image courtesy of
 
@@ -59,7 +59,7 @@ Image courtesy of
 - TGW native
 - Automation for instantiaton
 
-![Multicloud](../images/cisco/white-paper-c11-742817_0.avif)
+![Multicloud](./images/cisco/white-paper-c11-742817_0.avif)
 
 ## References
 

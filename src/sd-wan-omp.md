@@ -99,7 +99,7 @@ These require a TLOC.
 
 - Prefer the biz-internet connections.
 
-![sd-wan-route-types](../images/diagrams/sd-wan-route-types.drawio.svg)
+![sd-wan-route-types](./images/diagrams/sd-wan-route-types.drawio.svg)
 
 ### TLOC
 

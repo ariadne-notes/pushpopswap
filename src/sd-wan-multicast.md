@@ -1,4 +1,4 @@
-# Multicast
+# SD-WAN Multicast
 
 > [!NOTE]
 > Data streams are forwarded to the receivers through replication.

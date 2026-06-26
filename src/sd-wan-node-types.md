@@ -1,4 +1,4 @@
-# Node Types
+# SD-WAN Node Types
 
 ## Manager
 
