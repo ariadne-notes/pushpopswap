@@ -92,9 +92,6 @@ jobs:
         if: steps.cache-svgbob.outputs.cache-hit != 'true'
         run: cargo install --version ${{ env.BOB }} --locked mdbook-svgbob
 
-      - name: Install mdbook-summary-h1
-        run: cargo install --git https://github.com/ariadne-notes/mdbook-summary-h1 --locked mdbook-summary-h1
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
