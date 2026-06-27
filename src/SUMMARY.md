@@ -191,6 +191,7 @@
   - [IPSec](ipsec.md)
     - [IPSec Authentication Header](ipsec-ah.md)
     - [IPSec Encapsulating Security Payload](ipsec-esp.md)
+  - [VTI](vti.md)
   - [DMVPN](dmvpn.md)
     - [NHRP](nhrp.md)
   - [GETVPN](getvpn.md)
