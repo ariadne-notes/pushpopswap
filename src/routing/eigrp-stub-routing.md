@@ -16,7 +16,7 @@ Normally a hub-and-spoke technology
 
 More details on page 174 of [BRKENT-1187]
 
-[BRKENT-1187]: ./pdfs/ciscolive/BRKENT-1187.pdf
+[BRKENT-1187]: /pdfs/ciscolive/BRKENT-1187.pdf
 
 ## Commands
 
@@ -106,7 +106,7 @@ router eigrp ROCKS
 
 ## References
 
-[Cisco Live - EIGRP Introduction and Overview - Steven Moore - BRKENT-1187](./pdfs/ciscolive/BRKENT-1187.pdf)
+[Cisco Live - EIGRP Introduction and Overview - Steven Moore - BRKENT-1187](/pdfs/ciscolive/BRKENT-1187.pdf)
 
 [Cisco - EIGRP IWAN Simplification - IP Routing Configuration Guide, Cisco IOS XE 17.x](https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-routing/b-ip-routing/m_ire-iwan-simpl.html)
 

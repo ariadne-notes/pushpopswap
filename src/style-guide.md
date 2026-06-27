@@ -49,6 +49,21 @@ Does it support bullets --- or modern parking lot?
 > [!CAUTION]
 > Information about potential issues that require caution.
 
+## SUMMARY.md
+
+```markdown
+
+<-- Section should be a large inclusive word, because it will show up in the URIs -->
+
+# Routing
+
+                                                     <-- All files go into same same section folder -->
+                                                     
+- [OSPFv2](./routing/ospfv2.md)                       <-- Root -->
+  - [DR Election](./routing/ospfv2-dr-election.md)    <-- Sidebar_Branch_Title is short, branch_name_is_qualified -->
+      - [DR LSAs](./routing/ospfv2-dr-lsas.md)        <-- Sidebar_Leaf_Title is short, leaf_file_name_is_qualified -->
+```
+
 ## Footnote
 
 This is a footnote[^note].

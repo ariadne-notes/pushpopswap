@@ -82,8 +82,8 @@ Multicast is `224.0.0.10`
 - See [EIGRP Classic Metric].
 - See [EIGRP Wide Metric].
 
-[EIGRP Classic Metric]: ./eigrp-classic-metric.md
-[EIGRP Wide Metric]: ./eigrp-wide-metric.md
+[EIGRP Classic Metric]: /eigrp-classic-metric.md
+[EIGRP Wide Metric]: /eigrp-wide-metric.md
 
 ## Feasible successor algorithm
 
@@ -355,9 +355,9 @@ D        2.2.2.2 [90/3398] via 10.12.1.2, 00:00:04, GigabitEthernet0/1
 
 [Cisco - Troubleshooting EIGRP Variance](https://community.cisco.com/t5/networking-knowledge-base/troubleshooting-eigrp-variance-command/ta-p/3129662)
 
-[Cisco Live - EIGRP, The Usual Suspects - Steven Moore - BRKENT-2050](./pdfs/ciscolive/BRKENT-2050.pdf)
+[Cisco Live - EIGRP, The Usual Suspects - Steven Moore - BRKENT-2050](/pdfs/ciscolive/BRKENT-2050.pdf)
 
-[Cisco Live - EIGRP, Introduction and Overview - Steven Moore - BRKENT-1187](./pdfs/ciscolive/BRKENT-1187.pdf)
+[Cisco Live - EIGRP, Introduction and Overview - Steven Moore - BRKENT-1187](/pdfs/ciscolive/BRKENT-1187.pdf)
 
 [Wikipedia - Diffusing update algorithm](https://en.wikipedia.org/wiki/Diffusing_update_algorithm)
 
