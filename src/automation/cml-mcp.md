@@ -28,7 +28,7 @@
 
 CML-MCP isn't great after the lab has been started to make modifications or tweaks, for that, use [PyATS].
 
-[PyATS]: /pyats.md
+[PyATS]: /automation/pyats.md
 
 ## GitHub
 

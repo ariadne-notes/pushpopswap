@@ -274,7 +274,7 @@ router ospfv3 1
 
 I made a [chart].
 
-[chart]: /routing/ospfv2-network-and-lsa-chart.md
+[chart]: /ospf/ospfv2-network-and-lsa-chart.md
 
 ## References
 

@@ -27,7 +27,6 @@ Describe the topology at a high level with design constraints.
 
 Tooling:
 
-- [PyATS](/pyats.md)
-- [CML MCP](/cml-mcp.md)
+- [PyATS](/automation/pyats.md)
+- [CML MCP](/automation/cml-mcp.md)
 - [CML Breakout](/cml-breakout.md)
-

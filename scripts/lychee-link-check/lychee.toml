@@ -1,15 +1,11 @@
-# lychee link-checker config. Lives in scripts/, so it is not auto-discovered;
-# pass it explicitly. Run from the repo root with:
-#   lychee --config scripts/lychee.toml './src/**/*.md'
+# Lychee link-checker config. The wrapper passes this file explicitly. Run with:
+#   ./scripts/lychee-link-check/check-links-with-lychee.sh
+# To check a smaller, stable slice of files:
+#   ./scripts/lychee-link-check/check-links-with-lychee.sh --batch 1/10
 
 # Quiet output and reuse the on-disk cache (.lycheecache).
 no_progress = true
 cache = true
-
-# Treat these as success. Cisco docs return 403 to automated checkers,
-# LinkedIn returns 999 — both are bot-blocking, not real breakage.
-# 429 is rate-limiting.
-accept = ["200..=204", "403", "429", "999"]
 
 # Pretend to be a browser so fewer sites reject the request outright.
 user_agent = "Mozilla/5.0 (compatible; lychee link checker)"
@@ -19,3 +15,17 @@ user_agent = "Mozilla/5.0 (compatible; lychee link checker)"
 exclude = [
   '\.html\?',
 ]
+
+# Cisco rate-limits automated checks. Serialize requests to its hosts and leave
+# a gap between them; 403 and 429 responses remain visible as failures.
+[hosts."www.cisco.com"]
+concurrency = 1
+request_interval = "1s"
+
+[hosts."community.cisco.com"]
+concurrency = 1
+request_interval = "1s"
+
+[hosts."learningnetwork.cisco.com"]
+concurrency = 1
+request_interval = "1s"

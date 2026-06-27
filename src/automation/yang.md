@@ -120,9 +120,9 @@ Courtesy of IETF 98, Rob Shakir & Anees Shaikh
 - Not widely implemented
 - A standards body
 - Other works include
-  - [YANG](/yang.md)
-  - [NETCONF](/netconf.md)
-  - [RESTCONF](/restconf.md)
+  - [YANG](/automation/yang.md)
+  - [NETCONF](/automation/netconf.md)
+  - [RESTCONF](/automation/restconf.md)
   
 **[IEEE]**
 
@@ -156,4 +156,3 @@ Courtesy of IETF 98, Rob Shakir & Anees Shaikh
 [IETF 98 - Observations on Modeling Configuration and State in YANG](/pdfs/ietf/slides-98-rtgwg-openconfig-modeling-and-observations-00.pdf)
 
 [RFC 6020 - YANG - A Data Modeling Language for the Network Configuration Protocol (NETCONF)](https://datatracker.ietf.org/doc/rfc6020/)
-
