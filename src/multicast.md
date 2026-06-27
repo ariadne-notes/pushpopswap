@@ -5,6 +5,8 @@ Invented by [Steve Deering], in his 1991 PhD thesis work *[Multicast Routing in 
 [Steve Deering]: https://en.wikipedia.org/wiki/Steve_Deering
 [Multicast Routing in a Datagram Internetwork]: /pdfs/ADA325909.pdf
 
+Multicast is always to a group, a destination, or a set of destinations.
+
 ## Terms
 
 **Multicast**
@@ -122,47 +124,7 @@ Any multi-cast traffic from any given source, not received on the RPF is discard
 
 (*,G) entries in the mroute table represent a security risk, because any source can send to this shared tree.
 
-## Theory (in V4)
 
-Multicast is always TO a group, a destination, or a set of destinations.
-
-Multicast comes from an older time. Unlike Unicast addresses, you can tell via bits if a v4 address is multicast.
-
-A multicast address always start with `1110`
-
-| Address Scopes      | Description                                                                          |
-| ------------------- | --------------                                                                       |
-| `224.0.0.0/4`       | Multicast Supernet                                                                   |
-| `224.0.0.0/24`      | Local Control (TTL=1)                                                                |
-| `224.0.1.0/24`      | Internetwork Control (an example is NTP, Cisco RP-Announce, Cisco RP-Discovery)      |
-| `232.0.0.0/8`       | Source-Specific Multicast (SSM). Via an extension PIM can build (S,G) MDTs.          |
-| `233.0.0.0/8`       | GLOP! Companies with a 16-bit ASN can have globally static multicast. 233.X.Y.0/24   |
-| `239.0.0.0/8`       | Organization-Local Scope. Exactly like RFC1918, but for multicast.                   |
-
-## Common L3 addresses
-
-### Same broadcast domain
-
-| Protocol           | Multicast Address |
-| -------------------| ------------------|
-| all-hosts          | 224.0.0.1         |
-| all-routers        | 224.0.0.2         |
-| OSPF-hello         | 224.0.0.5         |
-| OSPF-DR            | 224.0.0.6         |
-| RIPv2              | 224.0.0.9         |
-| EIGRP              | 224.0.0.10        |
-| PIM                | 224.0.0.13        |
-| mDNS               | 224.0.0.251       |
-
-### Can be forwarded
-
-| Protocol           | Multicast Address | Notes                                              |
-| -------------------|-------------------|----------------------------------------------------|
-| ntp                | 224.0.1.1         |                                                    |
-| cisco-rp-announce  | 224.0.1.39        | Candidate RPs announce every 60s. Highest IP wins. |
-| cisco-rp-discovery | 224.0.1.40        | Mapping agent floods RP-to-group mappings.         |
-
-[IANA Assignments](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml)
 
 ### PIM
 

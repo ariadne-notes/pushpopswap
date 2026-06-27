@@ -198,7 +198,19 @@ Used when migrating from narrow to wide without a hard cutover:
 
 Default route injected via route-map.
 
-## Topology config
+## Config
+
+IS-IS checks for sanity, if only one protocol is being shared over IS-IS ... adding a second one will break adjacencies.
+
+A workaround is to disable the adjacency check.
+
+### IPv6 not enabled on neighbor
+
+```console
+router isis
+  address family ipv6
+    no adjacency check
+```
 
 ### Single topology v6
 
@@ -218,6 +230,8 @@ router isis
 ```
 
 ### Multi topology v6
+
+Requires wide metrics
 
 ```console,editable
 interface Gi1
@@ -242,6 +256,8 @@ router isis
 
 [RFC 5308: Routing IPv6 with IS-IS | RFC Editor](https://www.rfc-editor.org/info/rfc5308/)
 
-[ISO/IEC 10589:2002 - Information technology — Telecommunications and information exchange between systems](https://www.iso.org/standard/30932.html)
+[Cisco Live - Deploying IPv6 Routing Protocols - Peter Palúch - BRKIPV-2418](/pdfs/ciscolive/BRKIPV-2418.pdf)
+
+[ISO/IEC 10589:2002 - IT — Telecommunications and information exchange between systems](https://www.iso.org/standard/30932.html)
 
 [ISO/IEC 8348:2002 - Information technology — Open Systems Interconnection — Network service definition](https://www.iso.org/standard/35872.html)

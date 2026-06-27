@@ -171,7 +171,9 @@ Intended for [this flow] where an IPv6 only app can work with IPv4 addresses.
 
 [IPv6 address - Wikipedia](https://en.wikipedia.org/wiki/IPv6_address)
 
-[Cisco Live - IPv6:: It's Happening - Nathan Sherrard - BRKIPV-2191](/pdfs/ciscolive/BRKARC-1011.pdf)
+[Cisco Live - IPv6:: It's Happening - Nathan Sherrard - BRKIPV-2191](/pdfs/ciscolive/BRKIPV-2191.pdf)
+
+[Cisco Live - Deploying IPv6 Routing Protocols - Peter Palúch - BRKIPV-2418](/pdfs/ciscolive/BRKIPV-2418.pdf)
 
 [RFC 9099: Operational Security Considerations for IPv6 Networks](https://www.rfc-editor.org/rfc/rfc9099.html)
 

@@ -329,6 +329,32 @@ D        2.2.2.2 [90/3398] via 10.12.1.2, 00:00:04, GigabitEthernet0/1
                  [90/5177] via 10.12.7.2, 00:00:04, GigabitEthernet0/7
 ```
 
+## IPv6
+
+Classic Configuration is **deprecated.**
+
+i.e., do not use these:
+
+```console
+!
+! Not for v6
+!
+router eigrp 100
+!
+! also not for v6
+!
+ipv6 router eigrp 100
+```
+
+Use named mode.
+
+```
+router eigrp EIGRP-AS-100
+  address family ipv4 auton 100
+    network 10.0.0.0
+  address family ipv6 auton 100
+```
+
 ## Network parser
 
 - The CLI parser is converting the IP into binary, then comparing it to the wild mask.
