@@ -75,4 +75,4 @@ For private resources ZTA can proxy HTTP, SSH, and RDP sessions.
 
 [Cisco - Introduction to Resilient Zero Trust Access](https://securitydocs.cisco.com/docs/csa/best-practice/161173.dita)
 
-[Cisco Live - Zero Trust Network Access Demystified - Steven Chimes - BRKSEC-2079](./pdfs/ciscolive/BRKSEC-2079.pdf)
+[Cisco Live - Zero Trust Network Access Demystified - Steven Chimes - BRKSEC-2079](/pdfs/ciscolive/BRKSEC-2079.pdf)

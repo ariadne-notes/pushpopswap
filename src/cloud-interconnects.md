@@ -20,7 +20,7 @@ The WAN edges are IGs.
 
 ## Example
 
-![Cloud Interconnect](./images/cisco/357333.avif)
+![Cloud Interconnect](/images/cisco/357333.avif)
 
 Image courtesy of [Cisco].
 

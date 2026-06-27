@@ -71,30 +71,30 @@
 
 # Enterprise Switching
 
-- [Spanning Trees](spanning-trees.md)
-  - [STP](stp.md)
-    - [Finding TCNs](finding-tcns.md)
-  - [RSTP](rstp.md)
-  - [MST](mst.md)
+- [Spanning Trees](enterprise-switching/spanning-trees.md)
+  - [STP](enterprise-switching/stp.md)
+    - [Finding TCNs](enterprise-switching/finding-tcns.md)
+  - [RSTP](enterprise-switching/rstp.md)
+  - [MST](enterprise-switching/mst.md)
 
-- [Defend Spanning Tree](defend-spanning-tree.md)
-  - [DTP](dtp.md)
-  - [Portfast](portfast.md)
-  - [BPDU Guard](bpdu-guard.md)
-  - [BPDU Filter](bpdu-filter.md)
-  - [Root Guard](root-guard.md)
-  - [Loop Guard](loop-guard.md)
-  - [UplinkFast](uplinkfast.md)
-  - [Port Security](port-security.md)
-  - [UDLD](udld.md)
+- [Defend Spanning Tree](enterprise-switching/defend-spanning-tree.md)
+  - [DTP](enterprise-switching/dtp.md)
+  - [Portfast](enterprise-switching/portfast.md)
+  - [BPDU Guard](enterprise-switching/bpdu-guard.md)
+  - [BPDU Filter](enterprise-switching/bpdu-filter.md)
+  - [Root Guard](enterprise-switching/root-guard.md)
+  - [Loop Guard](enterprise-switching/loop-guard.md)
+  - [UplinkFast](enterprise-switching/uplinkfast.md)
+  - [Port Security](enterprise-switching/port-security.md)
+  - [UDLD](enterprise-switching/udld.md)
 
-- [ARP](arp.md)
-  - [ARP Attacks](arp-attacks.md)
-  - [DAI](dai.md)
-  - [Proxy ARP](proxy-arp.md)
+- [ARP](enterprise-switching/arp.md)
+  - [ARP Attacks](enterprise-switching/arp-attacks.md)
+  - [DAI](enterprise-switching/dai.md)
+  - [Proxy ARP](enterprise-switching/proxy-arp.md)
 
-- [VTP](vtp.md)
-  - [VTP Bomb](vtp-bomb.md)
+- [VTP](enterprise-switching/vtp.md)
+  - [VTP Bomb](enterprise-switching/vtp-bomb.md)
 
 # SP Ethernet
 

@@ -83,7 +83,7 @@ The list of files and their hashes is called the **Index.**
 
 Git tries to avoid touching working tree files. When a file is added, a snapshot is taken at that time.
 
-![Index](./images/git/how-the-index-works.png)
+![Index](/images/git/how-the-index-works.png)
 
 Image courtesy of [Derrick Stolee].
 
@@ -156,7 +156,7 @@ git push
 
 ## Git operations
 
-![git-operations-chart](./images/git/git-operations-chart.png)
+![git-operations-chart](/images/git/git-operations-chart.png)
 
 [image courtesy of Reddit]
 

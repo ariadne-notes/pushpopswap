@@ -32,7 +32,7 @@
 
 ## References
 
-[Cisco Live - Silicon One - Andreas Bovopoulos - BRKARC-1011](./pdfs/ciscolive/BRKARC-1011.pdf)
+[Cisco Live - Silicon One - Andreas Bovopoulos - BRKARC-1011](/pdfs/ciscolive/BRKARC-1011.pdf)
 
-[Cisco Live - Silicon One - Yaron Agami & Ramesh Sivakolundu - PSODCN-1005](./pdfs/ciscolive/PSODCN-1005.pdf)
+[Cisco Live - Silicon One - Yaron Agami & Ramesh Sivakolundu - PSODCN-1005](/pdfs/ciscolive/PSODCN-1005.pdf)
 

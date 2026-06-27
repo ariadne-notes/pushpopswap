@@ -186,7 +186,7 @@ Gi3/2            Root FWD 20000     128.15   P2p
 
 ## Captures
 
-[MST-region-frame.pcap](./captures/switching/MST-region-frame.pcap)
+[MST-region-frame.pcap](/captures/switching/MST-region-frame.pcap)
 
 ## References
 

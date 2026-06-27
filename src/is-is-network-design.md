@@ -4,20 +4,20 @@
 
 Small Networks
 
-![is-is-flat-network](./images/diagrams/is-is-flat.drawio.svg)
+![is-is-flat-network](/images/diagrams/is-is-flat.drawio.svg)
 
 ## Hybrid
 
 Mid Sized Networks, still allows some summarization.
 
-![is-is-hybrid](./images/diagrams/is-is-hybrid.drawio.svg)
+![is-is-hybrid](/images/diagrams/is-is-hybrid.drawio.svg)
 
 
 ## Hierarchical
 
 Large Networks, can be designed to support summarization.
 
-![is-is-hierarchical](./images/diagrams/is-is-hierarchical.drawio.svg)
+![is-is-hierarchical](/images/diagrams/is-is-hierarchical.drawio.svg)
 
 ## References
 

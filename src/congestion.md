@@ -45,7 +45,7 @@ TCP's implementation of CC is responsible for the Internet not suffering from Co
 
 TCP on its own, will settle into this pattern, when the queues fill, multiple flows all speeding up and slowing down around the same period.
 
-![tcp-no-congestion-avoidance](./images/diagrams/tcp-no-congestion-avoidance.svg)
+![tcp-no-congestion-avoidance](/images/diagrams/tcp-no-congestion-avoidance.svg)
 
 ## References
 

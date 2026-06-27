@@ -131,7 +131,7 @@ Feature availability is tied to the support level: Basic, Standard, or Signature
 
 Hosted in the cloud, part of the support contract.
 
-Comes with an optional collector called [Cisco IQ Link](./cisco-iq-link.md)
+Comes with an optional collector called [Cisco IQ Link](/cisco-iq-link.md)
 
 - Deployed VM
 - One Telemetry source is SNMP

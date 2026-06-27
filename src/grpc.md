@@ -81,13 +81,13 @@ flowchart LR
 - Two independent streams
 - Any read or write order
 
-![gRPC-protocol](./images/google/grpc-netvis-x.jpg)
+![gRPC-protocol](/images/google/grpc-netvis-x.jpg)
 
 Image courtesy of Rob Shakir.
 
 ## gRPC network applications
 
-![gRPC-reda-nanog-93](./images/nanog/gRPC-reda-nanog-93.jpg)
+![gRPC-reda-nanog-93](/images/nanog/gRPC-reda-nanog-93.jpg)
 
 Image courtesy of Reda Laichi - NANOG 93.
 
@@ -125,8 +125,8 @@ Now the `Person` class can serialize and retrieve protocol buffer messages.
 
 [gRPC - Core concepts, architecture and lifecycle](https://grpc.io/docs/what-is-grpc/core-concepts/)
 
-[KubeCon 2018 - gRPC Introduction - Jayanth Kolhe](./pdfs/gRPC-Introduction.pdf)
+[KubeCon 2018 - gRPC Introduction - Jayanth Kolhe](/pdfs/gRPC-Introduction.pdf)
 
-[NANOG 93 - gRPC Services under one roof - Reda Laichi - Nokia](./pdfs/nanog/20250202_Laichi_Grpc_Services_Under_v1.pdf)
+[NANOG 93 - gRPC Services under one roof - Reda Laichi - Nokia](/pdfs/nanog/20250202_Laichi_Grpc_Services_Under_v1.pdf)
 
-[Network Visibility for the Automation Age - Rob Shakir](./pdfs/netvis-x.pdf)
+[Network Visibility for the Automation Age - Rob Shakir](/pdfs/netvis-x.pdf)

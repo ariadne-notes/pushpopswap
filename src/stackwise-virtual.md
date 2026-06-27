@@ -6,9 +6,9 @@ This is a [MLAG] technology.
 
 Used to reduce complexity from FHRP and STP.
 
-![nb-06-cat-9k-stack-wp-cte-en_0.avif](./images/cisco/nb-06-cat-9k-stack-wp-cte-en_0.avif)
+![nb-06-cat-9k-stack-wp-cte-en_0.avif](/images/cisco/nb-06-cat-9k-stack-wp-cte-en_0.avif)
 
-![nb-06-cat-9k-stack-wp-cte-en_1.avif](./images/cisco/nb-06-cat-9k-stack-wp-cte-en_1.avif)
+![nb-06-cat-9k-stack-wp-cte-en_1.avif](/images/cisco/nb-06-cat-9k-stack-wp-cte-en_1.avif)
 
 Images courtesy of [Cisco].
 
@@ -29,7 +29,7 @@ DAD
 
 Between 1 and 8 inter-chassis links, for control-plane and data-plane traffic.
 
-![nb-06-cat-9k-stack-wp-cte-en_4.png](./images/cisco/nb-06-cat-9k-stack-wp-cte-en_4.png)
+![nb-06-cat-9k-stack-wp-cte-en_4.png](/images/cisco/nb-06-cat-9k-stack-wp-cte-en_4.png)
 
 ## DAD
 

@@ -13,7 +13,7 @@
 
 **[BFD]** --- Bidirectional Forwarding Detection
 
-[BFD]: bfd.md
+[BFD]: /bfd.md
 
 ## SD-WAN policy
 

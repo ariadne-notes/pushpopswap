@@ -82,11 +82,11 @@ graph TD;
 
 ## Cisco's chart
 
-![Power Over Ethernet - 1](./images/cisco/cisco-brkiot-1128-poe-1.png)
+![Power Over Ethernet - 1](/images/cisco/cisco-brkiot-1128-poe-1.png)
 
 ## Wire example - 4 pairs
 
-![Power Over Ethernet - 2](./images/cisco/cisco-upoe-1.png)
+![Power Over Ethernet - 2](/images/cisco/cisco-upoe-1.png)
 
 ## Power states
 

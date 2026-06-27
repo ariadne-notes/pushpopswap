@@ -46,7 +46,7 @@
   - Delays transmission
   - Buffers have limits
   - Expensive, because memory is expensive
-  - Enables [RED](./congestion.md)
+  - Enables [RED](/congestion.md)
 
 **LLQ** --- Low Latency Queuing
 

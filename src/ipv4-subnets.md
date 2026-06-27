@@ -16,7 +16,7 @@ A `/24` is 24 n-bits and 8 h-bits.
 
 Since [classful networking is dead], unless we are told the subnet mask, we cannot guess what the subnet size is from an IP
 
-[classful networking is dead]: ./ipv4-classful-networking.md
+[classful networking is dead]: /ipv4-classful-networking.md
 
 ## Terms
 
@@ -34,7 +34,7 @@ We can subnet anywhere from `/0` to `/32`. Even [`/31`] is valid.
 
 When a portion of the 32-bit space is used to make a subnet mask, we call these bits **borrowed**.
 
-[`/31`]: ./point-to-point-links.md
+[`/31`]: /point-to-point-links.md
 
 | Borrowed Bits | Binary   | Decimal | Masks               |
 

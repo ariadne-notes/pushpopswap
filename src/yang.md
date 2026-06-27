@@ -92,7 +92,7 @@ At present multiple models are needed to get all features.
 
 This is a BGP example.
 
-![ietf-98-openconfig-models](./images/ietf/ietf-98-openconfig-models.png)
+![ietf-98-openconfig-models](/images/ietf/ietf-98-openconfig-models.png)
 
 Courtesy of IETF 98, Rob Shakir & Anees Shaikh
 
@@ -120,9 +120,9 @@ Courtesy of IETF 98, Rob Shakir & Anees Shaikh
 - Not widely implemented
 - A standards body
 - Other works include
-  - [YANG](./yang.md)
-  - [NETCONF](./netconf.md)
-  - [RESTCONF](./restconf.md)
+  - [YANG](/yang.md)
+  - [NETCONF](/netconf.md)
+  - [RESTCONF](/restconf.md)
   
 **[IEEE]**
 
@@ -147,13 +147,13 @@ Courtesy of IETF 98, Rob Shakir & Anees Shaikh
 
 [Cisco Blog - Native, IETF, OpenConfig... Why so many YANG models? - Hank Preston](https://blogs.cisco.com/developer/which-yang-model-to-use)
 
-[Cisco Live - ... Understand ... YANG with NETCONF and RESTCONF ... - Bryan Byrne & Hank Preston - BRKDEV-1368](./pdfs/ciscolive/BRKDEV-1368.pdf)
+[Cisco Live - ... Understand ... YANG with NETCONF and RESTCONF ... - Bryan Byrne & Hank Preston - BRKDEV-1368](/pdfs/ciscolive/BRKDEV-1368.pdf)
 
-[Cisco Live - Exploring YANG Data Modeling - Aayushi Mahajan - DEVNET-1882](./pdfs/ciscolive/DEVNET-1882.pdf)
+[Cisco Live - Exploring YANG Data Modeling - Aayushi Mahajan - DEVNET-1882](/pdfs/ciscolive/DEVNET-1882.pdf)
 
 [GitHub - OpenConfig YANG models](https://github.com/openconfig/public/tree/master/release/models)
 
-[IETF 98 - Observations on Modeling Configuration and State in YANG](./pdfs/ietf/slides-98-rtgwg-openconfig-modeling-and-observations-00.pdf)
+[IETF 98 - Observations on Modeling Configuration and State in YANG](/pdfs/ietf/slides-98-rtgwg-openconfig-modeling-and-observations-00.pdf)
 
 [RFC 6020 - YANG - A Data Modeling Language for the Network Configuration Protocol (NETCONF)](https://datatracker.ietf.org/doc/rfc6020/)
 

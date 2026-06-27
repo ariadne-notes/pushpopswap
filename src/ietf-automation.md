@@ -10,10 +10,10 @@ That workshop is recorded in [RFC 3535].
 
 [YANG], [RESTCONF], [NETCONF], and [gRPC] try to solve these problems.
 
-[YANG]: ./yang.md
-[RESTCONF]: ./restconf.md
-[NETCONF]: ./netconf.md
-[gRPC]: ./grpc.md
+[YANG]: /yang.md
+[RESTCONF]: /restconf.md
+[NETCONF]: /netconf.md
+[gRPC]: /grpc.md
 
 > 3. Operator Requirements
 >

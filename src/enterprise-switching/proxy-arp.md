@@ -41,10 +41,10 @@ R1# show ip traffic | i proxy
 
 ## Captures
 
-[ARP-proxy-arp.pcap](./captures/switching/ARP-proxy-arp.pcap)
+[ARP-proxy-arp.pcap](/captures/switching/ARP-proxy-arp.pcap)
 
 ## References
 
 [Cisco - Proxy ARP](https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13718-5.html)
 
-[Cisco - Proxy ARP Problem](https://community.cisco.com/t5/switching/proxy-arp-problem/td-p/1462662)
+[Cisco - Proxy ARP Problem](https://community.cisco.com/t5/enterprise-switching/proxy-arp-problem/td-p/1462662)

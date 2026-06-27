@@ -118,7 +118,7 @@ No BPDUs being received? Wait for the forward delay, transition port to forwardi
 
 ## Captures
 
-[RSTP-initial-bringup-fastest.pcap](./captures/switching/RSTP-initial-bringup-fastest.pcap)
+[RSTP-initial-bringup-fastest.pcap](/captures/switching/RSTP-initial-bringup-fastest.pcap)
 
 ## References
 

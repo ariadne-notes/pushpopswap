@@ -65,5 +65,5 @@ switch# show dtp interface tenGigabitEthernet 1/0/7 | i Enabled
 
 [VLAN Configuration Guide, Cisco IOS XE 17.15.x (Catalyst 9500 Switches) - Configuring VLAN Trunks Cisco Catalyst 9500 Series Switches - Cisco](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9500/software/release/17-15/configuration_guide/vlan/b_1715_vlan_9500_cg/configuring_vlan_trunks.html)
 
-[Solved: Switchport Mode Access question - Cisco Community](https://community.cisco.com/t5/switching/switchport-mode-access-question/td-p/2301352)
+[Solved: Switchport Mode Access question - Cisco Community](https://community.cisco.com/t5/enterprise-switching/switchport-mode-access-question/td-p/2301352)
 

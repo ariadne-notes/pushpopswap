@@ -40,7 +40,7 @@ Getting the signal **off the air**
 
 ### Small Cell
 
-![panduit-ibw-small-cell](./images/panduit-ibw-small-cell.jpg)
+![panduit-ibw-small-cell](/images/panduit-ibw-small-cell.jpg)
 
 Image courtesy of [Panduit].
 
@@ -72,13 +72,13 @@ Image courtesy of [Panduit].
 - Fiber
 - RF is carried via coax to passive antennas
 
-![panduit-ibw-passive](./images/panduit-ibw-hybrid-passive.jpg)
+![panduit-ibw-passive](/images/panduit-ibw-hybrid-passive.jpg)
 
 Image courtesy of [Panduit].
 
 **Active**
 
-![panduit-ibw-active](./images/panduit-ibw-active.jpg)
+![panduit-ibw-active](/images/panduit-ibw-active.jpg)
 
 Image courtesy of [Panduit].
 

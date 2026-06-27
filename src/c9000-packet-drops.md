@@ -35,7 +35,7 @@ S1 ASIC platforms.
 
 EPDA instructions are inside [BRKARC-3090].
 
-[BRKARC-3090]: ./pdfs/ciscolive/BRKARC-3090.pdf
+[BRKARC-3090]: /pdfs/ciscolive/BRKARC-3090.pdf
 
 ```console,editable
 !
@@ -89,11 +89,11 @@ show platform hardware fed active fwd-asic counters 0 counters_all
 
 ## References
 
-[Cisco Live - C9000 - Packet Journey - Ivan Shirshin & Nathan Pan - BRKARC-3090](./pdfs/ciscolive/BRKARC-3090.pdf)
+[Cisco Live - C9000 - Packet Journey - Ivan Shirshin & Nathan Pan - BRKARC-3090](/pdfs/ciscolive/BRKARC-3090.pdf)
 
-[Cisco Live - C9000 - Packet Journey - Jaroslaw Gawron & Ivan Shirshin - BRKARC-2100](./pdfs/ciscolive/BRKARC-2100.pdf)
+[Cisco Live - C9000 - Packet Journey - Jaroslaw Gawron & Ivan Shirshin - BRKARC-2100](/pdfs/ciscolive/BRKARC-2100.pdf)
 
-[Cisco Live - C9000 - Troubleshooting - Michel Peters - BRKTRS-3090](./pdfs/ciscolive/BRKTRS-3090.pdf)
+[Cisco Live - C9000 - Troubleshooting - Michel Peters - BRKTRS-3090](/pdfs/ciscolive/BRKTRS-3090.pdf)
 
-[Cisco Live - Silicon One - Andreas Bovopoulos - BRKARC-1011](./pdfs/ciscolive/BRKARC-1011.pdf)
+[Cisco Live - Silicon One - Andreas Bovopoulos - BRKARC-1011](/pdfs/ciscolive/BRKARC-1011.pdf)
 

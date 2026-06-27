@@ -174,8 +174,8 @@
 
 ## Overlay technologies
 
-- [IPSec](./ipsec.md)
-- [GETVPN](./getvpn.md)
+- [IPSec](/ipsec.md)
+- [GETVPN](/getvpn.md)
 - [SDWAN](/cisco-sdn/sd-wan.md)
 
 ## References

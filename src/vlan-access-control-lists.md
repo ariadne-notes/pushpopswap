@@ -93,4 +93,4 @@ vlan filter VACL vlan-list 10
 
 [Validate Security ACLs on Catalyst 9000 Switches - Cisco](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-9500-series-switches/217266-validate-security-acls-on-catalyst-9000.html)
 
-[Solved: PACL and VACL processing order - Cisco Community](https://community.cisco.com/t5/switching/pacl-and-vacl-processing-order/td-p/5261049)
+[Solved: PACL and VACL processing order - Cisco Community](https://community.cisco.com/t5/enterprise-switching/pacl-and-vacl-processing-order/td-p/5261049)

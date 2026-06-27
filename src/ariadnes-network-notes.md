@@ -17,7 +17,7 @@ I've worked at Cisco on-and-off over the last 10y+, on teams like TAC for IOS-XR
 
 Push, Pop, and Swap are [MPLS] operations.
 
-[MPLS]: ./mpls.md
+[MPLS]: /mpls.md
 
 **Email:** ariadne@haske.org
 

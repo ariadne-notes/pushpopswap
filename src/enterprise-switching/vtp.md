@@ -6,7 +6,7 @@
 >
 > See [VTP Bomb].
 
-[VTP Bomb]: ./vtp-bomb.md
+[VTP Bomb]: /enterprise-switching/vtp-bomb.md
 
 **VTP** --- Vlan Trunk Protocol
 
@@ -21,7 +21,7 @@
 
 See [BRKENS-2031].
 
-[BRKENS-2031]: ./pdfs/ciscolive/BRKENS-2031.pdf
+[BRKENS-2031]: /pdfs/ciscolive/BRKENS-2031.pdf
 
 ## Modes
 
@@ -66,4 +66,4 @@ See [BRKENS-2031].
 
 [Configure VTP - VLAN Configuration Guide - IOS XE 17.18.x - Cisco](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-18/configuration_guide/vlan/b_1718_vlan_9300_cg/configuring_vtp.html)
 
-[Cisco Live - Enterprise Campus Design - Marcin Hamróz, and Jarosław Gawron - BRKENS-2031](./pdfs/ciscolive/BRKENS-2031.pdf)
+[Cisco Live - Enterprise Campus Design - Marcin Hamróz, and Jarosław Gawron - BRKENS-2031](/pdfs/ciscolive/BRKENS-2031.pdf)

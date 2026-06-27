@@ -14,7 +14,7 @@ Could be useful to work with [NPTv6]
 
 The easy v6 networks to subnet fall on hex digit boundaries of /4.
 
-For these, [see this chart](./ipv6-hextet-boundaries.md).
+For these, [see this chart](/ipv6-hextet-boundaries.md).
 
 ### /40
 

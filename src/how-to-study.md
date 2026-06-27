@@ -13,7 +13,7 @@ I do something like:
 1. Take more advanced notes documenting observations about behavior.
 1. Understand where this concept fits with other related concepts ...
 
-![Bloom Revised Taxonomy](./images/wikipedia/bloom's_revised_taxonomy.svg)
+![Bloom Revised Taxonomy](/images/wikipedia/bloom's_revised_taxonomy.svg)
 Image by Tidema - [CC BY 4.0][1]
 
 ## References

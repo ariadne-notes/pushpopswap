@@ -6,7 +6,7 @@ VMs inside a VPC can usually communicate with the outside world via NAT, but nee
 
 Google's VPC is implemented with [Andromeda].
 
-[Andromeda]: ./pdfs/nsdi18-dalton.pdf
+[Andromeda]: /pdfs/nsdi18-dalton.pdf
 
 ## Terms
 

@@ -39,4 +39,4 @@ Streaming Telemetry.
 
 ## References
 
-[SNMP is Dead - Carl Lebsack, Rob Shakir - NANOG73](./pdfs/nanog/20180625_Shakir_Snmp_Is_Dead_v1.pdf)
+[SNMP is Dead - Carl Lebsack, Rob Shakir - NANOG73](/pdfs/nanog/20180625_Shakir_Snmp_Is_Dead_v1.pdf)

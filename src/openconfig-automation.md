@@ -20,12 +20,12 @@ Most of the existing network paradigms fail at scale.
 
 SNMP at scale is [very broken].
 
-[very broken]: ./snmp-is-dead.md
+[very broken]: /snmp-is-dead.md
 
 [FOSS]: https://en.wikipedia.org/wiki/Free_and_open-source_software
 
 
-![nanog-90-shakir](./images/nanog-90-shakir.jpg)
+![nanog-90-shakir](/images/nanog-90-shakir.jpg)
 
 Courtesy of NANOG 90, Rob Shakir's Keynote
 
@@ -37,8 +37,8 @@ Courtesy of NANOG 90, Rob Shakir's Keynote
 
 [Rob Shakir's - Public Projects](https://rob.sh/tags/openconfig/)
 
-[Network Visibility for the Automation Age - Rob Shakir](./pdfs/netvis-x.pdf)
+[Network Visibility for the Automation Age - Rob Shakir](/pdfs/netvis-x.pdf)
 
-[IETF 98 - Observations on Modeling Configuration and State in YANG](./pdfs/ietf/slides-98-rtgwg-openconfig-modeling-and-observations-00.pdf)
+[IETF 98 - Observations on Modeling Configuration and State in YANG](/pdfs/ietf/slides-98-rtgwg-openconfig-modeling-and-observations-00.pdf)
 
 [RFC 5218: What Makes for a Successful Protocol? | RFC Editor](https://www.rfc-editor.org/info/rfc5218/)

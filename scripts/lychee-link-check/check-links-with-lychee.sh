@@ -11,4 +11,6 @@ set -euo pipefail
 cd "$(dirname "$0")"
 root="$(git rev-parse --show-toplevel)"
 
-exec lychee --config lychee.toml "$@" "$root/src/**/*.md"
+# Body links are root-absolute (/foo.md, /pdfs/...) per the book convention.
+# Point lychee's root dir at src/ so those resolve like they do in the built site.
+exec lychee --config lychee.toml --root-dir "$root/src" "$@" "$root/src/**/*.md"

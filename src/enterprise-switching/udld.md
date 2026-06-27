@@ -46,7 +46,7 @@ Gi0/0    91YBLF6S1KI     1            Gi0/0      Bidirectional
 
 ## Capture
 
-[UDLD.pcap](./captures/switching/UDLD-enabled.pcap)
+[UDLD.pcap](/captures/switching/UDLD-enabled.pcap)
 
 ## Reference
 

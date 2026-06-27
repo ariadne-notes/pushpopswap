@@ -435,9 +435,9 @@ Global Aging Time:  300
 
 ## Captures
 
-[STP-stable-state.pcap](./captures/switching/STP-stable-state.pcap)
+[STP-stable-state.pcap](/captures/switching/STP-stable-state.pcap)
 
-[STP-TCN-topology-change-notification.pcap](./captures/switching/STP-TCN-topology-change-notification.pcap)
+[STP-TCN-topology-change-notification.pcap](/captures/switching/STP-TCN-topology-change-notification.pcap)
 
 ## References
 

@@ -26,6 +26,6 @@ Routers do a poor job of providing telemetry for "I have the route installed."
 
 ## References
 
-[NANOG 93 - gRPC Services under one roof - Reda Laichi - Nokia](./pdfs/nanog/20250202_Laichi_Grpc_Services_Under_v1.pdf)
+[NANOG 93 - gRPC Services under one roof - Reda Laichi - Nokia](/pdfs/nanog/20250202_Laichi_Grpc_Services_Under_v1.pdf)
 
 [GitHub - openconfig/gribi: A gRPC Interface to a Network Element RIB](https://github.com/openconfig/gribi)

@@ -24,15 +24,15 @@ It's not recommended to share a SA for multiple senders for this reason.
 
 ## Transport mode
 
-![IPSec Transport Mode](./images/diagrams/ipsec-transport.drawio.svg)
+![IPSec Transport Mode](/images/diagrams/ipsec-transport.drawio.svg)
 
-![IPSec ESP Packet](./images/diagrams/ipsec-esp-transport-packet.svg)
+![IPSec ESP Packet](/images/diagrams/ipsec-esp-transport-packet.svg)
 
 ## Tunnel mode
 
-![IPSec Tunnel Mode](./images/diagrams/ipsec-tunnel.drawio.svg)
+![IPSec Tunnel Mode](/images/diagrams/ipsec-tunnel.drawio.svg)
 
-![IPSec ESP Packet](./images/diagrams/ipsec-esp-tunnel-packet.svg)
+![IPSec ESP Packet](/images/diagrams/ipsec-esp-tunnel-packet.svg)
 
 ## References
 

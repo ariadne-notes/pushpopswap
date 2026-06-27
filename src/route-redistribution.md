@@ -6,7 +6,7 @@
 
 How trusted a route is, if two routes have the same subnet and mask.
 
-[Administrative Distance]: ./study-tables.md#cisco-administrative-distance
+[Administrative Distance]: /study-tables.md#cisco-administrative-distance
 
 **One-way Redistribution**
 

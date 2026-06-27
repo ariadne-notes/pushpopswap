@@ -2,7 +2,7 @@
 
 The more advanced of a `match` operation, the harder this becomes to get correct.
 
-Verify with [Flexible Netflow](./flexible-netflow.md).
+Verify with [Flexible Netflow](/flexible-netflow.md).
 
 ## Config
 

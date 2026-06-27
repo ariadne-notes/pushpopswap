@@ -59,7 +59,7 @@ sequenceDiagram
 
 ## References
 
-[Group Encrypted Transport VPN (GETVPN) Design and Implementation Guide](./pdfs/GETVPN_DIG_version_2_0_External.pdf)
+[Group Encrypted Transport VPN (GETVPN) Design and Implementation Guide](/pdfs/GETVPN_DIG_version_2_0_External.pdf)
 
 [Security and VPN Configuration Guide - GETVPN G-IKEv2 Support - Cisco](https://www.cisco.com/c/en/us/td/docs/routers/ios-xe/security-vpn/security-vpn/m_sec-get-vpn-gikev2.html)
 

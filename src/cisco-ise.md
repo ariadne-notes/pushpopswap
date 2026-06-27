@@ -45,4 +45,4 @@ Context that can be shared with other devices to determine what a user is allowe
 
 [Cisco - Cisco Identity Services Engine Documents Landing Page](https://www.cisco.com/c/en/us/support/security/identity-services-engine/series.html#~tab-documents)
 
-[Cisco Live - Katherine McNamara - ISE Deployment Improvement Tips and Tricks - BRKSEC-2347](./pdfs/ciscolive/BRKSEC-2347.pdf)
+[Cisco Live - Katherine McNamara - ISE Deployment Improvement Tips and Tricks - BRKSEC-2347](/pdfs/ciscolive/BRKSEC-2347.pdf)

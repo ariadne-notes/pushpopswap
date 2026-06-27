@@ -47,8 +47,8 @@ sequenceDiagram
 
 [Cisco - Whitepaper - Model Driven Telemetry](https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9300-series-switches/model-driven-telemetry-wp.html)
 
-[Cisco Live - gRPC, gNMI, gNOI ... Oh My! - Jeremy Cohoe - BRKDEV-2017](./pdfs/ciscolive/BRKDEV-2017.pdf)
+[Cisco Live - gRPC, gNMI, gNOI ... Oh My! - Jeremy Cohoe - BRKDEV-2017](/pdfs/ciscolive/BRKDEV-2017.pdf)
 
-[NANOG73 - SNMP is Dead - Carl Lebsack, Rob Shakir](./pdfs/nanog/20180625_Shakir_Snmp_Is_Dead_v1.pdf)
+[NANOG73 - SNMP is Dead - Carl Lebsack, Rob Shakir](/pdfs/nanog/20180625_Shakir_Snmp_Is_Dead_v1.pdf)
 
 [XRdocs - Model-Driven Telemetry: Dial-In or Dial-Out ? | Telemetry](<https://xrdocs.io/telemetry/blogs/2017-01-20-model-driven-telemetry-dial-in-or-dial-out>)

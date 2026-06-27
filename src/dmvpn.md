@@ -43,7 +43,7 @@ distribute-list prefix-list PL_BLOCK_OSPF_32 out
   ip prefix-list PL_BLOCK_OSPF_32 permit any le 32
 ```
 
-[This is why.](./routing/ospfv2-p2mp.md)
+[This is why.](/routing/ospfv2-p2mp.md)
 
 [This is a Cisco documented failing](https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-multicast/b-ip-multicast/m_sec-conn-dmvpn-dmvpn-0.html#restrictions_dmvpn)
 
@@ -142,7 +142,7 @@ interface Tunnel1
 
 ## References
 
-[Cisco Live - BRKSEC-4054 - Advanced Concepts of DMVPN - Mike Sullenberger DSE](./pdfs/ciscolive/BRKSEC-4054.pdf)
+[Cisco Live - BRKSEC-4054 - Advanced Concepts of DMVPN - Mike Sullenberger DSE](/pdfs/ciscolive/BRKSEC-4054.pdf)
 
 [Cisco - Technote - Configure BGP over DMVPN Phase 3](https://www.cisco.com/c/en/us/support/docs/security/dynamic-multipoint-vpn-dmvpn/222585-configure-bgp-over-dmvpn-phase-3.html)
 

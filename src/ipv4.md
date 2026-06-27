@@ -21,9 +21,9 @@ Concepts from the 1974 IEEE paper:
 
 [History of the Internet - Internet Society](https://www.internetsociety.org/internet/history-internet/)
 
-[IEN 54 - Internetwork Protocol Specification Version 4](./pdfs/ien54.pdf)
+[IEN 54 - Internetwork Protocol Specification Version 4](/pdfs/ien54.pdf)
 
-[A Protocol for Packet Network Intercommunication - IEEE Transactions on Communications](./pdfs/cerf74.pdf)
+[A Protocol for Packet Network Intercommunication - IEEE Transactions on Communications](/pdfs/cerf74.pdf)
 
 [IPv4 - Wikipedia](https://en.wikipedia.org/wiki/IPv4)
 

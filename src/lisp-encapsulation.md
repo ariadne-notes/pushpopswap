@@ -2,7 +2,7 @@
 
 ## A packet (an ICMP request)
 
-[Capture is here](./captures/LISP-icmp-ping.pcapng)
+[Capture is here](/captures/LISP-icmp-ping.pcapng)
 
 ```plain
 Frame 4156: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits) on interface -, id 0

@@ -50,7 +50,7 @@ Exactly one mode has working interop.
 
 Courtesy of [BRKIPV-2418].
 
-[BRKIPV-2418]: ./pdfs/ciscolive/BRKIPV-2418.pdf
+[BRKIPV-2418]: /pdfs/ciscolive/BRKIPV-2418.pdf
 
 ## Config
 
@@ -98,6 +98,6 @@ OSPFv3 IPv4 AFI does not support virtual links.
 
 ## References
 
-[Cisco Live - Deploying IPv6 Routing Protocols - Peter Palúch](./pdfs/ciscolive/BRKIPV-2418.pdf)
+[Cisco Live - Deploying IPv6 Routing Protocols - Peter Palúch](/pdfs/ciscolive/BRKIPV-2418.pdf)
 
 [RFC 5340: OSPF for IPv6 | RFC Editor](https://www.rfc-editor.org/info/rfc5340/)

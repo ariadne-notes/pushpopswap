@@ -4,14 +4,14 @@ The C9000-L series, does not support Catalyst Center, and has lower stackwise Sp
 
 ## Two tier collapsed core
 
-![cisco-campus-two-tier-collapsed-core-cisco](./images/cisco-campus/cisco-campus-two-tier-collapsed-core-cisco.jpg)
+![cisco-campus-two-tier-collapsed-core-cisco](/images/cisco-campus/cisco-campus-two-tier-collapsed-core-cisco.jpg)
 
 - The core and distribution switches are the same
 - The center is running StackWise Virtual
 
 ## Three tier
 
-![cisco-campus-three-tier-with-network-services-layer](./images/cisco-campus/cisco-campus-three-tier-with-network-services-layer.jpg)
+![cisco-campus-three-tier-with-network-services-layer](/images/cisco-campus/cisco-campus-three-tier-with-network-services-layer.jpg)
 
 ## Layer 2 access with traditional multilayer
 
@@ -40,7 +40,7 @@ Fast and expensive.
 - Always on
 - Ideally, a minimum of 100G to conserve ports.
 
-![cisco-campus-lan-core](./images/cisco-campus/cisco-campus-lan-core.jpg)
+![cisco-campus-lan-core](/images/cisco-campus/cisco-campus-lan-core.jpg)
 
 ## Distribution layer considerations
 
@@ -114,7 +114,7 @@ Set ports to access ports.
 
 ## Traditional design
 
-![cisco-campus-looped-access](./images/cisco-campus/cisco-campus-looped-access.jpg)
+![cisco-campus-looped-access](/images/cisco-campus/cisco-campus-looped-access.jpg)
 
 - Needs STP to block ports
 - VLANS can span multiple switches.
@@ -126,7 +126,7 @@ Set ports to access ports.
 
 [Autostate]: https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/infra/interface-characteristics/interface-characteristics-configuration-guide.html
 
-![cisco-campus-loop-free-access](./images/cisco-campus/cisco-campus-loop-free-access.jpg)
+![cisco-campus-loop-free-access](/images/cisco-campus/cisco-campus-loop-free-access.jpg)
 
 ## Other designs
 
@@ -135,14 +135,14 @@ Set ports to access ports.
 - Cisco Catalyst Center
 - Cisco Identity Services Engine
 
-![cisco-campus-sd-access-design](./images/cisco-campus/cisco-campus-sd-access-design.jpg)
+![cisco-campus-sd-access-design](/images/cisco-campus/cisco-campus-sd-access-design.jpg)
 
 ### Open standards based overlay
 
 - MP-BGP
 - VXLAN
 
-![cisco-campus-bgp-evpn-vxlan](./images/cisco-campus/cisco-campus-bgp-evpn-vxlan.jpg)
+![cisco-campus-bgp-evpn-vxlan](/images/cisco-campus/cisco-campus-bgp-evpn-vxlan.jpg)
 
 ## Campus LAN best practices - security
 

@@ -2,7 +2,7 @@
 
 PyATS interacts with raw TCP ports expecting the other side to be Cisco CLI.
 
-It should be paired with [CML Breakout](cml-breakout.md)
+It should be paired with [CML Breakout](/cml-breakout.md)
 
 ## Unicon
 
