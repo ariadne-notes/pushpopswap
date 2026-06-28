@@ -1,11 +1,22 @@
 # Lychee link-checker config. The wrapper passes this file explicitly. Run with:
 #   ./scripts/lychee-link-check/check-links-with-lychee.sh
-# To check a smaller, stable slice of files:
-#   ./scripts/lychee-link-check/check-links-with-lychee.sh --batch 1/10
 
-# Quiet output and reuse the on-disk cache (.lycheecache).
-no_progress = true
+# Reuse checks for two days from the on-disk cache.
 cache = true
+max_cache_age = "2d"
+# Cache successful checks only. Failures should be freshly tested on a later
+# run rather than replayed instantly from the cache.
+cache_exclude_status = ["400..=599", "999"]
+
+# A failed URL will be retried on a later run. Avoid a long quiet tail caused
+# by retrying slow hosts up to three times during the same run.
+timeout = 5
+max_retries = 0
+
+# Send only one request at a time to each host, with at least one second between
+# requests. Different hosts can all be checked concurrently.
+host_concurrency = 1
+host_request_interval = "1s"
 
 # Pretend to be a browser so fewer sites reject the request outright.
 user_agent = "Mozilla/5.0 (compatible; lychee link checker)"
@@ -15,17 +26,3 @@ user_agent = "Mozilla/5.0 (compatible; lychee link checker)"
 exclude = [
   '\.html\?',
 ]
-
-# Cisco rate-limits automated checks. Serialize requests to its hosts and leave
-# a gap between them; 403 and 429 responses remain visible as failures.
-[hosts."www.cisco.com"]
-concurrency = 1
-request_interval = "1s"
-
-[hosts."community.cisco.com"]
-concurrency = 1
-request_interval = "1s"
-
-[hosts."learningnetwork.cisco.com"]
-concurrency = 1
-request_interval = "1s"

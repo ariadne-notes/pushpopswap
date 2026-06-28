@@ -38,13 +38,13 @@
 
 - [IPv6](ipv6/ipv6.md)
   - [IPv6 Subnetting](ipv6/ipv6-subnetting.md)
-  - [IPv6 Hextext Boundaries](ipv6/ipv6-hextet-boundaries.md)
+  - [IPv6 Hextet Boundaries](ipv6/ipv6-hextet-boundaries.md)
   - [IPv6 Network Address Planning](ipv6/ipv6-network-address-planning.md)
   - [IPv6 Link Local Addressing](ipv6/ipv6-link-local-addressing.md)
-  - [IPv6 Unique Link Local Addressing](ipv6/ipv6-ula.md)
+  - [IPv6 Unique Local Addressing](ipv6/ipv6-ula.md)
   - [IPv6 ICMPv6](ipv6/ipv6-icmpv6.md)
   - [IPv6 Neighbor Discovery](ipv6/ipv6-nd.md)
-    - [IPv6 ND Router Solicitation](ipv6/ipv6-nd-ra.md)
+    - [IPv6 ND Router Advertisements](ipv6/ipv6-nd-ra.md)
 
 
 - [IPv4 to IPV6 Migration Strategies](ipv4/ipv4-to-ipv6-migration-strategies.md)
@@ -210,7 +210,7 @@
 # High Availability
 
 - [SSO](sso.md)
-- [Stackwise Virtual](stackwise-virtual.md)
+- [StackWise Virtual](stackwise-virtual.md)
 
 # Enterprise Campus
 

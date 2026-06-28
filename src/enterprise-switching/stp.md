@@ -80,13 +80,13 @@ STP elects root and designated ports, aka RP, and DPs. It also moves STP ports i
 1. Bridge with lowest Bridge ID is root, (Lowest priority, if priority is default, Lowest mac, usually the oldest switch)
 1. All ports on root bridge are DP, and BPDU cost field is set to zero.
 1. Root sends BPDUs.
-1. DPs send configuration BDPUs.
+1. DPs send configuration BPDUs.
 1. RPs receive configuration BPDUs.
 1. Root bridge sends BPDU, cost is 0, with port identifiers set.
 1. A non-root bridge can only have one RP.
 1. Non-root bridge gets BPDUs. It uses the port selection Algo to pick one RP.
 1. Non-root bridge starts STP elections on all other ports, by sending BPDUs. It takes the cost inside the received BPDU, and adds it's port cost.
-1. If a DP gets a BDPU, STP blocks the port if the received BPDU is better.
+1. If a DP gets a BPDU, STP blocks the port if the received BPDU is better.
 
 ## Port selection algo
 
@@ -418,7 +418,7 @@ Spanning Tree Protocol
 ```
 
 1. Bridge sees change in STP topology, sends TCN to upstream bridge.
-1. Upstream sees TCN, sends a regular BDPU back with TCA bit set.
+1. Upstream sees TCN, sends a regular BPDU back with TCA bit set.
 1. Upstream bridge sends TCN upstream, this continues until TCN reaches the root.
 1. Root Bridge sees the TCN, marks BPDUs with TC bit set.
 1. All bridges see TC, and shorten their MAC aging timer to Forward Delay (default 15 seconds).

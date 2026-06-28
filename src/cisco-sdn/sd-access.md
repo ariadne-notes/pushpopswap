@@ -2,7 +2,7 @@
 
 A physical network can host a variety of logical networks.
 
-Requires gear to support the overlay, Catalyst Center, and *sometimes* ISE.
+Requires hardware and software support for the fabric, plus Catalyst Center. ISE is used when identity-based policy and segmentation are part of the design.
 
 ## Terms
 

@@ -2,25 +2,28 @@
 
 ## Definitions
 
+## Headings use sentence case, it's a touch more casual and less commanding
+
 **MPL** --- Modern Parking Lot
 
 - Uses [CommonMark]
 - Bold for the abbreviation, which is used in common speech
 - Expansion goes next to it with a hyphen train
 - Items go underneath as bullets
-
 - Sort of resembles a parking lot
 - Never has periods on the end
+- Sentence case
+- No periods on the end
 
 [CommonMark]: https://commonmark.org/
 
-**A** - Single hyphen
+**A** - Single hyphen, Nope
 
-**Two** -- hyphens
+**Two** -- hyphens, Nope
 
-**Hyphen Train** --- Uses three hyphens
+**Hyphen Train** --- Uses three hyphens. Good. Don't bold the definition
 
-What is a modern definition?
+This is a modern definition
 : It uses the colon in front, but there is no easy way to do line breaks. It's weird about where it puts the first indent. It's also like, very tightly spaced?
 
 I guess this would be good for prose? Nope, doesn't respect indents.
@@ -80,11 +83,31 @@ This is a footnote[^note].
 
 ## A code block
 
-    I'm wondering
-    if this is 
-    a way to get
-    transparent 
-    inline monospace.
+    never use this
+    it can't be found
+    because its not fenced
+    
+## A good numbered list
+
+**1. It needs to be bolded on the top**
+
+- It looks good
+- Bold catches the eyes
+
+**2. Keep Numbering**
+
+- Everything will work out fine
+
+## A bad numbered list
+
+1. This doesn't work.
+
+- Nope
+- Not at all
+
+2. Seems like it should
+
+- But it doesn't
 
 ## Reference
 

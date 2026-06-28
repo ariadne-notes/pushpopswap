@@ -6,7 +6,7 @@
 - Northbound (towards applications)
   - REST/HTTPS
 
-Refers to SGTs as *Scalable Groups*
+Uses Security Group Tags (SGTs) for group-based segmentation and policy.
 
 ## Modules
 

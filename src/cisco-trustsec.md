@@ -12,7 +12,7 @@ A user connects, and a tag is assigned.
 
 **Inline tagging**
 
-- Traffic itself caries the SGT
+- Traffic itself carries the SGT
 
 **SXP** --- SGT Exchange Protocol
 

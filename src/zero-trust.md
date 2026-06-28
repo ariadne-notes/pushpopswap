@@ -1,77 +1,87 @@
 # Zero Trust
 
-```mermaid
-graph TB
-    subgraph ZT["Zero Trust (ZT)"]
-        subgraph ZTA["Zero Trust Access (ZTA)"]
-            ZTNA["Zero Trust\nNetwork Access\n(ZTNA)"]
-            ZTAA["Zero Trust\nApplication Access\n(ZTAA)"]
-        end
-    end
+> There’s an old saying in information security: “We want our network to be like an M&M, with a hard
+> crunchy outside and a soft chewy center.” 
+>
+> For a generation of information security professionals, this was the motto we grew up with. 
+> It was a motto based on trust and the assumption that malicious
+> individuals wouldn’t get past the “hard crunchy outside.” 
+> 
+> In today’s new threat landscape, this is no
+> longer an effective way of enforcing security. Once an attacker gets past the shell, he has access to all
+> the resources in our network. 
+> 
+> We’ve built strong perimeters, but well-organized cybercriminals have
+> recruited insiders and developed new attack methods that easily pierce our current security protections.
+> 
+> To confront these new threats, information security professionals must eliminate the soft chewy center
+> by making security ubiquitous throughout the network, not just at the perimeter. 
+> 
+> To help security
+> professionals do this effectively, Forrester has developed a new model for information security, called
+> Zero Trust. This report, the first in a series, will introduce the necessity and key concepts of the Zero
+> Trust Model.
 
-    classDef innerNode fill:#1a3a6b,stroke:#4a7fc1,color:#fff
-    class ZTNA,ZTAA innerNode
+[Forrester - No More Chewy Centers - John Kindervag]
 
-    style ZT fill:#2a52a0,stroke:#6a9fd8,color:#fff
-    style ZTA fill:#1e4080,stroke:#4a7fc1,color:#fff
-```
+[Forrester - No More Chewy Centers - John Kindervag]: /pdfs/Forrester-No-More-Chewy-Centers.pdf
 
-## Terms
+**Assume attackers are**
 
-**Zero Trust**
+- Working for the org
+- On the network
+- Crafting malicious traffic
+- Capturing sensitive traffic
+
+**Enforce these things**
 
 - Least privilege
 - Access controls
 - Continuous monitoring
-- AKA ZT
 
-**ZTA** -- Zero Trust Access
+## Pitfalls
 
-- Managing ZT on specific resources
+**1. It’s Impossible To Identify “Trusted” Interfaces**
 
-**ZTNA** --- Zero Trust Network Access
+- *"The attack is coming from inside the house"*
 
-- Networks
+**2. The Mantra “Trust But Verify” Is A Joke — Literally**
 
-**ZTAA** -- Zero Trust Application Access
+- Never trust
+- Authenticate, Authorize, then log
 
-- Applications
+**3. Malicious Insiders Are Often In Positions Of “Trust"**
 
-**SPA** --- Secure Private Access
+- The people who can hurt the org most work there
 
-**SIA** --- Secure Internet Access
+**4. “Trust” Doesn’t Apply To Packets**
 
-Access Lists without ACLs, using SGTs.
+- All we can know is in the packets
+- Packets are not a substitute for identity
+- Packets can be forged
 
-- Ingress
-  - SGT is assigned when the packet is created
-  
-- Egress
-  - SGT is read to grants or deny access
-  
-SGT Classification
+## Concepts
 
-SGT Propagation
+**1. Ensure That All Resources Are Accessed Securely Regardless Of Location**
 
-## ZTA
+- no trusted part of the network
+- Everything requires auth
+- Anything sensitive should be encrypted
 
-### Client based
+**2. Adopt A Least Privilege Strategy And Strictly Enforce Access Control**
 
-Uses the Cisco Secure Client.
+- Discourage idle curiosity, log everything
+- Ensure everyone knows, everything is logged
 
-Works with either Auto-Enrollment or SAML.
+**3.  Inspect And Log All Traffic**
 
-- SPA & SIA
-
-SPA works with a ZTA headend, and supports TCP or UDP.
-
-### Clientless
-
-SPA, no enrollment, uses SAML re-directs and browser challenges.
-
-For private resources ZTA can proxy HTTP, SSH, and RDP sessions.
+- Capture, inspect and log
 
 ## References
+
+[NIST Special Publication 800-207 - Zero Trust Architecture](/pdfs/NIST.SP.800-207.pdf)
+
+[Forrester - No More Chewy Centers - John Kindervag](/pdfs/Forrester-No-More-Chewy-Centers.pdf)
 
 [Cisco - Introduction to Resilient Zero Trust Access](https://securitydocs.cisco.com/docs/csa/best-practice/161173.dita)
 

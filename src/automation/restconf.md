@@ -44,7 +44,7 @@ pubd             : Running
 
 This is done from the linux commandline via curl
 
-`--insecure` is added because Cisco generates it's own self-signed certificates.
+`--insecure` is added because Cisco generates its own self-signed certificates.
 
 ```console
 ariadne@tesseract:~$ curl --insecure --user admin:cisco123 \

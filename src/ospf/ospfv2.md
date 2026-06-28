@@ -89,7 +89,7 @@ Check with `debug ip ospf event`
 
 ## Identical databases
 
-Each router can perform it's own SPT via [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm).
+Each router can perform its own SPT via [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm).
 
 LSAs are flooded throughout an area, all routers in the same area should have the same LSAs and same database.
 

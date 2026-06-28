@@ -31,7 +31,7 @@ Use a `/127`.
 
 Config that lives on the port can sense and respond to a link failure in 8 msec.
 
-For an SVI to go down, it must be the only port, and it must sense the interface down, this takes 150+ msec.
+For an SVI to go down, there must be only one port using it,ex and it must sense the interface down, this takes 150+ msec.
 
 ## References
 
@@ -39,6 +39,6 @@ For an SVI to go down, it must be the only port, and it must sense the interface
 
 [RFC 6164 - Using 127-Bit IPv6 Prefixes on Inter-Router Links](https://datatracker.ietf.org/doc/html/rfc6164)
 
-[IPv6 Security Myths and Legends](https://archive.nanog.org/sites/default/files/04-notr-chicago-ipv6-sec.pdf)
+[NANOG - 2015 - IPv6 Security Myths and Legends](/pdfs/nanog/04-notr-chicago-ipv6-sec.pdf)
 
 [Enterprise Campus Design - Multilayer Architectures and Design Principles - Cisco Live 2023](https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2023/pdf/BRKENS-2031.pdf)

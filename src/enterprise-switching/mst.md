@@ -46,7 +46,7 @@ Industry liked what Cisco was doing with "per vlan" so MST merges that feature i
 
 **MST Region Root**
 
-- MST can propagate multiple MSTIs. Each MSTI can have it's own root
+- MST can propagate multiple MSTIs. Each MSTI can have its own root
 
 **IST** --- Internal Spanning Tree
 

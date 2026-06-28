@@ -12,7 +12,7 @@ This network type assumes that spoke sites cannot reach each other directly, but
 
 This network type also assumes hair-pins are OK (traffic must go in and out of the same interface on one node)
 
-Since each router is in the same L3 subnet, but not directly L2 reachable, each router will advertise it's own, in subnet, IP as a `/32`.
+Since each router is in the same L3 subnet, but not directly L2 reachable, each router will advertise its own, in-subnet IP as a `/32`.
 
 The use-case for this network type is frame-relay, older network types where traveling through the hub is required.
 
@@ -436,4 +436,3 @@ end
 [RFC 2328: OSPF Version 2 | RFC Editor](https://www.rfc-editor.org/info/rfc2328/)
 
 [Cisco - IP Routing: OSPF Configuration Guide - OSPF Mechanism to Exclude Connected IP Prefixes from LSA Advertisements Cisco - IOS 15.2E](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_ospf/configuration/15-e/iro-15-e-book/iro-ex-lsa.html#GUID-779A0D0C-6CDE-4A1C-9B20-B863FB863F80)
-

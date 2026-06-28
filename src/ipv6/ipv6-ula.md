@@ -1,4 +1,4 @@
-# IPv6 Unique Link Local Addressing
+# IPv6 Unique Local Addressing
 
 Sort of but not quite equivalent to [RFC 1918].
 

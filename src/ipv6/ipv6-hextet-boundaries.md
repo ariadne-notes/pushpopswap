@@ -1,4 +1,4 @@
-# IPv6 Hextext Boundaries
+# IPv6 Hextet Boundaries
 
 For any of these, to subnet them, just change the final hex digit.
 

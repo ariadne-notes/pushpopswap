@@ -39,14 +39,12 @@ Multi-destination Support is provided by multicast.
 
 ## Layer 2 overlay
 
-- Supports multiple SGTs
 - VNI is matched
   - LISP Instance ID
   - VLAN
 
 ## Layer 3 overlay
 
-- Supports multiple SGTs
 - Endpoints are routed
 - VNI is matched
   - LISP Instance ID

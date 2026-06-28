@@ -1,6 +1,6 @@
 # Enterprise Campus Architecture
 
-The C9000-L series, does not support Catalyst Center, and has lower stackwise Speeds.
+The C9000-L series, does not support Catalyst Center, and has lower StackWise speeds.
 
 ## Two tier collapsed core
 
@@ -71,7 +71,7 @@ Purpose
 - Used to interconnect all the access layer switches in a building
 - Used to interconnect Access layer switches, once they can't form a full-mesh
 - Also contains the failure domain of the access layer.
-- Simplified Distribution, using stackwise virtual to remove FHRP.
+- Simplified Distribution, using StackWise Virtual to remove FHRP.
 
 ## Access layer
 
@@ -79,12 +79,11 @@ Set ports to access ports.
 
 - Disable
   - DTP
-  - Etherchannel
   
 - Enable
   - Portfast
-  - BPDU-Guard
-    - Or Rootguard
+  - BPDU Guard
+    - Use Root Guard on designated ports toward downstream switches when the port should participate in STP, but must not accept a superior BPDU
 
 **Gear**
 
@@ -106,7 +105,7 @@ Set ports to access ports.
 - Phones
   - QoS
   - Trust Boundaries
-  - Auxilary VLANs
+  - Auxiliary VLANs
 - IP Multicast
 - IGMP snooping
 - Link Aggregation
@@ -148,9 +147,9 @@ Set ports to access ports.
 
 - DHCP Snooping, to prevent users from hooking up a DHCP server from home on accident.
 
-- Dynamic ARP inspection, to prevent a ARP attack, where the attack sends ARP replies with the IPs in the subnet.
+- Dynamic ARP inspection, to prevent an ARP attack, where the attack sends ARP replies with the IPs in the subnet.
 
-- BDPU Guard, to prevent home switches.
+- BPDU Guard, to prevent home switches from participating in spanning tree on edge ports.
 
 - 802.1x, port authentication
 

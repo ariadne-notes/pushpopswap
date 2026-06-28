@@ -1,6 +1,8 @@
 # Root Guard
 
-Rootguard is an alternative to BPDU guard, when the port needs to participate in BPDUs, but should never receive a superior BPDU.
+Root Guard is used when a port should participate in STP, but must never accept a superior BPDU.
+
+Unlike BPDU Guard, the port still participates in spanning tree.
 
 Normally SW1 is the root bridge
 
