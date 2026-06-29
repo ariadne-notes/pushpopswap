@@ -347,6 +347,7 @@
 - [Telnet With No User Accounts](telnet-with-no-user-accounts.md)
 - [Sitemaps](./sitemaps.md)
 - [Socket Statistics](socket-statistics.md)
+- [Ceph](ceph.md)
 
 # Certification Stuff
 
