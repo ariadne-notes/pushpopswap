@@ -322,6 +322,12 @@
     - [CML MCP](automation/cml-mcp.md)
     - [LLM Instructions](llm-instructions.md)
     - [PyATS](automation/pyats.md)
+    
+# Ceph
+
+- [Ceph](ceph.md)
+- [Add Cephfs to Debian](add-cephfs-to-debian.md)
+- [Reclaim Space from Ceph for LVM](reclaim-space-from-ceph-for-lvm.md)
 
 # Etc (Stuff I Haven't Sorted)
 
@@ -339,7 +345,6 @@
 - [Unknown Command or Computer Name](unknown-command-or-computer-name.md)
 - [Cisco C9000 Packet Drops](c9000-packet-drops.md)
 - [SecureCRT](securecrt.md)
-- [Add Cephfs to Debian](add-cephfs-to-debian.md)
 - [Cisco Architecture](cisco-architecture.md)
   - [Cisco Silicon One](cisco-silicon-one.md)
 - [Internet Routing Registry](internet-routing-registry.md)
@@ -348,7 +353,7 @@
 - [Telnet With No User Accounts](telnet-with-no-user-accounts.md)
 - [Sitemaps](./sitemaps.md)
 - [Socket Statistics](socket-statistics.md)
-- [Ceph](ceph.md)
+
 
 # Certification Stuff
 
