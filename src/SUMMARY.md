@@ -69,6 +69,7 @@
   - [802.1P](802.1p.md)
   - [Congestion](congestion.md)
   - [Cisco IOS QoS Commands](cisco-ios-qos-commands.md)
+  - [IOS-XR QoS Commands](ios-xr-qos.md)
 
 # Enterprise Switching
 

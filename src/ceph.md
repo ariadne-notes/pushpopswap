@@ -1,5 +1,9 @@
 # Ceph
 
+Sage Weil's 2007 PhD [thesis topic] at University of California, Santa Cruz.
+
+[thesis topic]: /pdfs/weil-thesis.pdf
+
 The service Ceph provides is **RADOS,** Reliable Autonomic Distributed Object Store.
 
 RADOS provides four services: LIBRADOS, RADOSGW, RBD, and CEPHFS.
@@ -55,8 +59,6 @@ Image courtesy of [Sage Weil and Lisa]
 - Not in dataplane
 - 1s - 10s active, plus standbys
 
-
-
 ## RADOS cluster
 
 ![ceph-cluster](/images/ceph/rados-cluster.png)
@@ -68,3 +70,8 @@ Image courtesy of [Sage Weil and Lisa]
 [Ceph: Managing a distributed storage system at scale - Sage Weil & Lisa - Inktank](/pdfs/weil_lisa12_slides.pdf)
 
 [CephFS: Architecture Introduction & New Features - Greg Farnum](/pdfs/10-Greg-CephFS.pdf)
+
+[Ceph Tech Talk - Intro to Ceph - 2019-JUN-27 - Sage Weil - YouTube](https://www.youtube.com/watch?v=PmLPbrf-x9g)
+
+[Ceph Tech Talk - Intro to Ceph - 2019-JUN-27 - Sage Weil - Slides](/pdfs/intro-to-ceph-sage-weil-2019.06.27.pdf)
+
