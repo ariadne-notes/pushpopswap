@@ -1,8 +1,12 @@
 # Root Guard
 
-Root Guard is used when a port should participate in STP, but must never accept a superior BPDU.
+For ports which must participate in STP, but never accept a superior BPDU.
+
+- Downlinks
 
 Unlike BPDU Guard, the port still participates in spanning tree.
+
+## Example
 
 Normally SW1 is the root bridge
 
@@ -20,7 +24,9 @@ Someone configures SW2 to be the root by making the switch priority 0.
 └──────┘                                                      └──────┘
 ```
 
-## Config
+
+
+### Config
 
 This can be prevented with this config. Root guard goes onto DPs.
 
@@ -32,7 +38,7 @@ interface 1
   spanning tree guard root
 ```
 
-## Verification
+### Verification
 
 ```console
 sw1# show spanning-tree 
@@ -55,8 +61,21 @@ Gi0/0               Desg BKN*4         128.1    P2p *ROOT_Inc
 Gi0/2               Desg BKN*4         128.3    P2p *ROOT_Inc 
 ```
 
-## Logs
+### Logs
 
 ```console
 *May  3 20:14:45.169: %SPANTREE-2-ROOTGUARD_BLOCK: Root guard blocking port GigabitEthernet0/0 on VLAN0001.  
 ```
+
+## Picture Example
+
+![loopguard-rootguard-locations](/images/cisco/loopguard-rootguard-locations.jpg)
+
+Image courtesy of [BRKENS-2031].
+
+[BRKENS-2031]: /pdfs/ciscolive/BRKENS-2031.pdf
+
+
+## References
+
+[Cisco Live - Enterprise Campus Design - Marcin Hamróz, and Jarosław Gawron - BRKENS-2031](/pdfs/ciscolive/BRKENS-2031.pdf)
