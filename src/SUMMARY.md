@@ -353,6 +353,7 @@
 - [Telnet With No User Accounts](telnet-with-no-user-accounts.md)
 - [Sitemaps](./sitemaps.md)
 - [Socket Statistics](socket-statistics.md)
+- [K8s on Debian - Initial Setup](k8s-on-debian-initial-setup.md)
 
 
 # Certification Stuff
