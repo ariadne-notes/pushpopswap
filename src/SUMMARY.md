@@ -110,6 +110,7 @@
   - [MPLS DiffServ](mpls-diffserv.md)
   - [IRB On the ASR9K](irb-on-the-asr9k.md)
 
+- [Simple BBA on the ASR 1k](simple-bba-on-the-asr-1k.md)
 - [PBB](pbb.md)
 
 # Switch Features
