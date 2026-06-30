@@ -1,19 +1,17 @@
 # MSDP
 
-Used to link together multicast domains via RPs.
+- Link multicast domains via RPs
+- Provide Redundant RPs via Anycast RP
 
 A source turns on, and when the first RP finds out about it, it notifies other RPs.
 
 ## Details
 
-- RPs register to each other, in different multicast domains.
-- RP sends a SA (source active) message.
-- Still needs PIM running for the S,G.
-- TCP port 639.
-- Has keepalives.
-
-`show ip msdp peer`
-`show ip msdp sa-cache`
+- RPs register to each other, in different multicast domains
+- RP sends a SA (source active) message
+- Still needs PIM running for the `S,G`
+- TCP port 639
+- Has keepalives
 
 ## Startup
 
@@ -59,6 +57,15 @@ ip msdp originator-id loopback 1
 ip pim rp-address 10.0.0.1
 ```
 
+## Commands
+
+```console,editable
+show ip msdp peer
+show ip msdp sa-cache
+```
+
 ## References
 
 [RFC 4611 - Multicast Source Discovery Protocol (MSDP) Deployment Scenarios](https://datatracker.ietf.org/doc/html/rfc4611)
+
+[Anycast RP - Cisco Whitepaper](https://www.cisco.com/c/en/us/td/docs/ios/solutions_docs/ip_multicast/White_papers/anycast.html)

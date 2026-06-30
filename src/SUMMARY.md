@@ -27,6 +27,9 @@
 
 # Routed Protocols
 
+- [TCP](tcp.md)
+- [UDP](udp.md)
+
 - [IPv4](ipv4/ipv4.md)
   - [IPv4 Addressing](ipv4/ipv4-addressing.md)
   - [IPv4 Packet Header](ipv4/ipv4-packet-header.md)
@@ -37,7 +40,6 @@
     - [Subnetting with Binary](subnet-with-binary.md)
     - [IPv4 Classful Networking](ipv4/ipv4-classful-networking.md)
 
-
 - [IPv6](ipv6/ipv6.md)
   - [IPv6 Subnetting](ipv6/ipv6-subnetting.md)
   - [IPv6 Hextet Boundaries](ipv6/ipv6-hextet-boundaries.md)
@@ -47,7 +49,6 @@
   - [IPv6 ICMPv6](ipv6/ipv6-icmpv6.md)
   - [IPv6 Neighbor Discovery](ipv6/ipv6-nd.md)
     - [IPv6 ND Router Advertisements](ipv6/ipv6-nd-ra.md)
-
 
 - [IPv4 to IPV6 Migration Strategies](ipv4/ipv4-to-ipv6-migration-strategies.md)
   - [ISATAP](isatap.md)
@@ -128,6 +129,7 @@
   - [IPv6 Multicast Addresses](multicast/ipv6-multicast-addresses.md)
   - [IPv4 Multicast L2 Addressing](multicast/ipv4-multicast-l2-addressing.md)
   - [Multicast L3 Addressing](multicast/multicast-l3-addressing.md)
+  - [IGMPv3](multicast/igmpv3.md)
 
 # Routing
 
@@ -311,7 +313,7 @@
   - [SONET](sonet.md)
     - [SONET C2 Byte](sonet-c2-byte.md)
   - [Circuit Emulation](cem.md)
-- [UDP](udp.md)
+
 
 # Lab Work
 

@@ -355,6 +355,16 @@ router eigrp EIGRP-AS-100
   address family ipv6 auton 100
 ```
 
+EIGRP for IPv6 uses Link Local hellos.
+
+## Commands
+
+```console,editable
+show eigrp neighbors
+show eigrp interfaces
+```
+
+
 ## Network parser
 
 - The CLI parser is converting the IP into binary, then comparing it to the wild mask.

@@ -270,6 +270,13 @@ router ospfv3 1
   area 1 filter-list prefix PREFIX_LIST_v6 in
 ```
 
+## OSPF graceful restart
+
+[RFC 3623]: https://datatracker.ietf.org/doc/html/rfc3623
+
+- Restart OSPF without dropping adjacencies
+- Keeps the OSPF table in memory while OSPF rebuilds.
+
 ### Area types
 
 I made a [chart].
