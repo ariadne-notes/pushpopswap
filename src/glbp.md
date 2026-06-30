@@ -39,6 +39,20 @@ Gi0/0       12   1   -   Active   0007.b400.0c01  local           -
 Gi0/0       12   2   -   Listen   0007.b400.0c02  192.168.12.2    -
 ```
 
+## Config
+
+```console,editable
+interface GigabitEthernet0/0
+ ip address 192.168.12.1 255.255.255.0
+ !
+ glbp 12 ip 192.168.12.12
+ glbp 12 priority 100
+ glbp 12 preempt
+ !
+ glbp 12 weighting 100
+ glbp 12 load-balancing round-robin
+```
+
 ## References
 
 [Cisco - Configuring GLBP](https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ntw-servs/b-network-services/m_fhp-glbp-0.pdf)

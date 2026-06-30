@@ -377,5 +377,7 @@
 
 ---
 
+[Troubleshooting](troubleshooting.md)
+[Customer Service](customer-service.md)
 [A Woman Calls TAC](joke-a-woman-calls-TAC.md)
 [A Red Team Housecall](joke-red-team-housecall.md)
