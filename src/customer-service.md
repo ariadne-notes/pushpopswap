@@ -1,4 +1,4 @@
-# Customer Service Training
+# Customer Service
 
 > "Nobody cares what you know, until they know that you care"
 
@@ -41,13 +41,13 @@ If they are rude or unprofessional, once the problem is solved, they will unders
 4. Someone was rude to the customer
 5. They didn't receive what they were promised or expected
 
-## Why Complaints are good
+## Why complaints are good
 
 - Every complaint represents about 25 other people
 - If someone complains, they typically won't buy from you again
 - If you impress a complainer, you can actually get new business
 
-# Basic Strategic Objectives
+# Basic strategic objectives
 
 **1. Pace the customer's emotional state**
 
@@ -159,7 +159,7 @@ Avoid [Idioms].
 
 [Idioms]: https://en.wikipedia.org/wiki/English-language_idioms
 
-## Case Handling
+## Case handling
 
 "In order to save time I'd like to ask some questions to scope the problem. They might seem basic, is that OK?"
 

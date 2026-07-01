@@ -270,6 +270,14 @@
   - [VXLAN-GPO Header](./cisco-sdn/sd-access-vxlan-gpo-header.md)
   - [Wireless Integration](./cisco-sdn/sd-access-and-wireless-integration.md)
 
+# Software Defined Storage
+
+- [Ceph](ceph.md)
+  - [Add Cephfs to Debian](add-cephfs-to-debian.md)
+  - [Reclaim Space from Ceph for LVM](reclaim-space-from-ceph-for-lvm.md)
+  - [Ceph-CSI RBD](ceph-csi-rbd.md)
+  - [Ceph-CSI CephFS](ceph-csi-cephfs.md)
+
 # Timing
 
 - [PTP](ptp.md)
@@ -325,12 +333,6 @@
     - [CML MCP](automation/cml-mcp.md)
     - [LLM Instructions](llm-instructions.md)
     - [PyATS](automation/pyats.md)
-    
-# Ceph
-
-- [Ceph](ceph.md)
-- [Add Cephfs to Debian](add-cephfs-to-debian.md)
-- [Reclaim Space from Ceph for LVM](reclaim-space-from-ceph-for-lvm.md)
 
 # Etc (Stuff I Haven't Sorted)
 
