@@ -1,7 +1,8 @@
-# SSH
+# Configure SSH on Cisco IOS
+
+This should also work for IOS-XE.
 
 `aaa new-model` is necessary for the login default line under the vty.
-
 
 ## Config
 

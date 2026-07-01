@@ -238,7 +238,7 @@
 - [CoPP with ACLs and Object Groups](copp-with-acls-and-object-groups.md)
 - [NAT](nat.md)
 - [DNS](dns.md)
-- [SSH](ssh.md)
+- [Configure SSH on Cisco IOS](configure-ssh-on-cisco-ios.md)
 - [NTP](ntp.md)
 - [Power Over Ethernet](power-over-ethernet.md)
 - [Cisco ECMP](cisco-ecmp.md)
@@ -337,6 +337,7 @@
 # Etc (Stuff I Haven't Sorted)
 
 - [Study Tables](study-tables.md)
+- [Cisco Administrative Distance](cisco-administrative-distance.md)
 - [OS Architecture](os-architecture.md)
 - [Wiki.js, Duplicati, Traefik, Portainer](wikijs-duplicati-traefik-portainer.md)
 - [Windows 10 Physical to Virtual](windows-10-physical-to-virtual.md)
@@ -359,7 +360,9 @@
 - [Sitemaps](./sitemaps.md)
 - [Socket Statistics](socket-statistics.md)
 - [K8s on Debian - Initial Setup](k8s-on-debian-initial-setup.md)
-
+- [Flannel - VXLAN](flannel-vxlan.md)
+- [Flannel - Change the spec.PodCIDR Subnets](flannel-change-the-spec.podcidr-subnets.md)
+- [SSH Without a Password](ssh-without-a-password.md)
 
 # Certification Stuff
 
