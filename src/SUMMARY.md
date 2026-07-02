@@ -363,6 +363,7 @@
 - [Flannel - VXLAN](flannel-vxlan.md)
 - [Flannel - Change the spec.PodCIDR Subnets](flannel-change-the-spec.podcidr-subnets.md)
 - [SSH Without a Password](ssh-without-a-password.md)
+- [MetalLB in l2](metallb-in-l2.md)
 
 # Certification Stuff
 

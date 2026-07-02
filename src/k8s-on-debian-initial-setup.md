@@ -182,6 +182,8 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 
 ### Turn on Metal-LB
 
+See [MetalLB in L2](metallb-in-l2.md) for the controller/speaker model and L2 behavior.
+
 ##### Deploy Manifests
 
 ```console,editable
