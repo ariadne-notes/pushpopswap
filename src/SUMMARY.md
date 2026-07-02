@@ -1,7 +1,7 @@
 # Push, Pop, Swap
 
 [Ariadne's Network Notes](ariadnes-network-notes.md)
-[License](license.md)
+[License](LICENSE.md)
 
 ----
 
