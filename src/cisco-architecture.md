@@ -9,3 +9,7 @@
 [Cisco Live - C9000 - UADP & Silicon One ASIC Architecture & Innovations - Kenny Lei & Shawn Wargo - BRKARC-2091](/pdfs/ciscolive/BRKARC-2091.pdf)
 
 [Cisco Live - C9000 - Packet Journey - Ivan Shirshin & Nathan Pan - BRKARC-3090](/pdfs/ciscolive/BRKARC-3090.pdf)
+
+## Catalyst 8000
+
+[Cisco Live - C8000 - All You Need to Know About Forwarding on the C8000 - David Roten - BRKENT-2653](/pdfs/ciscolive/BRKENT-2653.pdf)
