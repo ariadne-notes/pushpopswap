@@ -89,7 +89,6 @@ sequenceDiagram
 
 ## References
 
-[Cisco Live - Empowering your Network with SDWAN OMP - Waqas Daar - BKRENT-3115](/pdfs/ciscolive/BRKENT-3115.pdf)
+[Cisco Live - Empowering your Network with SDWAN OMP - Waqas Daar - BRKENT-3115](/pdfs/ciscolive/BRKENT-3115.pdf)
 
 [Routing Configuration Guide for vEdge Routers, SD-WAN Release 20 - Multicast - Cisco](https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/routing/vEdge-20-x/routing-book/m-multicast-routing.html)
-
