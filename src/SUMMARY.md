@@ -29,6 +29,7 @@
 
 - [TCP](tcp.md)
 - [UDP](udp.md)
+  - [Cisco Traceroute](cisco-traceroute.md)
 
 - [IPv4](ipv4/ipv4.md)
   - [IPv4 Addressing](ipv4/ipv4-addressing.md)
