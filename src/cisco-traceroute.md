@@ -12,15 +12,6 @@ The answer is [ICMP Rate Limiting], but it also covers [UDP behavior] and how th
 
 ### Topology
 
-I first tried IOSv then recreated it with C8000v boxes. The behavior did not change.
-
-- IOS-XE
-- C8000v
-- 17.13.01a
-- Default Settings
-
-**Topology**
-
 ```text
 10.0.0.1/32     10.0.0.2/32     10.0.0.3/32      10.0.0.4/32       10.0.0.5/32 
    │               │               │                │                 │        
@@ -35,10 +26,12 @@ I first tried IOSv then recreated it with C8000v boxes. The behavior did not cha
      10.2.12.0/24    10.4.23.0/24     10.2.34.0/24     10.4.45.0/24            
 ```
 
+- SW: IOS-XE 17.13.01a
+- HW: C8000v
+- Backend: Enterprise CML
 - Single area OSPFv2
 - 13 subnets
 - Ping works
-- Always traceroute `*` on the last hop
 
 ### The Drops
 
@@ -170,7 +163,7 @@ The behavior changes when I connect the router to my lab network, and it gets a 
 
 ![Timing towards Google](/images/cisco-traceroute-graph-of-outbound-udp.jpg)
 
-22 probes complete in a little over 10 seconds.
+30+ probes complete in a little under 2 seconds. DNS is involved.
 
 ### Disabling DNS lookups
 
