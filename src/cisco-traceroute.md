@@ -62,13 +62,46 @@ Captures are taken between R1 and R2. The output above is from a `probe 5` run; 
 
 ## Cisco traceroute uses UDP
 
+The router does not send ICMP packets. It's purely [UDP].
+
+[UDP]: /udp.md
+
+**Sent**
+
+```text
+Frame 1: Packet, 42 bytes on wire (336 bits), 42 bytes captured (336 bits)
+Ethernet II, Src: 52:54:00:d8:d7:63 (52:54:00:d8:d7:63), Dst: 52:54:00:81:12:6f (52:54:00:81:12:6f)
+Internet Protocol Version 4, Src: 10.0.0.1 (10.0.0.1), Dst: 10.0.0.5 (10.0.0.5)
+User Datagram Protocol, Src Port: 49435 (49435), Dst Port: mtrace (33435)
+```
+
+In response it gets an ICMP TTL message.
+
+**Received**
+
+```text
+Frame 2: Packet, 70 bytes on wire (560 bits), 70 bytes captured (560 bits)
+Ethernet II, Src: 52:54:00:81:12:6f (52:54:00:81:12:6f), Dst: 52:54:00:d8:d7:63 (52:54:00:d8:d7:63)
+Internet Protocol Version 4, Src: 10.1.12.2 (10.1.12.2), Dst: 10.0.0.1 (10.0.0.1)
+Internet Control Message Protocol
+    Type: Time-to-live exceeded (11)
+    Code: 0 (Time to live exceeded in transit)
+    Checksum: 0x091f [correct]
+    [Checksum Status: Good]
+    Unused: 00000000
+    Internet Protocol Version 4, Src: 10.0.0.1 (10.0.0.1), Dst: 10.0.0.5 (10.0.0.5)
+    User Datagram Protocol, Src Port: 49435 (49435), Dst Port: mtrace (33435)
+```
+
+The payload of the ICMP message is the original UDP packet.
+
+### It increments the src and dst UDP ports
+
 - `udp.srcport` looks like it starts at a randomized ephemeral port and increments for each probe
 - `udp.dstport` starts at `33434` and increments for each probe
 - `udp.dstport` as a filter will find both the UDP probe and the ICMP reply
 
 This means that each probe pair (the probe and its reply) has a **unique** and **sequential** port number.
-
-## It increments the src and dst UDP ports
 
 Each probe set has 1 added to its TTL.
 
