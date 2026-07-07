@@ -27,6 +27,7 @@
 
 # Routed Protocols
 
+
 - [TCP](tcp.md)
 - [UDP](udp.md)
   - [Cisco Traceroute](cisco-traceroute.md)
@@ -40,6 +41,13 @@
     - [Subnetting with the Box Method](subnet-with-the-box-method.md)
     - [Subnetting with Binary](subnet-with-binary.md)
     - [IPv4 Classful Networking](ipv4/ipv4-classful-networking.md)
+
+- [ICMP](icmp/icmp.md)
+  - [Ping](icmp/ping.md)
+    - [Type 8: Echo Request](icmp/icmp-type-8-echo-request.md)
+    - [Type 0: Echo Reply](icmp/icmp-type-0-echo-reply.md)
+  - [Type 3: Destination Unreachable](icmp/icmp-type-3-destination-unreachable.md)
+  - [Type 11: Time Exceeded](icmp/icmp-type-11-time-exceeded.md)
 
 - [IPv6](ipv6/ipv6.md)
   - [IPv6 Subnetting](ipv6/ipv6-subnetting.md)
@@ -62,6 +70,10 @@
 - [Ethernet CSMA/CD](ethernet-csma-cd.md)
 - [10G Ethernet](10-gig-ethernet.md)
 - [802.1Q](802.1q.md)
+- [ARP](arp/arp.md)
+  - [ARP Attacks](arp/arp-attacks.md)
+  - [DAI](arp/dai.md)
+  - [Proxy ARP](arp/proxy-arp.md)
 - [VLAN Access Control Lists](vlan-access-control-lists.md)
 
 # Quality of Service
@@ -91,11 +103,6 @@
   - [UplinkFast](enterprise-switching/uplinkfast.md)
   - [Port Security](enterprise-switching/port-security.md)
   - [UDLD](enterprise-switching/udld.md)
-
-- [ARP](enterprise-switching/arp.md)
-  - [ARP Attacks](enterprise-switching/arp-attacks.md)
-  - [DAI](enterprise-switching/dai.md)
-  - [Proxy ARP](enterprise-switching/proxy-arp.md)
 
 - [VTP](enterprise-switching/vtp.md)
   - [VTP Bomb](enterprise-switching/vtp-bomb.md)
@@ -157,7 +164,7 @@
 
 - [EIGRP](./eigrp/eigrp.md)
   - [EIGRP Stub Routing](./eigrp/eigrp-stub-routing.md)
-  
+
 - [IS-IS](is-is.md)
   - [IS-IS Network Design](is-is-network-design.md)
 
@@ -181,7 +188,7 @@
   - [Route Redistribution EIGRP](route-redistribution-eigrp.md)
   - [Route Redistribution OSPF](ospf/route-redistribution-ospf.md)
   - [Route Redistribution with Tags](route-redistribution-with-tags.md)
-  
+
 - [Policy Based Routing](policy-based-routing.md)
 
 # Security
@@ -203,7 +210,7 @@
   - [DMVPN](dmvpn.md)
     - [NHRP](nhrp.md)
   - [GETVPN](getvpn.md)
-  
+
 # DDoS Prevention
 
 - [uRPF](urpf.md)
