@@ -20,4 +20,3 @@ Push, Pop, and Swap are [MPLS] operations.
 [MPLS]: /mpls.md
 
 **Email:** ariadne@haske.org
-

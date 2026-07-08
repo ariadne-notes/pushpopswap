@@ -144,8 +144,8 @@ Connected to:
 
 [editable-extras.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/editable-extras.js)
 
-- Modifies `book.js`
-  - Enables editing console examples directly on the webpage
+- Extends mdBook's editable code block behavior after `book.js` runs
+  - Adds undo controls for editable non-Rust examples
   - Uses code fences: ` ```text,editable `
 - Vibecoded
 
