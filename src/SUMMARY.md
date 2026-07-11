@@ -295,6 +295,7 @@
 # Wireless
 
 - [Wireless](wireless.md)
+  - [Wi-Fi Channels](wifi-channels.md)
 - [OFDM](ofdm.md)
 
 # Automation

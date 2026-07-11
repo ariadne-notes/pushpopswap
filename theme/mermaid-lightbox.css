@@ -6,6 +6,8 @@
 .mermaid{ cursor:zoom-in; }
 .mermaid:focus-visible{ outline:2px solid var(--links, #29b6e6); outline-offset:3px; }
 .mermaid svg{ max-height:480px; height:auto; }   /* cap tall previews; full size lives in the viewer */
+.content img[src$=".svg"]{ cursor:zoom-in; }
+.content img[src$=".svg"]:focus-visible{ outline:2px solid var(--links, #29b6e6); outline-offset:3px; }
 
 /* ---- fullscreen viewer ---- */
 .mlb-overlay{

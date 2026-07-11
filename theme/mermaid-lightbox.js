@@ -28,9 +28,14 @@
     zoomScaleSensitivity: 0.3
   };
 
+  function isSvgImage(img) {
+    var src = img.currentSrc || img.getAttribute("src") || "";
+    return /\.svg(?:[?#].*)?$/i.test(src);
+  }
+
   /* -------------------------------------------------------------------------
-     Decorator — annotate rendered diagrams so they're keyboard-focusable
-     buttons. Idempotent: safe to call on every render and every theme toggle.
+     Decorator — annotate rendered diagrams and SVG image embeds so they're
+     keyboard-focusable buttons. Idempotent: safe to call repeatedly.
   ------------------------------------------------------------------------- */
   function createDecorator() {
     function decorate() {
@@ -40,6 +45,14 @@
         m.setAttribute("tabindex", "0");
         m.setAttribute("role", "button");
         m.setAttribute("aria-label", "Open diagram in zoom viewer");
+      });
+
+      document.querySelectorAll(".content img").forEach(function (img) {
+        if (img.dataset.lbReady || !isSvgImage(img)) return;
+        img.dataset.lbReady = "1";
+        img.setAttribute("tabindex", "0");
+        img.setAttribute("role", "button");
+        img.setAttribute("aria-label", "Open image in zoom viewer");
       });
     }
     return { decorate: decorate };
@@ -93,6 +106,37 @@
       getZoom: function () { return pz ? pz.getZoom() : 1; },
       destroy: function () { if (pz) { try { pz.destroy(); } catch (_) {} pz = null; } }
     };
+  }
+
+  function createSvgImageLoader() {
+    var cache = new Map();
+
+    function load(img) {
+      var src = img.currentSrc || img.getAttribute("src");
+      var url = new URL(src, window.location.href).href;
+
+      if (!cache.has(url)) {
+        cache.set(url, fetch(url, { credentials: "same-origin" })
+          .then(function (r) {
+            if (!r.ok) throw new Error("Unable to load SVG image: " + url);
+            return r.text();
+          })
+          .then(function (text) {
+            var doc = new DOMParser().parseFromString(text, "image/svg+xml");
+            var svg = doc.documentElement;
+            if (!svg || svg.nodeName.toLowerCase() !== "svg") {
+              throw new Error("Image is not an SVG: " + url);
+            }
+            return svg;
+          }));
+      }
+
+      return cache.get(url).then(function (svg) {
+        return svg.cloneNode(true);
+      });
+    }
+
+    return { load: load };
   }
 
   /* -------------------------------------------------------------------------
@@ -171,13 +215,23 @@
      on a decorated diagram. Queries the SVG fresh each time, so it keeps
      working after diagrams are re-rendered on a theme toggle.
   ------------------------------------------------------------------------- */
-  function wireTriggers(lightbox) {
+  function wireTriggers(lightbox, svgImageLoader) {
     document.addEventListener("click", function (e) {
       if (lightbox.isOpen()) return;
       var host = e.target.closest && e.target.closest(".mermaid");
-      if (!host || e.target.closest("a")) return;   // let diagram links work
-      var svg = host.querySelector("svg");
-      if (svg) lightbox.open(svg);
+      if (host && !e.target.closest("a")) {   // let diagram links work
+        var svg = host.querySelector("svg");
+        if (svg) lightbox.open(svg);
+        return;
+      }
+
+      var img = e.target.closest && e.target.closest(".content img");
+      if (!img || !isSvgImage(img) || e.target.closest("a")) return;
+      svgImageLoader.load(img).then(function (svg) {
+        lightbox.open(svg);
+      }).catch(function () {
+        window.open(img.currentSrc || img.src, "_blank", "noopener");
+      });
     });
 
     document.addEventListener("keydown", function (e) {
@@ -187,16 +241,26 @@
         var svg = a.querySelector("svg");
         if (svg) { e.preventDefault(); lightbox.open(svg); }
       }
+      if (a && a.tagName === "IMG" && isSvgImage(a)) {
+        e.preventDefault();
+        svgImageLoader.load(a).then(function (svg) {
+          lightbox.open(svg);
+        }).catch(function () {
+          window.open(a.currentSrc || a.src, "_blank", "noopener");
+        });
+      }
     });
   }
 
   /* --- bootstrap ----------------------------------------------------------- */
   var decorator = createDecorator();
+  var svgImageLoader = createSvgImageLoader();
   var lightbox  = createLightbox();
-  wireTriggers(lightbox);
+  wireTriggers(lightbox, svgImageLoader);
 
   // Decorate whenever mermaid-lazyload.js (re)renders, plus once now in case a page
   // ever ships pre-rendered diagrams. Idempotent, so double-firing is harmless.
   document.addEventListener("mermaid:rendered", decorator.decorate);
+  document.addEventListener("DOMContentLoaded", decorator.decorate);
   decorator.decorate();
 })();
