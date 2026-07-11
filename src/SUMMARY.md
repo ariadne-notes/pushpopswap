@@ -24,6 +24,7 @@
   - [Git Commit](git/git-commit.md)
   - [Git Restore](git/git-restore.md)
   - [Git Ignore](git/git-ignore.md)
+  - [GH Commands](git/gh.md)
 
 # Routed Protocols
 
@@ -374,6 +375,7 @@
 - [SSH Without a Password](ssh-without-a-password.md)
 - [MetalLB in L2](metallb-in-l2.md)
 - [NFS with Unraid](nfs-with-unraid.md)
+- [Backup Strategies](backup-strategies.md)
 
 # Certification Stuff
 
