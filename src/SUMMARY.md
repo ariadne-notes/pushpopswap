@@ -375,8 +375,6 @@
 - [Flannel - Change the spec.PodCIDR Subnets](flannel-change-the-spec.podcidr-subnets.md)
 - [SSH Without a Password](ssh-without-a-password.md)
 - [MetalLB in L2](metallb-in-l2.md)
-- [NFS with Unraid](nfs-with-unraid.md)
-- [Backup Strategies](backup-strategies.md)
 
 # Certification Stuff
 

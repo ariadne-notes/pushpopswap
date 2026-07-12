@@ -1,4 +1,4 @@
-# Wi-Fi Channels
+# Wireless Channels
 
 ## 2ghz
 
@@ -6,25 +6,37 @@
 
 ![2ghz](/images/ariadne/wifi-2ghz-channel-allocation.svg)
 
-This graphic is rendered with python and [matplotlib] from [ariadne-notes/wifi-charts].
-
 ## 5ghz
 
-**DFS** --- Dynamic Frequency Selection
+The Wi-Fi Alliance helped drive use of the 5 GHz band for Wi-Fi.
 
-These channels are shared with other applications, like weather radar.
+**[UNII]** --- Unlicensed National Information Infrastructure
 
-When a primary user is transmitting (like the weather radar) radios allocated to these frequencies must suspend transmitting.
+**[TDWR]** -- Terminal Doppler Weather Radio
+
+- Uses and relies on a 5ghz signal to detect weather events
+
+**[DFS]** --- Dynamic Frequency Selection
+
+- Weather radar is the primary user of DFS frequencies
+- WLAN equipment must not transmit if it senses [TDWR]
+
+[UNII]: https://en.wikipedia.org/wiki/Unlicensed_National_Information_Infrastructure
+[TDWR]: https://en.wikipedia.org/wiki/Terminal_Doppler_Weather_Radar
+[DFS]: https://en.wikipedia.org/wiki/Dynamic_frequency_selection
 
 ![5ghz](/images/ariadne/wifi-5ghz-channel-allocation.svg)
-
-This graphic is rendered with python and [matplotlib] from [ariadne-notes/wifi-charts].
 
 ## 6ghz
 
 ![6ghz](/images/ariadne/wifi-6ghz-channel-allocation.svg)
 
-This graphic is rendered with python and [matplotlib] from [ariadne-notes/wifi-charts].
+## Graphics
+
+Graphics on this page are rendered with python and [matplotlib] from [ariadne-notes/wifi-charts].
+
+[ariadne-notes/wifi-charts]: https://github.com/ariadne-notes/wifi-charts
+[matplotlib]: https://matplotlib.org/
 
 ## References
 
@@ -42,5 +54,6 @@ Channel numbers, center frequencies, and channel widths are from [IEEE Std 802.1
 
 [Unlicensed National Information Infrastructure - Wikipedia](https://en.wikipedia.org/wiki/Unlicensed_National_Information_Infrastructure)
 
-[ariadne-notes/wifi-charts]: https://github.com/ariadne-notes/wifi-charts
-[matplotlib]: https://matplotlib.org/
+[NTIA Report 20-544 - Lessons Learned from the Development and Deployment of 5 GHz ...](/pdfs/TR-20-544.pdf)
+
+[FCC 03-287 - Revision of Parts 2 and 15 of the Commission's Rules to Permit U-NII devices in the 5ghz band](/pdfs/FCC-03-287A3.pdf)
