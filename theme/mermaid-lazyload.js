@@ -1,5 +1,5 @@
 // theme/mermaid-lazyload.js — lazy-load mermaid, render on demand, re-render on theme toggle.
-// Pairs with mermaid-lightbox.js via the `mermaid:rendered` event (keep the name identical).
+// Pairs with svg-zoomer.js via the `mermaid:rendered` event (keep the name identical).
 (() => {
   const nodes = [...document.querySelectorAll("pre.mermaid, .mermaid")];
   if (!nodes.length) return;                         // no diagrams on this page → never load mermaid

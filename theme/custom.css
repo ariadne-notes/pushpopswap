@@ -29,3 +29,15 @@
 .component-note{font-size:11px;color:var(--color-text-tertiary);margin-top:-2px;margin-bottom:4px;font-family:var(--font-mono)}
 .hint{font-size:11px;color:var(--color-text-tertiary);margin-left:4px}
 .linked{font-size:11px;color:var(--color-text-tertiary);margin-left:4px}
+
+/* Touch devices: never stick the menu bar. A sticky header rides along with
+   native pinch-zoom, magnified and covering the content being zoomed; letting
+   it scroll away like normal content keeps zoom clean. (Stickiness is a
+   mouse-era convenience anyway — the hover variants below it are unreachable
+   on touch.) Overrides the .sticky/:hover/sidebar-visible rules in chrome.css. */
+@media (pointer: coarse){
+  #mdbook-menu-bar.sticky,
+  #mdbook-menu-bar:hover,
+  html.sidebar-visible #mdbook-menu-bar{ position: relative; top: auto !important; }
+  #mdbook-menu-bar-hover-placeholder{ display: none; }
+}

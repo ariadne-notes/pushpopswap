@@ -1,4 +1,4 @@
-/* mermaid-lightbox.css — inline preview + fullscreen viewer.
+/* svg-zoomer.css — inline preview + fullscreen viewer.
    The viewer inherits the active mdBook theme via mdBook's own CSS variables,
    so it matches light / rust / coal / navy / ayu automatically. */
 
@@ -19,11 +19,16 @@
   backdrop-filter: blur(2px);
 }
 .mlb-toolbar{
+  /* floats over the stage so the diagram gets the full screen; auto-hides
+     after a quiet spell (see .mlb-chrome-hidden, toggled from JS) */
+  position:absolute; top:0; left:0; right:0; z-index:1;
   display:flex; align-items:center; gap:6px; justify-content:flex-end;
   padding:10px 14px;
   background: var(--theme-popup-bg, var(--sidebar-bg, #2b2b2b));
   border-bottom:1px solid var(--theme-popup-border, var(--table-border-color, #444));
+  opacity:1; transition:opacity .3s;
 }
+.mlb-chrome-hidden .mlb-toolbar{ opacity:0; pointer-events:none; }
 .mlb-toolbar button{
   font:13px/1 var(--mono-font, ui-monospace, "Cascadia Code", Menlo, monospace);
   color: var(--fg, #ddd);
@@ -42,6 +47,11 @@
   font:12px/1 var(--mono-font, ui-monospace, Menlo, monospace);
   color: var(--icons, var(--fg, #999)); min-width:50px; text-align:center; user-select:none;
 }
-.mlb-stage{ flex:1; overflow:hidden; cursor:grab; position:relative; }
+.mlb-stage{
+  flex:1; overflow:hidden; cursor:grab; position:relative;
+  touch-action:none;                    /* hand pinch/drag to our pointer handlers */
+  user-select:none; -webkit-user-select:none;
+}
 .mlb-stage:active{ cursor:grabbing; }
-.mlb-stage svg{ display:block; width:100%; height:100%; max-height:none; }
+.mlb-canvas{ position:absolute; top:0; left:0; transform-origin:0 0; }
+.mlb-canvas svg{ display:block; max-width:none; max-height:none; }

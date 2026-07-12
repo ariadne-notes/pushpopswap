@@ -93,13 +93,6 @@ mdbook build
   
 [Injects Git Metadata into the rendered HTML articles]: https://compeng0001.github.io/mdbook-gitinfo
 
-### SVG-Pan-Zoom
-
-- [Click on a SVG]
-  - Get zoomable picture
-
-[Click on a SVG]:  https://github.com/bumbu/svg-pan-zoom
-
 ### SVGBOB
 
 - **buggy**
@@ -112,19 +105,19 @@ mdbook build
 
 ## Custom scripts
 
-### Mermaid lightbox
+### SVG zoomer
 
-[mermaid-lightbox.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/mermaid-lightbox.js)
+[svg-zoomer.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/svg-zoomer.js)
 
-Mermaid diagrams can't be zoom'd natively on desktop.
-
+SVGs and Mermaid diagrams can't be zoom'd natively on desktop — click one to get a fullscreen pan/zoom viewer.
 
 There are some very large diagrams on this site.
 
+- Desktop only: on mobile the browser's own pinch-to-zoom already works, so the script stands down
+- Self-contained (Pointer Events), no libraries
+
 Connected to
--`svg-pan-zoom`
--`mermaid-11.15.0.min.js`
--`mermaid-init.js`
+- `mermaid-lazyload.js`
 
 ### Mermaid lazyload
 
@@ -136,7 +129,7 @@ This script is put into the render blocking path. The big mermaid file is only l
 
 Connected to:
 - `mermaid-11.15.0.min.js`
-- `mermaid-lightbox.js`
+- `svg-zoomer.js`
 
 [Lighthouse]: https://developer.chrome.com/docs/lighthouse/
 
