@@ -332,7 +332,6 @@
     - [SONET C2 Byte](sonet-c2-byte.md)
   - [Circuit Emulation](cem.md)
 
-
 # Lab Work
 
 - [CML](cml.md)
@@ -343,6 +342,12 @@
     - [CML MCP](automation/cml-mcp.md)
     - [LLM Instructions](llm-instructions.md)
     - [PyATS](automation/pyats.md)
+
+# Linux
+
+- [Rsync](rsync.md)
+- [Grep](grep.md)
+- [SSH Without a Password](ssh-without-a-password.md)
 
 # Etc (Stuff I Haven't Sorted)
 
@@ -358,7 +363,6 @@
 - [Multihoming](multihoming.md)
 - [Certbot](certbot.md)
 - [Wake on LAN](wake-on-lan.md)
-- [Grep](grep.md)
 - [Unknown Command or Computer Name](unknown-command-or-computer-name.md)
 - [Cisco C9000 Packet Drops](c9000-packet-drops.md)
 - [SecureCRT](securecrt.md)
@@ -373,8 +377,8 @@
 - [K8s on Debian - Initial Setup](k8s-on-debian-initial-setup.md)
 - [Flannel - VXLAN](flannel-vxlan.md)
 - [Flannel - Change the spec.PodCIDR Subnets](flannel-change-the-spec.podcidr-subnets.md)
-- [SSH Without a Password](ssh-without-a-password.md)
 - [MetalLB in L2](metallb-in-l2.md)
+- [Cisco ACI](./cisco-sdn/cisco-aci.md)
 
 # Certification Stuff
 
