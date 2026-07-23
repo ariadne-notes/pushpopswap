@@ -31,5 +31,5 @@ default-theme = "ayu"
 preferred-dark-theme = "ayu"
 mathjax-support = true
 additional-css = ["theme/custom.css","theme/svg-zoomer.css"]
-additional-js = ["theme/svg-zoomer.js","theme/mermaid-lazyload.js","theme/editable-extras.js"]
+additional-js = ["theme/svg-zoomer.js","theme/mermaid-lazyload.js","theme/editable-extras.js","theme/zoom-unstick.js"]
 git-repository-url = "https://github.com/ariadne-notes/pushpopswap"

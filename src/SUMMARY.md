@@ -7,10 +7,14 @@
 
 # Studying
 
+- [How to Use this Site](how-to-use-this-site.md)
 - [How to Study](how-to-study.md)
 - [How to Take Notes](how-to-take-notes.md)
 - [How to Make a Blog Like This](how-to-make-a-blog-like-this.md)
-- [How to Use this Site](how-to-use-this-site.md)
+  - [Custom Scripts](custom-scripts.md)
+  - [AI Use Statement](ai-use-statement.md)
+  - [The Correctness Hierarchy](the-correctness-hierarchy.md)
+
 - [Git](git/git.md)
   - [Git Merge](git/git-merge.md)
   - [Git Branch](git/git-branch.md)

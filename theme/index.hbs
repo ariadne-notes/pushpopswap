@@ -214,10 +214,6 @@
                 </script>
 
                 <div id="mdbook-content" class="content">
-                    <main>
-                        {{{ content }}}
-                    </main>
-
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         {{#if previous}}
@@ -242,6 +238,10 @@
 
                         <div style="clear: both"></div>
                     </nav>
+
+                    <main>
+                        {{{ content }}}
+                    </main>
                 </div>
             </div>
 

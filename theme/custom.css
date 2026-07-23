@@ -30,14 +30,50 @@
 .hint{font-size:11px;color:var(--color-text-tertiary);margin-left:4px}
 .linked{font-size:11px;color:var(--color-text-tertiary);margin-left:4px}
 
-/* Touch devices: never stick the menu bar. A sticky header rides along with
-   native pinch-zoom, magnified and covering the content being zoomed; letting
-   it scroll away like normal content keeps zoom clean. (Stickiness is a
-   mouse-era convenience anyway — the hover variants below it are unreachable
-   on touch.) Overrides the .sticky/:hover/sidebar-visible rules in chrome.css. */
-@media (pointer: coarse){
-  #mdbook-menu-bar.sticky,
-  #mdbook-menu-bar:hover,
-  html.sidebar-visible #mdbook-menu-bar{ position: relative; top: auto !important; }
-  #mdbook-menu-bar-hover-placeholder{ display: none; }
-}
+/* Mobile prev/next buttons moved above the content (index.hbs); chrome.css's
+   50px margin-block-start was sized for sitting below the article. */
+.nav-wrapper{ margin-block-start: 0; margin-block-end: 1em }
+
+/* mdbook-svgbob wraps every diagram in an unscoped <style>svg{width:100%!important}</style>.
+   An HTML <style> is document-global, so that rule leaks onto every inline icon SVG
+   on any page with a bob diagram — stretching the menu-bar icons (GitHub wraps to a
+   second row) and blockquote note/tip icons. Re-assert mdbook's icon size; .fa-svg
+   is mdbook's own icon selector, so the .svgbob diagram (which should be 100%) is
+   untouched. */
+.fa-svg svg{ width: 1em !important; height: 1em !important }
+
+/* While pinch-zoomed (html.pinch-zoomed, set by theme/zoom-unstick.js):
+   unstick the menu bar so it doesn't ride along magnified over the content
+   being zoomed. Unzoomed, stock behavior stays — the hover placeholder must
+   remain in flow, since its 50px height is what makes the bar visible at the
+   top of the page (the .page container starts at -50px and counts on it).
+   Overrides the .sticky/:hover/sidebar-visible rules in chrome.css. */
+html.pinch-zoomed #mdbook-menu-bar.sticky,
+html.pinch-zoomed #mdbook-menu-bar:hover,
+html.pinch-zoomed.sidebar-visible #mdbook-menu-bar{ position: relative; top: auto !important; }
+html.pinch-zoomed #mdbook-menu-bar-hover-placeholder{ position: relative; pointer-events: none; }
+
+/* Correctness tier list (src/how-to-make-a-blog-like-this.md): source-authority
+   ranking S (top) → F (bottom). Markup is just .tier rows of a .tier-label letter
+   tile plus a .tier-items strip of chips. */
+/* The chips/strip pull from mdbook's own theme variables so they track whatever
+   theme is active (light, rust, coal, navy, ayu) instead of hardcoding one
+   light + one dark value. Scoped to .tierlist so nothing leaks. */
+.tierlist{
+  --surface-1: var(--quote-bg);            /* strip behind the chips */
+  --surface-2: var(--table-header-bg);     /* chip fill (reads raised on the strip) */
+  --border: var(--table-border-color);
+  --text-primary: var(--fg);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display:flex; flex-direction:column; gap:4px; padding:1rem 0; font-family:var(--font-sans) }
+.tier{ display:flex; gap:4px; align-items:stretch }
+.tier-label{ flex:0 0 64px; display:flex; align-items:center; justify-content:center; font-size:24px; font-weight:500; border-radius:8px }
+.tier-items{ flex:1; display:flex; flex-wrap:wrap; gap:6px; align-items:center; background:var(--surface-1); border-radius:8px; padding:10px 12px }
+.tier-items span{ background:var(--surface-2); border:0.5px solid var(--border); border-radius:6px; padding:6px 12px; font-size:14px; color:var(--text-primary) }
+.tier-s{ background:#E24B4A; color:#fff }
+.tier-a{ background:#EF9F27; color:#412402 }
+.tier-b{ background:#FAC775; color:#412402 }
+.tier-c{ background:#97C459; color:#173404 }
+.tier-d{ background:#5DCAA5; color:#04342C }
+.tier-e{ background:#85B7EB; color:#042C53 }
+.tier-f{ background:#AFA9EC; color:#26215C }

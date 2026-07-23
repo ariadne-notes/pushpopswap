@@ -1,5 +1,22 @@
 # How to Make a Blog Like This
 
+## Be correct
+
+I always ask myself these questions:
+
+- Who is the authority on this?
+- Is someone being paid to be correct?
+- Does this activity have a following, group, conference, forum, or discord?
+- Can this be tested in the lab?
+- Can this behavior be observed?
+- Can the behavior be documented?
+- Can the behavior be diagrammed?
+- Is effort tracked by a standards body? e.g., the IETF, IEEE, etc.
+
+See [The Correctness Hierarchy].
+
+[The Correctness Hierarchy]: /the-correctness-hierarchy.md
+
 ## Documentation as code
 
 This blog follows the [Documentation as Code] ethos.
@@ -102,88 +119,3 @@ mdbook build
 [Converts ASCII Art to a SVG]: https://ivanceras.github.io/svgbob-editor
 
 `mdbook-svgbob` uses the above [embed svgbob into mdBook](https://github.com/boozook/mdbook-svgbob)
-
-## Custom scripts
-
-### SVG zoomer
-
-[svg-zoomer.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/svg-zoomer.js)
-
-SVGs and Mermaid diagrams can't be zoom'd natively on desktop — click one to get a fullscreen pan/zoom viewer.
-
-There are some very large diagrams on this site.
-
-- Desktop only: on mobile the browser's own pinch-to-zoom already works, so the script stands down
-- Self-contained (Pointer Events), no libraries
-
-Connected to
-- `mermaid-lazyload.js`
-
-### Mermaid lazyload
-
-[mermaid-lazyload.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/mermaid-lazyload.js)
-
-The `mermaid-11.15.0.min.js` is 3MB which hurts [Lighthouse] scores, by slowing down page painting.
-
-This script is put into the render blocking path. The big mermaid file is only loaded on pages with Mermaid.
-
-Connected to:
-- `mermaid-11.15.0.min.js`
-- `svg-zoomer.js`
-
-[Lighthouse]: https://developer.chrome.com/docs/lighthouse/
-
-### Editable extras
-
-[editable-extras.js](https://github.com/ariadne-notes/pushpopswap/blob/main/theme/editable-extras.js)
-
-- Extends mdBook's editable code block behavior after `book.js` runs
-  - Adds undo controls for editable non-Rust examples
-  - Uses code fences: ` ```text,editable `
-- Vibecoded
-
-### Stamp page mtimes
-
-Necessary for accurate dates on pages.
-
-This is run right before build.
-
-- Vibecoded
-
-[stamp-page-mtimes.sh](https://github.com/ariadne-notes/pushpopswap/blob/main/scripts/sitemap/stamp-page-mtimes.sh)
-
-## AI
-
-There is some AI use here, the articles are 98% human written.
-
-I use Anthropic's tools.
-
-### Where LLMs are used
-
-- [OCR] tasks
-  - Diagram-to-Code tasks
-- Reforming tables
-- [Lint]
-- Spelling and grammar
-- Finding potential technical errors
-- [Rubber Ducking]
-- [Vibe Coding]
-- [Debugging]
-- Lab Implementation
-
-[OCR]: https://en.wikipedia.org/wiki/Optical_character_recognition
-[Lint]: https://github.com/caramelomartins/awesome-linters
-[Rubber Ducking]: https://en.wikipedia.org/wiki/Rubber_duck_debugging
-[Vibe Coding]: https://en.wikipedia.org/wiki/Vibe_coding
-[Debugging]: https://en.wikipedia.org/wiki/Debugging
-
-### Where LLMs are not used
-
-- Lab Design
-- [Note Taking]
-- [Prose]
-- [Technical Writing]
-
-[Technical Writing]: https://en.wikipedia.org/wiki/Technical_writing
-[Prose]: https://en.wikipedia.org/wiki/Prose
-[Note Taking]: https://en.wikipedia.org/wiki/Note-taking
