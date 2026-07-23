@@ -71,19 +71,18 @@ Communication between VNs must go to a fusion router or a firewall.
 
 ### Fabric edge
 
-- AKA FE.
-- Identifies and Auths wired endpoints.
-- Wireless OTT, registers v4/v6 endpoint ID.
-- Is the Layer 3 anycast gateway.
+- AKA FE
+- Identifies and Auths wired endpoints
+- Wireless OTT, registers v4/v6 endpoint ID
+- Is the Layer 3 anycast gateway
+  - Can perform DHCP relay for end hosts
 - Provides VN for wireless clients
 - Onboards APs into the fabric, forms VXLAN tunnels with APs
-- Provides the guest functionality for wireless guest.
-- Is a LISP xTR, with an anycast gateway, with overlay host protocols, (like DHCP).
+- Provides the guest functionality for wireless guest
 
 ### Fabric border
 
-
-- Connects other L3 networks to SDA fabric.
+- Connects other L3 networks to SDA fabric
 
 #### Fabric border nodes types
 
