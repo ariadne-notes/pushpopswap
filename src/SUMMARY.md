@@ -198,6 +198,13 @@
 
 # Security
 
+- [EAP](eap/eap.md)
+  - [EAP-FAST](eap/eap-fast.md)
+  - [EAP-TLS](eap/eap-tls.md)
+    - [EAP-TLS with Cisco ISE and WLC](eap/eap-tls-cisco-ise-and-wlc.md)
+    - [EAP-TLS 1.3](eap/eap-tls-1.3.md)
+  - [PEAP-MSCHAPv2 with ISE and C9800](eap/peap-mschapv2-with-ise-and-c9800.md)
+
 - [Cisco TrustSec](cisco-trustsec.md)
   - [Zero Trust](zero-trust.md)
   - [Cisco ISE](cisco-ise.md)
@@ -300,6 +307,7 @@
 
 - [Wireless](wireless.md)
   - [Wi-Fi Channels](wifi-channels.md)
+- [Cisco Wireless Security](wireless/cisco-wireless-security.md)
 - [OFDM](ofdm.md)
 
 # Automation

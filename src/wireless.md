@@ -29,11 +29,11 @@
 - CAPWAP or AP LAN port
 - No mesh
 
-**Bridge**
+**Bridge** 
 
 Two submodes:
 
-**Bridge-root**
+- **Bridge-root**
 
 - Has wired access, provides mesh access
 
@@ -48,7 +48,7 @@ Two submodes:
 - Dedicated Monitoring
 - RRM and Rogues
 
-**Rogue Detector**
+**Rogue Detector** 
 
 - Turn off RF
 - Monitor the LAN for on-wire rogues
@@ -60,7 +60,7 @@ Two submodes:
 - Tunneled in CAPWAP to WLC
 - forwarded to a machine running OmniPeek or Wireshark
 
-**SE-Connect**
+**SE-Connect** 
 
 - Spectrum Expert
   - Clean Air
