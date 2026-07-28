@@ -174,7 +174,7 @@
   - [IS-IS Network Design](is-is-network-design.md)
 
 - [BGP](./bgp/bgp.md)
-  - [Neighbor FSM](./bgp/bgp-neighbor-fsm.md)
+
   - [Confederations](./bgp/bgp-confederations.md)
   - [Route Reflectors](./bgp/bgp-route-reflectors.md)
   - [Multipath](./bgp/bgp-multipath.md)
@@ -183,6 +183,8 @@
   - [Load Balancing](./bgp/bgp-load-balancing.md)
   - [Allowas-In](./bgp/bgp-allowas-in.md)
   - [AS-Override](./bgp/bgp-as-override.md)
+  - [BGP Neighbor Finite State Machine](./bgp/bgp-neighbor-finite-state-machine.md)
+    - [BGP Neighbor FSM Events](./bgp/bgp-neighbor-finite-state-machine-events.md)
 
 # Routing Strategies
 
