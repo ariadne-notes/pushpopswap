@@ -47,3 +47,7 @@ Sent or received over TCP.
 - Event 26 `KeepAliveMsg`
 - Event 27 `UpdateMsg`
 - Event 28 `UpdateMsgErr`
+
+## References
+
+[RFC 4271: A Border Gateway Protocol 4 (BGP-4) | RFC Editor](https://www.rfc-editor.org/info/rfc4271/)
