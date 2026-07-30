@@ -59,7 +59,6 @@ sda      8:0    0    32G  0 disk
 └─sda5   8:5    0   975M  0 part [SWAP]
 ```
 
-
 Querying the disk directly for its logical sector size.
 
 ```
@@ -122,7 +121,6 @@ Journal backup:           inode blocks
 Checksum type:            crc32c
 Checksum:                 0xff19412a
 ```
-
 
 ## References
 

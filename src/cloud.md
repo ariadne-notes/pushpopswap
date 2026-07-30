@@ -1,4 +1,4 @@
-# Clouds
+# Cloud
 
 Most of this is based on the NIST definitions.
 
@@ -7,7 +7,7 @@ Most of this is based on the NIST definitions.
 **On-Demand**
 
 - Unilateral, no human interaction
-  
+
 **Broad Network Access**
 
 - Works on phones, laptops, desktops
@@ -16,7 +16,6 @@ Most of this is based on the NIST definitions.
 
 - Multi-tenant
 - Location independence
-
 
 **Rapid Elasticity**
 
@@ -73,7 +72,7 @@ Provision compute, storage, and networks on a providers cloud network.
   - Security requirements
   - Policy Requirements
   - Compliance Requirements.
-  
+
 An example is is credit unions.
 
 **Public**

@@ -207,8 +207,8 @@
     - [EAP-TLS 1.3](eap/eap-tls-1.3.md)
   - [PEAP-MSCHAPv2 with ISE and C9800](eap/peap-mschapv2-with-ise-and-c9800.md)
 
-- [Cisco TrustSec](cisco-trustsec.md)
-  - [Zero Trust](zero-trust.md)
+- [Zero Trust](zero-trust.md)
+  - [Cisco TrustSec](cisco-trustsec.md)
   - [Cisco ISE](cisco-ise.md)
   - [Cisco PxGrid](cisco-pxgrid.md)
 
@@ -224,6 +224,8 @@
   - [DMVPN](dmvpn.md)
     - [NHRP](nhrp.md)
   - [GETVPN](getvpn.md)
+  
+- [SASE](sase.md)
 
 # DDoS Prevention
 
@@ -246,7 +248,7 @@
 - [Enterprise Campus Modular Design](enterprise-campus-modular-design.md)
 - [Cisco AAA](cisco-aaa.md)
 - [TACACS+](tacacs-plus.md)
-- [Clouds](clouds.md)
+- [Cloud](cloud.md)
   - [Virtual Private Clouds](vpcs.md)
   - [Cloud Interconnects](cloud-interconnects.md)
 
@@ -260,6 +262,8 @@
 - [CoPP with ACLs and Object Groups](copp-with-acls-and-object-groups.md)
 - [NAT](nat.md)
 - [DNS](dns.md)
+  - [Unpaid DNS TLDs](unpaid-dns-tlds.md)
+    - [Do Not Use `.local` for Authoritative DNS](do-not-use-local-for-authoritative-dns.md)
 - [Configure SSH on Cisco IOS](configure-ssh-on-cisco-ios.md)
 - [NTP](ntp.md)
 - [Power Over Ethernet](power-over-ethernet.md)
