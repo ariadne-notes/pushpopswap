@@ -221,3 +221,15 @@ Vendors often include or integrate adjacent features that are not always core SA
 [SSE Components Explained: SWG, ZTNA, and CASB | Zscaler](https://www.zscaler.com/blogs/product-insights/sse-components-explained-swg-ztna-casb-and-how-they-work-together)
 
 [SASE: What is Secure Access Service Edge? | Zscaler](https://www.zscaler.com/resources/security-terms-glossary/what-is-sase)
+
+[Cisco Live - Jaki Hasan and Fay-Ann Lee - Cisco Secure Access: Overview and End-to-end Flow Review - BRKSEC-1708](/pdfs/ciscolive/BRKSEC-1708.pdf)
+
+[Cisco Live - Jonny Noble - The Latest in Cisco Secure Access (SSE) Innovation - BRKSEC-2285](/pdfs/ciscolive/BRKSEC-2285.pdf)
+
+[Cisco Live - Fay-Ann Lee - Cisco SASE: Unifying Networking, Identity, and Security - BRKSEC-2286](/pdfs/ciscolive/BRKSEC-2286.pdf)
+
+[Cisco Live - Bhavik Shah and Sandeep Yadav - From Fish to Shark: 8 Stepping Stones in Cisco Secure Access (Secure Service Edge) Journey - BRKSEC-2482](/pdfs/ciscolive/BRKSEC-2482.pdf)
+
+[Cisco Live - John Rauser - Cisco Secure Access - BRKSEC-2885](/pdfs/ciscolive/BRKSEC-2885.pdf)
+
+[Cisco Live - Vinny Parla - Deep Dive into Cisco's Use of QUIC, MASQUE and OS Native Capabilities to Deliver Frictionless Zero Trust Access - BRKSEC-3027](/pdfs/ciscolive/BRKSEC-3027.pdf)
