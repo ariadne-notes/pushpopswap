@@ -372,6 +372,10 @@
 
 - [SAN](san.md)
   - [Block Device Examples](block-device-examples.md)
+- [Backup](backup.md)
+  - [Backup Applications](backup-applications.md)
+    - [Restic](restic.md)
+    - [Kopia](kopia.md)
 
 # Etc (Stuff I Haven't Sorted)
 
