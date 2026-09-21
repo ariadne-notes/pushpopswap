@@ -2,6 +2,14 @@
 
 ## Terms
 
+**Autonomous Mode**
+
+- IOS-XE device that supports CLI configuration
+
+**Controller Mode**
+
+- IOS-XE device managed by SD-WAN
+
 **DIA** --- Direct Internet Access
 
 - Commodity Internet
@@ -126,6 +134,8 @@ show orchestrator connections
 [Cisco Live - Empowering your Network with SDWAN OMP - Waqas Daar - BKRENT-3115](/pdfs/ciscolive/BRKENT-3115.pdf)
 
 [Cisco Live - SD-WAN Start Here - Lars Granberg - BRKENT-2108](/pdfs/ciscolive/BRKENT-2108.pdf)
+
+[Cisco Live - Power your WAN with Cisco SD-Routing - Alex Yeung & David Roten - BRKENT-1039](/pdfs/ciscolive/BRKENT-1039.pdf)
 
 [Network Academy - SDWAN Deep-Dive](https://www.networkacademy.io/ccie-enterprise/sdwan)
 
