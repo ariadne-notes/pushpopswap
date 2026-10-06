@@ -289,6 +289,7 @@
   - [Header](./cisco-sdn/sd-wan-header.md)
   - [HA](./cisco-sdn/sd-wan-ha.md)
   - [Changing Site ID](./cisco-sdn/sd-wan-example-changing-site-id.md)
+  - [Understanding NAT DIA](./cisco-sdn/sd-wan-nat-dia.md)
 
 - [SD-Access](./cisco-sdn/sd-access.md)
   - [Cisco Catalyst Center](./cisco-sdn/cisco-catalyst-center.md)
