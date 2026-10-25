@@ -290,6 +290,7 @@
   - [HA](./cisco-sdn/sd-wan-ha.md)
   - [Changing Site ID](./cisco-sdn/sd-wan-example-changing-site-id.md)
   - [Understanding NAT DIA](./cisco-sdn/sd-wan-nat-dia.md)
+  - [Service Insertion](./cisco-sdn/sd-wan-service-insertion.md)
 
 - [SD-Access](./cisco-sdn/sd-access.md)
   - [Cisco Catalyst Center](./cisco-sdn/cisco-catalyst-center.md)
@@ -379,6 +380,13 @@
     - [Restic](restic.md)
     - [Kopia](kopia.md)
 
+# Kubernetes
+
+- [K8s on Debian - Initial Setup](k8s-on-debian-initial-setup.md)
+- [Flannel - VXLAN](flannel-vxlan.md)
+- [Flannel - Change the spec.PodCIDR Subnets](flannel-change-the-spec.podcidr-subnets.md)
+- [MetalLB in L2](metallb-in-l2.md)
+
 # Etc (Stuff I Haven't Sorted)
 
 - [Study Tables](study-tables.md)
@@ -404,11 +412,8 @@
 - [Telnet With No User Accounts](telnet-with-no-user-accounts.md)
 - [Sitemaps](./sitemaps.md)
 - [Socket Statistics](socket-statistics.md)
-- [K8s on Debian - Initial Setup](k8s-on-debian-initial-setup.md)
-- [Flannel - VXLAN](flannel-vxlan.md)
-- [Flannel - Change the spec.PodCIDR Subnets](flannel-change-the-spec.podcidr-subnets.md)
-- [MetalLB in L2](metallb-in-l2.md)
 - [Cisco ACI](./cisco-aci.md)
+- [Upgrading Cisco IOS with tar](./upgrading-cisco-ios-with-tar.md)
 
 # Certification Stuff
 
