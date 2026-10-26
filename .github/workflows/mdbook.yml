@@ -104,7 +104,7 @@ jobs:
 
       - name: Generate sitemap
         run: |
-          npx static-sitemap-cli \
+          npx static-sitemap-cli@2.2.8 \
             --base https://pushpopswap.com \
             --root book \
             --no-clean \
