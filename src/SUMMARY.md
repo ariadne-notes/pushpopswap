@@ -386,6 +386,7 @@
 - [Flannel - VXLAN](flannel-vxlan.md)
 - [Flannel - Change the spec.PodCIDR Subnets](flannel-change-the-spec.podcidr-subnets.md)
 - [MetalLB in L2](metallb-in-l2.md)
+- [Patching Software with GitOps, Helm, and Argo CD](patching-software-with-gitops-helm-and-argocd.md)
 
 # Etc (Stuff I Haven't Sorted)
 
